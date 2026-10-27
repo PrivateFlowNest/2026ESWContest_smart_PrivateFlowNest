@@ -8,7 +8,7 @@
 
 ![LG AI Native OS](https://img.shields.io/badge/LG%20AI%20Native%20OS-Pi%205%20%C3%972%20%C2%B7%20Pi%204-A50034) ![EXAONE](https://img.shields.io/badge/EXAONE%204.0-1.2B%20LoRA%20%C2%B7%20on--device-6A4FC9) ![Whisper](https://img.shields.io/badge/Whisper-small%20LoRA-2A8C9A) ![C++20](https://img.shields.io/badge/C%2B%2B20-native%20services-00599C?logo=cplusplus&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-7%E2%80%B3%20UI%20%C2%B7%20Android-02569B?logo=flutter&logoColor=white) ![MQTT](https://img.shields.io/badge/MQTT-pfn.v1%20%C2%B7%20ACL-660066?logo=mqtt&logoColor=white) ![ESP32](https://img.shields.io/badge/ESP32%20%C2%B7%20ESP8266-firmware-E7352C?logo=espressif&logoColor=white)
 
-**시연 동영상: 〈유튜브 링크〉**
+[![시연 동영상 보기](https://img.shields.io/badge/YouTube-%EC%8B%9C%EC%97%B0%20%EB%8F%99%EC%98%81%EC%83%81%20%EB%B3%B4%EA%B8%B0-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/CBQyykjMGVk)
 
 <img src="docs/readme/model.jpg" alt="실제 모형: ① 창문 모터 ② 거실 조명 LED ③ 에어컨 표시등 LED ④ 화장실 환기팬" width="88%">
 
