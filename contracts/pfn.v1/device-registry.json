@@ -1,0 +1,304 @@
+{
+  "schema_version": "pfn.v1",
+  "registry_version": 4,
+  "id_policy": {
+    "pattern": "^[A-Z0-9]+(?:-[A-Z0-9]+)*$",
+    "node_id_usage": "MQTT topic and node_id fields",
+    "device_id_usage": "target_device_id and reading source fields",
+    "mqtt_client_id_usage": "runtime connection identifier; append a process suffix to node_id",
+    "wiring_status_values": {
+      "wired": "connected in the confirmed harness plan (electrical-harness-plan.md); physical verification is recorded separately",
+      "not_wired": "official ID kept, but no hardware is connected; core must reject commands",
+      "to_confirm": "official ID kept, wiring not decided; core must reject commands"
+    }
+  },
+  "zones": [
+    "entrance", "bathroom", "living", "bed", "desk", "outdoor",
+    "living_to_bathroom", "all", "unknown"
+  ],
+  "nodes": [
+    {
+      "asset_label": "RPiA",
+      "node_id": "NODE-RPI4-01",
+      "node_type": "pi4",
+      "role": "core",
+      "development_ip": "10.10.10.2"
+    },
+    {
+      "asset_label": "RPiB",
+      "node_id": "NODE-RPI4-02",
+      "node_type": "pi4",
+      "role": "octopus_klipper_host"
+    },
+    {
+      "asset_label": "RPiC",
+      "node_id": "NODE-RPI5-01",
+      "node_type": "pi5",
+      "role": "ui_and_llm"
+    },
+    {
+      "asset_label": "RPiD",
+      "node_id": "NODE-RPI5-02",
+      "node_type": "pi5",
+      "role": "perception"
+    },
+    {
+      "asset_label": "ESP32",
+      "node_id": "CTRL-ESP32-ACT-01",
+      "node_type": "esp32",
+      "role": "door_and_window_controller"
+    },
+    {
+      "asset_label": "ESP8266",
+      "node_id": "CTRL-ESP8266-LED-01",
+      "node_type": "esp8266",
+      "role": "light_and_fan_controller"
+    },
+    {
+      "asset_label": "Octopus",
+      "node_id": "CTRL-OCTOPUS-01",
+      "node_type": "octopus",
+      "role": "xy_motion_controller"
+    }
+  ],
+  "devices": [
+    {
+      "hardware": "OPEN_CLOSE_SERVO",
+      "function": "entrance_door",
+      "device_id": "SERVO-DOOR-01",
+      "controller_node_id": "CTRL-ESP32-ACT-01",
+      "pin": "GPIO19",
+      "channel": "door1",
+      "wiring_status": "wired",
+      "zone": "entrance",
+      "capabilities": ["set_position"],
+      "positions": { "open": 90, "closed": 0, "calibrated": true }
+    },
+    {
+      "hardware": "MG90S",
+      "function": "bathroom_door",
+      "device_id": "SERVO-DOOR-02",
+      "controller_node_id": "CTRL-ESP32-ACT-01",
+      "assignment_status": "removed_from_model",
+      "wiring_status": "not_wired",
+      "zone": "bathroom",
+      "capabilities": ["set_position"]
+    },
+    {
+      "hardware": "OPEN_CLOSE_SERVO",
+      "function": "window",
+      "device_id": "SERVO-WINDOW-01",
+      "controller_node_id": "CTRL-ESP32-ACT-01",
+      "pin": "GPIO21",
+      "channel": "wind1",
+      "wiring_status": "wired",
+      "zone": "living",
+      "capabilities": ["set_position"],
+      "positions": { "open": 90, "closed": 0, "calibrated": true }
+    },
+    {
+      "hardware": "FAN_12V_4010_D4184",
+      "function": "ventilation_fan",
+      "device_id": "FAN-01",
+      "controller_node_id": "CTRL-ESP8266-LED-01",
+      "pin": "D2",
+      "channel": "pan1",
+      "wiring_status": "wired",
+      "zone": "bathroom",
+      "capabilities": ["set_switch"]
+    },
+    {
+      "hardware": "LED",
+      "function": "washer_indicator",
+      "device_id": "LED-WASHER-01",
+      "controller_node_id": "CTRL-ESP8266-LED-01",
+      "assignment_status": "removed_from_model",
+      "wiring_status": "not_wired",
+      "zone": "living",
+      "capabilities": ["set_switch", "set_color"],
+      "supported_colors": ["off", "red"]
+    },
+    {
+      "hardware": "LED",
+      "function": "air_conditioner_indicator",
+      "device_id": "LED-AIRCON-01",
+      "controller_node_id": "CTRL-ESP8266-LED-01",
+      "pin": "D1",
+      "channel": "에어컨",
+      "wiring_status": "wired",
+      "zone": "living",
+      "capabilities": ["set_switch", "set_color"],
+      "supported_colors": ["off", "red"]
+    },
+    {
+      "hardware": "LED",
+      "function": "tv_indicator",
+      "device_id": "LED-TV-01",
+      "controller_node_id": "CTRL-ESP8266-LED-01",
+      "assignment_status": "removed_from_model",
+      "wiring_status": "not_wired",
+      "zone": "living",
+      "capabilities": ["set_switch", "set_color"],
+      "supported_colors": ["off", "red"]
+    },
+    {
+      "hardware": "LED",
+      "function": "laptop_indicator",
+      "device_id": "LED-LAPTOP-01",
+      "controller_node_id": "CTRL-ESP8266-LED-01",
+      "assignment_status": "removed_from_model",
+      "wiring_status": "not_wired",
+      "zone": "desk",
+      "capabilities": ["set_switch", "set_color"],
+      "supported_colors": ["off", "red"]
+    },
+    {
+      "hardware": "LED",
+      "function": "living_light",
+      "device_id": "LED-LIVING-01",
+      "controller_node_id": "CTRL-ESP8266-LED-01",
+      "pin": "D0",
+      "channel": "조명",
+      "wiring_status": "wired",
+      "zone": "living",
+      "capabilities": ["set_switch", "set_color"],
+      "supported_colors": ["off", "red"]
+    },
+    {
+      "hardware": "LED",
+      "function": "night_guide_light",
+      "device_id": "LED-GUIDE-01",
+      "controller_node_id": "CTRL-ESP8266-LED-01",
+      "assignment_status": "removed_from_model",
+      "wiring_status": "not_wired",
+      "zone": "living_to_bathroom",
+      "capabilities": ["set_switch", "set_color"]
+    },
+    {
+      "hardware": "MG90S",
+      "function": "bed_curtain",
+      "device_id": "SERVO-BED-CURTAIN-01",
+      "controller_node_id": "CTRL-ESP32-ACT-01",
+      "assignment_status": "removed_from_model",
+      "wiring_status": "not_wired",
+      "zone": "bed",
+      "capabilities": ["set_position"]
+    },
+    {
+      "hardware": "FND",
+      "function": "washer_sound_display",
+      "device_id": "FND-WASHER-01",
+      "controller_node_id": "CTRL-ESP8266-LED-01",
+      "assignment_status": "removed_from_model",
+      "wiring_status": "not_wired",
+      "zone": "living",
+      "capabilities": ["set_number"]
+    },
+    {
+      "hardware": "FND",
+      "function": "air_conditioner_sound_display",
+      "device_id": "FND-AIRCON-01",
+      "controller_node_id": "CTRL-ESP8266-LED-01",
+      "assignment_status": "removed_from_model",
+      "wiring_status": "not_wired",
+      "zone": "living",
+      "capabilities": ["set_number"]
+    },
+    {
+      "hardware": "FND",
+      "function": "tv_sound_display",
+      "device_id": "FND-TV-01",
+      "controller_node_id": "CTRL-ESP8266-LED-01",
+      "assignment_status": "removed_from_model",
+      "wiring_status": "not_wired",
+      "zone": "living",
+      "capabilities": ["set_number"]
+    },
+    {
+      "hardware": "USB_MIC",
+      "function": "voice_recognition",
+      "device_id": "MIC-INDOOR-01",
+      "controller_node_id": "NODE-RPI5-02",
+      "assignment_status": "assigned_to_perception_pi",
+      "pin": "USB",
+      "channel": "마이크 / 음원 분석",
+      "wiring_status": "wired",
+      "zone": "living",
+      "capabilities": ["audio_level", "voice_event"]
+    },
+    {
+      "hardware": "USB_WEBCAM",
+      "function": "indoor_camera",
+      "device_id": "CAM-INDOOR-01",
+      "controller_node_id": "NODE-RPI5-02",
+      "assignment_status": "assigned_to_perception_pi",
+      "pin": "USB3",
+      "channel": "내부",
+      "wiring_status": "wired",
+      "zone": "living",
+      "capabilities": ["person_presence", "person_state", "local_stream"]
+    },
+    {
+      "hardware": "USB_WEBCAM",
+      "function": "outdoor_camera",
+      "device_id": "CAM-OUTDOOR-01",
+      "controller_node_id": "NODE-RPI5-02",
+      "assignment_status": "assigned_to_perception_pi",
+      "pin": "USB",
+      "channel": "외부",
+      "wiring_status": "wired",
+      "zone": "outdoor",
+      "capabilities": ["person_presence", "person_state", "local_stream"]
+    },
+    {
+      "hardware": "NEMA17",
+      "function": "xy_axis_x",
+      "device_id": "MOTOR-XY-X-01",
+      "controller_node_id": "CTRL-OCTOPUS-01",
+      "pin": "MOTOR0",
+      "channel": "x",
+      "wiring_status": "wired",
+      "zone": "living",
+      "capabilities": ["move_axis", "home_axis"]
+    },
+    {
+      "hardware": "NEMA17",
+      "function": "xy_axis_y",
+      "device_id": "MOTOR-XY-Y-01",
+      "controller_node_id": "CTRL-OCTOPUS-01",
+      "pin": "MOTOR1",
+      "channel": "y",
+      "wiring_status": "wired",
+      "zone": "living",
+      "capabilities": ["move_axis", "home_axis"]
+    },
+    {
+      "hardware": "LIGHT_SENSOR",
+      "function": "x_axis_home",
+      "device_id": "SENSOR-HOME-X-01",
+      "controller_node_id": "CTRL-OCTOPUS-01",
+      "pin": "J27 PG6",
+      "channel": "x원점센서",
+      "wiring_status": "wired",
+      "zone": "living",
+      "capabilities": ["binary_state"]
+    },
+    {
+      "hardware": "LIGHT_SENSOR",
+      "function": "y_axis_home",
+      "device_id": "SENSOR-HOME-Y-01",
+      "controller_node_id": "CTRL-OCTOPUS-01",
+      "pin": "J29 PG9",
+      "channel": "y원점센서",
+      "wiring_status": "wired",
+      "zone": "living",
+      "capabilities": ["binary_state"]
+    }
+  ],
+  "open_decisions": [
+    "Registry v4 (user 2026-10-25): SERVO-DOOR-01 and SERVO-WINDOW-01 are open/close motors without angle control on GPIO19 and GPIO21. position_degrees 90 = open and 0 = closed are codes, not angles; CTRL-ESP32-ACT-01 turns them into the pulses of the user's tested sketch (around 90: door open -90 / close 0, window open -90 / close +90, 1000-2000 us) and drives nothing before the first command. SERVO-DOOR-02 (bathroom door) was removed from the model: ID kept, not_wired.",
+    "Registry v4 ESP8266 (user 2026-10-25): CTRL-ESP8266-LED-01 drives LED-LIVING-01 (D0), LED-AIRCON-01 (D1) and FAN-01 (D2, moved from the ESP32), HIGH = on, all LOW at power-on (user's tested sketch). The model has nothing else: every other device keeps its official ID as not_wired with assignment_status removed_from_model (UI and app do not list them).",
+    "FAN-01 accepts set_switch only until PWM (set_level) is verified on hardware.",
+    "LED single-colour state encoding: steady red = power on, slow blink = quiet/mute/deferred (set_color pattern)."
+  ]
+}

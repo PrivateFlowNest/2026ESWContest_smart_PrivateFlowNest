@@ -1,0 +1,7 @@
+{
+  "scope": "PC end-to-end text normalization, feature extraction, ONNX inference, event creation",
+  "runs": 1000,
+  "p50_ms": 0.4262,
+  "p95_ms": 0.6272549999999996,
+  "maximum_ms": 0.9763
+}

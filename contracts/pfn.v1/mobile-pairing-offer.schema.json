@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-mobile-pairing-offer.schema.json",
+  "title": "HomeMind phone pairing offer from the Mobile API to the 7-inch UI",
+  "description": "homemind-mobile-api on NODE-RPI4-01 to NODE-RPI5-01, answering one pfn/v1/mobile/pairing/request (same request_id). status offered: qr_payload is the exact text to draw as the QR (the same JSON the device terminal prints with --print-pairing-qr --json) and pairing_code is shown next to it so the person can compare it with the phone. The code is one-time and expires at expires_at_ms; it is a secret while valid: only NODE-RPI5-01 may read this topic (broker ACL), nobody logs it and core does not subscribe. status unavailable: no offer (reason says why), no secret fields.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "request_id", "source_node_id", "target_node_id", "status",
+               "created_at_ms"],
+  "properties": {
+    "schema_version": {"const": "pfn.v1"},
+    "event_id": {"type": "string", "format": "uuid"},
+    "request_id": {"type": "string", "format": "uuid"},
+    "source_node_id": {"const": "NODE-RPI4-01"},
+    "target_node_id": {"const": "NODE-RPI5-01"},
+    "status": {"enum": ["offered", "unavailable"]},
+    "created_at_ms": {"type": "integer", "minimum": 0},
+    "expires_at_ms": {"type": "integer", "minimum": 0},
+    "qr_payload": {"type": "string", "minLength": 2, "maxLength": 1024},
+    "pairing_code": {"type": "string", "pattern": "^[0-9A-Z]{4}-[0-9A-Z]{4}$"},
+    "device_name": {"type": "string", "minLength": 1, "maxLength": 64},
+    "base_url": {"type": "string", "pattern": "^https?://.+$", "maxLength": 256},
+    "reason": {"type": "string", "minLength": 1, "maxLength": 128},
+    "simulated": {"type": "boolean"}
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "status": {"const": "offered"},
+        "schema_version": {}, "event_id": {}, "request_id": {}, "source_node_id": {}, "target_node_id": {},
+        "created_at_ms": {}, "simulated": {},
+        "expires_at_ms": {}, "qr_payload": {}, "pairing_code": {}, "device_name": {}, "base_url": {}
+      },
+      "required": ["expires_at_ms", "qr_payload", "pairing_code", "device_name", "base_url"],
+      "additionalProperties": false
+    },
+    {
+      "properties": {
+        "status": {"const": "unavailable"},
+        "schema_version": {}, "event_id": {}, "request_id": {}, "source_node_id": {}, "target_node_id": {},
+        "created_at_ms": {}, "simulated": {},
+        "reason": {}
+      },
+      "required": ["reason"],
+      "additionalProperties": false
+    }
+  ]
+}

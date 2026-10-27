@@ -1,0 +1,474 @@
+{
+  "yamnet": "https://tfhub.dev/google/yamnet/1",
+  "feature_version": "mean-std-max-vad-v2",
+  "extraction": {
+    "batch_size": 8,
+    "prefetch_workers": 2,
+    "prefetch_batches": 2,
+    "manifest_order": "path/start (HDD locality)",
+    "benchmark": null
+  },
+  "heads": {
+    "activity": {
+      "train_samples": 51714,
+      "labels": [
+        "IN_PERSON_MEETING",
+        "SELF_TALK",
+        "TV_MEDIA",
+        "UNKNOWN",
+        "ZOOM_SPEAKER"
+      ],
+      "classifier_selection": {
+        "enabled": true,
+        "selection_split": "validation",
+        "selection_metric": "macro_f1, then accuracy, then fewer TV_MEDIA→IN_PERSON_MEETING errors",
+        "selected": {
+          "C": 0.03,
+          "class_weight": null,
+          "validation_macro_f1": 0.8535265709556406,
+          "validation_accuracy": 0.851773714642913,
+          "tv_media_as_in_person_meeting": 712,
+          "candidate_index": 6
+        },
+        "candidates": [
+          {
+            "C": 0.03,
+            "class_weight": "balanced",
+            "validation_macro_f1": 0.8494868018367381,
+            "validation_accuracy": 0.8486482262853571,
+            "tv_media_as_in_person_meeting": 694
+          },
+          {
+            "C": 0.1,
+            "class_weight": "balanced",
+            "validation_macro_f1": 0.8497385364010043,
+            "validation_accuracy": 0.8492733239568683,
+            "tv_media_as_in_person_meeting": 693
+          },
+          {
+            "C": 0.3,
+            "class_weight": "balanced",
+            "validation_macro_f1": 0.8477577201234563,
+            "validation_accuracy": 0.8473198937333959,
+            "tv_media_as_in_person_meeting": 687
+          },
+          {
+            "C": 1.0,
+            "class_weight": "balanced",
+            "validation_macro_f1": 0.8451450854221492,
+            "validation_accuracy": 0.8446632286294734,
+            "tv_media_as_in_person_meeting": 669
+          },
+          {
+            "C": 3.0,
+            "class_weight": "balanced",
+            "validation_macro_f1": 0.8409314574751786,
+            "validation_accuracy": 0.8405219565557118,
+            "tv_media_as_in_person_meeting": 660
+          },
+          {
+            "C": 10.0,
+            "class_weight": "balanced",
+            "validation_macro_f1": 0.8344656345129872,
+            "validation_accuracy": 0.8345835286763557,
+            "tv_media_as_in_person_meeting": 649
+          },
+          {
+            "C": 0.03,
+            "class_weight": null,
+            "validation_macro_f1": 0.8535265709556406,
+            "validation_accuracy": 0.851773714642913,
+            "tv_media_as_in_person_meeting": 712
+          },
+          {
+            "C": 0.1,
+            "class_weight": null,
+            "validation_macro_f1": 0.8533353437282786,
+            "validation_accuracy": 0.851773714642913,
+            "tv_media_as_in_person_meeting": 706
+          },
+          {
+            "C": 0.3,
+            "class_weight": null,
+            "validation_macro_f1": 0.8512263169055648,
+            "validation_accuracy": 0.8499765588373184,
+            "tv_media_as_in_person_meeting": 686
+          },
+          {
+            "C": 1.0,
+            "class_weight": null,
+            "validation_macro_f1": 0.8473569414247046,
+            "validation_accuracy": 0.8462259728082513,
+            "tv_media_as_in_person_meeting": 672
+          },
+          {
+            "C": 3.0,
+            "class_weight": null,
+            "validation_macro_f1": 0.843230753151502,
+            "validation_accuracy": 0.842631661197062,
+            "tv_media_as_in_person_meeting": 656
+          },
+          {
+            "C": 10.0,
+            "class_weight": null,
+            "validation_macro_f1": 0.8367797063512195,
+            "validation_accuracy": 0.8364588216908893,
+            "tv_media_as_in_person_meeting": 647
+          }
+        ]
+      },
+      "evaluations": {
+        "validation": {
+          "samples": 12798,
+          "accuracy": 0.851773714642913,
+          "report": {
+            "IN_PERSON_MEETING": {
+              "precision": 0.7587925782331764,
+              "recall": 0.9133333333333333,
+              "f1-score": 0.8289214944788988,
+              "support": 3000.0
+            },
+            "SELF_TALK": {
+              "precision": 0.8425087108013938,
+              "recall": 0.8799126637554585,
+              "f1-score": 0.8608045567817729,
+              "support": 1374.0
+            },
+            "TV_MEDIA": {
+              "precision": 0.8894645941278065,
+              "recall": 0.6866666666666666,
+              "f1-score": 0.7750188111361926,
+              "support": 3000.0
+            },
+            "UNKNOWN": {
+              "precision": 0.9206069160197601,
+              "recall": 0.8696666666666667,
+              "f1-score": 0.8944120671923209,
+              "support": 3000.0
+            },
+            "ZOOM_SPEAKER": {
+              "precision": 0.8774019984627209,
+              "recall": 0.9418316831683168,
+              "f1-score": 0.9084759251890171,
+              "support": 2424.0
+            },
+            "accuracy": 0.851773714642913,
+            "macro avg": {
+              "precision": 0.8577549595289715,
+              "recall": 0.8582822027180883,
+              "f1-score": 0.8535265709556406,
+              "support": 12798.0
+            },
+            "weighted avg": {
+              "precision": 0.8588077573102813,
+              "recall": 0.851773714642913,
+              "f1-score": 0.8501287874744937,
+              "support": 12798.0
+            }
+          },
+          "confusion_matrix": {
+            "labels": [
+              "IN_PERSON_MEETING",
+              "SELF_TALK",
+              "TV_MEDIA",
+              "UNKNOWN",
+              "ZOOM_SPEAKER"
+            ],
+            "values": [
+              [
+                2740,
+                25,
+                158,
+                48,
+                29
+              ],
+              [
+                42,
+                1209,
+                27,
+                55,
+                41
+              ],
+              [
+                712,
+                86,
+                2060,
+                49,
+                93
+              ],
+              [
+                93,
+                86,
+                56,
+                2609,
+                156
+              ],
+              [
+                24,
+                29,
+                15,
+                73,
+                2283
+              ]
+            ]
+          },
+          "false_positive_rate": {
+            "IN_PERSON_MEETING": 0.08889569299857114,
+            "SELF_TALK": 0.019782913165266106,
+            "TV_MEDIA": 0.02612778117983262,
+            "UNKNOWN": 0.02296387017758726,
+            "ZOOM_SPEAKER": 0.030749951802583383
+          }
+        }
+      }
+    },
+    "sound_event": {
+      "train_samples": 5882,
+      "labels": [
+        "ALARM",
+        "DOORBELL",
+        "OTHER"
+      ],
+      "classifier_selection": {
+        "enabled": true,
+        "selection_split": "validation",
+        "selection_metric": "macro_f1, then accuracy, then fewer TV_MEDIA→IN_PERSON_MEETING errors",
+        "selected": {
+          "C": 0.03,
+          "class_weight": null,
+          "validation_macro_f1": 0.8265744877209662,
+          "validation_accuracy": 0.9266281945589447,
+          "tv_media_as_in_person_meeting": 0,
+          "candidate_index": 6
+        },
+        "candidates": [
+          {
+            "C": 0.03,
+            "class_weight": "balanced",
+            "validation_macro_f1": 0.8178166350939281,
+            "validation_accuracy": 0.9150865622423743,
+            "tv_media_as_in_person_meeting": 0
+          },
+          {
+            "C": 0.1,
+            "class_weight": "balanced",
+            "validation_macro_f1": 0.8100094233851275,
+            "validation_accuracy": 0.9134377576257213,
+            "tv_media_as_in_person_meeting": 0
+          },
+          {
+            "C": 0.3,
+            "class_weight": "balanced",
+            "validation_macro_f1": 0.8028751420557186,
+            "validation_accuracy": 0.909315746084089,
+            "tv_media_as_in_person_meeting": 0
+          },
+          {
+            "C": 1.0,
+            "class_weight": "balanced",
+            "validation_macro_f1": 0.7925210754158122,
+            "validation_accuracy": 0.9043693322341303,
+            "tv_media_as_in_person_meeting": 0
+          },
+          {
+            "C": 3.0,
+            "class_weight": "balanced",
+            "validation_macro_f1": 0.7914118543855785,
+            "validation_accuracy": 0.9051937345424568,
+            "tv_media_as_in_person_meeting": 0
+          },
+          {
+            "C": 10.0,
+            "class_weight": "balanced",
+            "validation_macro_f1": 0.7788390787242921,
+            "validation_accuracy": 0.9010717230008244,
+            "tv_media_as_in_person_meeting": 0
+          },
+          {
+            "C": 0.03,
+            "class_weight": null,
+            "validation_macro_f1": 0.8265744877209662,
+            "validation_accuracy": 0.9266281945589447,
+            "tv_media_as_in_person_meeting": 0
+          },
+          {
+            "C": 0.1,
+            "class_weight": null,
+            "validation_macro_f1": 0.8179818528205626,
+            "validation_accuracy": 0.9241549876339654,
+            "tv_media_as_in_person_meeting": 0
+          },
+          {
+            "C": 0.3,
+            "class_weight": null,
+            "validation_macro_f1": 0.810433881086055,
+            "validation_accuracy": 0.9208573784006595,
+            "tv_media_as_in_person_meeting": 0
+          },
+          {
+            "C": 1.0,
+            "class_weight": null,
+            "validation_macro_f1": 0.7859186855433485,
+            "validation_accuracy": 0.909315746084089,
+            "tv_media_as_in_person_meeting": 0
+          },
+          {
+            "C": 3.0,
+            "class_weight": null,
+            "validation_macro_f1": 0.7886144065351756,
+            "validation_accuracy": 0.9076669414674361,
+            "tv_media_as_in_person_meeting": 0
+          },
+          {
+            "C": 10.0,
+            "class_weight": null,
+            "validation_macro_f1": 0.7803833462435613,
+            "validation_accuracy": 0.9035449299258038,
+            "tv_media_as_in_person_meeting": 0
+          }
+        ]
+      },
+      "evaluations": {
+        "validation": {
+          "samples": 1213,
+          "accuracy": 0.9266281945589447,
+          "report": {
+            "ALARM": {
+              "precision": 0.7411764705882353,
+              "recall": 0.7924528301886793,
+              "f1-score": 0.7659574468085106,
+              "support": 159.0
+            },
+            "DOORBELL": {
+              "precision": 0.8974358974358975,
+              "recall": 0.6481481481481481,
+              "f1-score": 0.7526881720430108,
+              "support": 54.0
+            },
+            "OTHER": {
+              "precision": 0.9591633466135459,
+              "recall": 0.963,
+              "f1-score": 0.9610778443113772,
+              "support": 1000.0
+            },
+            "accuracy": 0.9266281945589447,
+            "macro avg": {
+              "precision": 0.8659252382125594,
+              "recall": 0.8012003261122759,
+              "f1-score": 0.8265744877209662,
+              "support": 1213.0
+            },
+            "weighted avg": {
+              "precision": 0.927841668506689,
+              "recall": 0.9266281945589447,
+              "f1-score": 0.9262244349911402,
+              "support": 1213.0
+            }
+          },
+          "confusion_matrix": {
+            "labels": [
+              "ALARM",
+              "DOORBELL",
+              "OTHER"
+            ],
+            "values": [
+              [
+                126,
+                0,
+                33
+              ],
+              [
+                11,
+                35,
+                8
+              ],
+              [
+                33,
+                4,
+                963
+              ]
+            ]
+          },
+          "false_positive_rate": {
+            "ALARM": 0.04174573055028463,
+            "DOORBELL": 0.003451251078515962,
+            "OTHER": 0.19248826291079812
+          }
+        },
+        "test": {
+          "samples": 1171,
+          "accuracy": 0.7660119555935099,
+          "report": {
+            "ALARM": {
+              "precision": 0.7743732590529248,
+              "recall": 0.6136865342163356,
+              "f1-score": 0.6847290640394089,
+              "support": 453.0
+            },
+            "DOORBELL": {
+              "precision": 0.3157894736842105,
+              "recall": 0.2222222222222222,
+              "f1-score": 0.2608695652173913,
+              "support": 27.0
+            },
+            "OTHER": {
+              "precision": 0.7730138713745272,
+              "recall": 0.8871201157742402,
+              "f1-score": 0.8261455525606469,
+              "support": 691.0
+            },
+            "accuracy": 0.7660119555935099,
+            "macro avg": {
+              "precision": 0.6210588680372208,
+              "recall": 0.574342957404266,
+              "f1-score": 0.590581393939149,
+              "support": 1171.0
+            },
+            "weighted avg": {
+              "precision": 0.7629974272077258,
+              "recall": 0.7660119555935099,
+              "f1-score": 0.758405056439051,
+              "support": 1171.0
+            }
+          },
+          "confusion_matrix": {
+            "labels": [
+              "ALARM",
+              "DOORBELL",
+              "OTHER"
+            ],
+            "values": [
+              [
+                278,
+                6,
+                169
+              ],
+              [
+                10,
+                6,
+                11
+              ],
+              [
+                71,
+                7,
+                613
+              ]
+            ]
+          },
+          "false_positive_rate": {
+            "ALARM": 0.11281337047353761,
+            "DOORBELL": 0.011363636363636364,
+            "OTHER": 0.375
+          }
+        }
+      }
+    }
+  },
+  "embedding_cache": {
+    "path": "/home/alexi/homemind-cache/public-balanced-v4-temporal.sqlite3",
+    "hits": 57541,
+    "misses": 15237,
+    "model_identity": "https://tfhub.dev/google/yamnet/1::mean-std-max-vad-v2",
+    "unique_source_files": 24608
+  }
+}

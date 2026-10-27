@@ -1,0 +1,8 @@
+#!/bin/sh
+# Fake systemctl: records calls; is-active answers "active" for units whose file exists in /etc/systemd/system.
+echo "$*" >> /var/log/fake-systemctl.log
+case "$1" in
+  is-active) shift; for u in "$@"; do case "$u" in *.service) ;; *) u="$u.service";; esac
+               if [ -f "/etc/systemd/system/$u" ]; then echo active; else echo inactive; fi; done;;
+esac
+exit 0

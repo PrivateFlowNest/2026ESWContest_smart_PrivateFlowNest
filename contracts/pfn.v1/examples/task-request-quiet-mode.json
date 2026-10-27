@@ -1,0 +1,20 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "5f0e0000-0000-4000-8000-000000000022",
+  "trace_id": "5f0e0000-0000-4000-8000-000000000004",
+  "task_id": "5f0e0000-0000-4000-8000-000000000023",
+  "source_node_id": "NODE-RPI5-02",
+  "intent": "quiet_mode_on",
+  "target_device": "HOME-ENV-01",
+  "priority": 40,
+  "safety_level": "normal",
+  "interruptible": true,
+  "resume_policy": "when_context_returns",
+  "confidence": 0.91,
+  "parameters": {
+    "origin": "voice_parser",
+    "ai_device": "ALL_QUIET_DEVICES",
+    "ai_action": "SET_QUIET_MODE"
+  },
+  "requested_at_ms": 1792560000000
+}

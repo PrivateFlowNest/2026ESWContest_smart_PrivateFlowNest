@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "status": "SELECTED",
+  "selected_model": "YOLOX-Nano",
+  "input_size": [416, 416],
+  "deployment_format": "ONNX",
+  "runtime": "ONNX Runtime",
+  "execution_provider": "XNNPACK",
+  "model_path": "artifacts/candidates/yolox_nano_416.onnx",
+  "classes": ["FIGURE"],
+  "camera_ids": ["CAM-INDOOR-01", "CAM-OUTDOOR-01"],
+  "target_fps_per_camera": 5,
+  "decision_date": "2026-09-03",
+  "decision": "YOLOX-Tiny is retained only as a benchmark artifact and is not an automatic runtime fallback."
+}

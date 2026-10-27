@@ -1,0 +1,19 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "5f0e0000-0000-4000-8000-0000000000c2",
+  "request_id": "5f0e0000-0000-4000-8000-0000000000c0",
+  "source_node_id": "NODE-RPI4-01",
+  "target_node_id": "NODE-RPI5-01",
+  "created_at_ms": 1792560000150,
+  "action": "revoke",
+  "status": "ok",
+  "revoked": true,
+  "phones": [
+    {
+      "phone_id": "a1b2c3d4",
+      "device_name": "Galaxy S24",
+      "paired_at": "2026-10-25T07:30:12Z",
+      "last_seen_at_ms": 1792559990000
+    }
+  ]
+}

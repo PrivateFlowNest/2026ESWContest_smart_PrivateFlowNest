@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-mobile-pairing-request.schema.json",
+  "title": "HomeMind phone pairing QR request from the 7-inch UI to the Mobile API",
+  "description": "NODE-RPI5-01 (UI 'phone connect' button) to homemind-mobile-api on NODE-RPI4-01. Asks for one fresh one-time pairing offer to show as a QR on the 7-inch display; the Mobile API answers on pfn/v1/mobile/pairing/offer with the same request_id. Carries no secret. The Mobile API ignores a request whose expires_at_ms has passed, so a press is never replayed after a reconnect. Core does not subscribe.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "request_id", "source_node_id", "target_node_id", "client_id",
+               "sent_at_ms", "expires_at_ms"],
+  "properties": {
+    "schema_version": {"const": "pfn.v1"},
+    "event_id": {"type": "string", "format": "uuid"},
+    "request_id": {"type": "string", "format": "uuid"},
+    "source_node_id": {"const": "NODE-RPI5-01"},
+    "target_node_id": {"const": "NODE-RPI4-01"},
+    "client_id": {"type": "string", "minLength": 1, "maxLength": 64},
+    "sent_at_ms": {"type": "integer", "minimum": 0},
+    "expires_at_ms": {"type": "integer", "minimum": 0},
+    "simulated": {"type": "boolean"}
+  }
+}

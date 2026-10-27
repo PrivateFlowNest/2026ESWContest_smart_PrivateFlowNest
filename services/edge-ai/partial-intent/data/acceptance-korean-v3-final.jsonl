@@ -1,0 +1,60 @@
+{"text":"새벽부터 방 안이 싸늘해서 난방 상태가 궁금해", "intent":"CLIMATE_COMFORT"}
+{"text":"햇빛 때문에 실내 온도가 빠르게 오르는 것 같아", "intent":"CLIMATE_COMFORT"}
+{"text":"손발이 시릴 정도라 조금 따뜻한 환경이면 좋겠어", "intent":"CLIMATE_COMFORT"}
+{"text":"에어컨 냉기가 강해서 몸이 으슬으슬해", "intent":"CLIMATE_COMFORT"}
+{"text":"잠들 무렵에는 지금보다 선선했으면 좋겠는데", "intent":"CLIMATE_COMFORT"}
+{"text":"책상 위가 어두워서 공책 글씨를 읽기 어렵네", "intent":"LIGHTING"}
+{"text":"천장 조명이 눈부셔서 조금 은은했으면 좋겠어", "intent":"LIGHTING"}
+{"text":"밤에 들어올 때 현관 불빛이 있으면 좋겠는데", "intent":"LIGHTING"}
+{"text":"스탠드 밝기가 현재 몇 단계인지 궁금해", "intent":"LIGHTING"}
+{"text":"취침 전에 켜진 전등이 남아 있는지 확인하고 싶어", "intent":"LIGHTING"}
+{"text":"음식을 만들었더니 실내에 냄새가 가득해", "intent":"VENTILATION"}
+{"text":"샤워한 다음이라 욕실 공기가 매우 습하네", "intent":"VENTILATION"}
+{"text":"창가에서 찬 외풍이 들어오는 느낌이야", "intent":"VENTILATION"}
+{"text":"방 안이 답답해서 환기를 준비하면 좋겠어", "intent":"VENTILATION"}
+{"text":"공기청정기가 지금 어떤 세기로 도는지 알고 싶어", "intent":"VENTILATION"}
+{"text":"보고 있던 영화가 끝났으니 미디어 상태를 정리하고 싶어", "intent":"MEDIA"}
+{"text":"TV 뉴스 목소리가 작아서 잘 들리지 않네", "intent":"MEDIA"}
+{"text":"회의가 시작하면 영상 소리를 조용하게 하고 싶어", "intent":"MEDIA"}
+{"text":"방송이 재생 중인지 화면 상태를 먼저 보여줘", "intent":"MEDIA"}
+{"text":"드라마 시작 전에 텔레비전 준비가 됐으면 좋겠어", "intent":"MEDIA"}
+{"text":"외출한 뒤 현관문이 닫혔는지 걱정돼", "intent":"ACCESS"}
+{"text":"사람이 문 앞에 온 것 같으니 출입 상태를 보고 싶어", "intent":"ACCESS"}
+{"text":"욕실 입구가 열려 있는지 확인해 볼래", "intent":"ACCESS"}
+{"text":"손님이 들어오기 전에 현관 쪽을 준비하고 싶은데", "intent":"ACCESS"}
+{"text":"화장실에서 나오려는데 문이 막혀 있는 것 같아", "intent":"ACCESS"}
+{"text":"빨래 종료까지 시간이 얼마나 남았는지 알고 싶어", "intent":"LAUNDRY"}
+{"text":"세탁이 다 끝나면 통화 후에 알려줬으면 좋겠어", "intent":"LAUNDRY"}
+{"text":"옷을 넣어둔 세탁 장치가 멈춘 것 같아", "intent":"LAUNDRY"}
+{"text":"회의 동안 보류한 세탁 알림이 있는지 확인해줘", "intent":"LAUNDRY"}
+{"text":"빨래 완료 표시가 들어왔는지 궁금한데", "intent":"LAUNDRY"}
+{"text":"방바닥에 먼지가 보여서 정리가 필요할 것 같아", "intent":"CLEANING"}
+{"text":"집을 비운 사이에 청소를 마치면 좋겠어", "intent":"CLEANING"}
+{"text":"통화하는 동안 청소 소리는 쉬었으면 해", "intent":"CLEANING"}
+{"text":"로봇청소기가 일을 끝냈는지 상태를 확인하고 싶어", "intent":"CLEANING"}
+{"text":"바닥의 부스러기를 치울 준비가 필요해 보여", "intent":"CLEANING"}
+{"text":"화상 회의가 이어지고 있어서 주변이 조용해야 해", "intent":"QUIET_ENVIRONMENT"}
+{"text":"온라인 수업에 집중하도록 가전 소리를 줄였으면", "intent":"QUIET_ENVIRONMENT"}
+{"text":"노트북 마이크로 발표하는 동안 알림을 미루고 싶어", "intent":"QUIET_ENVIRONMENT"}
+{"text":"중요한 대화가 끝날 때까지 방해받고 싶지 않아", "intent":"QUIET_ENVIRONMENT"}
+{"text":"여러 사람이 통화하는 상황이라 조용한 환경이 필요해", "intent":"QUIET_ENVIRONMENT"}
+{"text":"냉방기 제품 비교 영상을 보고 있어", "intent":"NO_ACTION"}
+{"text":"스탠드 디자인에 관한 잡지를 읽었어", "intent":"NO_ACTION"}
+{"text":"창문 모형을 어떻게 꾸밀지 정하는 중이야", "intent":"NO_ACTION"}
+{"text":"텔레비전 광고 음악의 가수를 찾고 있어", "intent":"NO_ACTION"}
+{"text":"세탁기 사용 설명서를 친구에게 보냈어", "intent":"NO_ACTION"}
+{"text":"로봇청소기 신제품 이름을 기억해뒀어", "intent":"NO_ACTION"}
+{"text":"회의와 미팅의 뜻 차이를 설명하고 있었어", "intent":"NO_ACTION"}
+{"text":"현관 사진이 실린 인테리어 책을 샀어", "intent":"NO_ACTION"}
+{"text":"방 불은 켜지 말고 그대로 둬", "intent":"NO_ACTION"}
+{"text":"에어컨 세기는 바꿀 필요 없어", "intent":"NO_ACTION"}
+{"text":"창문을 닫아 달라는 뜻은 아니야", "intent":"NO_ACTION"}
+{"text":"TV를 작동해 달라고 부탁한 게 아니야", "intent":"NO_ACTION"}
+{"text":"세탁 알림은 지금 건드리지 않았으면 해", "intent":"NO_ACTION"}
+{"text":"청소를 시작하지 말고 나중에 생각하자", "intent":"NO_ACTION"}
+{"text":"현관문은 열지 마", "intent":"NO_ACTION"}
+{"text":"오늘 밤에 할 이야기가 하나 있어", "intent":"NO_ACTION"}
+{"text":"아직 문장을 다 생각하지 못했어", "intent":"NO_ACTION"}
+{"text":"그 부분은 조금 뒤에 이어서 말할게", "intent":"NO_ACTION"}
+{"text":"내가 원하는 게 뭔지 먼저 고민해볼게", "intent":"NO_ACTION"}
+{"text":"일단은 아무것도 부탁하지 않을게", "intent":"NO_ACTION"}

@@ -1,0 +1,12 @@
+{
+    "id": "com.atlas.app.homemind_ui",
+    "type": "flutter",
+    "name": "HomeMind",
+    "description": "HomeMind 7-inch home screen (PrivateFlowNest)",
+    "entry": "homemind_flutter_test --bundle=./ --fullscreen -a com.atlas.app.homemind_ui",
+    "version": "@VERSION@",
+    "required_permissions": {
+        "privileged": [],
+        "user_consent": []
+    }
+}

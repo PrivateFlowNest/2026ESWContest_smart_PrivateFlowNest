@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-safety-alert.schema.json",
+  "title": "HomeMind P0 safety alert",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "trace_id", "alert_id", "source_node_id",
+    "alert_type", "zone", "severity", "summary", "evidence", "raised_at_ms",
+    "automatic_actions"
+  ],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "alert_id": { "type": "string", "format": "uuid" },
+    "source_node_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "alert_type": { "enum": ["fire", "gas", "intrusion", "fall", "device_fault", "manual_test"] },
+    "zone": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "severity": { "const": "p0" },
+    "summary": { "type": "string", "minLength": 1, "maxLength": 256 },
+    "evidence": { "type": "object" },
+    "raised_at_ms": { "type": "integer", "minimum": 0 },
+    "automatic_actions": { "type": "array", "items": { "type": "object" } }
+  }
+}

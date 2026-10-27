@@ -1,0 +1,51 @@
+{
+  "source": "ID 정의표(2026-09-03) + 전장 확정안 v13 + contracts/pfn.v1/device-registry.json v3, 2026-10-21",
+  "registry": "contracts/pfn.v1/device-registry.json",
+  "compute_nodes": [
+    {"label": "RPiA", "id": "NODE-RPI4-01", "os": "LG_AI_Native_OS_Headless", "role": "homemind_core_mqtt_sqlite"},
+    {"label": "RPiB", "id": "NODE-RPI4-02", "os": "Ubuntu", "role": "octopus_klipper_host_not_connected_to_homemind"},
+    {"label": "RPiC", "id": "NODE-RPI5-01", "os": "LG_AI_Native_OS_Video", "role": "ui_flutter_and_exaone_llm"},
+    {"label": "RPiD", "id": "NODE-RPI5-02", "os": "LG_AI_Native_OS_Video", "role": "perception_stt_yamnet_vision_context_fusion"}
+  ],
+  "controllers": [
+    {"type": "ESP32", "id": "CTRL-ESP32-ACT-01", "loads": ["MG90S", "FAN"]},
+    {"type": "ESP8266", "id": "CTRL-ESP8266-LED-01", "loads": ["LED"]},
+    {"type": "Octopus", "id": "CTRL-OCTOPUS-01", "loads": ["XY_DOF_ROBOT"]}
+  ],
+  "hardware": [
+    {"type": "LED", "name": "거실 조명", "id": "LED-LIVING-01", "controller": "CTRL-ESP8266-LED-01", "channel": "조명", "pin": "D7", "zone": "COMMON", "behavior": "on_off_single_red"},
+    {"type": "MG90S", "name": "현관문", "id": "SERVO-DOOR-01", "controller": "CTRL-ESP32-ACT-01", "channel": "door1", "pin": "GPIO13", "zone": "ENTRANCE", "behavior": "open_close"},
+    {"type": "MG90S", "name": "화장실문", "id": "SERVO-DOOR-02", "controller": "CTRL-ESP32-ACT-01", "channel": "door2", "pin": "GPIO25", "zone": "BATHROOM", "behavior": "open_close"},
+    {"type": "MG90S", "name": "창문", "id": "SERVO-WINDOW-01", "controller": "CTRL-ESP32-ACT-01", "channel": "wind1", "pin": "GPIO26", "zone": "COMMON", "behavior": "open_close"},
+    {"type": "FAN", "name": "화장실 환기팬", "id": "FAN-01", "controller": "CTRL-ESP32-ACT-01", "channel": "pan1", "pin": "GPIO32", "zone": "BATHROOM", "behavior": "on_off_pending_pwm_test"},
+    {"type": "LED", "name": "세탁기 표시", "id": "LED-WASHER-01", "controller": "CTRL-ESP8266-LED-01", "channel": "세탁기", "pin": "D1", "zone": "COMMON", "behavior": "simulated_operation_state_blink_quiet"},
+    {"type": "LED", "name": "에어컨 표시", "id": "LED-AIRCON-01", "controller": "CTRL-ESP8266-LED-01", "channel": "에어컨", "pin": "D2", "zone": "COMMON", "behavior": "simulated_operation_state_blink_quiet"},
+    {"type": "LED", "name": "TV 표시", "id": "LED-TV-01", "controller": "CTRL-ESP8266-LED-01", "channel": "TV", "pin": "D5", "zone": "COMMON", "behavior": "simulated_operation_state_blink_mute"},
+    {"type": "LED", "name": "노트북 표시", "id": "LED-LAPTOP-01", "controller": "CTRL-ESP8266-LED-01", "channel": "노트북", "pin": "D6", "zone": "DESK", "behavior": "function_disabled"},
+    {"type": "USB_MIC", "name": "음성 인식", "id": "MIC-INDOOR-01", "controller": "NODE-RPI5-02", "channel": "마이크 / 음원 분석", "pin": "USB", "zone": "WHOLE_HOME", "behavior": "local_audio_input_no_direction"},
+    {"type": "USB_WEBCAM", "name": "내부 카메라", "id": "CAM-INDOOR-01", "controller": "NODE-RPI5-02", "channel": "내부", "pin": "USB3", "zone": "WHOLE_HOME", "behavior": "local_zone_presence"},
+    {"type": "CAMERA_MODULE_3", "name": "외부 카메라", "id": "CAM-OUTDOOR-01", "controller": "NODE-RPI5-02", "channel": "외부", "pin": "CSI CAM/DISP 0", "zone": "OUTDOOR", "behavior": "local_outdoor_presence"},
+    {"type": "NEMA17", "name": "X축 이동", "id": "MOTOR-XY-X-01", "controller": "CTRL-OCTOPUS-01", "channel": "x", "pin": "MOTOR0", "zone": null, "behavior": "move_figure_x"},
+    {"type": "NEMA17", "name": "Y축 이동", "id": "MOTOR-XY-Y-01", "controller": "CTRL-OCTOPUS-01", "channel": "y", "pin": "MOTOR1", "zone": null, "behavior": "move_figure_y"},
+    {"type": "OPTICAL_SENSOR", "name": "X축 원점", "id": "SENSOR-HOME-X-01", "controller": "CTRL-OCTOPUS-01", "channel": "x원점센서", "pin": "J27 PG6", "zone": null, "behavior": "home_x"},
+    {"type": "OPTICAL_SENSOR", "name": "Y축 원점", "id": "SENSOR-HOME-Y-01", "controller": "CTRL-OCTOPUS-01", "channel": "y원점센서", "pin": "J29 PG9", "zone": null, "behavior": "home_y"}
+  ],
+  "logical_zones": ["BED", "DESK", "BATHROOM", "ENTRANCE", "COMMON", "OUTDOOR", "WHOLE_HOME"],
+  "zone_map": "contracts/pfn.v1/ai-action-map.json zone_map (COMMON -> living, WHOLE_HOME -> all)",
+  "fan_product": {
+    "name": "12V 4010 2핀 팬",
+    "quantity": 1,
+    "voltage": "12V",
+    "driver": "D4184 MOSFET 모듈, PWM 입력 GPIO32, 플라이백 1N5819",
+    "native_control": "power on/off",
+    "pwm_levels": "enable only after MOSFET PWM hardware validation"
+  },
+  "notes": [
+    "침대와 책상 구역의 실제 카메라 좌표는 모형 완성 후 보정한다.",
+    "NODE-RPI5-02는 인식(STT, YAMNet, 부분 인텐트, 비전, context-fusion), NODE-RPI5-01은 Flutter UI와 EXAONE, NODE-RPI4-01은 HomeMind core를 담당한다.",
+    "NODE-RPI4-02는 Octopus 전용 Klipper 호스트이며 HomeMind와 연동하지 않는다.",
+    "일반 조명(LIGHT)은 LED-LIVING-01(ESP8266 D7, R 단색)이다.",
+    "서보 열림·닫힘 각도는 registry positions의 임시값(닫힘 0, 열림 90, calibrated=false)이며 모형에서 보정한다.",
+    "LED-GUIDE-01, SERVO-BED-CURTAIN-01은 공식 ID만 있고 배선되지 않았다. FND 3개는 배선 미정이다."
+  ]
+}

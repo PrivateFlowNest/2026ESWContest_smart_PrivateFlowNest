@@ -1,0 +1,27 @@
+# HomeMind 7-inch UI (NODE-RPI5-01). The Flutter bundle in /data/share/homemind/ui runs as the Atlas
+# app com.atlas.app.homemind_ui: the Atlas window manager shows only apps started by the Atlas app
+# manager (real Pi5-01, 2026-10-23). This unit copies the bundle and settings into the app and keeps
+# the app running (homemind-ui-atlas.sh). Stopping the unit stops the app.
+[Unit]
+Description=HomeMind 7-inch UI (Atlas app com.atlas.app.homemind_ui)
+After=app-manager.service window-manager.service
+Wants=app-manager.service window-manager.service
+ConditionPathExists=/data/share/homemind/config/ui.env
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+# root: reads the 0640 root:network password file, writes into the app's folders (owned by the
+# app's account) and calls com.atlas.AppManager1 on the system bus.
+ExecStart=/data/share/homemind/ui/homemind-ui-atlas.sh supervise
+ExecStopPost=/data/share/homemind/ui/homemind-ui-atlas.sh stop
+Restart=always
+RestartSec=5s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-task-update.schema.json",
+  "title": "HomeMind Pi4 task update",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "trace_id", "source_node_id", "published_at_ms", "task"
+  ],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "source_node_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "published_at_ms": { "type": "integer", "minimum": 0 },
+    "task": {
+      "type": "object",
+      "required": [
+        "task_id", "intent", "target_device", "priority", "safety_level", "state",
+        "interruptible", "resume_policy", "confidence", "parameters", "revision",
+        "action_token", "resume_allowed"
+      ],
+      "properties": {
+        "failure": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["code", "message", "occurred_at_ms", "retry_allowed"],
+          "properties": {
+            "code": { "type": "string", "minLength": 1, "maxLength": 64 },
+            "message": { "type": "string", "minLength": 1, "maxLength": 512 },
+            "occurred_at_ms": { "type": "integer", "minimum": 0 },
+            "retry_allowed": { "type": "boolean" }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "broker": {"host": "127.0.0.1", "port": 1883, "username": null, "password_file": null, "keepalive": 30},
+  "perception_node_id": "NODE-RPI5-02",
+  "simulated": true,
+
+  "vision": {
+    "model_path": "services/edge-ai/vision-presence/artifacts/smoke-yolox-nano-figure.onnx",
+    "model_version": "yolox-nano-416-figure-smoke",
+    "threads": 2,
+    "score_threshold": 0.25,
+    "nms_threshold": 0.45,
+    "figure_class_ids": [0],
+    "interval_ms": 200,
+    "confirmation_count": 3,
+    "lost_count": 3,
+    "republish_seconds": 10,
+    "presence_fifo": null,
+    "cameras": [
+      {
+        "camera_id": "CAM-INDOOR-01",
+        "zones": "native/services/homemind-vision/config/zones.indoor.example.json",
+        "source": {"type": "images", "path": "services/edge-ai/vision-presence/data/smoke-dataset/images/surrogate/CAM-INDOOR-01"}
+      },
+      {
+        "camera_id": "CAM-OUTDOOR-01",
+        "zones": "native/services/homemind-vision/config/zones.outdoor.example.json",
+        "source": {"type": "images", "path": "services/edge-ai/vision-presence/data/smoke-dataset/images/surrogate/CAM-OUTDOOR-01"}
+      }
+    ]
+  }
+}

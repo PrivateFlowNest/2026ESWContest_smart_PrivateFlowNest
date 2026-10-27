@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "windows": 4,
+  "window_seconds": 4.0,
+  "activity_prediction_counts": {
+    "TV_MEDIA": 2,
+    "IN_PERSON_MEETING": 2
+  },
+  "fused_context_counts": {
+    "UNKNOWN": 1,
+    "TV_MEDIA": 3
+  },
+  "quiet_required_ever": false,
+  "transitions": [
+    {
+      "window": 2,
+      "decision_seconds": 5.0,
+      "transition": "UPDATED",
+      "context_type": "TV_MEDIA",
+      "quiet_required": false
+    }
+  ],
+  "latency_ms": {
+    "cold_first": 220.944,
+    "all_mean": 69.811,
+    "all_p95": 220.944,
+    "warm_mean": 19.433,
+    "warm_p95": 20.71
+  },
+  "privacy": {
+    "raw_audio_persisted": false,
+    "transcript_persisted": false,
+    "image_persisted": false
+  }
+}

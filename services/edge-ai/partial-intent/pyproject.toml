@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "homemind-partial-intent"
+version = "0.1.0"
+description = "Non-executable streaming Korean partial-intent classifier for HomeMind"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "jsonschema>=4.23,<5",
+  "numpy>=1.26,<3",
+  "onnx>=1.17,<2",
+  "onnxruntime>=1.20,<2",
+  "scikit-learn>=1.5,<2"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+homemind-partial-intent = "homemind_partial_intent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

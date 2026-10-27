@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-device-telemetry.schema.json",
+  "title": "HomeMind device telemetry",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version", "event_id", "trace_id", "node_id", "seq",
+    "sent_at_ms", "uptime_ms", "sensor_ready", "readings", "reading_sources"
+  ],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "node_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "seq": { "type": "integer", "minimum": 0 },
+    "sent_at_ms": { "type": "integer", "minimum": 0 },
+    "uptime_ms": { "type": "integer", "minimum": 0 },
+    "sensor_ready": { "type": "boolean" },
+    "simulated_value": { "type": "number" },
+    "led_on": { "type": "boolean" },
+    "reading_sources": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "minLength": 1, "maxLength": 64 }
+    },
+    "readings": {
+      "type": "object",
+      "additionalProperties": {
+        "type": ["number", "integer", "boolean", "string", "null"]
+      }
+    }
+  }
+}

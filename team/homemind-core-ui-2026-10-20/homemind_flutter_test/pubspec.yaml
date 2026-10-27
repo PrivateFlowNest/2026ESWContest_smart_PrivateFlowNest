@@ -1,0 +1,28 @@
+name: homemind_flutter_test
+description: HomeMind 1024x600 Flutter UI prototype for laptop and Atlas Pi5.
+publish_to: none
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  dbus: ^0.7.12
+  flutter:
+    sdk: flutter
+  mqtt_client: ^10.11.11
+  qr: ^3.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  crypto: ^3.0.6  # phone_pairing_live_test: HTTPS certificate pinning like the phone app
+
+flutter:
+  uses-material-design: true
+  # Bundled so Korean renders offline (no fonts.gstatic.com at the venue). OFL 1.1, see assets/fonts.
+  fonts:
+    - family: NotoSansKR
+      fonts:
+        - asset: assets/fonts/NotoSansKR-VariableFont_wght.ttf

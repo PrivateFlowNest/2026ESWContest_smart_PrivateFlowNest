@@ -1,0 +1,78 @@
+{
+  "schema_version": "pfn.v1",
+  "map_version": 1,
+  "notes": [
+    "AI vocabulary (rpi5-internal/task-proposal.schema.json) to core commands. Used by the NODE-RPI5-02 voice parser and the NODE-RPI5-01 EXAONE guard to build device_control task requests or scenario intents.",
+    "enabled=false entries are closed (fail-closed): the AI side answers UNSUPPORTED and sends nothing to core.",
+    "position_ref resolves to device-registry positions[open|closed]. parameter_from copies a task-proposal parameter into the command parameter.",
+    "LED single colour: set_switch is the power state (steady red); set_color pattern=blink is the quiet overlay; pattern=steady clears the overlay and shows the power state again."
+  ],
+  "zone_map": {
+    "BED": "bed",
+    "DESK": "desk",
+    "BATHROOM": "bathroom",
+    "ENTRANCE": "entrance",
+    "COMMON": "living",
+    "OUTDOOR": "outdoor",
+    "WHOLE_HOME": "all",
+    "UNKNOWN": "unknown"
+  },
+  "devices": {
+    "LIGHT": { "device_id": "LED-LIVING-01", "enabled": true },
+    "ENTRY_DOOR": { "device_id": "SERVO-DOOR-01", "enabled": true },
+    "BATHROOM_DOOR": { "device_id": "SERVO-DOOR-02", "enabled": false, "reason": "bathroom door removed from the model (2026-10-25)" },
+    "WINDOW": { "device_id": "SERVO-WINDOW-01", "enabled": true },
+    "VENTILATION_FAN": { "device_id": "FAN-01", "enabled": true },
+    "TV": { "device_id": "LED-TV-01", "number_device_id": "FND-TV-01", "enabled": false, "reason": "not in the model (2026-10-25)" },
+    "AIR_CONDITIONER": { "device_id": "LED-AIRCON-01", "number_device_id": "FND-AIRCON-01", "enabled": true },
+    "WASHER": { "device_id": "LED-WASHER-01", "number_device_id": "FND-WASHER-01", "enabled": false, "reason": "not in the model (2026-10-25)" },
+    "LAPTOP": { "device_id": "LED-LAPTOP-01", "enabled": false, "reason": "not in the model (2026-10-25)" },
+    "NOTIFICATION": { "device_id": null, "enabled": false, "reason": "no hardware; shown in UI only" },
+    "ALL_QUIET_DEVICES": { "device_id": null, "enabled": true, "reason": "scenario quiet_mode_on/off" },
+    "AIR_PURIFIER": { "device_id": null, "enabled": false, "reason": "no hardware" },
+    "ROBOT_VACUUM": { "device_id": null, "enabled": false, "reason": "no hardware" }
+  },
+  "actions": [
+    { "ai_device": "LIGHT", "ai_action": "TURN_ON", "kind": "device_control", "command": "set_switch", "parameters": { "on": true }, "enabled": true },
+    { "ai_device": "LIGHT", "ai_action": "TURN_OFF", "kind": "device_control", "command": "set_switch", "parameters": { "on": false }, "enabled": true },
+    { "ai_device": "LIGHT", "ai_action": "SET_BRIGHTNESS", "kind": "device_control", "command": "set_level", "enabled": false, "pending_decision": "single-colour LED is on/off only" },
+
+    { "ai_device": "ENTRY_DOOR", "ai_action": "OPEN", "kind": "device_control", "command": "set_position", "position_ref": "open", "enabled": true },
+    { "ai_device": "ENTRY_DOOR", "ai_action": "CLOSE", "kind": "device_control", "command": "set_position", "position_ref": "closed", "enabled": true },
+    { "ai_device": "BATHROOM_DOOR", "ai_action": "OPEN", "kind": "device_control", "command": "set_position", "position_ref": "open", "enabled": false, "pending_decision": "bathroom door removed from the model (2026-10-25)" },
+    { "ai_device": "BATHROOM_DOOR", "ai_action": "CLOSE", "kind": "device_control", "command": "set_position", "position_ref": "closed", "enabled": false, "pending_decision": "bathroom door removed from the model (2026-10-25)" },
+    { "ai_device": "WINDOW", "ai_action": "OPEN", "kind": "device_control", "command": "set_position", "position_ref": "open", "enabled": true },
+    { "ai_device": "WINDOW", "ai_action": "CLOSE", "kind": "device_control", "command": "set_position", "position_ref": "closed", "enabled": true },
+
+    { "ai_device": "VENTILATION_FAN", "ai_action": "TURN_ON", "kind": "device_control", "command": "set_switch", "parameters": { "on": true }, "enabled": true },
+    { "ai_device": "VENTILATION_FAN", "ai_action": "TURN_OFF", "kind": "device_control", "command": "set_switch", "parameters": { "on": false }, "enabled": true },
+    { "ai_device": "VENTILATION_FAN", "ai_action": "SET_LEVEL", "kind": "device_control", "command": "set_level", "enabled": false, "pending_decision": "fan PWM not verified on hardware" },
+
+    { "ai_device": "TV", "ai_action": "TURN_ON", "kind": "device_control", "command": "set_switch", "parameters": { "on": true }, "enabled": false, "pending_decision": "not in the model (2026-10-25)" },
+    { "ai_device": "TV", "ai_action": "TURN_OFF", "kind": "device_control", "command": "set_switch", "parameters": { "on": false }, "enabled": false, "pending_decision": "not in the model (2026-10-25)" },
+    { "ai_device": "TV", "ai_action": "MUTE", "kind": "device_control", "command": "set_color", "parameters": { "color": "red", "pattern": "blink" }, "enabled": false, "pending_decision": "not in the model (2026-10-25)" },
+    { "ai_device": "TV", "ai_action": "UNMUTE", "kind": "device_control", "command": "set_color", "parameters": { "color": "red", "pattern": "steady" }, "enabled": false, "pending_decision": "not in the model (2026-10-25)" },
+    { "ai_device": "TV", "ai_action": "SET_VOLUME", "kind": "device_control", "command": "set_number", "target": "number_device_id", "parameter_from": { "volume": "value" }, "enabled": false, "pending_decision": "FND wiring" },
+    { "ai_device": "TV", "ai_action": "INCREASE_VOLUME", "kind": "device_control", "command": "set_number", "target": "number_device_id", "enabled": false, "pending_decision": "FND wiring" },
+    { "ai_device": "TV", "ai_action": "DECREASE_VOLUME", "kind": "device_control", "command": "set_number", "target": "number_device_id", "enabled": false, "pending_decision": "FND wiring" },
+
+    { "ai_device": "AIR_CONDITIONER", "ai_action": "TURN_ON", "kind": "device_control", "command": "set_switch", "parameters": { "on": true }, "enabled": true },
+    { "ai_device": "AIR_CONDITIONER", "ai_action": "TURN_OFF", "kind": "device_control", "command": "set_switch", "parameters": { "on": false }, "enabled": true },
+    { "ai_device": "AIR_CONDITIONER", "ai_action": "SET_QUIET_MODE", "kind": "device_control", "command": "set_color", "parameters": { "color": "red", "pattern": "blink" }, "enabled": true },
+    { "ai_device": "AIR_CONDITIONER", "ai_action": "SET_TEMPERATURE", "kind": "device_control", "command": "set_number", "target": "number_device_id", "parameter_from": { "temperature_celsius": "value" }, "enabled": false, "pending_decision": "FND wiring" },
+    { "ai_device": "AIR_CONDITIONER", "ai_action": "SET_LEVEL", "kind": "device_control", "command": "set_number", "target": "number_device_id", "parameter_from": { "level": "value" }, "enabled": false, "pending_decision": "FND wiring" },
+
+    { "ai_device": "WASHER", "ai_action": "DEFER_NOTIFICATION", "kind": "device_control", "command": "set_color", "parameters": { "color": "red", "pattern": "blink" }, "enabled": false, "pending_decision": "not in the model (2026-10-25)" },
+    { "ai_device": "WASHER", "ai_action": "RESUME_NOTIFICATION", "kind": "device_control", "command": "set_color", "parameters": { "color": "red", "pattern": "steady" }, "enabled": false, "pending_decision": "not in the model (2026-10-25)" },
+
+    { "ai_device": "ALL_QUIET_DEVICES", "ai_action": "SET_QUIET_MODE", "kind": "scenario", "intent": "quiet_mode_on", "enabled": true },
+    { "ai_device": "ALL_QUIET_DEVICES", "ai_action": "RESUME", "kind": "scenario", "intent": "quiet_mode_off", "enabled": true },
+
+    { "ai_device": "NOTIFICATION", "ai_action": "MUTE", "kind": "unsupported", "enabled": false, "pending_decision": "no hardware" },
+    { "ai_device": "NOTIFICATION", "ai_action": "UNMUTE", "kind": "unsupported", "enabled": false, "pending_decision": "no hardware" },
+    { "ai_device": "NOTIFICATION", "ai_action": "DEFER_NOTIFICATION", "kind": "unsupported", "enabled": false, "pending_decision": "no hardware" },
+    { "ai_device": "NOTIFICATION", "ai_action": "RESUME_NOTIFICATION", "kind": "unsupported", "enabled": false, "pending_decision": "no hardware" },
+
+    { "ai_device": "*", "ai_action": "QUERY_STATUS", "kind": "query", "enabled": true }
+  ]
+}

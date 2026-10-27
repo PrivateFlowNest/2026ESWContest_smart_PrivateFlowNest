@@ -1,0 +1,7 @@
+# qrcodegen (Project Nayuki QR Code generator, C++)
+
+- Source: https://github.com/nayuki/QR-Code-generator tag `v1.8.0`, files `cpp/qrcodegen.hpp`, `cpp/qrcodegen.cpp`, unmodified
+- License: MIT (see the header of `qrcodegen.hpp`: "Copyright (c) Project Nayuki. (MIT License)")
+- SHA-256: `qrcodegen.hpp` b779c3b156cf7a57ce789d6fee4fc991ccc2913774d26c909d22bb8f26b2a793,
+  `qrcodegen.cpp` 1f3b3fcdac6954c32cf583ccd02ec9b5901f756a38c461acedc70be4a77d3757
+- Used by `homemind-mobile-api --print-pairing-qr` to draw the pairing QR in the device terminal (no qrencode on the device).

@@ -1,0 +1,25 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "5f0e0000-0000-4000-8000-00000000001f",
+  "trace_id": "5f0e0000-0000-4000-8000-000000000001",
+  "task_id": "5f0e0000-0000-4000-8000-00000000001e",
+  "source_node_id": "NODE-RPI5-01",
+  "intent": "device_control",
+  "target_device": "LED-LIVING-01",
+  "priority": 50,
+  "safety_level": "normal",
+  "interruptible": true,
+  "resume_policy": "never",
+  "confidence": 0.9,
+  "parameters": {
+    "target_device_id": "LED-LIVING-01",
+    "action": "set_switch",
+    "parameters": {
+      "on": true
+    },
+    "origin": "llm",
+    "ai_device": "LIGHT",
+    "ai_action": "TURN_ON"
+  },
+  "requested_at_ms": 1792560000390
+}

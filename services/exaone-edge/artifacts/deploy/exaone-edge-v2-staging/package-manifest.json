@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "package_version": "exaone-edge-v2-q4-k-m",
+  "created_at": "2026-10-21T13:42:58.300575+00:00",
+  "target": {
+    "node_id": "NODE-RPI5-01",
+    "device": "Raspberry Pi 5",
+    "architecture": "aarch64",
+    "model_runtime": "llama.cpp",
+    "concurrency": 1
+  },
+  "activation": {
+    "allowed": false,
+    "status": "STAGING_ONLY",
+    "blockers": [
+      "cryptographic_signature_missing",
+      "pi5_latency_and_thermal_test_pending",
+      "real_pi4_esp_ack_test_pending"
+    ]
+  },
+  "acceptance": {
+    "fresh_cases": 100,
+    "contract_success_rate": 1.0,
+    "expectation_success_rate": 1.0,
+    "model_first_pass_success_rate": 1.0,
+    "pc_e2e_consecutive_successes": 10
+  },
+  "signature": {
+    "status": "UNSIGNED",
+    "required_before_activation": true
+  },
+  "privacy": {
+    "raw_audio_included": false,
+    "raw_video_included": false,
+    "transcripts_included": false
+  },
+  "rollback": {
+    "mode": "GUARD_ONLY_SAFE_FALLBACK",
+    "procedure": "stop llama.cpp, keep deterministic safety guards active, return CLARIFY for commands without a guard, restore previous signed bundle, verify health"
+  },
+  "files": [
+    {
+      "role": "q4_k_m_model",
+      "path": "models/exaone-1.2b-q4_k_m.gguf",
+      "bytes": 812437824,
+      "sha256": "dee9aacb73f6c8ff98af7fea01d23b2eb60f3fefa3a323e967062fbb65e9e24d"
+    },
+    {
+      "role": "device_capabilities",
+      "path": "config/device-capabilities.json",
+      "bytes": 2834,
+      "sha256": "1391fe2cb5be7f4758f21c806e0321842099903010a7e0c0e7145f7bc4ae62fa"
+    },
+    {
+      "role": "spreadsheet_hardware_inventory",
+      "path": "config/hardware-inventory.json",
+      "bytes": 5310,
+      "sha256": "13656a4192646606337306c89f20fe94158c53424c6ec89ff993184954fc5386"
+    },
+    {
+      "role": "fresh_acceptance_report",
+      "path": "reports/acceptance.json",
+      "bytes": 65666,
+      "sha256": "839b166853f2007879da9f7bddd5c0854f4effbee0453b54b835b0b117f1a4cd"
+    },
+    {
+      "role": "pc_e2e_report",
+      "path": "reports/pc-e2e.json",
+      "bytes": 7530,
+      "sha256": "06f9d88dcedd41aa5d5ca6532766b7ce361e7f6dc394846032a65a3ecacbf89b"
+    },
+    {
+      "role": "json_schema",
+      "path": "contracts/task-proposal.schema.json",
+      "bytes": 2711,
+      "sha256": "4a9e2315924ae400288107d8afec3a05b0587f6baf1787c57193f1d0e0230a3c"
+    },
+    {
+      "role": "json_schema",
+      "path": "contracts/activity-context.schema.json",
+      "bytes": 1258,
+      "sha256": "483036d3f357b1038e7893e4f828632ca91a7a33f3eb7ee8296aa2ee831a4f50"
+    },
+    {
+      "role": "json_schema",
+      "path": "contracts/llm-request.schema.json",
+      "bytes": 2844,
+      "sha256": "747b823c1d735acfd53dfbb7c169f6c7a03826dd21499a6526dc9883fbf54565"
+    },
+    {
+      "role": "json_schema",
+      "path": "contracts/llm-result.schema.json",
+      "bytes": 2894,
+      "sha256": "3b422af4082de94c5fb41d2393b5a375eb17d6e880f885948e64d9f0337e375b"
+    },
+    {
+      "role": "json_schema",
+      "path": "contracts/task-request.schema.json",
+      "bytes": 1379,
+      "sha256": "5a4ce1d3dd5a1c2f917e77b6b4d26d3fa080becc364a3c997d2bf2d30755ccf0"
+    },
+    {
+      "role": "json_schema",
+      "path": "contracts/device-control.schema.json",
+      "bytes": 2463,
+      "sha256": "f98c6da7dfacb47e9effe5e4dfc0b4b9ec2025a62f7a29d2af0058f74e25443e"
+    },
+    {
+      "role": "json_schema",
+      "path": "contracts/ai-action-map.json",
+      "bytes": 7597,
+      "sha256": "01a5b40b374ef27d33d94e1cd6420ca5f281c4c47f855a159d408ca8a10171e6"
+    },
+    {
+      "role": "runtime_wheel",
+      "path": "wheels/homemind_exaone_edge-0.1.0-py3-none-any.whl",
+      "bytes": 29971,
+      "sha256": "c42ae28ab234e3c5bf130cbaa0f0c166abf6fbbeebdfe4ac66a30dcdec6928a4"
+    }
+  ]
+}

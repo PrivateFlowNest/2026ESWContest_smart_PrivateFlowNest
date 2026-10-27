@@ -1,0 +1,7 @@
+Package: homemind-rpi5-ui
+Version: @VERSION@
+Architecture: aarch64
+Maintainer: HomeMind TaskFlow Team
+Section: apps
+Priority: optional
+Description: HomeMind NODE-RPI5-01 7-inch UI (Flutter, open-source flutter-elinux Wayland bundle)

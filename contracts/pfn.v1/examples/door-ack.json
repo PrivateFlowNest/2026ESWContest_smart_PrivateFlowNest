@@ -1,0 +1,16 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "55555555-5555-4555-8555-555555555555",
+  "trace_id": "22222222-2222-4222-8222-222222222222",
+  "command_id": "44444444-4444-4444-8444-444444444444",
+  "node_id": "CTRL-ESP32-ACT-01",
+  "target_device_id": "SERVO-DOOR-01",
+  "ok": true,
+  "duplicate": false,
+  "status": "succeeded",
+  "executed_at_ms": 1788278400400,
+  "result": {
+    "position_degrees": 90
+  },
+  "error": null
+}

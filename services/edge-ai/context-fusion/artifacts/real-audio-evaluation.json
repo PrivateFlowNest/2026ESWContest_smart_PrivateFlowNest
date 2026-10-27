@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "model_version": "yamnet-temporal-logreg-v0.6.0+context-fusion-rules-v1",
+  "samples": 25,
+  "exact_context_accuracy": 0.52,
+  "quiet_required": {
+    "positive_samples": 10,
+    "negative_samples": 15,
+    "recall": 0.4,
+    "false_positive_rate": 0.1333
+  },
+  "activation_delay_seconds": {
+    "count": 4,
+    "mean": 7.0,
+    "p95": 8.0
+  },
+  "confusion_matrix": {
+    "labels": [
+      "IN_PERSON_MEETING",
+      "SELF_TALK",
+      "TV_MEDIA",
+      "UNKNOWN",
+      "ZOOM_SPEAKER"
+    ],
+    "values": [
+      [
+        3,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "inference_latency_ms": {
+    "windows": 118,
+    "mean": 18.547,
+    "p95": 20.461
+  },
+  "coverage": {
+    "learned_activity_labels": [
+      "IN_PERSON_MEETING",
+      "SELF_TALK",
+      "TV_MEDIA",
+      "UNKNOWN",
+      "ZOOM_SPEAKER"
+    ],
+    "rule_or_auxiliary_labels": [
+      "QUIET",
+      "ZOOM_HEADPHONES"
+    ]
+  },
+  "privacy": {
+    "raw_audio_in_report": false,
+    "file_paths_in_report": false,
+    "transcripts_in_report": false
+  },
+  "selection": {
+    "split": "validation",
+    "per_label": 5,
+    "seed": 42,
+    "available_after_duration_filter": {
+      "skipped_missing": 0,
+      "IN_PERSON_MEETING": 1000,
+      "SELF_TALK": 413,
+      "TV_MEDIA": 1000,
+      "UNKNOWN": 1000,
+      "ZOOM_SPEAKER": 808
+    }
+  }
+}

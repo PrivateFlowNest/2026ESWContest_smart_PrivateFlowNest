@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "event_id": "ac-0001",
+  "trace_id": "trace-0002",
+  "timestamp": "2026-10-21T13:20:00.000Z",
+  "source": "pi5.audio-context",
+  "source_node_id": "NODE-RPI5-02",
+  "event_type": "ACTIVITY_CONTEXT",
+  "confidence": 0.84,
+  "model_version": "yamnet-temporal-cost-ensemble-v0.8.0-50-50",
+  "evidence": [
+    "SPEECH_RATIO_HIGH"
+  ],
+  "context_type": "ZOOM_SPEAKER",
+  "policy_tags": [
+    "QUIET_REQUIRED"
+  ],
+  "valid_until": "2026-10-21T13:20:30.000Z"
+}

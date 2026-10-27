@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-ui-action.schema.json",
+  "title": "HomeMind user task action",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "trace_id", "task_id", "client_id",
+    "action", "expected_revision", "action_token", "sent_at_ms"
+  ],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "task_id": { "type": "string", "format": "uuid" },
+    "client_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "action": { "enum": ["approve", "reject", "cancel", "resume"] },
+    "expected_revision": { "type": "integer", "minimum": 1 },
+    "action_token": { "type": "string", "minLength": 16, "maxLength": 256 },
+    "reason": { "type": "string", "maxLength": 256 },
+    "sent_at_ms": { "type": "integer", "minimum": 0 }
+  }
+}

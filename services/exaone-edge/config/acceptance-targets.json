@@ -1,0 +1,25 @@
+{
+  "overall": {
+    "contract_success_rate": 1.0,
+    "expectation_success_rate": 0.95,
+    "model_first_pass_success_rate": 0.95
+  },
+  "categories": {
+    "command": {
+      "expectation_success_rate": 0.95,
+      "contract_success_rate": 1.0
+    },
+    "context": {
+      "expectation_success_rate": 0.95,
+      "contract_success_rate": 1.0
+    },
+    "no_action": {
+      "expectation_success_rate": 0.95,
+      "contract_success_rate": 1.0
+    },
+    "safety": {
+      "expectation_success_rate": 1.0,
+      "contract_success_rate": 1.0
+    }
+  }
+}

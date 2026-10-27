@@ -1,0 +1,38 @@
+[Unit]
+Description=HomeMind perception (NODE-RPI5-02): microphone -> voice parser / audio context -> MQTT
+After=homemind-whisper.service network-online.target sound.target
+Wants=homemind-whisper.service network-online.target
+ConditionPathExists=/data/share/homemind/config/rpi5-02.json
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=network
+Group=network
+# ALSA capture. [판단] the "audio" group and /dev/snd naming are checked on the device (P9).
+SupplementaryGroups=audio
+Environment=LD_LIBRARY_PATH=/data/share/homemind/lib
+# Push-to-talk FIFO (`echo start > /run/homemind/ptt`; the 7-inch UI uses pfn/v1/ai/voice/listen) and the camera
+# presence FIFO from homemind-vision. Shared with homemind-vision.service; Preserve keeps the FIFOs when either restarts.
+RuntimeDirectory=homemind
+RuntimeDirectoryMode=0770
+RuntimeDirectoryPreserve=yes
+ExecStart=/data/share/homemind/bin/homemind-perception --config /data/share/homemind/config/rpi5-02.json
+Restart=always
+RestartSec=3s
+NoNewPrivileges=true
+DevicePolicy=closed
+DeviceAllow=char-alsa rw
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadOnlyPaths=/data/share/homemind
+LockPersonality=true
+RestrictSUIDSGID=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

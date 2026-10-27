@@ -1,0 +1,19 @@
+{
+  "root": "E:\\HomeMind-Datasets\\raw\\zenodo\\10378145_tau_sound_privacy\\extracted",
+  "metadata": "E:\\HomeMind-Datasets\\raw\\zenodo\\10378145_tau_sound_privacy\\metadata.csv",
+  "manifest": "C:\\Users\\alexi\\Desktop\\Workspace\\ESW\\services\\edge-ai\\audio-context\\data\\tau-doorbell.csv",
+  "selected_count": 192,
+  "counts": {
+    "DOORBELL/train": 155,
+    "DOORBELL/validation": 37
+  },
+  "unique_fsd50k_groups": 100,
+  "missing_audio_rows": 0,
+  "ambiguous_audio_stems": 0,
+  "eval_or_test_source_rows_excluded": 993,
+  "unsupported_event_rows_excluded": 4454,
+  "reference_split_overrides": 47,
+  "include_other": false,
+  "license": "CC-BY-NC-4.0",
+  "leakage_policy": "Reuse fsd50k:<sound-id> group IDs and reference splits; exclude all FSD50K evaluation-derived samples from this augmentation manifest."
+}

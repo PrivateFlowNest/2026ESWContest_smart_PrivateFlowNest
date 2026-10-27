@@ -1,0 +1,12 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "5f0e0000-0000-4000-8000-0000000000c1",
+  "request_id": "5f0e0000-0000-4000-8000-0000000000c0",
+  "source_node_id": "NODE-RPI5-01",
+  "target_node_id": "NODE-RPI4-01",
+  "client_id": "homemind-ui-7inch",
+  "action": "revoke",
+  "phone_id": "3f9a0c12",
+  "sent_at_ms": 1792560000000,
+  "expires_at_ms": 1792560005000
+}

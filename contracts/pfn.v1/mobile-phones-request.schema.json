@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-mobile-phones-request.schema.json",
+  "title": "HomeMind paired-phone list or unpair request from the 7-inch UI to the Mobile API",
+  "description": "NODE-RPI5-01 (UI 'phone connect' screen) to homemind-mobile-api on NODE-RPI4-01 (added 2026-10-25). action list: send the phones that hold a valid token. action revoke: unpair phone_id now, so its token is refused on the phone's next request and the phone shows the pairing QR gate again. The Mobile API answers on pfn/v1/mobile/phones/state with the same request_id. It ignores a request whose expires_at_ms has passed or whose request_id it has seen, so a press is never replayed after a reconnect. Carries no secret. Core does not subscribe.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "request_id", "source_node_id", "target_node_id", "client_id", "action",
+               "sent_at_ms", "expires_at_ms"],
+  "properties": {
+    "schema_version": {"const": "pfn.v1"},
+    "event_id": {"type": "string", "format": "uuid"},
+    "request_id": {"type": "string", "format": "uuid"},
+    "source_node_id": {"const": "NODE-RPI5-01"},
+    "target_node_id": {"const": "NODE-RPI4-01"},
+    "client_id": {"type": "string", "minLength": 1, "maxLength": 64},
+    "action": {"enum": ["list", "revoke"]},
+    "phone_id": {"type": "string", "pattern": "^[0-9a-f]{8}$", "description": "Token id from the state message (never the token)."},
+    "sent_at_ms": {"type": "integer", "minimum": 0},
+    "expires_at_ms": {"type": "integer", "minimum": 0},
+    "simulated": {"type": "boolean"}
+  },
+  "if": {"properties": {"action": {"const": "revoke"}}},
+  "then": {"required": ["phone_id"]},
+  "else": {"not": {"required": ["phone_id"]}}
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-privacy-set.schema.json",
+  "title": "HomeMind privacy mode request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "trace_id", "client_id", "mode", "sent_at_ms"],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "client_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "mode": { "enum": ["normal", "camera_blocked", "audio_blocked", "private"] },
+    "sent_at_ms": { "type": "integer", "minimum": 0 }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": "2.0",
+  "zones": ["BED", "DESK", "BATHROOM", "ENTRANCE", "COMMON", "OUTDOOR", "WHOLE_HOME"],
+  "devices": {
+    "LIGHT": {
+      "enabled": true,
+      "hardware_id": "LIGHT",
+      "zones": ["WHOLE_HOME"],
+      "actions": ["TURN_ON", "TURN_OFF", "SET_BRIGHTNESS", "QUERY_STATUS"]
+    },
+    "ENTRY_DOOR": {
+      "enabled": true,
+      "hardware_id": "SERVO-DOOR-01",
+      "zones": ["ENTRANCE"],
+      "actions": ["OPEN", "CLOSE", "QUERY_STATUS"]
+    },
+    "BATHROOM_DOOR": {
+      "enabled": true,
+      "hardware_id": "SERVO-DOOR-02",
+      "zones": ["BATHROOM"],
+      "actions": ["OPEN", "CLOSE", "QUERY_STATUS"]
+    },
+    "WINDOW": {
+      "enabled": true,
+      "hardware_id": "SERVO-WINDOW-01",
+      "zones": ["COMMON"],
+      "actions": ["OPEN", "CLOSE", "QUERY_STATUS"]
+    },
+    "VENTILATION_FAN": {
+      "enabled": true,
+      "hardware_id": "FAN-01",
+      "zones": ["BATHROOM", "COMMON"],
+      "actions": ["TURN_ON", "TURN_OFF", "QUERY_STATUS"]
+    },
+    "WASHER": {
+      "enabled": true,
+      "hardware_id": "LED-WASHER-01",
+      "zones": ["COMMON", "BATHROOM"],
+      "actions": ["QUERY_STATUS", "DEFER_NOTIFICATION", "RESUME_NOTIFICATION"]
+    },
+    "AIR_CONDITIONER": {
+      "enabled": true,
+      "hardware_id": "LED-AIRCON-01",
+      "zones": ["COMMON"],
+      "actions": ["TURN_ON", "TURN_OFF", "SET_LEVEL", "SET_TEMPERATURE", "SET_QUIET_MODE", "QUERY_STATUS"]
+    },
+    "TV": {
+      "enabled": true,
+      "hardware_id": "LED-TV-01",
+      "zones": ["COMMON"],
+      "actions": ["TURN_ON", "TURN_OFF", "SET_VOLUME", "INCREASE_VOLUME", "DECREASE_VOLUME", "MUTE", "UNMUTE", "QUERY_STATUS"]
+    },
+    "LAPTOP": {
+      "enabled": false,
+      "hardware_id": "LED-LAPTOP-01",
+      "zones": ["DESK"],
+      "actions": ["QUERY_STATUS"]
+    },
+    "NOTIFICATION": {
+      "enabled": true,
+      "hardware_id": null,
+      "zones": ["WHOLE_HOME"],
+      "actions": ["MUTE", "UNMUTE", "DEFER_NOTIFICATION", "RESUME_NOTIFICATION"]
+    },
+    "ALL_QUIET_DEVICES": {
+      "enabled": true,
+      "hardware_id": null,
+      "zones": ["WHOLE_HOME"],
+      "actions": ["SET_QUIET_MODE", "RESUME"]
+    },
+    "AIR_PURIFIER": {
+      "enabled": false,
+      "hardware_id": null,
+      "zones": ["COMMON"],
+      "actions": ["TURN_ON", "TURN_OFF", "SET_LEVEL", "SET_QUIET_MODE", "QUERY_STATUS"]
+    },
+    "ROBOT_VACUUM": {
+      "enabled": false,
+      "hardware_id": null,
+      "zones": ["COMMON"],
+      "actions": ["START", "PAUSE", "RESUME", "RETURN_TO_DOCK", "SET_QUIET_MODE", "QUERY_STATUS"]
+    }
+  }
+}

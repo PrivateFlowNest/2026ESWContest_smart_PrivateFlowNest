@@ -1,0 +1,7 @@
+Package: homemind-rpi5-perception
+Version: @VERSION@
+Architecture: aarch64
+Maintainer: HomeMind TaskFlow Team
+Section: services
+Priority: optional
+Description: HomeMind NODE-RPI5-02 perception: microphone, whisper.cpp STT, YAMNet context, voice parser (homemind-perception)

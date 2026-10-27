@@ -1,0 +1,17 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "00000000-0000-4000-8000-000000000501",
+  "trace_id": "00000000-0000-4000-8000-000000000502",
+  "request_id": "00000000-0000-4000-8000-000000000503",
+  "source_node_id": "NODE-RPI4-01",
+  "generated_at_ms": 1767225600000,
+  "tasks": [],
+  "devices": [],
+  "world_state": [],
+  "clock": {
+    "valid": false,
+    "boot_id": "00000000-0000-4000-8000-000000000504",
+    "uptime_ms": 125000,
+    "became_valid_at_ms": null
+  }
+}

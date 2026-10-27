@@ -1,0 +1,18 @@
+{
+  "input_rows": 6603,
+  "output_rows": 6603,
+  "unique_cached_audio": 5050,
+  "existing_cache_hits": 0,
+  "new_audio_hours": 8.50599515625,
+  "source_counts": {
+    "AIHUB-71405-TRAINING-HOME-NEAR": 3032,
+    "AIHUB-109-TRAINING-VOICE-COLLECTION": 992,
+    "AIHUB-463-TRAINING": 1560,
+    "AIHUB-464-TRAINING": 944,
+    "AIHUB-71698-TRAINING-RESIDENTIAL-DIALOGUE": 75
+  },
+  "cache_format": "16 kHz mono PCM16",
+  "privacy_scope": "LOCAL_TRAINING_ONLY",
+  "raw_transcripts_in_summary": false,
+  "source_audio_paths_in_summary": false
+}

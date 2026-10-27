@@ -1,0 +1,29 @@
+{
+  "selected_batch_size": 1,
+  "sample_count": 4,
+  "prefetch_workers": 2,
+  "results": [
+    {
+      "batch_size": 1,
+      "seconds": 0.06113798600000209,
+      "samples_per_second": 65.42577310282782,
+      "max_abs_difference": 0.0,
+      "equivalent_to_single": true
+    },
+    {
+      "batch_size": 2,
+      "seconds": 0.8341767719999993,
+      "samples_per_second": 4.795146705427568,
+      "max_abs_difference": 0.0,
+      "equivalent_to_single": true
+    },
+    {
+      "batch_size": 4,
+      "seconds": 0.3018014560000033,
+      "samples_per_second": 13.25374652930752,
+      "max_abs_difference": 0.0,
+      "equivalent_to_single": true
+    }
+  ],
+  "manifest": "/mnt/c/Users/alexi/Desktop/Workspace/ESW/services/edge-ai/audio-context/data/public-balanced-v3.csv"
+}

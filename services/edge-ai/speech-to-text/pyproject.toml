@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "homemind-speech-to-text"
+version = "0.1.0"
+description = "Local Korean streaming ASR boundary for HomeMind"
+requires-python = ">=3.10,<3.13"
+dependencies = ["numpy>=1.26,<3", "requests>=2.31,<3"]
+
+[project.optional-dependencies]
+vosk = ["vosk>=0.3.45,<0.4"]
+sherpa = ["sherpa-onnx>=1.12,<2"]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+homemind-stt = "homemind_stt.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

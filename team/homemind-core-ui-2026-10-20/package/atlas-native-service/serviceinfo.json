@@ -1,0 +1,8 @@
+{
+  "id": "com.privateflownest.homemindcore",
+  "description": "HomeMind Pi4 MQTT and SQLite Core",
+  "name": "homemind-core",
+  "type": "native",
+  "entry": "homemind-core",
+  "version": "0.6.2"
+}

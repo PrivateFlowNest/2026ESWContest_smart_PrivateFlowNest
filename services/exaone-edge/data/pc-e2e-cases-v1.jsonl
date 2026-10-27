@@ -1,0 +1,10 @@
+{"id":"E2E-001","utterance":"현관문 열어줘.","expected_routes":[{"hardware_id":"SERVO-DOOR-01","action":"OPEN"}]}
+{"id":"E2E-002","utterance":"현관문 닫아줘.","expected_routes":[{"hardware_id":"SERVO-DOOR-01","action":"CLOSE"}]}
+{"id":"E2E-003","utterance":"화장실 문 열어줘.","expected_routes":[{"hardware_id":"SERVO-DOOR-02","action":"OPEN"}]}
+{"id":"E2E-004","utterance":"화장실 문 닫아줘.","expected_routes":[{"hardware_id":"SERVO-DOOR-02","action":"CLOSE"}]}
+{"id":"E2E-005","utterance":"창문을 닫아줘.","expected_routes":[{"hardware_id":"SERVO-WINDOW-01","action":"CLOSE"}]}
+{"id":"E2E-006","utterance":"환기팬 꺼줘.","expected_routes":[{"hardware_id":"FAN-01","action":"TURN_OFF"}]}
+{"id":"E2E-007","utterance":"세탁기 완료 알림은 나중에 알려줘.","expected_routes":[{"hardware_id":"LED-WASHER-01","action":"DEFER_NOTIFICATION"}]}
+{"id":"E2E-008","utterance":"에어컨을 3단계로 맞춰줘.","expected_routes":[{"hardware_id":"LED-AIRCON-01","action":"SET_LEVEL"}]}
+{"id":"E2E-009","utterance":"TV 볼륨을 20으로 맞춰줘.","expected_routes":[{"hardware_id":"LED-TV-01","action":"SET_VOLUME"}]}
+{"id":"E2E-010","utterance":"회의 중이니까 전체 소리를 줄이고 알림도 미뤄줘.","expected_routes":[{"hardware_id":"LED-TV-01","action":"MUTE"},{"hardware_id":"LED-WASHER-01","action":"DEFER_NOTIFICATION"},{"hardware_id":"LED-AIRCON-01","action":"SET_QUIET_MODE"},{"hardware_id":"FAN-01","action":"TURN_OFF"}]}

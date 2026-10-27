@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "event_id": "asr-0001",
+  "utterance_id": "utt-0001",
+  "sequence": 3,
+  "timestamp": "2026-10-21T13:20:00.000Z",
+  "source": "pi5.speech-to-text",
+  "source_node_id": "NODE-RPI5-02",
+  "event_type": "ASR_UPDATE",
+  "scope": "RPI5_ONLY",
+  "microphone_id": "MIC-INDOOR-01",
+  "text": "창문 열어 줘",
+  "is_final": true,
+  "model_version": "whisper-small-homemind-lora-v4-q5_0",
+  "confidence": 0.91,
+  "expires_at": "2026-10-21T13:20:30.000Z"
+}

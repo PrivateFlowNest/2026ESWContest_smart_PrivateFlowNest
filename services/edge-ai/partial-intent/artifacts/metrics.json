@@ -1,0 +1,277 @@
+{
+  "dataset_source": "AUTHORED_SYNTHETIC_V2",
+  "acceptance_scope": "PC synthetic seed baseline; not Pi 5 or live-ASR acceptance",
+  "test_rows": 417,
+  "class_counts": {
+    "CLIMATE_COMFORT": 45,
+    "LIGHTING": 44,
+    "VENTILATION": 46,
+    "MEDIA": 45,
+    "ACCESS": 44,
+    "LAUNDRY": 46,
+    "CLEANING": 46,
+    "QUIET_ENVIRONMENT": 52,
+    "NO_ACTION": 49
+  },
+  "raw_model_accuracy": 0.9400479616306955,
+  "accuracy": 0.9568345323741008,
+  "macro_f1": 0.9544870712820841,
+  "gate": {
+    "detected_coverage": 0.8657074340527577,
+    "detected_precision": 0.9695290858725761,
+    "positive_recall": 0.9510869565217391,
+    "proactive_false_positive_rate": 0.0
+  },
+  "stream_gate": {
+    "simulation": "non-final word prefixes at 60%, 80%, and 100%; 2 matching updates required",
+    "confirmation_updates": 2,
+    "threshold": 0.3,
+    "eligible_accuracy": 0.8777506112469438,
+    "positive_recall": 0.8611111111111112,
+    "proactive_false_positive_rate": 0.0,
+    "false_positive_count": 0,
+    "negative_count": 49,
+    "early_eligible_positive_count": 360,
+    "deferred_direct_command_count": 8,
+    "false_positive_texts": [],
+    "missed_positive_texts": [
+      "잠들기 전에 따뜻했으면",
+      "지금보다 시원하면",
+      "온도를 확인해보고",
+      "열기가 가득해서",
+      "잘 때 냉방이",
+      "전등 밝기를",
+      "화면에 빛이 너무 반사되네",
+      "음, 화면에 빛이 너무 반사되네",
+      "지금 화면에 빛이 너무 반사되네",
+      "그런데 화면에 빛이 너무 반사되네",
+      "화면에 빛이 너무 반사되네…",
+      "화면에 빛이 너무 반사되네 그래서 말인데",
+      "화면에 빛이 너무 반사되네 어떻게 하면 좋을까",
+      "화면에 빛이",
+      "화면에 빛이 너무",
+      "화면에 빛이",
+      "화면에 빛이 비쳐서",
+      "화면에 빛이 비쳐서 밝기를",
+      "현관 앞을 볼 수 있도록 밝혀두고",
+      "환기팬 소리가",
+      "환풍 상태를",
+      "음식 냄새를",
+      "사람이 오기 전에 방 안 냄새를",
+      "볼륨을 조금",
+      "미디어 소리를",
+      "드라마 소리를",
+      "뉴스 목소리가",
+      "현관 쪽",
+      "음, 문이 자꾸 열린 채로 있는 것 같네",
+      "지금 문이 자꾸 열린 채로 있는 것 같네",
+      "그런데 문이 자꾸 열린 채로 있는 것 같네",
+      "문이 자꾸 열린 채로 있는 것 같네 그래서 말인데",
+      "문이 자꾸 열린 채로 있는 것 같네 어떻게 하면 좋을까",
+      "출입 상태를",
+      "욕실 입구가",
+      "빨래 알림은",
+      "빨래 상태를",
+      "회의 후에 빨래를",
+      "빨래가 끝나면",
+      "세탁 완료",
+      "청소를 잠시",
+      "청소기 상태를",
+      "회의 중에는 청소를",
+      "책상 아래에 먼지가 쌓여서 치우고",
+      "정리가 끝난",
+      "노트북으로 회의를",
+      "조용한 환경이",
+      "회의가 끝날",
+      "마이크를 쓰는",
+      "통화가 끝나면"
+    ]
+  },
+  "execution_safety": {
+    "execution_allowed": false,
+    "executable_false_positive_rate": 0.0,
+    "reason": "partial-intent contract forbids executable commands"
+  },
+  "threshold": 0.35,
+  "classification_report": {
+    "CLIMATE_COMFORT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 45.0
+    },
+    "LIGHTING": {
+      "precision": 0.825,
+      "recall": 0.75,
+      "f1-score": 0.7857142857142857,
+      "support": 44.0
+    },
+    "VENTILATION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 46.0
+    },
+    "MEDIA": {
+      "precision": 0.8035714285714286,
+      "recall": 1.0,
+      "f1-score": 0.8910891089108911,
+      "support": 45.0
+    },
+    "ACCESS": {
+      "precision": 1.0,
+      "recall": 0.8409090909090909,
+      "f1-score": 0.9135802469135802,
+      "support": 44.0
+    },
+    "LAUNDRY": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 46.0
+    },
+    "CLEANING": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 46.0
+    },
+    "QUIET_ENVIRONMENT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 52.0
+    },
+    "NO_ACTION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 49.0
+    },
+    "accuracy": 0.9568345323741008,
+    "macro avg": {
+      "precision": 0.9587301587301587,
+      "recall": 0.9545454545454545,
+      "f1-score": 0.9544870712820841,
+      "support": 417.0
+    },
+    "weighted avg": {
+      "precision": 0.9603374443302501,
+      "recall": 0.9568345323741008,
+      "f1-score": 0.9565179120782162,
+      "support": 417.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      45,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      33,
+      0,
+      11,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      46,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      45,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      7,
+      0,
+      0,
+      37,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      46,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      46,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      52,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      49
+    ]
+  ],
+  "labels": [
+    "CLIMATE_COMFORT",
+    "LIGHTING",
+    "VENTILATION",
+    "MEDIA",
+    "ACCESS",
+    "LAUNDRY",
+    "CLEANING",
+    "QUIET_ENVIRONMENT",
+    "NO_ACTION"
+  ]
+}

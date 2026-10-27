@@ -1,0 +1,147 @@
+# HomeMind TaskFlow 루트 .gitignore
+# 대용량 모델·데이터의 경로·크기·SHA-256은 docs/handoff/MODEL_MANIFEST.md에 기록한다.
+
+# ---- 비밀값 (절대 커밋 금지) ----
+secrets.h
+**/secrets.h
+!**/secrets.h.example
+*.passwd
+mosquitto.passwd
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# ---- Python 환경·캐시 ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+.pytest*/
+.test-tmp*/
+.test-temp*/
+.tmp-pytest*/
+.tmp-*/
+.pip-tmp/
+.research/
+*.egg-info/
+services/**/build/
+services/**/dist/
+logs/
+*.log
+*.pid
+
+# ---- 작업·임시 폴더 ----
+.cache/
+.codex_tmp/
+test-output/
+tmp/
+.test-tmp-aihub-streaming-*/
+
+# ---- 모델·가중치 (MODEL_MANIFEST.md 참조) ----
+*.gguf
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.tflite
+*.pte
+*.joblib
+*.npz
+*.npy
+*.fst
+*.mdl
+*.ie
+*.tar.bz2
+services/edge-ai/speech-to-text/models/
+services/edge-ai/speech-to-text/artifacts/training/
+services/exaone-edge/artifacts/exaone-1.2b-hf-merged-v1/
+services/exaone-edge/artifacts/exaone-1.2b-lora-v1/
+services/exaone-edge/artifacts/exaone-1.2b-lora-v1-smoke/
+services/exaone-edge/artifacts/exaone-1.2b-hf-merged-v3/
+services/exaone-edge/artifacts/exaone-1.2b-lora-v3/
+services/exaone-edge/artifacts/deploy/*/models/
+
+# ---- 데이터셋 (대용량 원본·파생) ----
+services/edge-ai/audio-context/data/*.csv
+services/edge-ai/audio-context/data/raw/
+services/edge-ai/vision-presence/data/figure-dataset/
+services/edge-ai/vision-presence/data/smoke-dataset/
+services/edge-ai/vision-presence/data/figure-coco/
+services/exaone-edge/data/finetune-*/
+*.wav
+*.flac
+*.mp3
+*.mp4
+
+# AIHub 파생 전사 manifest: 재배포 제한·대용량. 평가 100개 세트도 같은 출처라 제외
+services/edge-ai/speech-to-text/artifacts/manifests/aihub-*.jsonl
+
+# ---- 외부 소스 (별도 git, 커밋 해시는 MODEL_MANIFEST.md) ----
+third_party/llama.cpp/
+docs/ecoai-tutorial/
+
+# ---- 빌드 산출물 ----
+build/
+build-*/
+cmake-build-*/
+.pio/
+*.o
+*.a
+*.so
+*.so.*
+*.ipk
+*.deb
+*.whl
+*.exe
+*.dll
+team/HomeMind_Full_Handoff_*.zip
+team/homemind-core-ui-2026-10-20/dist/
+team/homemind-core-ui-2026-10-20/docs/smart-appliance-training.pdf
+
+# ---- Flutter ----
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+**/homemind_flutter_test/build/
+
+# ---- 런타임 DB ----
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+
+# ---- 에디터·OS ----
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ---- P4 native: downloaded prebuilt dependencies (hashes in MODEL_MANIFEST.md) ----
+native/.deps/
+native/build*/
+
+# RPI5 runtime image export (hash in MODEL_MANIFEST.md)
+deploy/rpi5/*.tar.gz
+
+# ---- deploy: per-device payloads (built by deploy/collect.sh; IPKs and models) and device host keys ----
+deploy/*/payload/
+deploy/.known_hosts
+deploy/site.env
+
+# Contest submission build (2026-10-26): generator deps and rendered output stay local
+docs/submission/report/node_modules/
+docs/submission/report/out/
+docs/submission/intro/out/
+docs/submission/video/node_modules/
+docs/submission/video/out/
+docs/submission/video/footage/
+docs/submission/video/.ui-build/

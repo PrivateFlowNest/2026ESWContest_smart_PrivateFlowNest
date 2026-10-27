@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-state-request.schema.json",
+  "title": "HomeMind UI state request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "trace_id", "request_id", "client_id", "sent_at_ms"],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "request_id": { "type": "string", "format": "uuid" },
+    "client_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "sections": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["tasks", "devices", "world_state", "privacy", "safety", "system_health"] }
+    },
+    "sent_at_ms": { "type": "integer", "minimum": 0 }
+  }
+}

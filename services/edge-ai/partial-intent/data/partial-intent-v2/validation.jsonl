@@ -1,0 +1,429 @@
+{"sample_id": "climate_comfort-04-00", "group_id": "climate_comfort-04", "split": "validation", "text": "오늘 밤은 꽤 쌀쌀하겠다", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-04-01", "group_id": "climate_comfort-04", "split": "validation", "text": "음, 오늘 밤은 꽤 쌀쌀하겠다", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-04-02", "group_id": "climate_comfort-04", "split": "validation", "text": "지금 오늘 밤은 꽤 쌀쌀하겠다", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-04-03", "group_id": "climate_comfort-04", "split": "validation", "text": "그런데 오늘 밤은 꽤 쌀쌀하겠다", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-04-04", "group_id": "climate_comfort-04", "split": "validation", "text": "오늘 밤은 꽤 쌀쌀하겠다…", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-04-05", "group_id": "climate_comfort-04", "split": "validation", "text": "오늘 밤은 꽤 쌀쌀하겠다 그래서 말인데", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-04-06", "group_id": "climate_comfort-04", "split": "validation", "text": "오늘 밤은 꽤 쌀쌀하겠다 어떻게 하면 좋을까", "intent": "CLIMATE_COMFORT", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-10-00", "group_id": "climate_comfort-10", "split": "validation", "text": "에어컨 바람을 조절하고 싶은데", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-10-01", "group_id": "climate_comfort-10", "split": "validation", "text": "음, 에어컨 바람을 조절하고 싶은데", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-10-02", "group_id": "climate_comfort-10", "split": "validation", "text": "지금 에어컨 바람을 조절하고 싶은데", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-10-03", "group_id": "climate_comfort-10", "split": "validation", "text": "그런데 에어컨 바람을 조절하고 싶은데", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-10-04", "group_id": "climate_comfort-10", "split": "validation", "text": "에어컨 바람을 조절하고 싶은데…", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-10-05", "group_id": "climate_comfort-10", "split": "validation", "text": "에어컨 바람을 조절하고 싶은데 그래서 말인데", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-10-06", "group_id": "climate_comfort-10", "split": "validation", "text": "에어컨 바람을 조절하고 싶은데 어떻게 하면 좋을까", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-10-07", "group_id": "climate_comfort-10", "split": "validation", "text": "에어컨 바람을", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-10-08", "group_id": "climate_comfort-10", "split": "validation", "text": "에어컨 바람을 조절하고", "intent": "CLIMATE_COMFORT", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-16-00", "group_id": "climate_comfort-16", "split": "validation", "text": "조금 있으면 더 더워질 것 같은데", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-16-01", "group_id": "climate_comfort-16", "split": "validation", "text": "음, 조금 있으면 더 더워질 것 같은데", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-16-02", "group_id": "climate_comfort-16", "split": "validation", "text": "지금 조금 있으면 더 더워질 것 같은데", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-16-03", "group_id": "climate_comfort-16", "split": "validation", "text": "그런데 조금 있으면 더 더워질 것 같은데", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-16-04", "group_id": "climate_comfort-16", "split": "validation", "text": "조금 있으면 더 더워질 것 같은데…", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-16-05", "group_id": "climate_comfort-16", "split": "validation", "text": "조금 있으면 더 더워질 것 같은데 그래서 말인데", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-16-06", "group_id": "climate_comfort-16", "split": "validation", "text": "조금 있으면 더 더워질 것 같은데 어떻게 하면 좋을까", "intent": "CLIMATE_COMFORT", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-22-00", "group_id": "climate_comfort-22", "split": "validation", "text": "잠들기 전에 실내가 몇 도인지 보고 싶어", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-22-01", "group_id": "climate_comfort-22", "split": "validation", "text": "음, 잠들기 전에 실내가 몇 도인지 보고 싶어", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-22-02", "group_id": "climate_comfort-22", "split": "validation", "text": "지금 잠들기 전에 실내가 몇 도인지 보고 싶어", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-22-03", "group_id": "climate_comfort-22", "split": "validation", "text": "그런데 잠들기 전에 실내가 몇 도인지 보고 싶어", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-22-04", "group_id": "climate_comfort-22", "split": "validation", "text": "잠들기 전에 실내가 몇 도인지 보고 싶어…", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-22-05", "group_id": "climate_comfort-22", "split": "validation", "text": "잠들기 전에 실내가 몇 도인지 보고 싶어 그래서 말인데", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-22-06", "group_id": "climate_comfort-22", "split": "validation", "text": "잠들기 전에 실내가 몇 도인지 보고 싶어 어떻게 하면 좋을까", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-22-07", "group_id": "climate_comfort-22", "split": "validation", "text": "잠들기 전에 실내가 몇", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-22-08", "group_id": "climate_comfort-22", "split": "validation", "text": "잠들기 전에 실내가 몇 도인지", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-22-09", "group_id": "climate_comfort-22", "split": "validation", "text": "잠들기 전에 실내가 몇 도인지 보고", "intent": "CLIMATE_COMFORT", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-28-00", "group_id": "climate_comfort-28", "split": "validation", "text": "공기가 뜨거워서 땀이 나기 시작했어", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-28-01", "group_id": "climate_comfort-28", "split": "validation", "text": "음, 공기가 뜨거워서 땀이 나기 시작했어", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-28-02", "group_id": "climate_comfort-28", "split": "validation", "text": "지금 공기가 뜨거워서 땀이 나기 시작했어", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-28-03", "group_id": "climate_comfort-28", "split": "validation", "text": "그런데 공기가 뜨거워서 땀이 나기 시작했어", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-28-04", "group_id": "climate_comfort-28", "split": "validation", "text": "공기가 뜨거워서 땀이 나기 시작했어…", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-28-05", "group_id": "climate_comfort-28", "split": "validation", "text": "공기가 뜨거워서 땀이 나기 시작했어 그래서 말인데", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-28-06", "group_id": "climate_comfort-28", "split": "validation", "text": "공기가 뜨거워서 땀이 나기 시작했어 어떻게 하면 좋을까", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-28-07", "group_id": "climate_comfort-28", "split": "validation", "text": "공기가 뜨거워서", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-28-08", "group_id": "climate_comfort-28", "split": "validation", "text": "공기가 뜨거워서 땀이", "intent": "CLIMATE_COMFORT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "climate_comfort-28-09", "group_id": "climate_comfort-28", "split": "validation", "text": "공기가 뜨거워서 땀이 나기", "intent": "CLIMATE_COMFORT", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-04-00", "group_id": "lighting-04", "split": "validation", "text": "조명이 너무 눈부신데", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-04-01", "group_id": "lighting-04", "split": "validation", "text": "음, 조명이 너무 눈부신데", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-04-02", "group_id": "lighting-04", "split": "validation", "text": "지금 조명이 너무 눈부신데", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-04-03", "group_id": "lighting-04", "split": "validation", "text": "그런데 조명이 너무 눈부신데", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-04-04", "group_id": "lighting-04", "split": "validation", "text": "조명이 너무 눈부신데…", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-04-05", "group_id": "lighting-04", "split": "validation", "text": "조명이 너무 눈부신데 그래서 말인데", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-04-06", "group_id": "lighting-04", "split": "validation", "text": "조명이 너무 눈부신데 어떻게 하면 좋을까", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-04-07", "group_id": "lighting-04", "split": "validation", "text": "조명이 너무", "intent": "LIGHTING", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-10-00", "group_id": "lighting-10", "split": "validation", "text": "방 불 상태를 확인해볼까", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-10-01", "group_id": "lighting-10", "split": "validation", "text": "음, 방 불 상태를 확인해볼까", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-10-02", "group_id": "lighting-10", "split": "validation", "text": "지금 방 불 상태를 확인해볼까", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-10-03", "group_id": "lighting-10", "split": "validation", "text": "그런데 방 불 상태를 확인해볼까", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-10-04", "group_id": "lighting-10", "split": "validation", "text": "방 불 상태를 확인해볼까…", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-10-05", "group_id": "lighting-10", "split": "validation", "text": "방 불 상태를 확인해볼까 그래서 말인데", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-10-06", "group_id": "lighting-10", "split": "validation", "text": "방 불 상태를 확인해볼까 어떻게 하면 좋을까", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-10-07", "group_id": "lighting-10", "split": "validation", "text": "방 불", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-10-08", "group_id": "lighting-10", "split": "validation", "text": "방 불 상태를", "intent": "LIGHTING", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-16-00", "group_id": "lighting-16", "split": "validation", "text": "조금만 더 밝으면 좋겠어", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-16-01", "group_id": "lighting-16", "split": "validation", "text": "음, 조금만 더 밝으면 좋겠어", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-16-02", "group_id": "lighting-16", "split": "validation", "text": "지금 조금만 더 밝으면 좋겠어", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-16-03", "group_id": "lighting-16", "split": "validation", "text": "그런데 조금만 더 밝으면 좋겠어", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-16-04", "group_id": "lighting-16", "split": "validation", "text": "조금만 더 밝으면 좋겠어…", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-16-05", "group_id": "lighting-16", "split": "validation", "text": "조금만 더 밝으면 좋겠어 그래서 말인데", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-16-06", "group_id": "lighting-16", "split": "validation", "text": "조금만 더 밝으면 좋겠어 어떻게 하면 좋을까", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-16-07", "group_id": "lighting-16", "split": "validation", "text": "조금만 더 밝으면", "intent": "LIGHTING", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-22-00", "group_id": "lighting-22", "split": "validation", "text": "전등을 켰는지 기억이 나지 않아", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-22-01", "group_id": "lighting-22", "split": "validation", "text": "음, 전등을 켰는지 기억이 나지 않아", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-22-02", "group_id": "lighting-22", "split": "validation", "text": "지금 전등을 켰는지 기억이 나지 않아", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-22-03", "group_id": "lighting-22", "split": "validation", "text": "그런데 전등을 켰는지 기억이 나지 않아", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-22-04", "group_id": "lighting-22", "split": "validation", "text": "전등을 켰는지 기억이 나지 않아…", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-22-05", "group_id": "lighting-22", "split": "validation", "text": "전등을 켰는지 기억이 나지 않아 그래서 말인데", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-22-06", "group_id": "lighting-22", "split": "validation", "text": "전등을 켰는지 기억이 나지 않아 어떻게 하면 좋을까", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-22-07", "group_id": "lighting-22", "split": "validation", "text": "전등을 켰는지", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-22-08", "group_id": "lighting-22", "split": "validation", "text": "전등을 켰는지 기억이", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-22-09", "group_id": "lighting-22", "split": "validation", "text": "전등을 켰는지 기억이 나지", "intent": "LIGHTING", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-28-00", "group_id": "lighting-28", "split": "validation", "text": "눈부셔서 방 안 빛을 조금 줄이고 싶어", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-28-01", "group_id": "lighting-28", "split": "validation", "text": "음, 눈부셔서 방 안 빛을 조금 줄이고 싶어", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-28-02", "group_id": "lighting-28", "split": "validation", "text": "지금 눈부셔서 방 안 빛을 조금 줄이고 싶어", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-28-03", "group_id": "lighting-28", "split": "validation", "text": "그런데 눈부셔서 방 안 빛을 조금 줄이고 싶어", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-28-04", "group_id": "lighting-28", "split": "validation", "text": "눈부셔서 방 안 빛을 조금 줄이고 싶어…", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-28-05", "group_id": "lighting-28", "split": "validation", "text": "눈부셔서 방 안 빛을 조금 줄이고 싶어 그래서 말인데", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-28-06", "group_id": "lighting-28", "split": "validation", "text": "눈부셔서 방 안 빛을 조금 줄이고 싶어 어떻게 하면 좋을까", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-28-07", "group_id": "lighting-28", "split": "validation", "text": "눈부셔서 방", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-28-08", "group_id": "lighting-28", "split": "validation", "text": "눈부셔서 방 안", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-28-09", "group_id": "lighting-28", "split": "validation", "text": "눈부셔서 방 안 빛을", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-28-10", "group_id": "lighting-28", "split": "validation", "text": "눈부셔서 방 안 빛을 조금", "intent": "LIGHTING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "lighting-28-11", "group_id": "lighting-28", "split": "validation", "text": "눈부셔서 방 안 빛을 조금 줄이고", "intent": "LIGHTING", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-04-00", "group_id": "ventilation-04", "split": "validation", "text": "창문을 좀 열어야 하나", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-04-01", "group_id": "ventilation-04", "split": "validation", "text": "음, 창문을 좀 열어야 하나", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-04-02", "group_id": "ventilation-04", "split": "validation", "text": "지금 창문을 좀 열어야 하나", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-04-03", "group_id": "ventilation-04", "split": "validation", "text": "그런데 창문을 좀 열어야 하나", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-04-04", "group_id": "ventilation-04", "split": "validation", "text": "창문을 좀 열어야 하나…", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-04-05", "group_id": "ventilation-04", "split": "validation", "text": "창문을 좀 열어야 하나 그래서 말인데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-04-06", "group_id": "ventilation-04", "split": "validation", "text": "창문을 좀 열어야 하나 어떻게 하면 좋을까", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-04-07", "group_id": "ventilation-04", "split": "validation", "text": "창문을 좀", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-04-08", "group_id": "ventilation-04", "split": "validation", "text": "창문을 좀 열어야", "intent": "VENTILATION", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-10-00", "group_id": "ventilation-10", "split": "validation", "text": "바깥 공기를 좀 들이고 싶은데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-10-01", "group_id": "ventilation-10", "split": "validation", "text": "음, 바깥 공기를 좀 들이고 싶은데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-10-02", "group_id": "ventilation-10", "split": "validation", "text": "지금 바깥 공기를 좀 들이고 싶은데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-10-03", "group_id": "ventilation-10", "split": "validation", "text": "그런데 바깥 공기를 좀 들이고 싶은데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-10-04", "group_id": "ventilation-10", "split": "validation", "text": "바깥 공기를 좀 들이고 싶은데…", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-10-05", "group_id": "ventilation-10", "split": "validation", "text": "바깥 공기를 좀 들이고 싶은데 그래서 말인데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-10-06", "group_id": "ventilation-10", "split": "validation", "text": "바깥 공기를 좀 들이고 싶은데 어떻게 하면 좋을까", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-10-07", "group_id": "ventilation-10", "split": "validation", "text": "바깥 공기를", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-10-08", "group_id": "ventilation-10", "split": "validation", "text": "바깥 공기를 좀", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-10-09", "group_id": "ventilation-10", "split": "validation", "text": "바깥 공기를 좀 들이고", "intent": "VENTILATION", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-16-00", "group_id": "ventilation-16", "split": "validation", "text": "방이 눅눅해서 환기하고 싶은데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-16-01", "group_id": "ventilation-16", "split": "validation", "text": "음, 방이 눅눅해서 환기하고 싶은데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-16-02", "group_id": "ventilation-16", "split": "validation", "text": "지금 방이 눅눅해서 환기하고 싶은데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-16-03", "group_id": "ventilation-16", "split": "validation", "text": "그런데 방이 눅눅해서 환기하고 싶은데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-16-04", "group_id": "ventilation-16", "split": "validation", "text": "방이 눅눅해서 환기하고 싶은데…", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-16-05", "group_id": "ventilation-16", "split": "validation", "text": "방이 눅눅해서 환기하고 싶은데 그래서 말인데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-16-06", "group_id": "ventilation-16", "split": "validation", "text": "방이 눅눅해서 환기하고 싶은데 어떻게 하면 좋을까", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-16-07", "group_id": "ventilation-16", "split": "validation", "text": "방이 눅눅해서", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-16-08", "group_id": "ventilation-16", "split": "validation", "text": "방이 눅눅해서 환기하고", "intent": "VENTILATION", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-22-00", "group_id": "ventilation-22", "split": "validation", "text": "실내 공기 상태가 지금 어떤지 보여줘", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-22-01", "group_id": "ventilation-22", "split": "validation", "text": "음, 실내 공기 상태가 지금 어떤지 보여줘", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-22-02", "group_id": "ventilation-22", "split": "validation", "text": "지금 실내 공기 상태가 지금 어떤지 보여줘", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-22-03", "group_id": "ventilation-22", "split": "validation", "text": "그런데 실내 공기 상태가 지금 어떤지 보여줘", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-22-04", "group_id": "ventilation-22", "split": "validation", "text": "실내 공기 상태가 지금 어떤지 보여줘…", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-22-05", "group_id": "ventilation-22", "split": "validation", "text": "실내 공기 상태가 지금 어떤지 보여줘 그래서 말인데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-22-06", "group_id": "ventilation-22", "split": "validation", "text": "실내 공기 상태가 지금 어떤지 보여줘 어떻게 하면 좋을까", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-22-07", "group_id": "ventilation-22", "split": "validation", "text": "실내 공기", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-22-08", "group_id": "ventilation-22", "split": "validation", "text": "실내 공기 상태가", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-22-09", "group_id": "ventilation-22", "split": "validation", "text": "실내 공기 상태가 지금", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-22-10", "group_id": "ventilation-22", "split": "validation", "text": "실내 공기 상태가 지금 어떤지", "intent": "VENTILATION", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-28-00", "group_id": "ventilation-28", "split": "validation", "text": "창가로 외풍이 들어오는 것 같은데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-28-01", "group_id": "ventilation-28", "split": "validation", "text": "음, 창가로 외풍이 들어오는 것 같은데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-28-02", "group_id": "ventilation-28", "split": "validation", "text": "지금 창가로 외풍이 들어오는 것 같은데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-28-03", "group_id": "ventilation-28", "split": "validation", "text": "그런데 창가로 외풍이 들어오는 것 같은데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-28-04", "group_id": "ventilation-28", "split": "validation", "text": "창가로 외풍이 들어오는 것 같은데…", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-28-05", "group_id": "ventilation-28", "split": "validation", "text": "창가로 외풍이 들어오는 것 같은데 그래서 말인데", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-28-06", "group_id": "ventilation-28", "split": "validation", "text": "창가로 외풍이 들어오는 것 같은데 어떻게 하면 좋을까", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-28-07", "group_id": "ventilation-28", "split": "validation", "text": "창가로 외풍이", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-28-08", "group_id": "ventilation-28", "split": "validation", "text": "창가로 외풍이 들어오는", "intent": "VENTILATION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "ventilation-28-09", "group_id": "ventilation-28", "split": "validation", "text": "창가로 외풍이 들어오는 것", "intent": "VENTILATION", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-04-00", "group_id": "media-04", "split": "validation", "text": "영상 소리가 잘 안 들리네", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-04-01", "group_id": "media-04", "split": "validation", "text": "음, 영상 소리가 잘 안 들리네", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-04-02", "group_id": "media-04", "split": "validation", "text": "지금 영상 소리가 잘 안 들리네", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-04-03", "group_id": "media-04", "split": "validation", "text": "그런데 영상 소리가 잘 안 들리네", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-04-04", "group_id": "media-04", "split": "validation", "text": "영상 소리가 잘 안 들리네…", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-04-05", "group_id": "media-04", "split": "validation", "text": "영상 소리가 잘 안 들리네 그래서 말인데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-04-06", "group_id": "media-04", "split": "validation", "text": "영상 소리가 잘 안 들리네 어떻게 하면 좋을까", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-04-07", "group_id": "media-04", "split": "validation", "text": "영상 소리가", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-04-08", "group_id": "media-04", "split": "validation", "text": "영상 소리가 잘", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-04-09", "group_id": "media-04", "split": "validation", "text": "영상 소리가 잘 안", "intent": "MEDIA", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-10-00", "group_id": "media-10", "split": "validation", "text": "영화 볼 준비를 하고 싶은데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-10-01", "group_id": "media-10", "split": "validation", "text": "음, 영화 볼 준비를 하고 싶은데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-10-02", "group_id": "media-10", "split": "validation", "text": "지금 영화 볼 준비를 하고 싶은데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-10-03", "group_id": "media-10", "split": "validation", "text": "그런데 영화 볼 준비를 하고 싶은데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-10-04", "group_id": "media-10", "split": "validation", "text": "영화 볼 준비를 하고 싶은데…", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-10-05", "group_id": "media-10", "split": "validation", "text": "영화 볼 준비를 하고 싶은데 그래서 말인데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-10-06", "group_id": "media-10", "split": "validation", "text": "영화 볼 준비를 하고 싶은데 어떻게 하면 좋을까", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-10-07", "group_id": "media-10", "split": "validation", "text": "영화 볼", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-10-08", "group_id": "media-10", "split": "validation", "text": "영화 볼 준비를", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-10-09", "group_id": "media-10", "split": "validation", "text": "영화 볼 준비를 하고", "intent": "MEDIA", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-16-00", "group_id": "media-16", "split": "validation", "text": "볼륨이 몇인지 알고 싶은데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-16-01", "group_id": "media-16", "split": "validation", "text": "음, 볼륨이 몇인지 알고 싶은데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-16-02", "group_id": "media-16", "split": "validation", "text": "지금 볼륨이 몇인지 알고 싶은데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-16-03", "group_id": "media-16", "split": "validation", "text": "그런데 볼륨이 몇인지 알고 싶은데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-16-04", "group_id": "media-16", "split": "validation", "text": "볼륨이 몇인지 알고 싶은데…", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-16-05", "group_id": "media-16", "split": "validation", "text": "볼륨이 몇인지 알고 싶은데 그래서 말인데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-16-06", "group_id": "media-16", "split": "validation", "text": "볼륨이 몇인지 알고 싶은데 어떻게 하면 좋을까", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-16-07", "group_id": "media-16", "split": "validation", "text": "볼륨이 몇인지", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-16-08", "group_id": "media-16", "split": "validation", "text": "볼륨이 몇인지 알고", "intent": "MEDIA", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-22-00", "group_id": "media-22", "split": "validation", "text": "재생 중인 방송 화면이 아직 나오는지 확인해줘", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-22-01", "group_id": "media-22", "split": "validation", "text": "음, 재생 중인 방송 화면이 아직 나오는지 확인해줘", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-22-02", "group_id": "media-22", "split": "validation", "text": "지금 재생 중인 방송 화면이 아직 나오는지 확인해줘", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-22-03", "group_id": "media-22", "split": "validation", "text": "그런데 재생 중인 방송 화면이 아직 나오는지 확인해줘", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-22-04", "group_id": "media-22", "split": "validation", "text": "재생 중인 방송 화면이 아직 나오는지 확인해줘…", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-22-05", "group_id": "media-22", "split": "validation", "text": "재생 중인 방송 화면이 아직 나오는지 확인해줘 그래서 말인데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-22-06", "group_id": "media-22", "split": "validation", "text": "재생 중인 방송 화면이 아직 나오는지 확인해줘 어떻게 하면 좋을까", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-22-07", "group_id": "media-22", "split": "validation", "text": "재생 중인", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-22-08", "group_id": "media-22", "split": "validation", "text": "재생 중인 방송", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-22-09", "group_id": "media-22", "split": "validation", "text": "재생 중인 방송 화면이", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-22-10", "group_id": "media-22", "split": "validation", "text": "재생 중인 방송 화면이 아직", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-22-11", "group_id": "media-22", "split": "validation", "text": "재생 중인 방송 화면이 아직 나오는지", "intent": "MEDIA", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-28-00", "group_id": "media-28", "split": "validation", "text": "영화가 끝났으니 화면을 정리하고 싶은데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-28-01", "group_id": "media-28", "split": "validation", "text": "음, 영화가 끝났으니 화면을 정리하고 싶은데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-28-02", "group_id": "media-28", "split": "validation", "text": "지금 영화가 끝났으니 화면을 정리하고 싶은데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-28-03", "group_id": "media-28", "split": "validation", "text": "그런데 영화가 끝났으니 화면을 정리하고 싶은데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-28-04", "group_id": "media-28", "split": "validation", "text": "영화가 끝났으니 화면을 정리하고 싶은데…", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-28-05", "group_id": "media-28", "split": "validation", "text": "영화가 끝났으니 화면을 정리하고 싶은데 그래서 말인데", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-28-06", "group_id": "media-28", "split": "validation", "text": "영화가 끝났으니 화면을 정리하고 싶은데 어떻게 하면 좋을까", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-28-07", "group_id": "media-28", "split": "validation", "text": "영화가 끝났으니", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-28-08", "group_id": "media-28", "split": "validation", "text": "영화가 끝났으니 화면을", "intent": "MEDIA", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "media-28-09", "group_id": "media-28", "split": "validation", "text": "영화가 끝났으니 화면을 정리하고", "intent": "MEDIA", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-04-00", "group_id": "access-04", "split": "validation", "text": "문 상태를 확인하고 싶은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-04-01", "group_id": "access-04", "split": "validation", "text": "음, 문 상태를 확인하고 싶은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-04-02", "group_id": "access-04", "split": "validation", "text": "지금 문 상태를 확인하고 싶은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-04-03", "group_id": "access-04", "split": "validation", "text": "그런데 문 상태를 확인하고 싶은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-04-04", "group_id": "access-04", "split": "validation", "text": "문 상태를 확인하고 싶은데…", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-04-05", "group_id": "access-04", "split": "validation", "text": "문 상태를 확인하고 싶은데 그래서 말인데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-04-06", "group_id": "access-04", "split": "validation", "text": "문 상태를 확인하고 싶은데 어떻게 하면 좋을까", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-04-07", "group_id": "access-04", "split": "validation", "text": "문 상태를", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-04-08", "group_id": "access-04", "split": "validation", "text": "문 상태를 확인하고", "intent": "ACCESS", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-10-00", "group_id": "access-10", "split": "validation", "text": "출입문을 열 준비가 필요할 것 같은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-10-01", "group_id": "access-10", "split": "validation", "text": "음, 출입문을 열 준비가 필요할 것 같은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-10-02", "group_id": "access-10", "split": "validation", "text": "지금 출입문을 열 준비가 필요할 것 같은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-10-03", "group_id": "access-10", "split": "validation", "text": "그런데 출입문을 열 준비가 필요할 것 같은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-10-04", "group_id": "access-10", "split": "validation", "text": "출입문을 열 준비가 필요할 것 같은데…", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-10-05", "group_id": "access-10", "split": "validation", "text": "출입문을 열 준비가 필요할 것 같은데 그래서 말인데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-10-06", "group_id": "access-10", "split": "validation", "text": "출입문을 열 준비가 필요할 것 같은데 어떻게 하면 좋을까", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-10-07", "group_id": "access-10", "split": "validation", "text": "출입문을 열", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-10-08", "group_id": "access-10", "split": "validation", "text": "출입문을 열 준비가", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-10-09", "group_id": "access-10", "split": "validation", "text": "출입문을 열 준비가 필요할", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-10-10", "group_id": "access-10", "split": "validation", "text": "출입문을 열 준비가 필요할 것", "intent": "ACCESS", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-16-00", "group_id": "access-16", "split": "validation", "text": "현관문을 닫고 싶은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-16-01", "group_id": "access-16", "split": "validation", "text": "음, 현관문을 닫고 싶은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-16-02", "group_id": "access-16", "split": "validation", "text": "지금 현관문을 닫고 싶은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-16-03", "group_id": "access-16", "split": "validation", "text": "그런데 현관문을 닫고 싶은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-16-04", "group_id": "access-16", "split": "validation", "text": "현관문을 닫고 싶은데…", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-16-05", "group_id": "access-16", "split": "validation", "text": "현관문을 닫고 싶은데 그래서 말인데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-16-06", "group_id": "access-16", "split": "validation", "text": "현관문을 닫고 싶은데 어떻게 하면 좋을까", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-16-07", "group_id": "access-16", "split": "validation", "text": "현관문을 닫고", "intent": "ACCESS", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-22-00", "group_id": "access-22", "split": "validation", "text": "문을 닫고 나왔는지 갑자기 기억이 안 나", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-22-01", "group_id": "access-22", "split": "validation", "text": "음, 문을 닫고 나왔는지 갑자기 기억이 안 나", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-22-02", "group_id": "access-22", "split": "validation", "text": "지금 문을 닫고 나왔는지 갑자기 기억이 안 나", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-22-03", "group_id": "access-22", "split": "validation", "text": "그런데 문을 닫고 나왔는지 갑자기 기억이 안 나", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-22-04", "group_id": "access-22", "split": "validation", "text": "문을 닫고 나왔는지 갑자기 기억이 안 나…", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-22-05", "group_id": "access-22", "split": "validation", "text": "문을 닫고 나왔는지 갑자기 기억이 안 나 그래서 말인데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-22-06", "group_id": "access-22", "split": "validation", "text": "문을 닫고 나왔는지 갑자기 기억이 안 나 어떻게 하면 좋을까", "intent": "ACCESS", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-28-00", "group_id": "access-28", "split": "validation", "text": "현관이 닫히지 않은 것 같은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-28-01", "group_id": "access-28", "split": "validation", "text": "음, 현관이 닫히지 않은 것 같은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-28-02", "group_id": "access-28", "split": "validation", "text": "지금 현관이 닫히지 않은 것 같은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-28-03", "group_id": "access-28", "split": "validation", "text": "그런데 현관이 닫히지 않은 것 같은데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-28-04", "group_id": "access-28", "split": "validation", "text": "현관이 닫히지 않은 것 같은데…", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-28-05", "group_id": "access-28", "split": "validation", "text": "현관이 닫히지 않은 것 같은데 그래서 말인데", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-28-06", "group_id": "access-28", "split": "validation", "text": "현관이 닫히지 않은 것 같은데 어떻게 하면 좋을까", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-28-07", "group_id": "access-28", "split": "validation", "text": "현관이 닫히지", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-28-08", "group_id": "access-28", "split": "validation", "text": "현관이 닫히지 않은", "intent": "ACCESS", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "access-28-09", "group_id": "access-28", "split": "validation", "text": "현관이 닫히지 않은 것", "intent": "ACCESS", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-04-00", "group_id": "laundry-04", "split": "validation", "text": "회의 끝나고 세탁 알림을 받고 싶은데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-04-01", "group_id": "laundry-04", "split": "validation", "text": "음, 회의 끝나고 세탁 알림을 받고 싶은데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-04-02", "group_id": "laundry-04", "split": "validation", "text": "지금 회의 끝나고 세탁 알림을 받고 싶은데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-04-03", "group_id": "laundry-04", "split": "validation", "text": "그런데 회의 끝나고 세탁 알림을 받고 싶은데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-04-04", "group_id": "laundry-04", "split": "validation", "text": "회의 끝나고 세탁 알림을 받고 싶은데…", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-04-05", "group_id": "laundry-04", "split": "validation", "text": "회의 끝나고 세탁 알림을 받고 싶은데 그래서 말인데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-04-06", "group_id": "laundry-04", "split": "validation", "text": "회의 끝나고 세탁 알림을 받고 싶은데 어떻게 하면 좋을까", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-04-07", "group_id": "laundry-04", "split": "validation", "text": "회의 끝나고 세탁", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-04-08", "group_id": "laundry-04", "split": "validation", "text": "회의 끝나고 세탁 알림을", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-04-09", "group_id": "laundry-04", "split": "validation", "text": "회의 끝나고 세탁 알림을 받고", "intent": "LAUNDRY", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-10-00", "group_id": "laundry-10", "split": "validation", "text": "세탁기 불이 켜진 것 같은데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-10-01", "group_id": "laundry-10", "split": "validation", "text": "음, 세탁기 불이 켜진 것 같은데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-10-02", "group_id": "laundry-10", "split": "validation", "text": "지금 세탁기 불이 켜진 것 같은데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-10-03", "group_id": "laundry-10", "split": "validation", "text": "그런데 세탁기 불이 켜진 것 같은데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-10-04", "group_id": "laundry-10", "split": "validation", "text": "세탁기 불이 켜진 것 같은데…", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-10-05", "group_id": "laundry-10", "split": "validation", "text": "세탁기 불이 켜진 것 같은데 그래서 말인데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-10-06", "group_id": "laundry-10", "split": "validation", "text": "세탁기 불이 켜진 것 같은데 어떻게 하면 좋을까", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-10-07", "group_id": "laundry-10", "split": "validation", "text": "세탁기 불이", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-10-08", "group_id": "laundry-10", "split": "validation", "text": "세탁기 불이 켜진", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-10-09", "group_id": "laundry-10", "split": "validation", "text": "세탁기 불이 켜진 것", "intent": "LAUNDRY", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-16-00", "group_id": "laundry-16", "split": "validation", "text": "세탁기 진행 상황이 궁금한데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-16-01", "group_id": "laundry-16", "split": "validation", "text": "음, 세탁기 진행 상황이 궁금한데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-16-02", "group_id": "laundry-16", "split": "validation", "text": "지금 세탁기 진행 상황이 궁금한데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-16-03", "group_id": "laundry-16", "split": "validation", "text": "그런데 세탁기 진행 상황이 궁금한데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-16-04", "group_id": "laundry-16", "split": "validation", "text": "세탁기 진행 상황이 궁금한데…", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-16-05", "group_id": "laundry-16", "split": "validation", "text": "세탁기 진행 상황이 궁금한데 그래서 말인데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-16-06", "group_id": "laundry-16", "split": "validation", "text": "세탁기 진행 상황이 궁금한데 어떻게 하면 좋을까", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-16-07", "group_id": "laundry-16", "split": "validation", "text": "세탁기 진행", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-16-08", "group_id": "laundry-16", "split": "validation", "text": "세탁기 진행 상황이", "intent": "LAUNDRY", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-22-00", "group_id": "laundry-22", "split": "validation", "text": "세탁 진행 상황만 먼저 보여줘", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-22-01", "group_id": "laundry-22", "split": "validation", "text": "음, 세탁 진행 상황만 먼저 보여줘", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-22-02", "group_id": "laundry-22", "split": "validation", "text": "지금 세탁 진행 상황만 먼저 보여줘", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-22-03", "group_id": "laundry-22", "split": "validation", "text": "그런데 세탁 진행 상황만 먼저 보여줘", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-22-04", "group_id": "laundry-22", "split": "validation", "text": "세탁 진행 상황만 먼저 보여줘…", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-22-05", "group_id": "laundry-22", "split": "validation", "text": "세탁 진행 상황만 먼저 보여줘 그래서 말인데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-22-06", "group_id": "laundry-22", "split": "validation", "text": "세탁 진행 상황만 먼저 보여줘 어떻게 하면 좋을까", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-22-07", "group_id": "laundry-22", "split": "validation", "text": "세탁 진행", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-22-08", "group_id": "laundry-22", "split": "validation", "text": "세탁 진행 상황만", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-22-09", "group_id": "laundry-22", "split": "validation", "text": "세탁 진행 상황만 먼저", "intent": "LAUNDRY", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-28-00", "group_id": "laundry-28", "split": "validation", "text": "회의가 끝나면 빨래 완료를 다시 알려줘", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-28-01", "group_id": "laundry-28", "split": "validation", "text": "음, 회의가 끝나면 빨래 완료를 다시 알려줘", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-28-02", "group_id": "laundry-28", "split": "validation", "text": "지금 회의가 끝나면 빨래 완료를 다시 알려줘", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-28-03", "group_id": "laundry-28", "split": "validation", "text": "그런데 회의가 끝나면 빨래 완료를 다시 알려줘", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-28-04", "group_id": "laundry-28", "split": "validation", "text": "회의가 끝나면 빨래 완료를 다시 알려줘…", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-28-05", "group_id": "laundry-28", "split": "validation", "text": "회의가 끝나면 빨래 완료를 다시 알려줘 그래서 말인데", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-28-06", "group_id": "laundry-28", "split": "validation", "text": "회의가 끝나면 빨래 완료를 다시 알려줘 어떻게 하면 좋을까", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-28-07", "group_id": "laundry-28", "split": "validation", "text": "회의가 끝나면 빨래", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-28-08", "group_id": "laundry-28", "split": "validation", "text": "회의가 끝나면 빨래 완료를", "intent": "LAUNDRY", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "laundry-28-09", "group_id": "laundry-28", "split": "validation", "text": "회의가 끝나면 빨래 완료를 다시", "intent": "LAUNDRY", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-04-00", "group_id": "cleaning-04", "split": "validation", "text": "지금 청소 소리가 너무 큰데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-04-01", "group_id": "cleaning-04", "split": "validation", "text": "음, 지금 청소 소리가 너무 큰데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-04-02", "group_id": "cleaning-04", "split": "validation", "text": "지금 지금 청소 소리가 너무 큰데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-04-03", "group_id": "cleaning-04", "split": "validation", "text": "그런데 지금 청소 소리가 너무 큰데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-04-04", "group_id": "cleaning-04", "split": "validation", "text": "지금 청소 소리가 너무 큰데…", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-04-05", "group_id": "cleaning-04", "split": "validation", "text": "지금 청소 소리가 너무 큰데 그래서 말인데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-04-06", "group_id": "cleaning-04", "split": "validation", "text": "지금 청소 소리가 너무 큰데 어떻게 하면 좋을까", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-04-07", "group_id": "cleaning-04", "split": "validation", "text": "지금 청소", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-04-08", "group_id": "cleaning-04", "split": "validation", "text": "지금 청소 소리가", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-04-09", "group_id": "cleaning-04", "split": "validation", "text": "지금 청소 소리가 너무", "intent": "CLEANING", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-10-00", "group_id": "cleaning-10", "split": "validation", "text": "로봇청소기가 돌아다니는 것 같은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-10-01", "group_id": "cleaning-10", "split": "validation", "text": "음, 로봇청소기가 돌아다니는 것 같은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-10-02", "group_id": "cleaning-10", "split": "validation", "text": "지금 로봇청소기가 돌아다니는 것 같은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-10-03", "group_id": "cleaning-10", "split": "validation", "text": "그런데 로봇청소기가 돌아다니는 것 같은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-10-04", "group_id": "cleaning-10", "split": "validation", "text": "로봇청소기가 돌아다니는 것 같은데…", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-10-05", "group_id": "cleaning-10", "split": "validation", "text": "로봇청소기가 돌아다니는 것 같은데 그래서 말인데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-10-06", "group_id": "cleaning-10", "split": "validation", "text": "로봇청소기가 돌아다니는 것 같은데 어떻게 하면 좋을까", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-10-07", "group_id": "cleaning-10", "split": "validation", "text": "로봇청소기가 돌아다니는", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-10-08", "group_id": "cleaning-10", "split": "validation", "text": "로봇청소기가 돌아다니는 것", "intent": "CLEANING", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-16-00", "group_id": "cleaning-16", "split": "validation", "text": "청소가 끝났는지 알고 싶은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-16-01", "group_id": "cleaning-16", "split": "validation", "text": "음, 청소가 끝났는지 알고 싶은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-16-02", "group_id": "cleaning-16", "split": "validation", "text": "지금 청소가 끝났는지 알고 싶은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-16-03", "group_id": "cleaning-16", "split": "validation", "text": "그런데 청소가 끝났는지 알고 싶은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-16-04", "group_id": "cleaning-16", "split": "validation", "text": "청소가 끝났는지 알고 싶은데…", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-16-05", "group_id": "cleaning-16", "split": "validation", "text": "청소가 끝났는지 알고 싶은데 그래서 말인데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-16-06", "group_id": "cleaning-16", "split": "validation", "text": "청소가 끝났는지 알고 싶은데 어떻게 하면 좋을까", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-16-07", "group_id": "cleaning-16", "split": "validation", "text": "청소가 끝났는지", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-16-08", "group_id": "cleaning-16", "split": "validation", "text": "청소가 끝났는지 알고", "intent": "CLEANING", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-22-00", "group_id": "cleaning-22", "split": "validation", "text": "방바닥 정리를 이제 시작하고 싶은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-22-01", "group_id": "cleaning-22", "split": "validation", "text": "음, 방바닥 정리를 이제 시작하고 싶은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-22-02", "group_id": "cleaning-22", "split": "validation", "text": "지금 방바닥 정리를 이제 시작하고 싶은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-22-03", "group_id": "cleaning-22", "split": "validation", "text": "그런데 방바닥 정리를 이제 시작하고 싶은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-22-04", "group_id": "cleaning-22", "split": "validation", "text": "방바닥 정리를 이제 시작하고 싶은데…", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-22-05", "group_id": "cleaning-22", "split": "validation", "text": "방바닥 정리를 이제 시작하고 싶은데 그래서 말인데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-22-06", "group_id": "cleaning-22", "split": "validation", "text": "방바닥 정리를 이제 시작하고 싶은데 어떻게 하면 좋을까", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-22-07", "group_id": "cleaning-22", "split": "validation", "text": "방바닥 정리를", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-22-08", "group_id": "cleaning-22", "split": "validation", "text": "방바닥 정리를 이제", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-22-09", "group_id": "cleaning-22", "split": "validation", "text": "방바닥 정리를 이제 시작하고", "intent": "CLEANING", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-28-00", "group_id": "cleaning-28", "split": "validation", "text": "부스러기를 치우도록 준비하고 싶은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-28-01", "group_id": "cleaning-28", "split": "validation", "text": "음, 부스러기를 치우도록 준비하고 싶은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-28-02", "group_id": "cleaning-28", "split": "validation", "text": "지금 부스러기를 치우도록 준비하고 싶은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-28-03", "group_id": "cleaning-28", "split": "validation", "text": "그런데 부스러기를 치우도록 준비하고 싶은데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-28-04", "group_id": "cleaning-28", "split": "validation", "text": "부스러기를 치우도록 준비하고 싶은데…", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-28-05", "group_id": "cleaning-28", "split": "validation", "text": "부스러기를 치우도록 준비하고 싶은데 그래서 말인데", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-28-06", "group_id": "cleaning-28", "split": "validation", "text": "부스러기를 치우도록 준비하고 싶은데 어떻게 하면 좋을까", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-28-07", "group_id": "cleaning-28", "split": "validation", "text": "부스러기를 치우도록", "intent": "CLEANING", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "cleaning-28-08", "group_id": "cleaning-28", "split": "validation", "text": "부스러기를 치우도록 준비하고", "intent": "CLEANING", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-04-00", "group_id": "quiet_environment-04", "split": "validation", "text": "통화하는 동안 방해받고 싶지 않아", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-04-01", "group_id": "quiet_environment-04", "split": "validation", "text": "음, 통화하는 동안 방해받고 싶지 않아", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-04-02", "group_id": "quiet_environment-04", "split": "validation", "text": "지금 통화하는 동안 방해받고 싶지 않아", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-04-03", "group_id": "quiet_environment-04", "split": "validation", "text": "그런데 통화하는 동안 방해받고 싶지 않아", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-04-04", "group_id": "quiet_environment-04", "split": "validation", "text": "통화하는 동안 방해받고 싶지 않아…", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-04-05", "group_id": "quiet_environment-04", "split": "validation", "text": "통화하는 동안 방해받고 싶지 않아 그래서 말인데", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-04-06", "group_id": "quiet_environment-04", "split": "validation", "text": "통화하는 동안 방해받고 싶지 않아 어떻게 하면 좋을까", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-04-07", "group_id": "quiet_environment-04", "split": "validation", "text": "통화하는 동안", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-04-08", "group_id": "quiet_environment-04", "split": "validation", "text": "통화하는 동안 방해받고", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-04-09", "group_id": "quiet_environment-04", "split": "validation", "text": "통화하는 동안 방해받고 싶지", "intent": "QUIET_ENVIRONMENT", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-10-00", "group_id": "quiet_environment-10", "split": "validation", "text": "지금은 알림이 울리지 않았으면", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-10-01", "group_id": "quiet_environment-10", "split": "validation", "text": "음, 지금은 알림이 울리지 않았으면", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-10-02", "group_id": "quiet_environment-10", "split": "validation", "text": "지금 지금은 알림이 울리지 않았으면", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-10-03", "group_id": "quiet_environment-10", "split": "validation", "text": "그런데 지금은 알림이 울리지 않았으면", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-10-04", "group_id": "quiet_environment-10", "split": "validation", "text": "지금은 알림이 울리지 않았으면…", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-10-05", "group_id": "quiet_environment-10", "split": "validation", "text": "지금은 알림이 울리지 않았으면 그래서 말인데", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-10-06", "group_id": "quiet_environment-10", "split": "validation", "text": "지금은 알림이 울리지 않았으면 어떻게 하면 좋을까", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-10-07", "group_id": "quiet_environment-10", "split": "validation", "text": "지금은 알림이", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-10-08", "group_id": "quiet_environment-10", "split": "validation", "text": "지금은 알림이 울리지", "intent": "QUIET_ENVIRONMENT", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-16-00", "group_id": "quiet_environment-16", "split": "validation", "text": "말소리가 이어지는 동안 조용했으면", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-16-01", "group_id": "quiet_environment-16", "split": "validation", "text": "음, 말소리가 이어지는 동안 조용했으면", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-16-02", "group_id": "quiet_environment-16", "split": "validation", "text": "지금 말소리가 이어지는 동안 조용했으면", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-16-03", "group_id": "quiet_environment-16", "split": "validation", "text": "그런데 말소리가 이어지는 동안 조용했으면", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-16-04", "group_id": "quiet_environment-16", "split": "validation", "text": "말소리가 이어지는 동안 조용했으면…", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-16-05", "group_id": "quiet_environment-16", "split": "validation", "text": "말소리가 이어지는 동안 조용했으면 그래서 말인데", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-16-06", "group_id": "quiet_environment-16", "split": "validation", "text": "말소리가 이어지는 동안 조용했으면 어떻게 하면 좋을까", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-16-07", "group_id": "quiet_environment-16", "split": "validation", "text": "말소리가 이어지는", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-16-08", "group_id": "quiet_environment-16", "split": "validation", "text": "말소리가 이어지는 동안", "intent": "QUIET_ENVIRONMENT", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-22-00", "group_id": "quiet_environment-22", "split": "validation", "text": "중요한 화상 통화가 곧 시작돼", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-22-01", "group_id": "quiet_environment-22", "split": "validation", "text": "음, 중요한 화상 통화가 곧 시작돼", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-22-02", "group_id": "quiet_environment-22", "split": "validation", "text": "지금 중요한 화상 통화가 곧 시작돼", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-22-03", "group_id": "quiet_environment-22", "split": "validation", "text": "그런데 중요한 화상 통화가 곧 시작돼", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-22-04", "group_id": "quiet_environment-22", "split": "validation", "text": "중요한 화상 통화가 곧 시작돼…", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-22-05", "group_id": "quiet_environment-22", "split": "validation", "text": "중요한 화상 통화가 곧 시작돼 그래서 말인데", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-22-06", "group_id": "quiet_environment-22", "split": "validation", "text": "중요한 화상 통화가 곧 시작돼 어떻게 하면 좋을까", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-22-07", "group_id": "quiet_environment-22", "split": "validation", "text": "중요한 화상", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-22-08", "group_id": "quiet_environment-22", "split": "validation", "text": "중요한 화상 통화가", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-22-09", "group_id": "quiet_environment-22", "split": "validation", "text": "중요한 화상 통화가 곧", "intent": "QUIET_ENVIRONMENT", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-28-00", "group_id": "quiet_environment-28", "split": "validation", "text": "회의 참가자가 말하기 시작한 것 같아", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-28-01", "group_id": "quiet_environment-28", "split": "validation", "text": "음, 회의 참가자가 말하기 시작한 것 같아", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-28-02", "group_id": "quiet_environment-28", "split": "validation", "text": "지금 회의 참가자가 말하기 시작한 것 같아", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-28-03", "group_id": "quiet_environment-28", "split": "validation", "text": "그런데 회의 참가자가 말하기 시작한 것 같아", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-28-04", "group_id": "quiet_environment-28", "split": "validation", "text": "회의 참가자가 말하기 시작한 것 같아…", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-28-05", "group_id": "quiet_environment-28", "split": "validation", "text": "회의 참가자가 말하기 시작한 것 같아 그래서 말인데", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-28-06", "group_id": "quiet_environment-28", "split": "validation", "text": "회의 참가자가 말하기 시작한 것 같아 어떻게 하면 좋을까", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-28-07", "group_id": "quiet_environment-28", "split": "validation", "text": "회의 참가자가", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-28-08", "group_id": "quiet_environment-28", "split": "validation", "text": "회의 참가자가 말하기", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-28-09", "group_id": "quiet_environment-28", "split": "validation", "text": "회의 참가자가 말하기 시작한", "intent": "QUIET_ENVIRONMENT", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "quiet_environment-28-10", "group_id": "quiet_environment-28", "split": "validation", "text": "회의 참가자가 말하기 시작한 것", "intent": "QUIET_ENVIRONMENT", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-04-00", "group_id": "no_action-04", "split": "validation", "text": "내일 일정이 꽤 많아", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-04-01", "group_id": "no_action-04", "split": "validation", "text": "음, 내일 일정이 꽤 많아", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-04-02", "group_id": "no_action-04", "split": "validation", "text": "지금 내일 일정이 꽤 많아", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-04-03", "group_id": "no_action-04", "split": "validation", "text": "그런데 내일 일정이 꽤 많아", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-04-04", "group_id": "no_action-04", "split": "validation", "text": "내일 일정이 꽤 많아…", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-04-05", "group_id": "no_action-04", "split": "validation", "text": "내일 일정이 꽤 많아 그래서 말인데", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-04-06", "group_id": "no_action-04", "split": "validation", "text": "내일 일정이 꽤 많아 어떻게 하면 좋을까", "intent": "NO_ACTION", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-10-00", "group_id": "no_action-10", "split": "validation", "text": "에어컨 광고가 계속 나오네", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-10-01", "group_id": "no_action-10", "split": "validation", "text": "음, 에어컨 광고가 계속 나오네", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-10-02", "group_id": "no_action-10", "split": "validation", "text": "지금 에어컨 광고가 계속 나오네", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-10-03", "group_id": "no_action-10", "split": "validation", "text": "그런데 에어컨 광고가 계속 나오네", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-10-04", "group_id": "no_action-10", "split": "validation", "text": "에어컨 광고가 계속 나오네…", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-10-05", "group_id": "no_action-10", "split": "validation", "text": "에어컨 광고가 계속 나오네 그래서 말인데", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-10-06", "group_id": "no_action-10", "split": "validation", "text": "에어컨 광고가 계속 나오네 어떻게 하면 좋을까", "intent": "NO_ACTION", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-16-00", "group_id": "no_action-16", "split": "validation", "text": "티비 소리 줄이지 마", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-16-01", "group_id": "no_action-16", "split": "validation", "text": "음, 티비 소리 줄이지 마", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-16-02", "group_id": "no_action-16", "split": "validation", "text": "지금 티비 소리 줄이지 마", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-16-03", "group_id": "no_action-16", "split": "validation", "text": "그런데 티비 소리 줄이지 마", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-16-04", "group_id": "no_action-16", "split": "validation", "text": "티비 소리 줄이지 마…", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-16-05", "group_id": "no_action-16", "split": "validation", "text": "티비 소리 줄이지 마 그래서 말인데", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-16-06", "group_id": "no_action-16", "split": "validation", "text": "티비 소리 줄이지 마 어떻게 하면 좋을까", "intent": "NO_ACTION", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-22-00", "group_id": "no_action-22", "split": "validation", "text": "회의라는 단어를 영어로 뭐라고 하지", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-22-01", "group_id": "no_action-22", "split": "validation", "text": "음, 회의라는 단어를 영어로 뭐라고 하지", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-22-02", "group_id": "no_action-22", "split": "validation", "text": "지금 회의라는 단어를 영어로 뭐라고 하지", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-22-03", "group_id": "no_action-22", "split": "validation", "text": "그런데 회의라는 단어를 영어로 뭐라고 하지", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-22-04", "group_id": "no_action-22", "split": "validation", "text": "회의라는 단어를 영어로 뭐라고 하지…", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-22-05", "group_id": "no_action-22", "split": "validation", "text": "회의라는 단어를 영어로 뭐라고 하지 그래서 말인데", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-22-06", "group_id": "no_action-22", "split": "validation", "text": "회의라는 단어를 영어로 뭐라고 하지 어떻게 하면 좋을까", "intent": "NO_ACTION", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-28-00", "group_id": "no_action-28", "split": "validation", "text": "회의를 영어로 미팅이라고 부르기도 해", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-28-01", "group_id": "no_action-28", "split": "validation", "text": "음, 회의를 영어로 미팅이라고 부르기도 해", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-28-02", "group_id": "no_action-28", "split": "validation", "text": "지금 회의를 영어로 미팅이라고 부르기도 해", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-28-03", "group_id": "no_action-28", "split": "validation", "text": "그런데 회의를 영어로 미팅이라고 부르기도 해", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-28-04", "group_id": "no_action-28", "split": "validation", "text": "회의를 영어로 미팅이라고 부르기도 해…", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-28-05", "group_id": "no_action-28", "split": "validation", "text": "회의를 영어로 미팅이라고 부르기도 해 그래서 말인데", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-28-06", "group_id": "no_action-28", "split": "validation", "text": "회의를 영어로 미팅이라고 부르기도 해 어떻게 하면 좋을까", "intent": "NO_ACTION", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-34-00", "group_id": "no_action-34", "split": "validation", "text": "불을 켜 달라는 뜻은 아니었어", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-34-01", "group_id": "no_action-34", "split": "validation", "text": "음, 불을 켜 달라는 뜻은 아니었어", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-34-02", "group_id": "no_action-34", "split": "validation", "text": "지금 불을 켜 달라는 뜻은 아니었어", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-34-03", "group_id": "no_action-34", "split": "validation", "text": "그런데 불을 켜 달라는 뜻은 아니었어", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-34-04", "group_id": "no_action-34", "split": "validation", "text": "불을 켜 달라는 뜻은 아니었어…", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-34-05", "group_id": "no_action-34", "split": "validation", "text": "불을 켜 달라는 뜻은 아니었어 그래서 말인데", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-34-06", "group_id": "no_action-34", "split": "validation", "text": "불을 켜 달라는 뜻은 아니었어 어떻게 하면 좋을까", "intent": "NO_ACTION", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-40-00", "group_id": "no_action-40", "split": "validation", "text": "오늘 밤에는", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-40-01", "group_id": "no_action-40", "split": "validation", "text": "음, 오늘 밤에는", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-40-02", "group_id": "no_action-40", "split": "validation", "text": "지금 오늘 밤에는", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-40-03", "group_id": "no_action-40", "split": "validation", "text": "그런데 오늘 밤에는", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-40-04", "group_id": "no_action-40", "split": "validation", "text": "오늘 밤에는…", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-40-05", "group_id": "no_action-40", "split": "validation", "text": "오늘 밤에는 그래서 말인데", "intent": "NO_ACTION", "is_partial": true, "source": "AUTHORED_SYNTHETIC_V2"}
+{"sample_id": "no_action-40-06", "group_id": "no_action-40", "split": "validation", "text": "오늘 밤에는 어떻게 하면 좋을까", "intent": "NO_ACTION", "is_partial": false, "source": "AUTHORED_SYNTHETIC_V2"}

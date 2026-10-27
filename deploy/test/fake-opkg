@@ -1,0 +1,17 @@
+#!/bin/sh
+# Fake opkg for the dry run: install = unpack data.tar.gz to / and run postinst (like opkg); list-installed.
+set -e
+case "$1" in
+  install)
+    shift; file=""
+    for arg in "$@"; do case "$arg" in --*) ;; *) file="$arg";; esac; done
+    work="$(mktemp -d)"; cd "$work"
+    ar x "$file"; tar -xzf control.tar.gz; tar -xzf data.tar.gz -C /
+    pkg="$(sed -n 's/^Package: //p' control)"; ver="$(sed -n 's/^Version: //p' control)"
+    grep -v "^$pkg - " /var/lib/fake-opkg/installed > /var/lib/fake-opkg/installed.new 2>/dev/null || true
+    echo "$pkg - $ver" >> /var/lib/fake-opkg/installed.new; mv /var/lib/fake-opkg/installed.new /var/lib/fake-opkg/installed
+    if [ -f ./postinst ]; then sh ./postinst; fi
+    echo "Configuring $pkg ($ver) [fake opkg]";;
+  list-installed) cat /var/lib/fake-opkg/installed 2>/dev/null || true;;
+  *) echo "fake opkg: unsupported $*" >&2; exit 1;;
+esac

@@ -1,0 +1,11 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "5f0e0000-0000-4000-8000-0000000000a1",
+  "trace_id": "5f0e0000-0000-4000-8000-0000000000a0",
+  "source_node_id": "NODE-RPI5-01",
+  "target_node_id": "NODE-RPI5-02",
+  "client_id": "homemind-ui-7inch",
+  "action": "start",
+  "sent_at_ms": 1792560000000,
+  "expires_at_ms": 1792560003000
+}

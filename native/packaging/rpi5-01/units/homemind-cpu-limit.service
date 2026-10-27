@@ -1,0 +1,17 @@
+# Caps the CPU clock before EXAONE starts (share/cpu-limit.sh): a 5 V 3 A supply could not hold four cores at
+# 2.4 GHz (real Pi5-01, 2026-10-25). config/cpu-limit.env: HM_CPU_MAX_KHZ=1800000, empty = full speed.
+[Unit]
+Description=HomeMind CPU clock limit (config/cpu-limit.env)
+Before=homemind-exaone.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+EnvironmentFile=-/data/share/homemind/config/cpu-limit.env
+ExecStart=/bin/sh /data/share/homemind/share/cpu-limit.sh
+NoNewPrivileges=true
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

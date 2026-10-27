@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-privacy-state.schema.json",
+  "title": "HomeMind effective privacy state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "trace_id", "source_node_id", "mode",
+    "camera_allowed", "microphone_allowed", "recording", "local_processing",
+    "changed_at_ms"
+  ],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "source_node_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "mode": { "enum": ["normal", "camera_blocked", "audio_blocked", "private"] },
+    "camera_allowed": { "type": "boolean" },
+    "microphone_allowed": { "type": "boolean" },
+    "recording": { "type": "boolean" },
+    "local_processing": { "type": "boolean" },
+    "changed_at_ms": { "type": "integer", "minimum": 0 }
+  }
+}

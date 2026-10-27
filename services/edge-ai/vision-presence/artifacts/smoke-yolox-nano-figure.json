@@ -1,0 +1,16 @@
+{
+  "model": "YOLOX-Nano",
+  "classes": [
+    "FIGURE"
+  ],
+  "input": [
+    1,
+    3,
+    416,
+    416
+  ],
+  "output": "C:\\Users\\alexi\\Desktop\\Workspace\\ESW\\services\\edge-ai\\vision-presence\\artifacts\\smoke-yolox-nano-figure.onnx",
+  "bytes": 3652238,
+  "sha256": "c6c0c139f2068d287e2513b28456be37737324d26e7183a84aebfb88f00dab74",
+  "checkpoint": "C:\\Users\\alexi\\Desktop\\Workspace\\ESW\\services\\edge-ai\\vision-presence\\artifacts\\smoke-yolox-nano.pth"
+}

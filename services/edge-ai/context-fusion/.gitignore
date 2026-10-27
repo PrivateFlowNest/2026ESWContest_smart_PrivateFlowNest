@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pip-tmp/
+.test-tmp/
+.venv/
+artifacts/benchmark-*.json

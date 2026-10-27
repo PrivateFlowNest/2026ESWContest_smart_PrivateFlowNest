@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-system-health.schema.json",
+  "title": "HomeMind system health update",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "trace_id", "source_node_id", "overall_status",
+    "components", "storage", "generated_at_ms"
+  ],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "source_node_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "overall_status": { "enum": ["healthy", "degraded", "offline"] },
+    "components": { "type": "array", "items": { "type": "object" } },
+    "storage": {
+      "type": "object",
+      "required": ["used_percent", "warning_threshold_percent", "warning"],
+      "properties": {
+        "used_percent": { "type": "number", "minimum": 0, "maximum": 100 },
+        "warning_threshold_percent": { "type": "number", "minimum": 0, "maximum": 100 },
+        "warning": { "type": "boolean" },
+        "database_bytes": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "generated_at_ms": { "type": "integer", "minimum": 0 }
+  }
+}

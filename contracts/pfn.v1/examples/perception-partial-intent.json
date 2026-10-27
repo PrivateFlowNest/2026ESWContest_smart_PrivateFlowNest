@@ -1,0 +1,23 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "5f0e0000-0000-4000-8000-00000000002a",
+  "trace_id": "5f0e0000-0000-4000-8000-000000000006",
+  "source_node_id": "NODE-RPI5-02",
+  "source_device_id": "MIC-INDOOR-01",
+  "observation_type": "PARTIAL_INTENT_HINT",
+  "zone": "living",
+  "confidence": 0.77,
+  "attributes": {
+    "intent": "VENTILATION",
+    "result": "DETECTED",
+    "candidate_devices": [
+      "FAN-01",
+      "SERVO-WINDOW-01"
+    ],
+    "requires_confirmation": true,
+    "execution_allowed": false,
+    "model_version": "partial-intent-v2"
+  },
+  "observed_at_ms": 1792560000000,
+  "simulated": true
+}

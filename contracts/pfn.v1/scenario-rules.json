@@ -1,0 +1,44 @@
+{
+  "schema_version": "pfn.v1",
+  "rules_version": 2,
+  "scenarios": [
+    {
+      "intent": "prepare_home",
+      "name_ko": "귀가 및 자동 환경 준비",
+      "commands": [
+        { "target_node_id": "CTRL-ESP8266-LED-01", "target_device_id": "LED-LIVING-01", "action": "set_switch", "parameters": { "on": true } },
+        { "target_node_id": "CTRL-ESP8266-LED-01", "target_device_id": "FAN-01", "action": "set_switch", "parameters": { "on": true } }
+      ]
+    },
+    {
+      "intent": "prepare_sleep",
+      "name_ko": "AI 취침 준비",
+      "commands": [
+        { "target_node_id": "CTRL-ESP8266-LED-01", "target_device_id": "LED-LIVING-01", "action": "set_switch", "parameters": { "on": false } },
+        { "target_node_id": "CTRL-ESP8266-LED-01", "target_device_id": "FAN-01", "action": "set_switch", "parameters": { "on": false } },
+        { "target_node_id": "CTRL-ESP32-ACT-01", "target_device_id": "SERVO-WINDOW-01", "action": "set_position", "parameters": { "position_degrees": 0 } }
+      ]
+    },
+    {
+      "intent": "night_bed_exit",
+      "name_ko": "야간 침대 이탈 및 이동 조명",
+      "commands": [
+        { "target_node_id": "CTRL-ESP8266-LED-01", "target_device_id": "LED-LIVING-01", "action": "set_switch", "parameters": { "on": true, "auto_off_after_seconds": 15 } }
+      ]
+    },
+    {
+      "intent": "quiet_mode_on",
+      "name_ko": "조용 모드 (에어컨 저소음 표시)",
+      "commands": [
+        { "target_node_id": "CTRL-ESP8266-LED-01", "target_device_id": "LED-AIRCON-01", "action": "set_color", "parameters": { "color": "red", "pattern": "blink" } }
+      ]
+    },
+    {
+      "intent": "quiet_mode_off",
+      "name_ko": "조용 모드 해제",
+      "commands": [
+        { "target_node_id": "CTRL-ESP8266-LED-01", "target_device_id": "LED-AIRCON-01", "action": "set_color", "parameters": { "color": "red", "pattern": "steady" } }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "schema_version": "pfn.v1",
+  "ack_timeout_ms": 3000,
+  "max_attempts": 3,
+  "command_ttl_ms": 10000,
+  "heartbeat_interval_ms": 5000,
+  "offline_after_ms": 15000,
+  "maximum_payload_bytes": 262144,
+  "topics": {
+    "device_command": "pfn/v1/device/{node_id}/command",
+    "device_ack": "pfn/v1/device/{node_id}/ack",
+    "device_telemetry": "pfn/v1/device/{node_id}/telemetry",
+    "system_heartbeat": "pfn/v1/system/heartbeat",
+    "system_health": "pfn/v1/system/health",
+    "safety_alert": "pfn/v1/system/safety/alert",
+    "safety_ack": "pfn/v1/ui/safety/ack",
+    "privacy_set": "pfn/v1/ui/privacy/set",
+    "privacy_state": "pfn/v1/system/privacy/state",
+    "feedback": "pfn/v1/ui/feedback",
+    "ai_perception": "pfn/v1/ai/perception",
+    "task_request": "pfn/v1/core/task/request",
+    "task_update": "pfn/v1/core/task/update",
+    "state_request": "pfn/v1/core/state/request",
+    "state_response": "pfn/v1/core/state/response/{client_id}",
+    "ui_action": "pfn/v1/ui/action",
+    "ai_llm_request": "pfn/v1/ai/llm/request",
+    "ai_llm_result": "pfn/v1/ai/llm/result",
+    "ai_voice_listen": "pfn/v1/ai/voice/listen",
+    "mobile_pairing_request": "pfn/v1/mobile/pairing/request",
+    "mobile_pairing_offer": "pfn/v1/mobile/pairing/offer",
+    "mobile_task_action": "pfn/v1/mobile/task/action",
+    "mobile_phones_request": "pfn/v1/mobile/phones/request",
+    "mobile_phones_state": "pfn/v1/mobile/phones/state"
+  },
+  "message_schemas": {
+    "device_command": "command.schema.json",
+    "device_ack": "ack.schema.json",
+    "device_telemetry": "telemetry.schema.json",
+    "system_heartbeat": "heartbeat.schema.json",
+    "system_health": "system-health.schema.json",
+    "safety_alert": "safety-alert.schema.json",
+    "safety_ack": "safety-ack.schema.json",
+    "privacy_set": "privacy-set.schema.json",
+    "privacy_state": "privacy-state.schema.json",
+    "feedback": "feedback.schema.json",
+    "ai_perception": "perception.schema.json",
+    "task_request": "task-request.schema.json",
+    "task_update": "task-update.schema.json",
+    "state_request": "state-request.schema.json",
+    "state_response": "state-response.schema.json",
+    "ui_action": "ui-action.schema.json",
+    "ai_llm_request": "llm-request.schema.json",
+    "ai_llm_result": "llm-result.schema.json",
+    "ai_voice_listen": "voice-listen.schema.json",
+    "mobile_pairing_request": "mobile-pairing-request.schema.json",
+    "mobile_pairing_offer": "mobile-pairing-offer.schema.json",
+    "mobile_task_action": "ui-action.schema.json",
+    "mobile_phones_request": "mobile-phones-request.schema.json",
+    "mobile_phones_state": "mobile-phones-state.schema.json"
+  },
+  "core_subscriptions": [
+    "pfn/v1/device/+/command",
+    "pfn/v1/device/+/ack",
+    "pfn/v1/device/+/telemetry",
+    "pfn/v1/system/#",
+    "pfn/v1/core/task/request",
+    "pfn/v1/core/state/request",
+    "pfn/v1/ui/#",
+    "pfn/v1/ai/perception",
+    "pfn/v1/mobile/task/action"
+  ],
+  "topic_policies": {
+    "device_command": {
+      "publishers": ["NODE-RPI4-01"],
+      "qos": 1,
+      "notes": "only core sends device commands; UI, phone app and AI go through core/task/request"
+    },
+    "ai_perception": {
+      "publishers": ["NODE-RPI5-02"],
+      "subscribers": ["NODE-RPI4-01", "NODE-RPI5-01"],
+      "qos": 1,
+      "notes": "results only; no frames, audio, transcripts, coordinates"
+    },
+    "ai_llm_request": {
+      "publishers": ["NODE-RPI5-02"],
+      "subscribers": ["NODE-RPI5-01"],
+      "acl_accounts": ["NODE-RPI5-01", "NODE-RPI5-02"],
+      "core_subscribes": false,
+      "contains_raw_transcript": true,
+      "qos": 1,
+      "notes": "only path for a transcript to leave NODE-RPI5-02; core and broker persistence must not store it"
+    },
+    "ai_llm_result": {
+      "publishers": ["NODE-RPI5-01"],
+      "subscribers": ["NODE-RPI5-01", "NODE-RPI5-02"],
+      "acl_accounts": ["NODE-RPI5-01", "NODE-RPI5-02"],
+      "core_subscribes": false,
+      "contains_raw_transcript": false,
+      "qos": 1
+    },
+    "ai_voice_listen": {
+      "publishers": ["NODE-RPI5-01"],
+      "subscribers": ["NODE-RPI5-02"],
+      "acl_accounts": ["NODE-RPI5-01", "NODE-RPI5-02"],
+      "core_subscribes": false,
+      "contains_raw_transcript": false,
+      "qos": 1,
+      "notes": "7-inch UI push-to-talk button -> perception node (added 2026-10-22). Outside pfn/v1/ui/# so core never receives it; stale presses (expires_at_ms passed) are ignored"
+    },
+    "mobile_pairing_request": {
+      "publishers": ["NODE-RPI5-01"],
+      "subscribers": ["NODE-RPI4-01"],
+      "acl_accounts": ["NODE-RPI5-01"],
+      "core_subscribes": false,
+      "contains_raw_transcript": false,
+      "qos": 1,
+      "notes": "7-inch UI 'phone connect' -> homemind-mobile-api (MQTT account homemind-mobile-api on NODE-RPI4-01) (added 2026-10-22). No secret; stale requests (expires_at_ms passed) are ignored"
+    },
+    "mobile_pairing_offer": {
+      "publishers": ["NODE-RPI4-01"],
+      "subscribers": ["NODE-RPI5-01"],
+      "acl_accounts": ["NODE-RPI5-01"],
+      "core_subscribes": false,
+      "contains_raw_transcript": false,
+      "contains_secret": true,
+      "qos": 1,
+      "notes": "homemind-mobile-api -> 7-inch UI: one-time pairing code and QR payload (added 2026-10-22). Secret while valid: the ACL lets only NODE-RPI5-01 read it and homemind-mobile-api write it; never logged; outside every core subscription"
+    },
+    "mobile_task_action": {
+      "publishers": ["NODE-RPI4-01"],
+      "subscribers": ["NODE-RPI4-01"],
+      "core_subscribes": true,
+      "contains_raw_transcript": false,
+      "qos": 1,
+      "notes": "phone approve / reject of a waiting task, sent by homemind-mobile-api (MQTT account homemind-mobile-api on NODE-RPI4-01) (added 2026-10-22). Same document as ui_action; a separate topic so the broker ACL tells core the phone sent it. Core refuses approve and resume when the task's task-policy rule has phone_may_approve false"
+    },
+    "mobile_phones_request": {
+      "publishers": ["NODE-RPI5-01"],
+      "subscribers": ["NODE-RPI4-01"],
+      "acl_accounts": ["NODE-RPI5-01"],
+      "core_subscribes": false,
+      "contains_raw_transcript": false,
+      "qos": 1,
+      "notes": "7-inch UI 'phone connect' screen -> homemind-mobile-api (MQTT account homemind-mobile-api on NODE-RPI4-01) (added 2026-10-25): list the paired phones or unpair one. Stale or replayed requests are ignored"
+    },
+    "mobile_phones_state": {
+      "publishers": ["NODE-RPI4-01"],
+      "subscribers": ["NODE-RPI5-01"],
+      "acl_accounts": ["NODE-RPI5-01"],
+      "core_subscribes": false,
+      "contains_raw_transcript": false,
+      "contains_secret": false,
+      "qos": 1,
+      "notes": "homemind-mobile-api -> 7-inch UI (added 2026-10-25): paired phone names, pairing times and last requests, as an answer or right after a phone pairs. Token ids only, never a token; still personal, so the ACL lets only NODE-RPI5-01 read it and homemind-mobile-api write it"
+    }
+  },
+  "task_intents": {
+    "device_control": {
+      "handled_by": "core_builtin",
+      "parameters_schema": "device-control.schema.json",
+      "notes": "single registry device; target_device must equal parameters.target_device_id"
+    },
+    "scenario_intents_from": "scenario-rules.json",
+    "origin_field": "parameters.origin (voice_parser | llm | ui); scenario intents may carry it too. Missing origin = unspecified = UI approval"
+  },
+  "task_policy": "task-policy.json",
+  "context_rules": "context-rules.json",
+  "ai_action_map": "ai-action-map.json",
+  "task_states": [
+    "proposed", "ready", "running", "deferred", "completed",
+    "failed", "rejected", "cancelled"
+  ],
+  "task_update_qos": 1,
+  "task_update_retained": false,
+  "transport_policy": {
+    "commands_and_user_actions_qos": 1,
+    "telemetry_heartbeat_health_qos": 0,
+    "retained": false,
+    "camera_frames_over_mqtt": false
+  }
+}

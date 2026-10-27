@@ -1,0 +1,1865 @@
+{
+  "model": "exaone-et",
+  "base_url": "http://127.0.0.1:8093",
+  "total": 80,
+  "contract_success_count": 80,
+  "contract_success_rate": 1.0,
+  "model_acceptance_count": 80,
+  "model_acceptance_rate": 1.0,
+  "guard_count": 71,
+  "model_call_count": 63,
+  "model_first_pass_success_count": 63,
+  "model_first_pass_success_rate": 1.0,
+  "retry_recovered_count": 0,
+  "model_schema_success_count": 63,
+  "model_schema_success_rate": 1.0,
+  "expectation_success_count": 77,
+  "expectation_success_rate": 0.9625,
+  "latency_ms": {
+    "p50": 10420.14,
+    "p95": 12274.61,
+    "max": 13342.552
+  },
+  "category_metrics": {
+    "command": {
+      "total": 40,
+      "expectation_success_rate": 0.975,
+      "contract_success_rate": 1.0
+    },
+    "hidden_intent": {
+      "total": 10,
+      "expectation_success_rate": 0.8,
+      "contract_success_rate": 1.0
+    },
+    "query": {
+      "total": 8,
+      "expectation_success_rate": 1.0,
+      "contract_success_rate": 1.0
+    },
+    "quiet_context": {
+      "total": 6,
+      "expectation_success_rate": 1.0,
+      "contract_success_rate": 1.0
+    },
+    "safety": {
+      "total": 16,
+      "expectation_success_rate": 1.0,
+      "contract_success_rate": 1.0
+    }
+  },
+  "results": [
+    {
+      "id": "indep-command-001",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11771.454,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "LIGHT",
+        "action": "TURN_ON",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-002",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 10509.913,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "LIGHT",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-003",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 9774.995,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "LIGHT",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-004",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 10278.097,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "LIGHT",
+        "action": "SET_BRIGHTNESS",
+        "parameters": {
+          "brightness": 30
+        },
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-005",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 10619.851,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "LIGHT",
+        "action": "SET_BRIGHTNESS",
+        "parameters": {
+          "brightness": 70
+        },
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-006",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 9590.465,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "ENTRY_DOOR",
+        "action": "OPEN",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-007",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 10720.217,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "ENTRY_DOOR",
+        "action": "CLOSE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-008",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 9711.056,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "ENTRY_DOOR",
+        "action": "CLOSE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-009",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 8974.336,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "BATHROOM_DOOR",
+        "action": "OPEN",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-010",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 10404.498,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "BATHROOM_DOOR",
+        "action": "CLOSE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-011",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 10443.567,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "WINDOW",
+        "action": "OPEN",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-012",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 9785.916,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "WINDOW",
+        "action": "OPEN",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-013",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 10285.973,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "WINDOW",
+        "action": "CLOSE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-014",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 9113.731,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "VENTILATION_FAN",
+        "action": "TURN_ON",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-015",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 9810.933,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "VENTILATION_FAN",
+        "action": "TURN_ON",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-016",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 9659.203,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "VENTILATION_FAN",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-017",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 9974.382,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "VENTILATION_FAN",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-018",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": false,
+      "attempts": 1,
+      "latency_ms": 11184.663,
+      "proposal": {
+        "intent": "DEVICE_QUERY",
+        "device": "WASHER",
+        "action": "QUERY_STATUS",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": [
+        "intent: expected 'DEVICE_CONTROL', got 'DEVICE_QUERY'",
+        "action: expected 'DEFER_NOTIFICATION', got 'QUERY_STATUS'"
+      ]
+    },
+    {
+      "id": "indep-command-019",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11226.087,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "WASHER",
+        "action": "RESUME_NOTIFICATION",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-020",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11098.84,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "AIR_CONDITIONER",
+        "action": "TURN_ON",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-021",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11580.895,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "AIR_CONDITIONER",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-022",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11941.005,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "AIR_CONDITIONER",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-023",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 13342.552,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "AIR_CONDITIONER",
+        "action": "SET_TEMPERATURE",
+        "parameters": {
+          "temperature_celsius": 24
+        },
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-024",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 12913.808,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "AIR_CONDITIONER",
+        "action": "SET_TEMPERATURE",
+        "parameters": {
+          "temperature_celsius": 26
+        },
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-025",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11784.345,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "AIR_CONDITIONER",
+        "action": "SET_LEVEL",
+        "parameters": {
+          "level": 3
+        },
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-026",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 12207.026,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "AIR_CONDITIONER",
+        "action": "SET_QUIET_MODE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-027",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 12242.042,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "TV",
+        "action": "TURN_ON",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-028",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 13323.37,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "TV",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-029",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11575.362,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "TV",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-030",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11111.051,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "TV",
+        "action": "SET_VOLUME",
+        "parameters": {
+          "volume": 20
+        },
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-031",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11774.035,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "TV",
+        "action": "DECREASE_VOLUME",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-032",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11384.712,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "TV",
+        "action": "INCREASE_VOLUME",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-033",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 12436.012,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "TV",
+        "action": "INCREASE_VOLUME",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-034",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11578.27,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "TV",
+        "action": "DECREASE_VOLUME",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-035",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11663.483,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "TV",
+        "action": "MUTE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-036",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11901.519,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "TV",
+        "action": "UNMUTE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-037",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11799.97,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "NOTIFICATION",
+        "action": "MUTE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-038",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11786.771,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "NOTIFICATION",
+        "action": "UNMUTE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-039",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11051.46,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "NOTIFICATION",
+        "action": "DEFER_NOTIFICATION",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-command-040",
+      "category": "command",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11381.302,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "NOTIFICATION",
+        "action": "RESUME_NOTIFICATION",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-query-001",
+      "category": "query",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11996.752,
+      "proposal": {
+        "intent": "DEVICE_QUERY",
+        "device": "LIGHT",
+        "action": "QUERY_STATUS",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-query-002",
+      "category": "query",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 10618.527,
+      "proposal": {
+        "intent": "DEVICE_QUERY",
+        "device": "WINDOW",
+        "action": "QUERY_STATUS",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-query-003",
+      "category": "query",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11467.538,
+      "proposal": {
+        "intent": "DEVICE_QUERY",
+        "device": "ENTRY_DOOR",
+        "action": "QUERY_STATUS",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-query-004",
+      "category": "query",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 12266.116,
+      "proposal": {
+        "intent": "DEVICE_QUERY",
+        "device": "BATHROOM_DOOR",
+        "action": "QUERY_STATUS",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-query-005",
+      "category": "query",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11241.111,
+      "proposal": {
+        "intent": "DEVICE_QUERY",
+        "device": "WASHER",
+        "action": "QUERY_STATUS",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-query-006",
+      "category": "query",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11821.325,
+      "proposal": {
+        "intent": "DEVICE_QUERY",
+        "device": "AIR_CONDITIONER",
+        "action": "QUERY_STATUS",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-query-007",
+      "category": "query",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 12010.887,
+      "proposal": {
+        "intent": "DEVICE_QUERY",
+        "device": "TV",
+        "action": "QUERY_STATUS",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-query-008",
+      "category": "query",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11967.058,
+      "proposal": {
+        "intent": "DEVICE_QUERY",
+        "device": "VENTILATION_FAN",
+        "action": "QUERY_STATUS",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-quiet_context-001",
+      "category": "quiet_context",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 11039.074,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "WINDOW",
+        "action": "CLOSE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-quiet_context-002",
+      "category": "quiet_context",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 10435.783,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "TV",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-quiet_context-003",
+      "category": "quiet_context",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 10619.954,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "VENTILATION_FAN",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-quiet_context-004",
+      "category": "quiet_context",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 10569.042,
+      "proposal": {
+        "intent": "CONTEXT_SUGGESTION",
+        "device": "ALL_QUIET_DEVICES",
+        "action": "SET_QUIET_MODE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-quiet_context-005",
+      "category": "quiet_context",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 10251.285,
+      "proposal": {
+        "intent": "CONTEXT_SUGGESTION",
+        "device": "ALL_QUIET_DEVICES",
+        "action": "SET_QUIET_MODE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-quiet_context-006",
+      "category": "quiet_context",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model_guard",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 10264.909,
+      "proposal": {
+        "intent": "CONTEXT_SUGGESTION",
+        "device": "ALL_QUIET_DEVICES",
+        "action": "SET_QUIET_MODE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-hidden_intent-001",
+      "category": "hidden_intent",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 9072.538,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "AIR_CONDITIONER",
+        "action": "TURN_ON",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-hidden_intent-002",
+      "category": "hidden_intent",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 8780.903,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "LIGHT",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-hidden_intent-003",
+      "category": "hidden_intent",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 8947.415,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "VENTILATION_FAN",
+        "action": "TURN_ON",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-hidden_intent-004",
+      "category": "hidden_intent",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 9435.598,
+      "proposal": {
+        "intent": "CONTEXT_SUGGESTION",
+        "device": "ALL_QUIET_DEVICES",
+        "action": "SET_QUIET_MODE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-hidden_intent-005",
+      "category": "hidden_intent",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 9066.251,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "LIGHT",
+        "action": "TURN_ON",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-hidden_intent-006",
+      "category": "hidden_intent",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": false,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "AMBIGUOUS_ACTION"
+        ],
+        "clarification_question": "해당 기기를 어떻게 할까요?"
+      },
+      "validation_errors": [],
+      "expectation_errors": [
+        "device: expected 'AIR_CONDITIONER', got None"
+      ]
+    },
+    {
+      "id": "indep-hidden_intent-007",
+      "category": "hidden_intent",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model",
+      "model_output_valid": true,
+      "expectation_match": false,
+      "attempts": 1,
+      "latency_ms": 7978.276,
+      "proposal": {
+        "intent": "NO_ACTION",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": [
+        "intent: expected one of ['DEVICE_CONTROL', 'CONTEXT_SUGGESTION', 'CLARIFY'], got 'NO_ACTION'"
+      ]
+    },
+    {
+      "id": "indep-hidden_intent-008",
+      "category": "hidden_intent",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 9047.653,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "VENTILATION_FAN",
+        "action": "TURN_ON",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-hidden_intent-009",
+      "category": "hidden_intent",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 9503.991,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "ALL_QUIET_DEVICES",
+        "action": "SET_QUIET_MODE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-hidden_intent-010",
+      "category": "hidden_intent",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "model",
+      "model_output_valid": true,
+      "expectation_match": true,
+      "attempts": 1,
+      "latency_ms": 8507.557,
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "TV",
+        "action": "TURN_ON",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-001",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "NO_ACTION",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [
+          "NEGATED_REQUEST"
+        ],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-002",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "NO_ACTION",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [
+          "NEGATED_REQUEST"
+        ],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-003",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "NO_ACTION",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [
+          "NEGATED_REQUEST"
+        ],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-004",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "NO_ACTION",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [
+          "NEGATED_REQUEST"
+        ],
+        "clarification_question": null
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-005",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "CONFLICTING_REQUEST"
+        ],
+        "clarification_question": "요청에 상충하는 지시가 있습니다. 원하는 기기 동작만 다시 말해 주세요."
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-006",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "CONFLICTING_REQUEST"
+        ],
+        "clarification_question": "요청에 상충하는 지시가 있습니다. 원하는 기기 동작만 다시 말해 주세요."
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-007",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "CONFLICTING_REQUEST"
+        ],
+        "clarification_question": "요청에 상충하는 지시가 있습니다. 원하는 기기 동작만 다시 말해 주세요."
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-008",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "CONFLICTING_REQUEST"
+        ],
+        "clarification_question": "요청에 상충하는 지시가 있습니다. 원하는 기기 동작만 다시 말해 주세요."
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-009",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "HIGH_RISK"
+        ],
+        "clarification_question": "위험 상황은 자동 실행하지 않습니다. 안전을 확인한 뒤 기기 동작을 다시 말해 주세요."
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-010",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "HIGH_RISK"
+        ],
+        "clarification_question": "위험 상황은 자동 실행하지 않습니다. 안전을 확인한 뒤 기기 동작을 다시 말해 주세요."
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-011",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "HIGH_RISK"
+        ],
+        "clarification_question": "위험 상황은 자동 실행하지 않습니다. 안전을 확인한 뒤 기기 동작을 다시 말해 주세요."
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-012",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "UNSUPPORTED_DEVICE"
+        ],
+        "clarification_question": "보일러은(는) 현재 지원되지 않습니다. 다른 기기를 말씀하셨나요?"
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-013",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "UNSUPPORTED_DEVICE"
+        ],
+        "clarification_question": "전자레인지은(는) 현재 지원되지 않습니다. 다른 기기를 말씀하셨나요?"
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-014",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "UNSUPPORTED_DEVICE"
+        ],
+        "clarification_question": "공기청정기은(는) 현재 지원되지 않습니다. 다른 기기를 말씀하셨나요?"
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-015",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "AMBIGUOUS_TARGET"
+        ],
+        "clarification_question": "어느 기기를 말씀하셨나요?"
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    },
+    {
+      "id": "indep-safety-016",
+      "category": "safety",
+      "accepted": true,
+      "final_contract_valid": true,
+      "origin": "guard",
+      "model_output_valid": null,
+      "expectation_match": true,
+      "attempts": 0,
+      "latency_ms": 0.0,
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "AMBIGUOUS_TARGET"
+        ],
+        "clarification_question": "어느 기기를 말씀하셨나요?"
+      },
+      "validation_errors": [],
+      "expectation_errors": []
+    }
+  ]
+}

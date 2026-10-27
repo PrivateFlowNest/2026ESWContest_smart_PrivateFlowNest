@@ -1,0 +1,1036 @@
+{
+ "schema_version": "1.0",
+ "audio": "30.0 min AIHub 464 meeting, 6 min meeting / 2 min quiet",
+ "ideal": {
+  "activations": 4,
+  "releases": 3
+ },
+ "windows": 1797,
+ "current_policy": {
+  "policy": {
+   "quiet_audio_confidence": 0.5,
+   "meeting_tv_margin": 0.0,
+   "activation_updates": 3,
+   "release_updates": 2,
+   "change_updates": 2,
+   "ttl_seconds": 10.0
+  },
+  "quiet_recall": 0.9133,
+  "quiet_false_positive_rate": 0.0489,
+  "exact_context_accuracy": 0.8453,
+  "activation_p95_seconds": 7.0,
+  "release_p95_seconds": 5.0,
+  "activations": 40,
+  "releases": 39,
+  "quiet_minutes": 16.1
+ },
+ "best": {
+  "policy": {
+   "quiet_audio_confidence": 0.5,
+   "meeting_tv_margin": 0.0,
+   "activation_updates": 3,
+   "release_updates": 15,
+   "change_updates": 2,
+   "ttl_seconds": 10.0
+  },
+  "config_file": "audio-policy-v6.3-hold15.json",
+  "config_version": "audio-policy-v6.3.0-ensemble-50-50-hold15",
+  "quiet_recall": 0.9133,
+  "quiet_false_positive_rate": 0.0489,
+  "exact_context_accuracy": 0.8453,
+  "activation_p95_seconds": 7.0,
+  "release_p95_seconds": 18.0,
+  "activations": 4,
+  "releases": 3,
+  "quiet_minutes": 24.5
+ },
+ "policy_files": [
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 3,
+    "release_updates": 15,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "config_file": "audio-policy-v6.3-hold15.json",
+   "config_version": "audio-policy-v6.3.0-ensemble-50-50-hold15",
+   "quiet_recall": 0.9133,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 18.0,
+   "activations": 4,
+   "releases": 3,
+   "quiet_minutes": 24.5
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 3,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "config_file": "audio-policy-v6-ensemble-50-50.json",
+   "config_version": "audio-policy-v6.2.1-ensemble-50-50",
+   "quiet_recall": 0.9133,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 5.0,
+   "activations": 40,
+   "releases": 39,
+   "quiet_minutes": 16.1
+  }
+ ],
+ "candidates": [
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 3,
+    "release_updates": 15,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "config_file": "audio-policy-v6.3-hold15.json",
+   "config_version": "audio-policy-v6.3.0-ensemble-50-50-hold15",
+   "quiet_recall": 0.9133,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 18.0,
+   "activations": 4,
+   "releases": 3,
+   "quiet_minutes": 24.5
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 3,
+    "release_updates": 12,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": null,
+   "quiet_false_positive_rate": null,
+   "exact_context_accuracy": null,
+   "activation_p95_seconds": null,
+   "release_p95_seconds": null,
+   "outside_tuning_gates": true,
+   "activations": 4,
+   "releases": 3,
+   "quiet_minutes": 24.4
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 3,
+    "release_updates": 15,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": null,
+   "quiet_false_positive_rate": null,
+   "exact_context_accuracy": null,
+   "activation_p95_seconds": null,
+   "release_p95_seconds": null,
+   "outside_tuning_gates": true,
+   "activations": 4,
+   "releases": 3,
+   "quiet_minutes": 24.5
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 3,
+    "release_updates": 20,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": null,
+   "quiet_false_positive_rate": null,
+   "exact_context_accuracy": null,
+   "activation_p95_seconds": null,
+   "release_p95_seconds": null,
+   "outside_tuning_gates": true,
+   "activations": 4,
+   "releases": 3,
+   "quiet_minutes": 24.8
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 3,
+    "release_updates": 10,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": null,
+   "quiet_false_positive_rate": null,
+   "exact_context_accuracy": null,
+   "activation_p95_seconds": null,
+   "release_p95_seconds": null,
+   "outside_tuning_gates": true,
+   "activations": 7,
+   "releases": 6,
+   "quiet_minutes": 23.6
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 3,
+    "release_updates": 8,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": null,
+   "quiet_false_positive_rate": null,
+   "exact_context_accuracy": null,
+   "activation_p95_seconds": null,
+   "release_p95_seconds": null,
+   "outside_tuning_gates": true,
+   "activations": 9,
+   "releases": 8,
+   "quiet_minutes": 22.3
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 3,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9133,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 7.0,
+   "activations": 19,
+   "releases": 18,
+   "quiet_minutes": 19.5
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.025,
+    "activation_updates": 3,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9133,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 7.0,
+   "activations": 19,
+   "releases": 18,
+   "quiet_minutes": 19.5
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.075,
+    "activation_updates": 3,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9067,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 7.0,
+   "activations": 19,
+   "releases": 18,
+   "quiet_minutes": 19.5
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.1,
+    "activation_updates": 3,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9067,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 7.0,
+   "activations": 19,
+   "releases": 18,
+   "quiet_minutes": 19.5
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.15,
+    "activation_updates": 3,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9067,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 7.0,
+   "activations": 19,
+   "releases": 18,
+   "quiet_minutes": 19.5
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.05,
+    "activation_updates": 3,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9067,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8427,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 7.0,
+   "activations": 19,
+   "releases": 18,
+   "quiet_minutes": 19.5
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.2,
+    "activation_updates": 3,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 7.0,
+   "activations": 19,
+   "releases": 18,
+   "quiet_minutes": 19.5
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.025,
+    "activation_updates": 3,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9133,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 6.0,
+   "activations": 27,
+   "releases": 26,
+   "quiet_minutes": 18.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.075,
+    "activation_updates": 3,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9067,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 6.0,
+   "activations": 27,
+   "releases": 26,
+   "quiet_minutes": 18.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.1,
+    "activation_updates": 3,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9067,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 6.0,
+   "activations": 27,
+   "releases": 26,
+   "quiet_minutes": 18.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.15,
+    "activation_updates": 3,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9067,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 6.0,
+   "activations": 27,
+   "releases": 26,
+   "quiet_minutes": 18.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.05,
+    "activation_updates": 3,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9067,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8427,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 6.0,
+   "activations": 27,
+   "releases": 26,
+   "quiet_minutes": 18.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.2,
+    "activation_updates": 2,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.848,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 7.0,
+   "activations": 27,
+   "releases": 26,
+   "quiet_minutes": 17.0
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.25,
+    "activation_updates": 2,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.848,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 7.0,
+   "activations": 27,
+   "releases": 26,
+   "quiet_minutes": 17.0
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.075,
+    "activation_updates": 2,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 7.0,
+   "activations": 27,
+   "releases": 26,
+   "quiet_minutes": 17.0
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.1,
+    "activation_updates": 2,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 7.0,
+   "activations": 27,
+   "releases": 26,
+   "quiet_minutes": 17.0
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.15,
+    "activation_updates": 2,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 7.0,
+   "activations": 27,
+   "releases": 26,
+   "quiet_minutes": 17.0
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 2,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8427,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 7.0,
+   "activations": 27,
+   "releases": 26,
+   "quiet_minutes": 16.9
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.025,
+    "activation_updates": 2,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8427,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 7.0,
+   "activations": 27,
+   "releases": 26,
+   "quiet_minutes": 17.0
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.05,
+    "activation_updates": 2,
+    "release_updates": 4,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8427,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 7.0,
+   "activations": 27,
+   "releases": 26,
+   "quiet_minutes": 17.0
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.2,
+    "activation_updates": 3,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 6.0,
+   "activations": 27,
+   "releases": 26,
+   "quiet_minutes": 18.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 3,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9133,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 6.0,
+   "activations": 28,
+   "releases": 27,
+   "quiet_minutes": 18.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 3,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9133,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 5.0,
+   "activations": 40,
+   "releases": 39,
+   "quiet_minutes": 16.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.025,
+    "activation_updates": 3,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9133,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 5.0,
+   "activations": 40,
+   "releases": 39,
+   "quiet_minutes": 16.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 3,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "config_file": "audio-policy-v6-ensemble-50-50.json",
+   "config_version": "audio-policy-v6.2.1-ensemble-50-50",
+   "quiet_recall": 0.9133,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 5.0,
+   "activations": 40,
+   "releases": 39,
+   "quiet_minutes": 16.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.075,
+    "activation_updates": 3,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9067,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 5.0,
+   "activations": 40,
+   "releases": 39,
+   "quiet_minutes": 16.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.1,
+    "activation_updates": 3,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9067,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 5.0,
+   "activations": 40,
+   "releases": 39,
+   "quiet_minutes": 16.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.15,
+    "activation_updates": 3,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9067,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 5.0,
+   "activations": 40,
+   "releases": 39,
+   "quiet_minutes": 16.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.05,
+    "activation_updates": 3,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9067,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8427,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 5.0,
+   "activations": 40,
+   "releases": 39,
+   "quiet_minutes": 16.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.2,
+    "activation_updates": 3,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0489,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 7.0,
+   "release_p95_seconds": 5.0,
+   "activations": 40,
+   "releases": 39,
+   "quiet_minutes": 16.1
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.2,
+    "activation_updates": 2,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.848,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 6.0,
+   "activations": 42,
+   "releases": 41,
+   "quiet_minutes": 15.2
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.25,
+    "activation_updates": 2,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.848,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 6.0,
+   "activations": 42,
+   "releases": 41,
+   "quiet_minutes": 15.2
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.075,
+    "activation_updates": 2,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 6.0,
+   "activations": 42,
+   "releases": 41,
+   "quiet_minutes": 15.2
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.1,
+    "activation_updates": 2,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 6.0,
+   "activations": 42,
+   "releases": 41,
+   "quiet_minutes": 15.2
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.15,
+    "activation_updates": 2,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 6.0,
+   "activations": 42,
+   "releases": 41,
+   "quiet_minutes": 15.2
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 2,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8427,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 6.0,
+   "activations": 42,
+   "releases": 41,
+   "quiet_minutes": 15.2
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.025,
+    "activation_updates": 2,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8427,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 6.0,
+   "activations": 42,
+   "releases": 41,
+   "quiet_minutes": 15.2
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.05,
+    "activation_updates": 2,
+    "release_updates": 3,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8427,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 6.0,
+   "activations": 42,
+   "releases": 41,
+   "quiet_minutes": 15.2
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.2,
+    "activation_updates": 2,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.848,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 5.0,
+   "activations": 66,
+   "releases": 65,
+   "quiet_minutes": 12.6
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.25,
+    "activation_updates": 2,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.848,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 5.0,
+   "activations": 66,
+   "releases": 65,
+   "quiet_minutes": 12.6
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.075,
+    "activation_updates": 2,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 5.0,
+   "activations": 66,
+   "releases": 65,
+   "quiet_minutes": 12.6
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.1,
+    "activation_updates": 2,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 5.0,
+   "activations": 66,
+   "releases": 65,
+   "quiet_minutes": 12.6
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.15,
+    "activation_updates": 2,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8453,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 5.0,
+   "activations": 66,
+   "releases": 65,
+   "quiet_minutes": 12.6
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 2,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8427,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 5.0,
+   "activations": 66,
+   "releases": 65,
+   "quiet_minutes": 12.6
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.025,
+    "activation_updates": 2,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8427,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 5.0,
+   "activations": 66,
+   "releases": 65,
+   "quiet_minutes": 12.6
+  },
+  {
+   "policy": {
+    "quiet_audio_confidence": 0.8,
+    "meeting_tv_margin": 0.05,
+    "activation_updates": 2,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+   },
+   "quiet_recall": 0.9,
+   "quiet_false_positive_rate": 0.0356,
+   "exact_context_accuracy": 0.8427,
+   "activation_p95_seconds": 8.0,
+   "release_p95_seconds": 5.0,
+   "activations": 66,
+   "releases": 65,
+   "quiet_minutes": 12.6
+  }
+ ]
+}

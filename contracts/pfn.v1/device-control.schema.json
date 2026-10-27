@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-device-control.schema.json",
+  "title": "parameters of a task request whose intent is device_control",
+  "description": "Single-device request built by the NODE-RPI5-02 voice parser or the NODE-RPI5-01 EXAONE guard from ai-action-map.json. Untrusted: NODE-RPI4-01 core resolves the controller node from device-registry.json, requires wiring_status=wired and the action in capabilities, and checks parameters with command.schema.json. task_request.target_device must equal target_device_id.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["target_device_id", "action", "parameters", "origin", "ai_device", "ai_action"],
+  "properties": {
+    "target_device_id": { "type": "string", "pattern": "^[A-Z0-9]+(?:-[A-Z0-9]+)*$", "maxLength": 64 },
+    "action": { "enum": ["set_switch", "set_color", "set_level", "set_position", "set_number"] },
+    "parameters": { "type": "object" },
+    "origin": { "enum": ["voice_parser", "llm", "ui"] },
+    "ai_device": { "type": ["string", "null"], "maxLength": 64 },
+    "ai_action": { "type": ["string", "null"], "maxLength": 64 }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "action": { "const": "set_switch" } } },
+      "then": { "properties": { "parameters": { "required": ["on"], "properties": { "on": { "type": "boolean" } } } } }
+    },
+    {
+      "if": { "properties": { "action": { "const": "set_position" } } },
+      "then": { "properties": { "parameters": { "required": ["position_degrees"], "properties": { "position_degrees": { "type": "number", "minimum": 0, "maximum": 180 } } } } }
+    },
+    {
+      "if": { "properties": { "action": { "const": "set_level" } } },
+      "then": { "properties": { "parameters": { "required": ["level_percent"], "properties": { "level_percent": { "type": "number", "minimum": 0, "maximum": 100 } } } } }
+    },
+    {
+      "if": { "properties": { "action": { "const": "set_color" } } },
+      "then": { "properties": { "parameters": { "required": ["color"], "properties": { "color": { "enum": ["off", "green", "red", "amber"] }, "pattern": { "enum": ["steady", "blink"] } } } } }
+    },
+    {
+      "if": { "properties": { "action": { "const": "set_number" } } },
+      "then": { "properties": { "parameters": { "required": ["value"], "properties": { "value": { "type": "integer", "minimum": 0, "maximum": 9999 } } } } }
+    }
+  ]
+}

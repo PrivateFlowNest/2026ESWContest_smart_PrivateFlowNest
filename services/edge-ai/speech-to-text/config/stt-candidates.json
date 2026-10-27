@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "decision_scope": "PC candidate evaluation; Pi 5 decision requires device benchmark",
+  "candidates": [
+    {
+      "id": "vosk-small-ko-0.22",
+      "role": "streaming_baseline",
+      "runtime": "vosk",
+      "download_url": "https://alphacephei.com/vosk/models/vosk-model-small-ko-0.22.zip",
+      "license": "Apache-2.0",
+      "published_size_mb": 82,
+      "notes": "True partial transcripts and small Raspberry Pi-oriented runtime; official Zeroth WER is 28.1%."
+    },
+    {
+      "id": "sherpa-onnx-zipformer-korean-2024-06-24-int8",
+      "role": "final_transcript_candidate",
+      "runtime": "sherpa-onnx",
+      "download_url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-zipformer-korean-2024-06-24.tar.bz2",
+      "license": "see upstream model card",
+      "notes": "Offline Korean Zipformer INT8 with VAD simulated streaming support. Kept separate from the affected 2024-06-16 online model."
+    },
+    {
+      "id": "whisper.cpp-base-multilingual",
+      "role": "accuracy_fallback_candidate",
+      "runtime": "whisper.cpp",
+      "download_url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin",
+      "license": "MIT code; model license per OpenAI Whisper",
+      "published_size_mb": 142,
+      "notes": "Multilingual comparison candidate; chunked pseudo-streaming and shared Pi 5 resources require later measurement."
+    },
+    {
+      "id": "whisper.cpp-small-multilingual",
+      "role": "fine_tuning_base",
+      "runtime": "whisper.cpp",
+      "download_url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-small.bin",
+      "license": "MIT code; model license per OpenAI Whisper",
+      "published_size_mb": 466,
+      "notes": "Best PC accuracy candidate. Must be fine-tuned, converted, quantized, and measured on Pi 5 before release."
+    }
+  ],
+  "pc_acceptance": {
+    "character_error_rate_max": 0.25,
+    "real_time_factor_max": 1.0,
+    "homemind_keyword_recall_min": 0.90,
+    "raw_transcripts_in_report": false
+  }
+}

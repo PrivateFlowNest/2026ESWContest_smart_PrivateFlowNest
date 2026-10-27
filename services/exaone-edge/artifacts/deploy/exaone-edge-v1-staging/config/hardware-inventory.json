@@ -1,0 +1,49 @@
+{
+  "source": "user-provided hardware table, confirmed 2026-09-02",
+  "compute_nodes": [
+    {"label": "RPiA", "id": "NODE-RPI4-01", "os": "LG_webOS_OSE", "role": "primary_homemind_core"},
+    {"label": "RPiB", "id": "NODE-RPI4-02", "os": "Ubuntu", "role": "auxiliary_xy_or_compute"},
+    {"label": "RPiC", "id": "NODE-RPI5-01", "os": "LG_webOS_OSE", "role": "primary_edge_ai"},
+    {"label": "RPiD", "id": "NODE-RPI5-02", "os": "Ubuntu", "role": "auxiliary_xy_or_ai_vision"}
+  ],
+  "controllers": [
+    {"type": "ESP32", "id": "CTRL-ESP32-ACT-01", "loads": ["BG90S", "FAN"]},
+    {"type": "ESP8266", "id": "CTRL-ESP8266-LED-01", "loads": ["LED"]},
+    {"type": "Octopus", "id": "CTRL-OCTOPUS-01", "loads": ["XY_DOF_ROBOT"]}
+  ],
+  "hardware": [
+    {"type": "LIGHT", "name": "일반 조명", "id": "LIGHT", "controller": null, "channel": null, "zone": "WHOLE_HOME", "behavior": "operation_and_brightness"},
+    {"type": "BG90S", "name": "현관문", "id": "SERVO-DOOR-01", "controller": "CTRL-ESP32-ACT-01", "channel": "door1", "zone": "ENTRANCE", "behavior": "open_close"},
+    {"type": "BG90S", "name": "화장실문", "id": "SERVO-DOOR-02", "controller": "CTRL-ESP32-ACT-01", "channel": "door2", "zone": "BATHROOM", "behavior": "open_close"},
+    {"type": "BG90S", "name": "창문", "id": "SERVO-WINDOW-01", "controller": "CTRL-ESP32-ACT-01", "channel": "wind1", "zone": "COMMON", "behavior": "open_close"},
+    {"type": "FAN", "name": "환기팬", "id": "FAN-01", "controller": "CTRL-ESP32-ACT-01", "channel": "pan1", "zone": null, "behavior": "on_off_pending_pwm_test"},
+    {"type": "LED", "name": "세탁기 표시", "id": "LED-WASHER-01", "controller": "CTRL-ESP8266-LED-01", "channel": "세탁기", "zone": null, "behavior": "simulated_operation_state"},
+    {"type": "LED", "name": "에어컨 표시", "id": "LED-AIRCON-01", "controller": "CTRL-ESP8266-LED-01", "channel": "에어컨", "zone": "COMMON", "behavior": "simulated_operation_state_and_level"},
+    {"type": "LED", "name": "TV 표시", "id": "LED-TV-01", "controller": "CTRL-ESP8266-LED-01", "channel": "TV", "zone": "COMMON", "behavior": "simulated_operation_state_and_level"},
+    {"type": "LED", "name": "노트북 표시", "id": "LED-LAPTOP-01", "controller": "CTRL-ESP8266-LED-01", "channel": "노트북", "zone": "DESK", "behavior": "simulated_observed_state"},
+    {"type": "USB_MIC", "name": "음성 인식", "id": "MIC-INDOOR-01", "controller": "NODE-RPI5-01", "channel": "마이크", "zone": "WHOLE_HOME", "behavior": "local_audio_input"},
+    {"type": "CAM", "name": "내부 카메라", "id": "CAM-INDOOR-01", "controller": "NODE-RPI5-01", "channel": "내부", "zone": "WHOLE_HOME", "behavior": "local_zone_presence"},
+    {"type": "CAM", "name": "외부 카메라", "id": "CAM-OUTDOOR-01", "controller": "NODE-RPI5-01", "channel": "외부", "zone": "OUTDOOR", "behavior": "local_outdoor_presence"},
+    {"type": "NEMA17", "name": "X축 이동", "id": "MOTOR-XY-Y-01", "controller": "CTRL-OCTOPUS-01", "channel": "x", "zone": null, "behavior": "move_figure_x", "id_status": "DUPLICATED_IN_SOURCE_REQUIRES_CONFIRMATION"},
+    {"type": "NEMA17", "name": "Y축 이동", "id": "MOTOR-XY-Y-01", "controller": "CTRL-OCTOPUS-01", "channel": "y", "zone": null, "behavior": "move_figure_y", "id_status": "DUPLICATED_IN_SOURCE_REQUIRES_CONFIRMATION"},
+    {"type": "OPTICAL_SENSOR", "name": "X축 원점", "id": "SENSOR-HOME-X-01", "controller": "CTRL-OCTOPUS-01", "channel": "x원점센서", "zone": null, "behavior": "home_x"},
+    {"type": "OPTICAL_SENSOR", "name": "Y축 원점", "id": "SENSOR-HOME-Y-01", "controller": "CTRL-OCTOPUS-01", "channel": "y원점센서", "zone": null, "behavior": "home_y"}
+  ],
+  "logical_zones": ["BED", "DESK", "BATHROOM", "ENTRANCE", "COMMON", "OUTDOOR", "WHOLE_HOME"],
+  "fan_product": {
+    "name": "40mm 저소음 브러시리스 냉각팬",
+    "quantity": 4,
+    "voltage": "12/24V product option",
+    "connector": "XH2.54 2PIN",
+    "native_control": "power on/off",
+    "pwm_levels": "enable only after MOSFET PWM hardware validation"
+  },
+  "notes": [
+    "침대와 책상 구역의 실제 카메라 좌표는 모형 완성 후 보정한다.",
+    "기본 구성은 NODE-RPI5-01 한 대와 NODE-RPI4-01 한 대가 각각 엣지 AI와 HomeMind 코어를 담당한다.",
+    "Ubuntu 보조 노드 두 대는 인형 XY 이동 또는 AI·비전 부하 분산에 재할당할 수 있으며 기본 LG OS 경로와 분리한다.",
+    "원본 표에서 X축·Y축 모터 ID가 모두 MOTOR-XY-Y-01로 중복되어 있다. 임의로 수정하지 않으며 배선 전에 서로 다른 최종 ID를 확정해야 한다.",
+    "일반 조명 ID는 사용자가 추가 확정한 LIGHT를 사용한다. 컨트롤러 채널은 배선 확정 후 갱신한다.",
+    "환기팬과 세탁기 표시의 실제 설치 구역은 아직 확정되지 않았다."
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-device-registry.schema.json",
+  "title": "HomeMind shared device ID registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "registry_version",
+    "id_policy",
+    "zones",
+    "nodes",
+    "devices",
+    "open_decisions"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "pfn.v1"
+    },
+    "registry_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "id_policy": {
+      "type": "object"
+    },
+    "zones": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$",
+        "maxLength": 64
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "asset_label",
+          "node_id",
+          "node_type",
+          "role"
+        ],
+        "properties": {
+          "asset_label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "node_id": {
+            "type": "string",
+            "pattern": "^[A-Z0-9]+(?:-[A-Z0-9]+)*$",
+            "maxLength": 64
+          },
+          "node_type": {
+            "enum": [
+              "pi4",
+              "pi5",
+              "esp32",
+              "esp8266",
+              "octopus"
+            ]
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "development_ip": {
+            "type": "string",
+            "format": "ipv4"
+          }
+        }
+      }
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "hardware",
+          "function",
+          "device_id",
+          "controller_node_id",
+          "wiring_status",
+          "zone",
+          "capabilities"
+        ],
+        "properties": {
+          "hardware": {
+            "type": "string",
+            "minLength": 1
+          },
+          "function": {
+            "type": "string",
+            "minLength": 1
+          },
+          "device_id": {
+            "type": "string",
+            "pattern": "^[A-Z0-9]+(?:-[A-Z0-9]+)*$",
+            "maxLength": 64
+          },
+          "controller_node_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z0-9]+(?:-[A-Z0-9]+)*$",
+                "maxLength": 64
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "assignment_status": {
+            "type": "string"
+          },
+          "zone": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          },
+          "capabilities": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 64
+            }
+          },
+          "pin": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32
+          },
+          "channel": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          },
+          "wiring_status": {
+            "enum": [
+              "wired",
+              "not_wired",
+              "to_confirm"
+            ]
+          },
+          "positions": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "open",
+              "closed",
+              "calibrated"
+            ],
+            "properties": {
+              "open": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 180
+              },
+              "closed": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 180
+              },
+              "calibrated": {
+                "type": "boolean"
+              }
+            }
+          },
+          "supported_colors": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "off",
+                "green",
+                "red",
+                "amber"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "open_decisions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

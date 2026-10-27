@@ -1,0 +1,37 @@
+{
+  "schema_version": "pfn.v1",
+  "rules_version": 2,
+  "notes": [
+    "NODE-RPI4-01 core turns accepted perception events into tasks (origin context_rule). Raw media never reaches core; only perception attributes.",
+    "A rule fires only on the listed transition, and core does not repeat the same intent of one group twice in a row.",
+    "feedback_overrides (rules_version 2): a UI feedback (pfn/v1/ui/feedback) with feedback_type and rating as listed, received while the group's last intent is active_intent, makes core send intent at once (origin context_rule, rule = override name) and ignore the group's rules until suppress_until_rule fires (that context ended) or max_suppress_seconds pass. Context and action feedback stay separate rows in feedback_events."
+  ],
+  "rules": [
+    {
+      "name": "quiet_required_on",
+      "group": "quiet_mode",
+      "observation_type": "ACTIVITY_CONTEXT",
+      "match": { "quiet_required": true, "transition": "ACTIVATED" },
+      "intent": "quiet_mode_on"
+    },
+    {
+      "name": "quiet_required_off",
+      "group": "quiet_mode",
+      "observation_type": "ACTIVITY_CONTEXT",
+      "match": { "quiet_required": false, "transition": "DEACTIVATED" },
+      "intent": "quiet_mode_off"
+    }
+  ],
+  "feedback_overrides": [
+    {
+      "name": "quiet_context_wrong",
+      "group": "quiet_mode",
+      "feedback_type": "context_feedback",
+      "rating": "negative",
+      "active_intent": "quiet_mode_on",
+      "intent": "quiet_mode_off",
+      "suppress_until_rule": "quiet_required_off",
+      "max_suppress_seconds": 1800
+    }
+  ]
+}

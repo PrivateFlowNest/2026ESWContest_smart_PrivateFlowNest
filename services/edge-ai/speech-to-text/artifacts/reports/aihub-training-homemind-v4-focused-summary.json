@@ -1,0 +1,27 @@
+{
+  "output_rows": 7036,
+  "base_command_rows": 3032,
+  "focused_supplement_rows": 4004,
+  "focus_weights": {
+    "front_door": 6,
+    "light": 2,
+    "bathroom": 2,
+    "meeting": 2,
+    "ventilation": 2
+  },
+  "weighted_keyword_counts": {
+    "meeting": 1208,
+    "light": 1204,
+    "bathroom": 1206,
+    "front_door": 366,
+    "ventilation": 34
+  },
+  "weighted_source_counts": {
+    "AIHUB-464-TRAINING": 1332,
+    "AIHUB-463-TRAINING": 1680,
+    "AIHUB-109-TRAINING-VOICE-COLLECTION": 944,
+    "AIHUB-71698-TRAINING-RESIDENTIAL-DIALOGUE": 48
+  },
+  "validation_rows_included": 0,
+  "raw_transcripts_in_summary": false
+}

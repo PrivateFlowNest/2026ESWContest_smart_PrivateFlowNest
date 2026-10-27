@@ -1,0 +1,29 @@
+[Unit]
+Description=HomeMind MQTT broker
+After=local-fs.target connman.service network.target
+Wants=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=network
+Group=network
+ExecStart=/data/share/homemind/bin/mosquitto -c /data/share/homemind/config/mosquitto.conf
+Restart=always
+RestartSec=3s
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+LockPersonality=true
+RestrictSUIDSGID=true
+MemoryDenyWriteExecute=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
+

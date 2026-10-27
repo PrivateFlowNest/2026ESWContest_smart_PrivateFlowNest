@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/partial-intent.schema.json",
+  "title": "HomeMind Proactive Partial Intent Event",
+  "description": "A local, non-executable intent hint derived from streaming ASR text.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "trace_id",
+    "timestamp",
+    "source",
+    "source_node_id",
+    "text_sha256",
+    "text_length",
+    "is_final",
+    "intent",
+    "confidence",
+    "result",
+    "candidate_devices",
+    "safe_preparations",
+    "requires_confirmation",
+    "execution_allowed",
+    "model"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "event_id": { "type": "string", "minLength": 1 },
+    "trace_id": { "type": "string", "minLength": 1 },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "source": { "const": "pi5.partial-intent" },
+    "source_node_id": { "const": "NODE-RPI5-02" },
+    "text_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "text_length": { "type": "integer", "minimum": 0, "maximum": 512 },
+    "is_final": { "type": "boolean" },
+    "intent": {
+      "enum": [
+        "CLIMATE_COMFORT",
+        "LIGHTING",
+        "VENTILATION",
+        "MEDIA",
+        "ACCESS",
+        "LAUNDRY",
+        "CLEANING",
+        "QUIET_ENVIRONMENT",
+        "NO_ACTION"
+      ]
+    },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "result": {
+      "enum": ["DETECTED", "INSUFFICIENT_EVIDENCE", "SUPPRESSED"]
+    },
+    "candidate_devices": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "AIR_CONDITIONER",
+          "LIGHT",
+          "WINDOW",
+          "VENTILATION_FAN",
+          "AIR_PURIFIER",
+          "TV",
+          "ENTRY_DOOR",
+          "BATHROOM_DOOR",
+          "WASHER",
+          "ROBOT_VACUUM",
+          "ALL_QUIET_DEVICES"
+        ]
+      }
+    },
+    "safe_preparations": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "CHECK_TEMPERATURE",
+          "CHECK_PRESENCE",
+          "CHECK_DEVICE_STATE",
+          "CHECK_AIR_QUALITY",
+          "CHECK_OPENING_STATE",
+          "CHECK_TASK_STATE",
+          "WAIT_FOR_CONTEXT_EVIDENCE"
+        ]
+      }
+    },
+    "requires_confirmation": { "type": "boolean" },
+    "execution_allowed": { "const": false },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "runtime"],
+      "properties": {
+        "name": { "const": "homemind-partial-intent" },
+        "version": { "type": "string", "minLength": 1 },
+        "runtime": { "const": "ONNX_RUNTIME" }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-context-rules.schema.json",
+  "title": "HomeMind core perception-to-task rules",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "rules_version", "notes", "rules"],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "rules_version": { "type": "integer", "minimum": 1 },
+    "notes": { "type": "array", "items": { "type": "string" } },
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "group", "observation_type", "match", "intent"],
+        "properties": {
+          "name": { "type": "string", "pattern": "^[a-z0-9_]+$", "maxLength": 64 },
+          "group": { "type": "string", "pattern": "^[a-z0-9_]+$", "maxLength": 64 },
+          "observation_type": { "enum": ["FIGURE_PRESENCE", "ACTIVITY_CONTEXT", "PARTIAL_INTENT_HINT"] },
+          "match": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": { "type": ["string", "boolean", "integer"] }
+          },
+          "intent": { "type": "string", "minLength": 1, "maxLength": 64 }
+        }
+      }
+    },
+    "feedback_overrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "group", "feedback_type", "rating", "active_intent", "intent", "suppress_until_rule",
+                     "max_suppress_seconds"],
+        "properties": {
+          "name": { "type": "string", "pattern": "^[a-z0-9_]+$", "maxLength": 64 },
+          "group": { "type": "string", "pattern": "^[a-z0-9_]+$", "maxLength": 64 },
+          "feedback_type": { "enum": ["context_feedback"] },
+          "rating": { "enum": ["negative"] },
+          "active_intent": { "type": "string", "minLength": 1, "maxLength": 64 },
+          "intent": { "type": "string", "minLength": 1, "maxLength": 64 },
+          "suppress_until_rule": { "type": "string", "pattern": "^[a-z0-9_]+$", "maxLength": 64 },
+          "max_suppress_seconds": { "type": "integer", "minimum": 60, "maximum": 86400 }
+        }
+      }
+    }
+  }
+}

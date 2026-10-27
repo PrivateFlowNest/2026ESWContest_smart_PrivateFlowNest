@@ -1,0 +1,14 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "5f0e0000-0000-4000-8000-0000000000b2",
+  "request_id": "5f0e0000-0000-4000-8000-0000000000b0",
+  "source_node_id": "NODE-RPI4-01",
+  "target_node_id": "NODE-RPI5-01",
+  "status": "offered",
+  "created_at_ms": 1792560000200,
+  "expires_at_ms": 1792560600000,
+  "qr_payload": "{\"version\":1,\"device_id\":\"NODE-RPI4-01\",\"device_name\":\"HomeMind 백엔드 (NODE-RPI4-01)\",\"base_url\":\"http://192.0.2.10:8000\",\"pairing_code\":\"EXAM-PLE0\",\"nonce\":\"v1.1792560600.00000000000000000000000000000000\",\"expires_at\":\"2026-10-21T00:10:00Z\"}",
+  "pairing_code": "EXAM-PLE0",
+  "device_name": "HomeMind 백엔드 (NODE-RPI4-01)",
+  "base_url": "http://192.0.2.10:8000"
+}

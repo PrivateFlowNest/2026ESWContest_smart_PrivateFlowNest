@@ -1,0 +1,38 @@
+#!/bin/sh
+set -e
+
+systemctl stop homemind-core.service 2>/dev/null || true
+systemctl stop homemind-mqtt.service 2>/dev/null || true
+
+# Remove only the /etc unit copy that still matches this package.  Restore the
+# Atlas root filesystem to read-only even if a later cleanup step fails.
+if [ -f /etc/systemd/system/homemind-core.service ] && \
+   cmp -s /etc/systemd/system/homemind-core.service \
+     /data/share/usr/lib/systemd/system/homemind-core.service; then
+  root_was_read_only=0
+  restore_root_read_only() {
+    if [ "$root_was_read_only" -eq 1 ]; then
+      sync
+      mount -o remount,ro / || true
+      root_was_read_only=0
+    fi
+  }
+  trap restore_root_read_only EXIT HUP INT TERM
+  case ",$(awk '$2 == "/" { print $4; exit }' /proc/mounts)," in
+    *,ro,*)
+      mount -o remount,rw /
+      root_was_read_only=1
+      ;;
+  esac
+  systemctl disable homemind-core.service 2>/dev/null || true
+  rm -f /etc/systemd/system/homemind-core.service
+  restore_root_read_only
+  trap - EXIT HUP INT TERM
+fi
+
+rm -f \
+  /data/share/usr/lib/systemd/system/multi-user.target.wants/homemind-core.service \
+  /data/share/usr/lib/systemd/system/multi-user.target.wants/homemind-mqtt.service \
+  /data/share/usr/lib/systemd/system/multi-user.target.wants/homemind-ethernet.service
+systemctl daemon-reload 2>/dev/null || true
+exit 0

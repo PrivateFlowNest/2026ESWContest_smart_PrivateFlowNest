@@ -1,0 +1,306 @@
+{
+ "summary": {
+  "base_url": "http://127.0.0.1:8093",
+  "n": 20,
+  "p50_ms": 9647.4,
+  "p95_ms": 10072.7,
+  "max_ms": 10081.6,
+  "warmup_ms": 9682.3
+ },
+ "rows": [
+  {
+   "id": "fresh-light-001",
+   "warmup": true,
+   "wall_ms": 9682.3,
+   "completion_tokens": 50,
+   "timings": {
+    "prompt_n": 446,
+    "prompt_cached": 1033,
+    "prompt_ms": 6441.116,
+    "predicted_n": 50,
+    "predicted_ms": 3192.882
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"LIGHT\",\"action\":\"TURN_ON\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-002",
+   "warmup": false,
+   "wall_ms": 9511.4,
+   "completion_tokens": 50,
+   "timings": {
+    "prompt_n": 445,
+    "prompt_cached": 1033,
+    "prompt_ms": 6265.442,
+    "predicted_n": 50,
+    "predicted_ms": 3210.31
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"LIGHT\",\"action\":\"TURN_OFF\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-003",
+   "warmup": false,
+   "wall_ms": 9758.6,
+   "completion_tokens": 50,
+   "timings": {
+    "prompt_n": 445,
+    "prompt_cached": 1033,
+    "prompt_ms": 6471.868,
+    "predicted_n": 50,
+    "predicted_ms": 3255.517
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"LIGHT\",\"action\":\"TURN_ON\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-004",
+   "warmup": false,
+   "wall_ms": 10081.6,
+   "completion_tokens": 50,
+   "timings": {
+    "prompt_n": 447,
+    "prompt_cached": 1033,
+    "prompt_ms": 6802.619,
+    "predicted_n": 50,
+    "predicted_ms": 3265.954
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"LIGHT\",\"action\":\"TURN_OFF\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-005",
+   "warmup": false,
+   "wall_ms": 9814.0,
+   "completion_tokens": 56,
+   "timings": {
+    "prompt_n": 456,
+    "prompt_cached": 1033,
+    "prompt_ms": 6143.029,
+    "predicted_n": 56,
+    "predicted_ms": 3660.17
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"LIGHT\",\"action\":\"SET_BRIGHTNESS\",\"parameters\":{\"brightness\":45},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-006",
+   "warmup": false,
+   "wall_ms": 9796.9,
+   "completion_tokens": 55,
+   "timings": {
+    "prompt_n": 457,
+    "prompt_cached": 1033,
+    "prompt_ms": 6183.397,
+    "predicted_n": 55,
+    "predicted_ms": 3582.048
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"LIGHT\",\"action\":\"SET_BRIGHTNESS\",\"parameters\":{\"brightness\":0},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-007",
+   "warmup": false,
+   "wall_ms": 9893.1,
+   "completion_tokens": 57,
+   "timings": {
+    "prompt_n": 456,
+    "prompt_cached": 1033,
+    "prompt_ms": 6173.812,
+    "predicted_n": 57,
+    "predicted_ms": 3722.023
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"LIGHT\",\"action\":\"SET_BRIGHTNESS\",\"parameters\":{\"brightness\":100},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-008",
+   "warmup": false,
+   "wall_ms": 8736.8,
+   "completion_tokens": 51,
+   "timings": {
+    "prompt_n": 448,
+    "prompt_cached": 1033,
+    "prompt_ms": 5404.198,
+    "predicted_n": 51,
+    "predicted_ms": 3309.833
+   },
+   "content": "{\"intent\":\"DEVICE_QUERY\",\"device\":\"LIGHT\",\"action\":\"QUERY_STATUS\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-009",
+   "warmup": false,
+   "wall_ms": 9754.0,
+   "completion_tokens": 51,
+   "timings": {
+    "prompt_n": 447,
+    "prompt_cached": 1033,
+    "prompt_ms": 6448.02,
+    "predicted_n": 51,
+    "predicted_ms": 3274.542
+   },
+   "content": "{\"intent\":\"DEVICE_QUERY\",\"device\":\"LIGHT\",\"action\":\"QUERY_STATUS\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-010",
+   "warmup": false,
+   "wall_ms": 9684.0,
+   "completion_tokens": 51,
+   "timings": {
+    "prompt_n": 447,
+    "prompt_cached": 1033,
+    "prompt_ms": 6384.571,
+    "predicted_n": 51,
+    "predicted_ms": 3281.916
+   },
+   "content": "{\"intent\":\"DEVICE_QUERY\",\"device\":\"LIGHT\",\"action\":\"QUERY_STATUS\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-011",
+   "warmup": false,
+   "wall_ms": 9610.7,
+   "completion_tokens": 49,
+   "timings": {
+    "prompt_n": 445,
+    "prompt_cached": 1033,
+    "prompt_ms": 6429.839,
+    "predicted_n": 49,
+    "predicted_ms": 3173.346
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"TURN_ON\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-012",
+   "warmup": false,
+   "wall_ms": 9520.3,
+   "completion_tokens": 49,
+   "timings": {
+    "prompt_n": 443,
+    "prompt_cached": 1033,
+    "prompt_ms": 6401.668,
+    "predicted_n": 49,
+    "predicted_ms": 3099.862
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"TURN_OFF\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-013",
+   "warmup": false,
+   "wall_ms": 9141.2,
+   "completion_tokens": 52,
+   "timings": {
+    "prompt_n": 450,
+    "prompt_cached": 1033,
+    "prompt_ms": 5830.143,
+    "predicted_n": 52,
+    "predicted_ms": 3301.849
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"DECREASE_VOLUME\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-014",
+   "warmup": false,
+   "wall_ms": 9687.2,
+   "completion_tokens": 52,
+   "timings": {
+    "prompt_n": 447,
+    "prompt_cached": 1033,
+    "prompt_ms": 6402.039,
+    "predicted_n": 52,
+    "predicted_ms": 3275.589
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"INCREASE_VOLUME\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-015",
+   "warmup": false,
+   "wall_ms": 9384.5,
+   "completion_tokens": 54,
+   "timings": {
+    "prompt_n": 455,
+    "prompt_cached": 1033,
+    "prompt_ms": 5877.762,
+    "predicted_n": 54,
+    "predicted_ms": 3490.554
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"SET_VOLUME\",\"parameters\":{\"volume\":37},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-016",
+   "warmup": false,
+   "wall_ms": 9541.0,
+   "completion_tokens": 53,
+   "timings": {
+    "prompt_n": 455,
+    "prompt_cached": 1033,
+    "prompt_ms": 6117.235,
+    "predicted_n": 53,
+    "predicted_ms": 3398.3
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"SET_VOLUME\",\"parameters\":{\"volume\":0},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-017",
+   "warmup": false,
+   "wall_ms": 9740.2,
+   "completion_tokens": 47,
+   "timings": {
+    "prompt_n": 444,
+    "prompt_cached": 1033,
+    "prompt_ms": 6802.873,
+    "predicted_n": 47,
+    "predicted_ms": 2937.313
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"MUTE\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-018",
+   "warmup": false,
+   "wall_ms": 9904.3,
+   "completion_tokens": 48,
+   "timings": {
+    "prompt_n": 444,
+    "prompt_cached": 1033,
+    "prompt_ms": 6827.229,
+    "predicted_n": 48,
+    "predicted_ms": 3063.128
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"UNMUTE\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-019",
+   "warmup": false,
+   "wall_ms": 9489.1,
+   "completion_tokens": 47,
+   "timings": {
+    "prompt_n": 445,
+    "prompt_cached": 1033,
+    "prompt_ms": 6416.167,
+    "predicted_n": 47,
+    "predicted_ms": 3060.317
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"MUTE\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-020",
+   "warmup": false,
+   "wall_ms": 8554.3,
+   "completion_tokens": 48,
+   "timings": {
+    "prompt_n": 448,
+    "prompt_cached": 1033,
+    "prompt_ms": 5538.973,
+    "predicted_n": 48,
+    "predicted_ms": 3016.58
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"UNMUTE\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-021",
+   "warmup": false,
+   "wall_ms": 9548.8,
+   "completion_tokens": 50,
+   "timings": {
+    "prompt_n": 446,
+    "prompt_cached": 1033,
+    "prompt_ms": 6410.56,
+    "predicted_n": 50,
+    "predicted_ms": 3125.835
+   },
+   "content": "{\"intent\":\"DEVICE_QUERY\",\"device\":\"TV\",\"action\":\"QUERY_STATUS\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  }
+ ]
+}

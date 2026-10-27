@@ -1,0 +1,93 @@
+# HomeMind Mosquitto ACL for the authenticated listener (1884).
+# Source of truth: contracts/pfn.v1/protocol.json (topics, topic_policies, core_subscriptions).
+# Usernames are node IDs. Passwords live only in /data/share/homemind/config/mosquitto.passwd
+# (mosquitto_passwd on the device). Never put a password in this repository.
+#
+# Rules that matter:
+# - pfn/v1/ai/llm/* (raw transcript) is readable/writable by the two RPI5 accounts only. Core has no access.
+# - pfn/v1/ai/voice/listen (UI push-to-talk, 0.6.1): RPI5-01 writes, RPI5-02 reads. Core has no access.
+# - pfn/v1/mobile/pairing/* (phone pairing QR on the 7-inch UI, 0.6.2): RPI5-01 asks, homemind-mobile-api answers
+#   with a one-time code that only RPI5-01 may read. Core and everyone else have no access.
+# - pfn/v1/mobile/phones/* (paired phones on the 7-inch UI, 0.6.5): RPI5-01 asks for the list or an unpair,
+#   homemind-mobile-api answers with phone names and token ids (never tokens). Only RPI5-01 reads the answer.
+# - pfn/v1/mobile/task/action (phone approve / reject, 0.6.3): only homemind-mobile-api writes, only core reads.
+#   A separate topic so core knows the phone sent it (no opening the entrance door from the phone). The phone gateway
+#   has no write right on pfn/v1/ui/#, so it cannot pose as the 7-inch UI.
+# - Only core publishes device commands. Everyone else asks core through pfn/v1/core/task/request.
+# - A controller may only read its own command topic and write its own ack/telemetry.
+# The broker cannot check payload fields; core still checks source_node_id against task-policy.json.
+
+# NODE-RPI4-01: homemind-core
+user NODE-RPI4-01
+topic readwrite pfn/v1/device/+/command
+topic read pfn/v1/device/+/ack
+topic read pfn/v1/device/+/telemetry
+topic readwrite pfn/v1/system/#
+topic read pfn/v1/core/task/request
+topic write pfn/v1/core/task/update
+topic read pfn/v1/core/state/request
+topic write pfn/v1/core/state/response/+
+topic read pfn/v1/ui/#
+topic read pfn/v1/ai/perception
+topic read pfn/v1/mobile/task/action
+
+# NODE-RPI5-02: perception (STT, YAMNet, partial intent, vision, context-fusion, voice parser)
+user NODE-RPI5-02
+topic write pfn/v1/ai/perception
+topic read pfn/v1/ai/voice/listen
+topic write pfn/v1/ai/llm/request
+topic read pfn/v1/ai/llm/result
+topic write pfn/v1/core/task/request
+topic read pfn/v1/core/task/update
+topic write pfn/v1/core/state/request
+topic read pfn/v1/core/state/response/NODE-RPI5-02
+topic write pfn/v1/system/heartbeat
+topic write pfn/v1/system/health
+topic read pfn/v1/system/privacy/state
+topic write pfn/v1/system/safety/alert
+
+# NODE-RPI5-01: Flutter UI and EXAONE
+user NODE-RPI5-01
+topic read pfn/v1/ai/llm/request
+topic write pfn/v1/ai/voice/listen
+topic write pfn/v1/mobile/pairing/request
+topic read pfn/v1/mobile/pairing/offer
+topic write pfn/v1/mobile/phones/request
+topic read pfn/v1/mobile/phones/state
+topic readwrite pfn/v1/ai/llm/result
+topic read pfn/v1/ai/perception
+topic write pfn/v1/core/task/request
+topic read pfn/v1/core/task/update
+topic write pfn/v1/core/state/request
+topic read pfn/v1/core/state/response/+
+topic write pfn/v1/ui/#
+topic read pfn/v1/system/#
+topic write pfn/v1/system/heartbeat
+topic write pfn/v1/system/health
+topic read pfn/v1/device/+/telemetry
+
+# Phone app gateway (homemind-mobile-api on NODE-RPI4-01): task requests and phone approvals, never pfn/v1/ui/#.
+user homemind-mobile-api
+topic write pfn/v1/core/task/request
+topic read pfn/v1/core/task/update
+topic write pfn/v1/core/state/request
+topic read pfn/v1/core/state/response/+
+topic read pfn/v1/mobile/pairing/request
+topic write pfn/v1/mobile/pairing/offer
+topic read pfn/v1/mobile/phones/request
+topic write pfn/v1/mobile/phones/state
+topic write pfn/v1/mobile/task/action
+
+# CTRL-ESP32-ACT-01: servos and fan
+user CTRL-ESP32-ACT-01
+topic read pfn/v1/device/CTRL-ESP32-ACT-01/command
+topic write pfn/v1/device/CTRL-ESP32-ACT-01/ack
+topic write pfn/v1/device/CTRL-ESP32-ACT-01/telemetry
+topic write pfn/v1/system/heartbeat
+
+# CTRL-ESP8266-LED-01: LEDs. Account slot only: create its password on the device with mosquitto_passwd.
+user CTRL-ESP8266-LED-01
+topic read pfn/v1/device/CTRL-ESP8266-LED-01/command
+topic write pfn/v1/device/CTRL-ESP8266-LED-01/ack
+topic write pfn/v1/device/CTRL-ESP8266-LED-01/telemetry
+topic write pfn/v1/system/heartbeat

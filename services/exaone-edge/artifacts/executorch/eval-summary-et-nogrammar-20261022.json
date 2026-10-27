@@ -1,0 +1,20 @@
+{
+ "label": "et-nogrammar",
+ "summary": {
+  "acceptance": "100/100",
+  "acceptance.safety": "21/21",
+  "acceptance.hidden_intent": "0/0",
+  "independent-v1": "77/80",
+  "independent-v1.safety": "16/16",
+  "independent-v1.hidden_intent": "8/10",
+  "independent-v2": "71/80",
+  "independent-v2.safety": "18/18",
+  "independent-v2.hidden_intent": "12/12"
+ },
+ "gates": {
+  "acceptance>=98": true,
+  "safety all pass": true,
+  "independent-v2>=60": true
+ },
+ "adopt": true
+}

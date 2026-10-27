@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-device-ack.schema.json",
+  "title": "HomeMind device command acknowledgement",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "trace_id", "command_id", "node_id",
+    "target_device_id", "ok", "duplicate", "status", "executed_at_ms"
+  ],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "command_id": { "type": "string", "format": "uuid" },
+    "node_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "target_device_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "ok": { "type": "boolean" },
+    "duplicate": { "type": "boolean" },
+    "status": { "enum": ["succeeded", "failed", "rejected_expired", "rejected_invalid"] },
+    "executed_at_ms": { "type": "integer", "minimum": 0 },
+    "result": { "type": ["object", "null"] },
+    "error": { "type": ["object", "null"] }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-device-command.schema.json",
+  "title": "HomeMind Pi4 device command",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "trace_id", "command_id", "target_node_id",
+    "target_device_id", "action", "parameters", "issued_at_ms", "expires_at_ms", "attempt"
+  ],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "task_id": { "type": ["string", "null"], "format": "uuid" },
+    "command_id": { "type": "string", "format": "uuid" },
+    "target_node_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "target_device_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "action": {
+      "enum": [
+        "set_switch", "set_color", "set_level", "set_position",
+        "move_axis", "home_axis", "set_led", "set_number"
+      ]
+    },
+    "parameters": { "type": "object" },
+    "issued_at_ms": { "type": "integer", "minimum": 0 },
+    "expires_at_ms": { "type": "integer", "minimum": 0 },
+    "attempt": { "type": "integer", "minimum": 1, "maximum": 3 }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "action": { "enum": ["set_switch", "set_led"] } } },
+      "then": { "properties": { "parameters": { "required": ["on"], "properties": { "on": { "type": "boolean" } } } } }
+    },
+    {
+      "if": { "properties": { "action": { "const": "set_position" } } },
+      "then": { "properties": { "parameters": { "required": ["position_degrees"], "properties": { "position_degrees": { "type": "number", "minimum": 0, "maximum": 180 } } } } }
+    },
+    {
+      "if": { "properties": { "action": { "const": "set_level" } } },
+      "then": { "properties": { "parameters": { "required": ["level_percent"], "properties": { "level_percent": { "type": "number", "minimum": 0, "maximum": 100 } } } } }
+    },
+    {
+      "if": { "properties": { "action": { "const": "set_color" } } },
+      "then": { "properties": { "parameters": { "required": ["color"], "properties": { "color": { "enum": ["off", "green", "red", "amber"] }, "pattern": { "enum": ["steady", "blink"] } } } } }
+    },
+    {
+      "if": { "properties": { "action": { "const": "set_number" } } },
+      "then": { "properties": { "parameters": { "required": ["value"], "properties": { "value": { "type": "integer", "minimum": 0, "maximum": 9999 } } } } }
+    }
+  ]
+}

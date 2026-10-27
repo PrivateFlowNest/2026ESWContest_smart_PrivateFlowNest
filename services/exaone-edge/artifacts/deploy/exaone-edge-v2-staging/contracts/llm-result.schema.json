@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-llm-result.schema.json",
+  "title": "HomeMind EXAONE handling result for one llm request",
+  "description": "NODE-RPI5-01 to RPI5 subscribers (perception service, UI). Never carries the transcript. When status is task_requested the guarded proposal was sent as pfn/v1/core/task/request with task_id; core still decides.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "trace_id", "request_id", "source_node_id",
+    "status", "task_id", "ai_intent", "ai_device", "ai_action", "safety_flags",
+    "clarification_question", "model", "completed_at_ms"
+  ],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "request_id": { "type": "string", "format": "uuid" },
+    "source_node_id": { "const": "NODE-RPI5-01" },
+    "status": {
+      "enum": [
+        "task_requested", "clarify", "no_action", "rejected_guard",
+        "invalid_output", "model_unavailable", "expired"
+      ]
+    },
+    "task_id": { "type": ["string", "null"], "format": "uuid" },
+    "ai_intent": {
+      "type": ["string", "null"],
+      "enum": ["DEVICE_CONTROL", "DEVICE_QUERY", "CONTEXT_SUGGESTION", "CLARIFY", "NO_ACTION", null]
+    },
+    "ai_device": { "type": ["string", "null"], "maxLength": 64 },
+    "ai_action": { "type": ["string", "null"], "maxLength": 64 },
+    "safety_flags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "AMBIGUOUS_TARGET", "AMBIGUOUS_ACTION", "UNSUPPORTED_DEVICE", "UNSUPPORTED_ACTION",
+          "PRIVACY_SENSITIVE", "HIGH_RISK", "CONFLICTING_REQUEST", "NEGATED_REQUEST",
+          "MODEL_OUTPUT_INVALID", "MODEL_UNAVAILABLE"
+        ]
+      }
+    },
+    "clarification_question": { "type": ["string", "null"], "maxLength": 200 },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "origin", "latency_ms"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "origin": { "enum": ["model", "guard", "model_guard", "guard_fallback", "none"] },
+        "latency_ms": { "type": "number", "minimum": 0 }
+      }
+    },
+    "completed_at_ms": { "type": "integer", "minimum": 0 },
+    "simulated": { "type": "boolean" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "task_requested" } } },
+      "then": { "properties": { "task_id": { "type": "string", "format": "uuid" } } }
+    },
+    {
+      "if": { "properties": { "status": { "enum": ["clarify", "no_action", "rejected_guard", "invalid_output", "model_unavailable", "expired"] } } },
+      "then": { "properties": { "task_id": { "type": "null" } } }
+    }
+  ]
+}

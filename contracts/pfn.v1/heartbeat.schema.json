@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-heartbeat.schema.json",
+  "title": "HomeMind node heartbeat",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "trace_id", "node_id", "node_type",
+    "status", "seq", "sent_at_ms", "uptime_ms"
+  ],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "node_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "node_type": { "enum": ["pi4", "pi5", "esp32", "esp8266", "octopus", "pc-test"] },
+    "status": { "enum": ["online", "offline", "degraded"] },
+    "seq": { "type": "integer", "minimum": 0 },
+    "sent_at_ms": { "type": "integer", "minimum": 0 },
+    "uptime_ms": { "type": "integer", "minimum": 0 },
+    "version": { "type": "string", "maxLength": 64 }
+  }
+}

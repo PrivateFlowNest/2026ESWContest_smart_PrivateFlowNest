@@ -1,0 +1,60 @@
+{
+  "root": "E:\\HomeMind-Datasets\\raw\\aihub",
+  "manifest": "C:\\Users\\alexi\\Desktop\\Workspace\\ESW\\services\\edge-ai\\audio-context\\data\\aihub-full.csv",
+  "seed": 42,
+  "max_per_label_per_split": null,
+  "candidate_count": 868518,
+  "selected_count": 868518,
+  "candidate_counts": {
+    "activity/IN_PERSON_MEETING/train": 4164,
+    "activity/IN_PERSON_MEETING/validation": 1008,
+    "activity/SELF_TALK/train": 643604,
+    "activity/SELF_TALK/validation": 137786,
+    "activity/TV_MEDIA/train": 21968,
+    "activity/TV_MEDIA/validation": 8516,
+    "activity/UNKNOWN/train": 32104,
+    "activity/UNKNOWN/validation": 5088,
+    "activity/ZOOM_SPEAKER/train": 3340,
+    "activity/ZOOM_SPEAKER/validation": 808,
+    "sound_event/ALARM/train": 699,
+    "sound_event/ALARM/validation": 90,
+    "sound_event/OTHER/train": 8310,
+    "sound_event/OTHER/validation": 1033
+  },
+  "selected_counts": {
+    "activity/IN_PERSON_MEETING/train": 4164,
+    "activity/IN_PERSON_MEETING/validation": 1008,
+    "activity/SELF_TALK/train": 643604,
+    "activity/SELF_TALK/validation": 137786,
+    "activity/TV_MEDIA/train": 21968,
+    "activity/TV_MEDIA/validation": 8516,
+    "activity/UNKNOWN/train": 32104,
+    "activity/UNKNOWN/validation": 5088,
+    "activity/ZOOM_SPEAKER/train": 3340,
+    "activity/ZOOM_SPEAKER/validation": 808,
+    "sound_event/ALARM/train": 699,
+    "sound_event/ALARM/validation": 90,
+    "sound_event/OTHER/train": 8310,
+    "sound_event/OTHER/validation": 1033
+  },
+  "known_excluded_archives": [
+    "464_meeting/Training/TS3.zip",
+    "464_meeting/Validation/VS1.zip",
+    "71405_noisy_command/Training/TS_01.다화자_소음_환경_003.가정환경_02.근거리.zip",
+    "71698_environment_sound/Training/TS_대화음성데이터_03.문화및라이프_01.주거지역.zip",
+    "71698_environment_sound/Training/TS_대화음성데이터_04.게임및과학_01.주거지역.zip"
+  ],
+  "reserved_for_partial_intent": [
+    "71405_noisy_command"
+  ],
+  "uncovered_activity_labels": [
+    "QUIET",
+    "ZOOM_HEADPHONES"
+  ],
+  "uncovered_sound_event_labels": [
+    "DOORBELL",
+    "WASHER_COMPLETE"
+  ],
+  "split_rule": "official split; datasets 464 and 109 use SHA-256 recording/speaker group holdout to prevent leakage",
+  "indexing": "full corpus"
+}

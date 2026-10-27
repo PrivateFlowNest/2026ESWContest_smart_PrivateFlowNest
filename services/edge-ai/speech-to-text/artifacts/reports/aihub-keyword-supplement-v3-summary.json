@@ -1,0 +1,55 @@
+{
+  "output": "artifacts\\manifests\\aihub-training-homemind-keyword-supplement-v3.jsonl",
+  "selected_rows": 3574,
+  "max_per_keyword_group": 600,
+  "candidate_keyword_counts": {
+    "meeting": 13212,
+    "sound": 14439,
+    "bathroom": 3082,
+    "light": 2294,
+    "tv": 1801,
+    "aircon": 502,
+    "front_door": 61,
+    "ventilation": 17
+  },
+  "selected_keyword_counts": {
+    "front_door": 61,
+    "sound": 612,
+    "tv": 603,
+    "meeting": 607,
+    "aircon": 502,
+    "bathroom": 601,
+    "light": 602,
+    "ventilation": 17
+  },
+  "selected_source_counts": {
+    "AIHUB-463-TRAINING": 1560,
+    "AIHUB-464-TRAINING": 947,
+    "AIHUB-109-TRAINING-VOICE-COLLECTION": 992,
+    "AIHUB-71698-TRAINING-RESIDENTIAL-DIALOGUE": 75
+  },
+  "scan_stats": {
+    "AIHUB-109-TRAINING-VOICE-COLLECTION": {
+      "labels": 693900,
+      "matched": 8877
+    },
+    "AIHUB-463-TRAINING": {
+      "labels": 5492,
+      "matched": 13474,
+      "invalid_segment": 1
+    },
+    "AIHUB-464-TRAINING": {
+      "labels": 2330,
+      "matched": 12313,
+      "invalid_segment": 1
+    },
+    "AIHUB-71698-TRAINING-RESIDENTIAL-DIALOGUE": {
+      "labels": 4013,
+      "matched": 653,
+      "invalid_segment": 3
+    }
+  },
+  "split": "Training only",
+  "validation_rows_included": 0,
+  "raw_transcripts_in_summary": false
+}

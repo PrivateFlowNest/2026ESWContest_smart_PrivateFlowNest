@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-state-response.schema.json",
+  "title": "HomeMind Pi4 UI snapshot response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "trace_id", "request_id", "source_node_id",
+    "generated_at_ms", "tasks", "devices", "world_state"
+  ],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "request_id": { "type": "string", "format": "uuid" },
+    "source_node_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "generated_at_ms": { "type": "integer", "minimum": 0 },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "task_id", "trace_id", "source_node_id", "intent", "target_device",
+          "priority", "safety_level", "state", "interruptible", "resume_policy",
+          "confidence", "parameters", "requested_at_ms", "created_at_ms",
+          "updated_at_ms", "revision"
+        ],
+        "properties": {
+          "task_id": { "type": "string", "format": "uuid" },
+          "trace_id": { "type": "string", "format": "uuid" },
+          "source_node_id": { "type": "string" },
+          "intent": { "type": "string" },
+          "target_device": { "type": "string" },
+          "priority": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "safety_level": { "enum": ["normal", "caution", "critical"] },
+          "state": { "enum": ["proposed", "ready", "running", "deferred", "completed", "failed", "rejected", "cancelled"] },
+          "interruptible": { "type": "boolean" },
+          "resume_policy": { "enum": ["never", "manual", "when_context_returns", "automatic"] },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "parameters": { "type": "object" },
+          "requested_at_ms": { "type": "integer", "minimum": 0 },
+          "created_at_ms": { "type": "integer", "minimum": 0 },
+          "updated_at_ms": { "type": "integer", "minimum": 0 },
+          "revision": { "type": "integer", "minimum": 1 },
+          "action_token": { "type": "string", "minLength": 16, "maxLength": 256 },
+          "resume_allowed": { "type": "boolean" },
+          "failure": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["code", "message", "occurred_at_ms", "retry_allowed"],
+            "properties": {
+              "code": { "type": "string", "minLength": 1, "maxLength": 64 },
+              "message": { "type": "string", "minLength": 1, "maxLength": 512 },
+              "occurred_at_ms": { "type": "integer", "minimum": 0 },
+              "retry_allowed": { "type": "boolean" }
+            }
+          }
+        }
+      }
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["node_id", "node_type", "status", "last_seen_at_ms", "version"],
+        "properties": {
+          "node_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+          "node_type": { "type": ["string", "null"] },
+          "status": { "enum": ["online", "offline", "degraded"] },
+          "last_seen_at_ms": { "type": "integer", "minimum": 0 },
+          "version": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "world_state": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "state_key", "value", "confidence", "source_node_id", "trace_id",
+          "observation_event_id", "observed_at_ms", "updated_at_ms"
+        ],
+        "properties": {
+          "state_key": { "type": "string" },
+          "value": { "type": "object" },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "source_node_id": { "type": "string" },
+          "trace_id": { "type": "string", "format": "uuid" },
+          "observation_event_id": { "type": "string", "format": "uuid" },
+          "observed_at_ms": { "type": "integer", "minimum": 0 },
+          "updated_at_ms": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "privacy": { "type": "object" },
+    "safety": { "type": "object" },
+    "clock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["valid", "boot_id", "uptime_ms", "became_valid_at_ms"],
+      "properties": {
+        "valid": { "type": "boolean" },
+        "boot_id": { "type": "string", "format": "uuid" },
+        "uptime_ms": { "type": "integer", "minimum": 0 },
+        "became_valid_at_ms": { "type": ["integer", "null"], "minimum": 0 }
+      }
+    },
+    "system_health": { "type": "object" }
+  }
+}

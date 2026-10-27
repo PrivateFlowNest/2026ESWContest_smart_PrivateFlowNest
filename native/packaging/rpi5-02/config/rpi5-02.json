@@ -1,0 +1,57 @@
+{
+  "base_dir": "/data/share/homemind",
+  "broker": {
+    "host": "BROKER_HOST",
+    "port": 1884,
+    "username": "NODE-RPI5-02",
+    "password_file": "/data/share/homemind/secrets/mqtt-password",
+    "keepalive": 30
+  },
+  "contracts_dir": "share/contracts",
+  "perception_node_id": "NODE-RPI5-02",
+  "llm_request_ttl_ms": 10000,
+  "simulated": false,
+
+  "audio_device": null,
+  "listen_mode": "push_to_talk",
+  "ptt_fifo": "/run/homemind/ptt",
+  "presence_fifo": null,
+  "presence_zone": "UNKNOWN",
+  "presence_confidence": 0.9,
+  "fusion_policy": "share/audio-policy-v6.3-hold15.json",
+  "yamnet_onnx": "share/models/yamnet/yamnet-embeddings.onnx",
+  "activity_head_json": "share/models/activity-head/public-balanced-v6-ensemble-50-50.json",
+  "device_capabilities": "share/device-capabilities.json",
+  "context_threads": 2,
+  "window_seconds": 4.0,
+  "hop_seconds": 1.0,
+  "republish_seconds": 10.0,
+  "perception_ttl_seconds": 15.0,
+  "vad": {
+    "start_ms": 200,
+    "end_silence_ms": 700,
+    "max_ms": 8000,
+    "min_ms": 400,
+    "pre_roll_ms": 300,
+    "threshold_db": -45.0,
+    "noise_margin_db": 10.0
+  },
+  "ptt_timeout_seconds": 6.0,
+  "whisper_server_url": "http://127.0.0.1:8090",
+  "whisper_cli_path": "bin/whisper-cli",
+  "whisper_model": "models/ggml-whisper-small-homemind-lora-v4-q5_0.bin",
+  "whisper_threads": 4,
+  "stt_timeout_seconds": 60.0,
+  "stt_model_version": "whisper-small-homemind-lora-v4-q5_0",
+  "partial_intent": {
+    "enabled": false,
+    "vosk_library": "lib/libvosk.so",
+    "vosk_model": "models/vosk-model-small-ko-0.22",
+    "onnx_model": "share/models/partial-intent/partial-intent-v2.onnx",
+    "chunk_ms": 100,
+    "confirmation_updates": 2,
+    "max_queue_seconds": 3.0
+  },
+  "debug_transcripts": false,
+  "publish": "mqtt"
+}

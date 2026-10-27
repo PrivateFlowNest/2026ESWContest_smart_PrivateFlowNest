@@ -1,0 +1,7 @@
+{
+  "camera_id": "CAM-OUTDOOR-01",
+  "note": "Template: the whole frame of the front-door camera is OUTDOOR. Narrow it once the camera is mounted.",
+  "zones": {
+    "OUTDOOR": [[0.00, 0.00], [1.00, 0.00], [1.00, 1.00], [0.00, 1.00]]
+  }
+}

@@ -1,0 +1,7 @@
+Package: homemind-core
+Version: 0.6.5
+Architecture: aarch64
+Maintainer: HomeMind TaskFlow Team
+Section: services
+Priority: optional
+Description: HomeMind Pi4 MQTT broker and C++ MQTT-to-SQLite core for Atlas

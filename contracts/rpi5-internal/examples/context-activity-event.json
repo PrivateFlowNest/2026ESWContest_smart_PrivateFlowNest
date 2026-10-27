@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "event_id": "ctx-0001",
+  "trace_id": "trace-0002",
+  "timestamp": "2026-10-21T13:20:00.000Z",
+  "source": "pi5.context-fusion",
+  "source_node_id": "NODE-RPI5-02",
+  "event_type": "ACTIVITY_CONTEXT",
+  "context_type": "ZOOM_SPEAKER",
+  "presence_zone": "DESK",
+  "activity": "MEETING",
+  "quiet_required": true,
+  "confidence": 0.84,
+  "evidence": [
+    "AUDIO_CONTEXT:ZOOM_SPEAKER",
+    "PRESENCE:DESK"
+  ],
+  "transition": "ACTIVATED",
+  "valid_until": "2026-10-21T13:20:30.000Z",
+  "model_version": "context-fusion-1"
+}

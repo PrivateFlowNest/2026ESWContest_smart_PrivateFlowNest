@@ -1,0 +1,23 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "5f0e0000-0000-4000-8000-000000000015",
+  "trace_id": "5f0e0000-0000-4000-8000-000000000002",
+  "request_id": "5f0e0000-0000-4000-8000-00000000000d",
+  "source_node_id": "NODE-RPI5-01",
+  "status": "clarify",
+  "task_id": null,
+  "ai_intent": "CLARIFY",
+  "ai_device": null,
+  "ai_action": null,
+  "safety_flags": [
+    "AMBIGUOUS_TARGET"
+  ],
+  "clarification_question": "어느 쪽을 열까요? 현관문인가요, 창문인가요?",
+  "model": {
+    "name": "exaone-1.2b-homemind-v1-q4_k_m",
+    "origin": "guard",
+    "latency_ms": 3.0
+  },
+  "completed_at_ms": 1792560000050,
+  "simulated": true
+}

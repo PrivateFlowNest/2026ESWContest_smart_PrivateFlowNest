@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "config_version": "audio-policy-v6.3.0-ensemble-50-50-hold15",
+  "engine": {
+    "quiet_audio_confidence": 0.5,
+    "meeting_tv_margin": 0.0,
+    "activation_updates": 3,
+    "release_updates": 15,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+  },
+  "acceptance": {
+    "calibration_passed": true,
+    "holdout_passed": true,
+    "source_report": "audio-policy-tuning-v6.3-hold15.json"
+  }
+}

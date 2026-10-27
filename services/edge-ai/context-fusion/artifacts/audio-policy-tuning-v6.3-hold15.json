@@ -1,0 +1,560 @@
+{
+  "schema_version": "1.0",
+  "gates": {
+    "quiet_false_positive_rate": "<0.05",
+    "quiet_recall": ">=0.9",
+    "activation_p95_seconds": "<=8.0",
+    "release_p95_seconds": "<=20.0"
+  },
+  "selection_reason": "highest quiet recall, then lowest false-positive rate and highest exact accuracy among policies passing every gate",
+  "candidate_count": 1,
+  "selected_candidate": {
+    "policy": {
+      "quiet_audio_confidence": 0.5,
+      "meeting_tv_margin": 0.0,
+      "activation_updates": 3,
+      "release_updates": 15,
+      "change_updates": 2,
+      "ttl_seconds": 10.0
+    },
+    "passed": true,
+    "exact_context_accuracy": 0.8453,
+    "quiet_recall": 0.9133,
+    "quiet_false_positive_rate": 0.0489,
+    "activation_p95_seconds": 7.0,
+    "release_p95_seconds": 18.0
+  },
+  "calibration": {
+    "schema_version": "1.0",
+    "model_version": "yamnet-temporal-logreg-v0.6.0+context-fusion-tuned-v1",
+    "samples": 375,
+    "exact_context_accuracy": 0.8453,
+    "quiet_required": {
+      "positive_samples": 150,
+      "negative_samples": 225,
+      "recall": 0.9133,
+      "false_positive_rate": 0.0489
+    },
+    "activation_delay_seconds": {
+      "count": 137,
+      "mean": 6.153,
+      "p95": 7.0
+    },
+    "release_delay_seconds": {
+      "count": 137,
+      "mean": 18.0,
+      "p95": 18.0,
+      "method": "synthetic no-speech tail proxy; confirm with real transition audio"
+    },
+    "confusion_matrix": {
+      "labels": [
+        "IN_PERSON_MEETING",
+        "QUIET",
+        "SELF_TALK",
+        "TV_MEDIA",
+        "UNKNOWN",
+        "ZOOM_SPEAKER"
+      ],
+      "values": [
+        [
+          62,
+          2,
+          0,
+          3,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          58,
+          3,
+          12,
+          1
+        ],
+        [
+          7,
+          0,
+          2,
+          56,
+          10,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          6,
+          66,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          75
+        ]
+      ]
+    },
+    "inference_latency_ms": {
+      "windows": 0,
+      "mean": null,
+      "p95": null
+    },
+    "coverage": {
+      "learned_activity_labels": [
+        "IN_PERSON_MEETING",
+        "SELF_TALK",
+        "TV_MEDIA",
+        "UNKNOWN",
+        "ZOOM_SPEAKER"
+      ],
+      "rule_or_auxiliary_labels": [
+        "QUIET",
+        "ZOOM_HEADPHONES"
+      ]
+    },
+    "privacy": {
+      "raw_audio_in_report": false,
+      "file_paths_in_report": false,
+      "transcripts_in_report": false
+    },
+    "policy": {
+      "quiet_audio_confidence": 0.5,
+      "meeting_tv_margin": 0.0,
+      "activation_updates": 3,
+      "release_updates": 15,
+      "change_updates": 2,
+      "ttl_seconds": 10.0
+    },
+    "audio_classifier_only": {
+      "window": {
+        "samples": 1757,
+        "accuracy": 0.8589,
+        "confusion_matrix": {
+          "labels": [
+            "IN_PERSON_MEETING",
+            "SELF_TALK",
+            "TV_MEDIA",
+            "UNKNOWN",
+            "ZOOM_SPEAKER"
+          ],
+          "values": [
+            [
+              337,
+              3,
+              25,
+              8,
+              2
+            ],
+            [
+              19,
+              221,
+              10,
+              12,
+              18
+            ],
+            [
+              71,
+              10,
+              260,
+              4,
+              12
+            ],
+            [
+              8,
+              10,
+              18,
+              321,
+              13
+            ],
+            [
+              0,
+              1,
+              0,
+              4,
+              370
+            ]
+          ]
+        }
+      },
+      "segment_majority": {
+        "samples": 375,
+        "accuracy": 0.8907,
+        "confusion_matrix": {
+          "labels": [
+            "IN_PERSON_MEETING",
+            "SELF_TALK",
+            "TV_MEDIA",
+            "UNKNOWN",
+            "ZOOM_SPEAKER"
+          ],
+          "values": [
+            [
+              70,
+              0,
+              3,
+              2,
+              0
+            ],
+            [
+              4,
+              66,
+              1,
+              2,
+              2
+            ],
+            [
+              17,
+              2,
+              55,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              3,
+              68,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              75
+            ]
+          ]
+        }
+      }
+    },
+    "gate": {
+      "passed": true,
+      "checks": {
+        "false_positive_rate_below_maximum": true,
+        "recall_at_least_minimum": true,
+        "activation_p95_within_maximum": true,
+        "release_p95_within_maximum": true
+      }
+    }
+  },
+  "holdout": {
+    "schema_version": "1.0",
+    "model_version": "yamnet-temporal-logreg-v0.6.0+context-fusion-tuned-v1",
+    "samples": 375,
+    "exact_context_accuracy": 0.88,
+    "quiet_required": {
+      "positive_samples": 150,
+      "negative_samples": 225,
+      "recall": 0.9133,
+      "false_positive_rate": 0.0489
+    },
+    "activation_delay_seconds": {
+      "count": 137,
+      "mean": 6.146,
+      "p95": 7.0
+    },
+    "release_delay_seconds": {
+      "count": 137,
+      "mean": 18.0,
+      "p95": 18.0,
+      "method": "synthetic no-speech tail proxy; confirm with real transition audio"
+    },
+    "confusion_matrix": {
+      "labels": [
+        "IN_PERSON_MEETING",
+        "QUIET",
+        "SELF_TALK",
+        "TV_MEDIA",
+        "UNKNOWN",
+        "ZOOM_SPEAKER"
+      ],
+      "values": [
+        [
+          65,
+          4,
+          0,
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          67,
+          0,
+          6,
+          0
+        ],
+        [
+          6,
+          0,
+          4,
+          59,
+          5,
+          1
+        ],
+        [
+          0,
+          3,
+          1,
+          2,
+          67,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          2,
+          72
+        ]
+      ]
+    },
+    "inference_latency_ms": {
+      "windows": 0,
+      "mean": null,
+      "p95": null
+    },
+    "coverage": {
+      "learned_activity_labels": [
+        "IN_PERSON_MEETING",
+        "SELF_TALK",
+        "TV_MEDIA",
+        "UNKNOWN",
+        "ZOOM_SPEAKER"
+      ],
+      "rule_or_auxiliary_labels": [
+        "QUIET",
+        "ZOOM_HEADPHONES"
+      ]
+    },
+    "privacy": {
+      "raw_audio_in_report": false,
+      "file_paths_in_report": false,
+      "transcripts_in_report": false
+    },
+    "policy": {
+      "quiet_audio_confidence": 0.5,
+      "meeting_tv_margin": 0.0,
+      "activation_updates": 3,
+      "release_updates": 15,
+      "change_updates": 2,
+      "ttl_seconds": 10.0
+    },
+    "audio_classifier_only": {
+      "window": {
+        "samples": 1788,
+        "accuracy": 0.8865,
+        "confusion_matrix": {
+          "labels": [
+            "IN_PERSON_MEETING",
+            "SELF_TALK",
+            "TV_MEDIA",
+            "UNKNOWN",
+            "ZOOM_SPEAKER"
+          ],
+          "values": [
+            [
+              344,
+              0,
+              23,
+              7,
+              1
+            ],
+            [
+              10,
+              268,
+              4,
+              10,
+              8
+            ],
+            [
+              58,
+              13,
+              278,
+              8,
+              10
+            ],
+            [
+              5,
+              9,
+              9,
+              334,
+              14
+            ],
+            [
+              6,
+              1,
+              3,
+              4,
+              361
+            ]
+          ]
+        }
+      },
+      "segment_majority": {
+        "samples": 375,
+        "accuracy": 0.9173,
+        "confusion_matrix": {
+          "labels": [
+            "IN_PERSON_MEETING",
+            "SELF_TALK",
+            "TV_MEDIA",
+            "UNKNOWN",
+            "ZOOM_SPEAKER"
+          ],
+          "values": [
+            [
+              72,
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              3,
+              69,
+              0,
+              2,
+              1
+            ],
+            [
+              10,
+              4,
+              60,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              2,
+              69,
+              2
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              74
+            ]
+          ]
+        }
+      }
+    },
+    "gate": {
+      "passed": true,
+      "checks": {
+        "false_positive_rate_below_maximum": true,
+        "recall_at_least_minimum": true,
+        "activation_p95_within_maximum": true,
+        "release_p95_within_maximum": true
+      }
+    }
+  },
+  "candidates": [
+    {
+      "policy": {
+        "quiet_audio_confidence": 0.5,
+        "meeting_tv_margin": 0.0,
+        "activation_updates": 3,
+        "release_updates": 15,
+        "change_updates": 2,
+        "ttl_seconds": 10.0
+      },
+      "passed": true,
+      "exact_context_accuracy": 0.8453,
+      "quiet_recall": 0.9133,
+      "quiet_false_positive_rate": 0.0489,
+      "activation_p95_seconds": 7.0,
+      "release_p95_seconds": 18.0
+    }
+  ],
+  "selection": {
+    "calibration_split": "validation",
+    "holdout_split": "test",
+    "seed": 20260903,
+    "minimum_seconds": 6.0,
+    "available_group_counts": {
+      "IN_PERSON_MEETING": {
+        "calibration_split": 152,
+        "holdout_split": 100
+      },
+      "SELF_TALK": {
+        "calibration_split": 161,
+        "holdout_split": 75
+      },
+      "TV_MEDIA": {
+        "calibration_split": 900,
+        "holdout_split": 100
+      },
+      "UNKNOWN": {
+        "calibration_split": 536,
+        "holdout_split": 100
+      },
+      "ZOOM_SPEAKER": {
+        "calibration_split": 102,
+        "holdout_split": 100
+      }
+    },
+    "selected_counts": {
+      "IN_PERSON_MEETING": {
+        "calibration": 75,
+        "holdout": 75
+      },
+      "SELF_TALK": {
+        "calibration": 75,
+        "holdout": 75
+      },
+      "TV_MEDIA": {
+        "calibration": 75,
+        "holdout": 75
+      },
+      "UNKNOWN": {
+        "calibration": 75,
+        "holdout": 75
+      },
+      "ZOOM_SPEAKER": {
+        "calibration": 75,
+        "holdout": 75
+      }
+    },
+    "group_overlap_count": 0,
+    "skipped_missing": 0,
+    "skipped_short": 587,
+    "selection_rule": "stable hash; one segment per source group; split boundary preserved"
+  },
+  "inference_collection": {
+    "windows": 3545,
+    "mean_ms": 18.899,
+    "p95_ms": 21.482
+  },
+  "privacy": {
+    "raw_audio_in_report": false,
+    "file_paths_in_report": false,
+    "group_ids_in_report": false,
+    "transcripts_in_report": false
+  }
+}

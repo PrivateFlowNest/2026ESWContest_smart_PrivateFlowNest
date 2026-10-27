@@ -1,0 +1,16 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "66666666-6666-4666-8666-666666666666",
+  "trace_id": "77777777-7777-4777-8777-777777777777",
+  "alert_id": "88888888-8888-4888-8888-888888888888",
+  "source_node_id": "NODE-RPI4-01",
+  "alert_type": "manual_test",
+  "zone": "living",
+  "severity": "p0",
+  "summary": "P0 화면과 ACK 흐름을 확인하는 시험 경고",
+  "evidence": {
+    "test": true
+  },
+  "raised_at_ms": 1788278400000,
+  "automatic_actions": []
+}

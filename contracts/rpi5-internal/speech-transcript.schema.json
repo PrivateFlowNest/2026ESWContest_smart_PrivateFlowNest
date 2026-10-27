@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/speech-transcript.schema.json",
+  "title": "HomeMind local ASR update",
+  "description": "NODE-RPI5-02 transcript update. Raw text stays on the RPI5 nodes: it is used inside NODE-RPI5-02 and may leave only inside pfn/v1/ai/llm/request to NODE-RPI5-01. Never to NODE-RPI4-01, ESP, logs or the RTX PC.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "utterance_id", "sequence", "timestamp",
+    "source", "source_node_id", "event_type", "scope", "microphone_id", "text", "is_final",
+    "model_version", "confidence", "expires_at"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "event_id": {"type": "string", "minLength": 1},
+    "utterance_id": {"type": "string", "minLength": 1},
+    "sequence": {"type": "integer", "minimum": 0},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "source": {"const": "pi5.speech-to-text"},
+    "source_node_id": {"const": "NODE-RPI5-02"},
+    "event_type": {"const": "ASR_UPDATE"},
+    "scope": {"const": "RPI5_ONLY"},
+    "microphone_id": {"const": "MIC-INDOOR-01"},
+    "text": {"type": "string", "maxLength": 500},
+    "is_final": {"type": "boolean"},
+    "model_version": {"type": "string", "minLength": 1},
+    "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "expires_at": {"type": "string", "format": "date-time"}
+  }
+}

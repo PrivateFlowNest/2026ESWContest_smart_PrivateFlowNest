@@ -1,0 +1,72 @@
+#!/bin/sh
+set -e
+
+mkdir -p \
+  /data/share/homemind/config \
+  /data/share/homemind/db \
+  /data/share/homemind/test-results
+chown network:network \
+  /data/share/homemind/config \
+  /data/share/homemind/db \
+  /data/share/homemind/test-results
+chmod 0750 \
+  /data/share/homemind/config \
+  /data/share/homemind/db \
+  /data/share/homemind/test-results
+
+# ACL template for the authenticated listener. Inactive until mosquitto.conf names it with
+# acl_file and the usernames in mosquitto.passwd match (see docs/RELEASE_0.6.0_KO.md, docs/RELEASE_0.6.1_KO.md, docs/RELEASE_0.6.2_KO.md).
+if [ ! -f /data/share/homemind/config/mosquitto.acl ]; then
+  cp /data/share/homemind/package-defaults/mosquitto.acl \
+    /data/share/homemind/config/mosquitto.acl
+  chown network:network /data/share/homemind/config/mosquitto.acl
+  chmod 0640 /data/share/homemind/config/mosquitto.acl
+fi
+
+if [ ! -f /data/share/homemind/config/mosquitto.conf ]; then
+  cp /data/share/homemind/package-defaults/mosquitto.conf \
+    /data/share/homemind/config/mosquitto.conf
+  chown network:network /data/share/homemind/config/mosquitto.conf
+  chmod 0640 /data/share/homemind/config/mosquitto.conf
+fi
+
+chown -R network:network /data/share/homemind/bin /data/share/homemind/lib
+
+# Atlas keeps the root filesystem read-only.  systemd can load the packaged
+# unit from /data/share, but multi-user.target's existing enable link points at
+# /etc/systemd/system/homemind-core.service.  Keep a real copy there so the
+# service is actually started on the next boot.
+root_was_read_only=0
+restore_root_read_only() {
+  if [ "$root_was_read_only" -eq 1 ]; then
+    sync
+    mount -o remount,ro / || true
+    root_was_read_only=0
+  fi
+}
+trap restore_root_read_only EXIT HUP INT TERM
+case ",$(awk '$2 == "/" { print $4; exit }' /proc/mounts)," in
+  *,ro,*)
+    mount -o remount,rw /
+    root_was_read_only=1
+    ;;
+esac
+cp /data/share/usr/lib/systemd/system/homemind-core.service \
+  /etc/systemd/system/homemind-core.service.new
+chmod 0644 /etc/systemd/system/homemind-core.service.new
+mv /etc/systemd/system/homemind-core.service.new \
+  /etc/systemd/system/homemind-core.service
+# Enable while / is still writable (the enable links live in /etc). The prerm of the version being upgraded
+# disables homemind-core; until 0.6.5 nothing enabled it again, so the real Pi4 started without core after a
+# reboot unless deploy/NODE-RPI4-01/install.sh had enabled it (found 2026-10-25).
+systemctl daemon-reload
+systemctl enable homemind-core.service homemind-mqtt.service || echo "homemind-core/mqtt: enable failed" >&2
+sync
+restore_root_read_only
+trap - EXIT HUP INT TERM
+
+systemctl daemon-reload
+systemctl restart homemind-ethernet.service
+systemctl restart homemind-mqtt.service
+systemctl restart homemind-core.service
+exit 0

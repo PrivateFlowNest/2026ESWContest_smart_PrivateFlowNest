@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>HomeMind demo scenes</title>
+<style>
+  html, body { margin: 0; width: 1280px; height: 720px; overflow: hidden; background: #0A1C24; }
+  body, canvas { font-family: "Noto Sans KR", "Malgun Gothic", sans-serif; }
+  #stage { position: absolute; inset: 0; }
+  #stage canvas { display: block; }
+  #labels { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
+  .tag { padding: 4px 10px; border-radius: 8px; background: rgba(8, 26, 33, 0.82); border: 1px solid rgba(57, 181, 196, 0.55);
+         color: #EAF6F8; text-align: center; white-space: nowrap; line-height: 1.25; }
+  .tag b { display: block; font-size: 15px; font-weight: 700; }
+  .tag span { display: block; font-size: 11.5px; color: #9FC3CA; }
+  .mini { padding: 2px 8px; border-radius: 6px; background: rgba(8, 26, 33, 0.7); color: #CFE3E7; font-size: 11.5px; white-space: nowrap; }
+  .packet { padding: 3px 9px; border-radius: 999px; font-size: 13px; font-weight: 700; white-space: nowrap; color: #08202A; background: #7FE3EE; box-shadow: 0 0 12px rgba(127, 227, 238, 0.6); }
+  .packet.cmd { background: #FFB27D; box-shadow: 0 0 12px rgba(255, 178, 125, 0.7); }
+  .packet.ack { background: #9BE7A6; box-shadow: 0 0 12px rgba(155, 231, 166, 0.6); }
+  .packet.ai { background: #C8B6FF; box-shadow: 0 0 12px rgba(200, 182, 255, 0.7); }
+  .packet.block { background: #FF7A7A; color: #2A0606; }
+  .note { padding: 5px 11px; border-radius: 8px; font-size: 14px; font-weight: 700; color: #FFFFFF; background: rgba(14, 74, 85, 0.92); border: 1px solid #39B5C4; white-space: nowrap; }
+  .note.warn { background: rgba(120, 52, 18, 0.92); border-color: #FFB27D; }
+  .note.ai { background: rgba(60, 44, 120, 0.92); border-color: #C8B6FF; }
+  .bubble { position: relative; padding: 8px 14px; border-radius: 14px; background: #FFFFFF; color: #10232A; font-size: 21px; font-weight: 700; white-space: nowrap; box-shadow: 0 6px 18px rgba(0,0,0,0.35); }
+  .bubble:after { content: ""; position: absolute; left: 22px; bottom: -10px; border: 10px solid transparent; border-top-color: #FFFFFF; border-bottom: 0; }
+  #overlay { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
+  /* UI scenes: the recorded 7-inch UI and phone app, full size on a plain background */
+  #flat { position: absolute; inset: 0; display: none; z-index: 1; background: radial-gradient(ellipse at 50% 40%, #12323C 0%, #0A1C24 70%); }
+  #flat figure { position: absolute; margin: 0; }
+  #flat img { display: block; width: 100%; height: 100%; border-radius: 12px; box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55); outline: 1px solid rgba(159, 195, 202, 0.25); }
+  #flat #flatPhone img { border-radius: 22px; outline: 6px solid #0F1416; }
+  #flat figcaption { position: absolute; bottom: calc(100% + 8px); padding: 3px 10px; border-radius: 6px; background: rgba(8, 26, 33, 0.82); color: #CFE3E7; font-size: 13.5px; white-space: nowrap; }
+  #flatPanel figcaption { right: 0; }
+  #flatPhone figcaption { left: 50%; transform: translateX(-50%); bottom: auto; top: calc(100% + 8px); }
+  #cut { position: absolute; display: none; padding: 7px 16px; border-radius: 999px; background: rgba(60, 44, 120, 0.94); border: 1px solid #C8B6FF; color: #fff; font-size: 17px; font-weight: 700; white-space: nowrap; transform: translate(-50%, -50%); }
+  #caption.low { bottom: 18px; }
+  #brand { position: absolute; left: 28px; top: 22px; color: #EAF6F8; font-size: 17px; font-weight: 700; letter-spacing: 0.2px; }
+  #brand i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #E8743B; margin-right: 8px; transform: translateY(-1px); font-style: normal; }
+  #chapter { position: absolute; left: 28px; top: 50px; padding: 4px 12px; border-radius: 999px; background: #E8743B; color: #fff; font-size: 14px; font-weight: 700; }
+  #kind { position: absolute; right: 26px; top: 22px; padding: 4px 11px; border-radius: 6px; border: 1px solid rgba(234, 246, 248, 0.45); color: rgba(234, 246, 248, 0.85); font-size: 12.5px; }
+  #caption { position: absolute; left: 50%; bottom: 34px; transform: translateX(-50%); max-width: 1060px; padding: 10px 22px; border-radius: 12px;
+             background: rgba(5, 18, 23, 0.86); color: #FFFFFF; font-size: 25px; font-weight: 700; text-align: center; white-space: nowrap; }
+  #caption small { display: block; font-size: 16px; font-weight: 500; color: #A9CDD3; margin-top: 2px; }
+  #card { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; text-align: center;
+          background: radial-gradient(ellipse at center, rgba(14, 74, 85, 0.94) 0%, rgba(6, 22, 28, 0.97) 70%); }
+  #card h1 { margin: 0; font-size: 64px; font-weight: 800; letter-spacing: 0.5px; }
+  #card h2 { margin: 18px 0 0; font-size: 26px; font-weight: 500; color: #F2B33D; }
+  #card p { margin: 30px 0 0; font-size: 19px; color: #A9CDD3; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "/node_modules/three/build/three.module.js", "three/addons/": "/node_modules/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div id="stage"></div>
+<div id="flat">
+  <figure id="flatPanel"><figcaption>7인치 터치 화면 · Raspberry Pi 5</figcaption><img alt=""></figure>
+  <figure id="flatPhone"><figcaption>휴대폰 앱</figcaption><img alt=""></figure>
+  <div id="cut"></div>
+</div>
+<div id="overlay">
+  <div id="brand"><i></i>HomeMind TaskFlow</div>
+  <div id="chapter"></div>
+  <div id="kind">동작 원리 애니메이션</div>
+  <div id="caption"></div>
+  <div id="card"><h1></h1><h2></h2><p></p></div>
+</div>
+<script type="module" src="./scene.js"></script>
+</body>
+</html>

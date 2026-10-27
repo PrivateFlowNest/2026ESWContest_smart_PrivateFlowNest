@@ -1,0 +1,31 @@
+[Unit]
+Description=HomeMind EXAONE 1.2B (llama.cpp server, localhost only)
+ConditionPathExists=/data/share/homemind/config/exaone.env
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=network
+Group=network
+EnvironmentFile=/data/share/homemind/config/exaone.env
+Environment=LD_LIBRARY_PATH=/data/share/homemind/lib
+# Model file is copied separately (not in the IPK); the service waits until it exists.
+ExecCondition=/bin/sh -c 'test -r "$HM_EXAONE_MODEL"'
+ExecStart=/bin/sh -c 'exec /data/share/homemind/bin/llama-server -m "$HM_EXAONE_MODEL" --alias "$HM_EXAONE_ALIAS" --host 127.0.0.1 --port 8080 -c "$HM_EXAONE_CTX" -t "$HM_EXAONE_THREADS"'
+Restart=always
+RestartSec=5s
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadOnlyPaths=/data/share/homemind
+LockPersonality=true
+RestrictSUIDSGID=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

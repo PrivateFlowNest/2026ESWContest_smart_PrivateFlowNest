@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "windows": 13,
+  "window_seconds": 4.0,
+  "activity_prediction_counts": {
+    "IN_PERSON_MEETING": 9,
+    "SELF_TALK": 3,
+    "ZOOM_SPEAKER": 1
+  },
+  "fused_context_counts": {
+    "UNKNOWN": 2,
+    "IN_PERSON_MEETING": 5,
+    "SELF_TALK": 2,
+    "QUIET": 4
+  },
+  "quiet_required_ever": true,
+  "transitions": [
+    {
+      "window": 3,
+      "decision_seconds": 6.0,
+      "transition": "ACTIVATED",
+      "context_type": "IN_PERSON_MEETING",
+      "quiet_required": true
+    },
+    {
+      "window": 8,
+      "decision_seconds": 11.0,
+      "transition": "DEACTIVATED",
+      "context_type": "SELF_TALK",
+      "quiet_required": false
+    },
+    {
+      "window": 10,
+      "decision_seconds": 13.0,
+      "transition": "UPDATED",
+      "context_type": "QUIET",
+      "quiet_required": false
+    }
+  ],
+  "latency_ms": {
+    "cold_first": 219.919,
+    "all_mean": 34.628,
+    "all_p95": 219.919,
+    "warm_mean": 19.187,
+    "warm_p95": 20.708
+  },
+  "privacy": {
+    "raw_audio_persisted": false,
+    "transcript_persisted": false,
+    "image_persisted": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "model_version": "partial-intent-v1",
+  "classes": [
+    "ACCESS",
+    "CLEANING",
+    "CLIMATE_COMFORT",
+    "LAUNDRY",
+    "LIGHTING",
+    "MEDIA",
+    "NO_ACTION",
+    "QUIET_ENVIRONMENT",
+    "VENTILATION"
+  ],
+  "feature_dimensions": 4096,
+  "feature_version": "fnv1a32-char-ngram-plus-korean-semantic-cues-l2-v2",
+  "confidence_threshold": 0.95,
+  "training_source": "AUTHORED_SYNTHETIC_V1",
+  "model_sha256": "f041f99c5d04535d9a6e5a0126d254562c30b56e7f2ff65b00733bca0b2c776e",
+  "training_rows": 1755,
+  "validation_rows": 441,
+  "regularization_c": 3.0,
+  "validation_macro_f1": 0.9424544143941335,
+  "validation_gate_metrics": {
+    "positive_recall": 0.0,
+    "proactive_false_positive_rate": 0.0,
+    "detected_precision": 1.0
+  }
+}

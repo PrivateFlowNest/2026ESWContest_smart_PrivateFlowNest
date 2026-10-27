@@ -1,0 +1,28 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "5f0e0000-0000-4000-8000-00000000000a",
+  "trace_id": "5f0e0000-0000-4000-8000-000000000001",
+  "request_id": "5f0e0000-0000-4000-8000-00000000000b",
+  "source_node_id": "NODE-RPI5-02",
+  "utterance_id": "5f0e0000-0000-4000-8000-00000000000c",
+  "transcript": {
+    "text": "거실 좀 밝게 해 줄래",
+    "language": "ko",
+    "stt_model_version": "whisper-small-homemind-lora-v4-q5_0",
+    "stt_confidence": 0.86
+  },
+  "parser": {
+    "result": "NO_MATCH",
+    "rule_version": "voice-parser-1"
+  },
+  "context": {
+    "presence_zone": "COMMON",
+    "activity": "GENERAL_ACTIVITY",
+    "audio_context": "SELF_TALK",
+    "quiet_required": false,
+    "confidence": 0.72
+  },
+  "requested_at_ms": 1792560000000,
+  "expires_at_ms": 1792560010000,
+  "simulated": true
+}

@@ -1,0 +1,40 @@
+{
+  "base_dir": ".",
+  "broker": {"host": "BROKER_HOST", "port": 1884, "username": "NODE-RPI5-02", "password_file": "/data/share/homemind/secrets/mqtt-password", "keepalive": 30},
+  "contracts_dir": "/data/share/homemind/share/contracts",
+  "perception_node_id": "NODE-RPI5-02",
+  "simulated": false,
+
+  "vision": {
+    "model_path": "models/homemind-yolox-nano-figure-v1.onnx",
+    "model_version": "yolox-nano-416-figure-v1",
+    "threads": 2,
+    "score_threshold": 0.25,
+    "nms_threshold": 0.45,
+    "figure_class_ids": [0],
+    "interval_ms": 200,
+    "confirmation_count": 3,
+    "lost_count": 3,
+    "republish_seconds": 10,
+    "presence_fifo": null,
+    "preview": {"enabled": true, "listen_host": "0.0.0.0", "port": 8091, "allowed_clients": ["10.10.10.3"]},
+    "cameras": [
+      {
+        "camera_id": "CAM-INDOOR-01",
+        "zones": "zones.indoor.json",
+        "source": {"type": "camera1", "device_name": "LifeCam", "width": 640, "height": 480, "fps": 30,
+                   "format": "JPEG", "warmup_ms": 5000, "capture_dir": "/tmp/homemind-vision-indoor",
+                   "capture_dir_mode": "0730", "capture_dir_group": "camera",
+                   "request_permissions": true, "app_id": "com.homemind.service.vision"}
+      },
+      {
+        "camera_id": "CAM-OUTDOOR-01",
+        "zones": "zones.outdoor.json",
+        "source": {"type": "camera1", "device_name": "USB_Composite_Device", "width": 640, "height": 480, "fps": 30,
+                   "format": "JPEG", "warmup_ms": 5000, "capture_dir": "/tmp/homemind-vision-outdoor",
+                   "capture_dir_mode": "0730", "capture_dir_group": "camera",
+                   "request_permissions": true, "app_id": "com.homemind.service.vision"}
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+# HomeMind 7-inch UI (NODE-RPI5-01): Flutter eLinux Wayland bundle in /data/share/homemind/ui.
+# Template. Every line marked [판단] is a guess that must be checked on the Atlas device
+# (compositor name, its user and socket, GPU device groups) before enabling the unit.
+[Unit]
+Description=HomeMind 7-inch UI (Flutter eLinux, Wayland)
+After=network-online.target
+Wants=network-online.target
+# [판단] Also start after the device's Wayland compositor once its unit name is known, e.g.:
+#After=weston.service
+ConditionPathExists=/data/share/homemind/config/ui.env
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+# [판단] The account must (1) read /data/share/homemind/secrets/mqtt-password (0640 root:network),
+# (2) connect to the compositor socket, (3) open the GPU (/dev/dri/*).
+User=network
+Group=network
+# [판단] GPU device groups on the device (check: ls -l /dev/dri).
+SupplementaryGroups=video render
+# [판단] Wayland session of the device compositor. Check on the device, e.g.:
+#   ls -l /run/user/*/wayland-* /run/wayland-* 2>/dev/null
+# The socket's directory and the socket itself must be accessible to User/Group above.
+Environment=XDG_RUNTIME_DIR=/run/user/0
+Environment=WAYLAND_DISPLAY=wayland-0
+# fontconfig cache goes to the private /tmp (the install tree is read-only).
+Environment=XDG_CACHE_HOME=/tmp
+ExecStart=/data/share/homemind/ui/homemind-ui-launch.sh
+Restart=always
+RestartSec=5s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadOnlyPaths=/data/share/homemind
+LockPersonality=true
+RestrictSUIDSGID=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+# Not set on purpose: PrivateDevices (needs /dev/dri), ProtectHome (hides /run/user, where the
+# Wayland socket usually is), MemoryDenyWriteExecute (Mesa software fallback JITs).
+
+[Install]
+# [판단] graphical.target if the device boots into one.
+WantedBy=multi-user.target

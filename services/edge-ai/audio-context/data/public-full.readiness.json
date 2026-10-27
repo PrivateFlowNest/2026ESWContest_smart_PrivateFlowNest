@@ -1,0 +1,181 @@
+{
+  "manifest": "C:\\Users\\alexi\\Desktop\\Workspace\\ESW\\services\\edge-ai\\audio-context\\data\\public-full.csv",
+  "ready_for_final_training": false,
+  "file_existence_checked": false,
+  "record_count": 872379,
+  "minimums_per_required_label": {
+    "train": 80,
+    "validation": 15,
+    "test": 20
+  },
+  "counts": {
+    "activity/IN_PERSON_MEETING/train": 1041,
+    "activity/IN_PERSON_MEETING/validation": 252,
+    "activity/SELF_TALK/train": 1308,
+    "activity/SELF_TALK/validation": 308,
+    "activity/TV_MEDIA/train": 5492,
+    "activity/TV_MEDIA/validation": 2129,
+    "activity/UNKNOWN/train": 4013,
+    "activity/UNKNOWN/validation": 636,
+    "activity/ZOOM_SPEAKER/train": 835,
+    "activity/ZOOM_SPEAKER/validation": 202,
+    "sound_event/ALARM/test": 453,
+    "sound_event/ALARM/train": 1648,
+    "sound_event/ALARM/validation": 159,
+    "sound_event/DOORBELL/test": 27,
+    "sound_event/DOORBELL/train": 79,
+    "sound_event/DOORBELL/validation": 17,
+    "sound_event/OTHER/test": 691,
+    "sound_event/OTHER/train": 9697,
+    "sound_event/OTHER/validation": 1222
+  },
+  "sample_counts": {
+    "activity/IN_PERSON_MEETING/train": 4164,
+    "activity/IN_PERSON_MEETING/validation": 1008,
+    "activity/SELF_TALK/train": 643604,
+    "activity/SELF_TALK/validation": 137786,
+    "activity/TV_MEDIA/train": 21968,
+    "activity/TV_MEDIA/validation": 8516,
+    "activity/UNKNOWN/train": 32104,
+    "activity/UNKNOWN/validation": 5088,
+    "activity/ZOOM_SPEAKER/train": 3340,
+    "activity/ZOOM_SPEAKER/validation": 808,
+    "sound_event/ALARM/test": 453,
+    "sound_event/ALARM/train": 1648,
+    "sound_event/ALARM/validation": 159,
+    "sound_event/DOORBELL/test": 27,
+    "sound_event/DOORBELL/train": 79,
+    "sound_event/DOORBELL/validation": 17,
+    "sound_event/OTHER/test": 691,
+    "sound_event/OTHER/train": 9697,
+    "sound_event/OTHER/validation": 1222
+  },
+  "counting_rule": "unique group_id per head, label, and split",
+  "coverage_gaps": [
+    {
+      "head": "activity",
+      "label": "QUIET",
+      "split": "train",
+      "actual": 0,
+      "required": 80,
+      "missing": 80
+    },
+    {
+      "head": "activity",
+      "label": "QUIET",
+      "split": "validation",
+      "actual": 0,
+      "required": 15,
+      "missing": 15
+    },
+    {
+      "head": "activity",
+      "label": "QUIET",
+      "split": "test",
+      "actual": 0,
+      "required": 20,
+      "missing": 20
+    },
+    {
+      "head": "activity",
+      "label": "SELF_TALK",
+      "split": "test",
+      "actual": 0,
+      "required": 20,
+      "missing": 20
+    },
+    {
+      "head": "activity",
+      "label": "TV_MEDIA",
+      "split": "test",
+      "actual": 0,
+      "required": 20,
+      "missing": 20
+    },
+    {
+      "head": "activity",
+      "label": "ZOOM_SPEAKER",
+      "split": "test",
+      "actual": 0,
+      "required": 20,
+      "missing": 20
+    },
+    {
+      "head": "activity",
+      "label": "ZOOM_HEADPHONES",
+      "split": "train",
+      "actual": 0,
+      "required": 80,
+      "missing": 80
+    },
+    {
+      "head": "activity",
+      "label": "ZOOM_HEADPHONES",
+      "split": "validation",
+      "actual": 0,
+      "required": 15,
+      "missing": 15
+    },
+    {
+      "head": "activity",
+      "label": "ZOOM_HEADPHONES",
+      "split": "test",
+      "actual": 0,
+      "required": 20,
+      "missing": 20
+    },
+    {
+      "head": "activity",
+      "label": "IN_PERSON_MEETING",
+      "split": "test",
+      "actual": 0,
+      "required": 20,
+      "missing": 20
+    },
+    {
+      "head": "sound_event",
+      "label": "DOORBELL",
+      "split": "train",
+      "actual": 79,
+      "required": 80,
+      "missing": 1
+    },
+    {
+      "head": "sound_event",
+      "label": "WASHER_COMPLETE",
+      "split": "train",
+      "actual": 0,
+      "required": 80,
+      "missing": 80
+    },
+    {
+      "head": "sound_event",
+      "label": "WASHER_COMPLETE",
+      "split": "validation",
+      "actual": 0,
+      "required": 15,
+      "missing": 15
+    },
+    {
+      "head": "sound_event",
+      "label": "WASHER_COMPLETE",
+      "split": "test",
+      "actual": 0,
+      "required": 20,
+      "missing": 20
+    }
+  ],
+  "group_leak_count": 0,
+  "group_leaks": [],
+  "missing_group_id_count": 0,
+  "blockers": [
+    "required_label_coverage"
+  ],
+  "metric_gate_after_training": {
+    "activity_macro_f1": 0.9,
+    "sound_event_macro_f1": 0.9,
+    "report_confusion_matrix": true,
+    "report_false_positive_rate": true
+  },
+  "note": "This gate checks data structure and coverage. A model is final only after the independent test metric gate and Pi 5 latency checks also pass."
+}

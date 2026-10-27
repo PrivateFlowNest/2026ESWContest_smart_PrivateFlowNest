@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/task-proposal.schema.json",
+  "title": "HomeMind EXAONE Task Proposal",
+  "description": "An untrusted proposal from Pi 5 EXAONE. Pi 4 policy must approve execution.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "intent",
+    "device",
+    "action",
+    "parameters",
+    "ambiguous",
+    "safety_flags",
+    "clarification_question"
+  ],
+  "properties": {
+    "intent": {
+      "enum": [
+        "DEVICE_CONTROL",
+        "DEVICE_QUERY",
+        "CONTEXT_SUGGESTION",
+        "CLARIFY",
+        "NO_ACTION"
+      ]
+    },
+    "device": {
+      "type": ["string", "null"],
+      "enum": [
+        "LIGHT",
+        "TV",
+        "WASHER",
+        "WINDOW",
+        "AIR_PURIFIER",
+        "ENTRY_DOOR",
+        "BATHROOM_DOOR",
+        "VENTILATION_FAN",
+        "AIR_CONDITIONER",
+        "LAPTOP",
+        "ROBOT_VACUUM",
+        "NOTIFICATION",
+        "ALL_QUIET_DEVICES",
+        null
+      ]
+    },
+    "action": {
+      "type": ["string", "null"],
+      "enum": [
+        "TURN_ON",
+        "TURN_OFF",
+        "SET_BRIGHTNESS",
+        "SET_VOLUME",
+        "INCREASE_VOLUME",
+        "DECREASE_VOLUME",
+        "MUTE",
+        "UNMUTE",
+        "OPEN",
+        "CLOSE",
+        "PAUSE",
+        "RESUME",
+        "START",
+        "RETURN_TO_DOCK",
+        "SET_LEVEL",
+        "SET_TEMPERATURE",
+        "SET_QUIET_MODE",
+        "DEFER_NOTIFICATION",
+        "RESUME_NOTIFICATION",
+        "QUERY_STATUS",
+        null
+      ]
+    },
+    "parameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "brightness": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "volume": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "level": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "temperature_celsius": { "type": "integer", "minimum": 16, "maximum": 30 },
+        "duration_seconds": { "type": "integer", "minimum": 0, "maximum": 86400 },
+        "reason": { "type": "string", "maxLength": 160 }
+      }
+    },
+    "ambiguous": { "type": "boolean" },
+    "safety_flags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "AMBIGUOUS_TARGET",
+          "AMBIGUOUS_ACTION",
+          "UNSUPPORTED_DEVICE",
+          "UNSUPPORTED_ACTION",
+          "PRIVACY_SENSITIVE",
+          "HIGH_RISK",
+          "CONFLICTING_REQUEST",
+          "NEGATED_REQUEST",
+          "MODEL_OUTPUT_INVALID",
+          "MODEL_UNAVAILABLE"
+        ]
+      }
+    },
+    "clarification_question": {
+      "type": ["string", "null"],
+      "maxLength": 200
+    }
+  }
+}

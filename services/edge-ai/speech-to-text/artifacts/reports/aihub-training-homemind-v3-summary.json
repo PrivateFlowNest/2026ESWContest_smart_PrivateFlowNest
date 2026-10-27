@@ -1,0 +1,17 @@
+{
+  "output": "artifacts\\manifests\\aihub-training-homemind-v3.jsonl",
+  "rows": 6606,
+  "input_counts": {
+    "artifacts\\manifests\\aihub-71405-home-near-training-homemind-weighted-v2.jsonl": 3032,
+    "artifacts\\manifests\\aihub-training-homemind-keyword-supplement-v3.jsonl": 3574
+  },
+  "source_counts": {
+    "AIHUB-71405-TRAINING-HOME-NEAR": 3032,
+    "AIHUB-463-TRAINING": 1560,
+    "AIHUB-464-TRAINING": 947,
+    "AIHUB-109-TRAINING-VOICE-COLLECTION": 992,
+    "AIHUB-71698-TRAINING-RESIDENTIAL-DIALOGUE": 75
+  },
+  "validation_rows_included": 0,
+  "raw_transcripts_in_summary": false
+}

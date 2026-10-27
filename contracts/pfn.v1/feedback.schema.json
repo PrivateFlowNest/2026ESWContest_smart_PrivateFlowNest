@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-feedback.schema.json",
+  "title": "HomeMind UI feedback",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "trace_id", "client_id", "feedback_type",
+    "rating", "sent_at_ms"
+  ],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "client_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "feedback_type": { "enum": ["context_feedback", "action_feedback"] },
+    "task_id": { "type": ["string", "null"], "format": "uuid" },
+    "observation_event_id": { "type": ["string", "null"], "format": "uuid" },
+    "rating": { "enum": ["positive", "negative", "unknown"] },
+    "note": { "type": "string", "maxLength": 512 },
+    "sent_at_ms": { "type": "integer", "minimum": 0 }
+  }
+}

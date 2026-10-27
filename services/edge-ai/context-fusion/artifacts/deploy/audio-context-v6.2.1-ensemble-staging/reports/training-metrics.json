@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "model_version": "yamnet-temporal-cost-ensemble-v0.8.0-50-50",
+  "method": "weighted_probability_average",
+  "weights": [0.5, 0.5],
+  "members": [
+    {
+      "model_version": "yamnet-temporal-cost-logreg-v0.7.0",
+      "role": "false-positive control"
+    },
+    {
+      "model_version": "yamnet-temporal-cost-logreg-v0.7.1-recall-buffer",
+      "role": "meeting recall buffer"
+    }
+  ],
+  "selection": {
+    "split": "validation",
+    "test_split_used_for_selection": false,
+    "policy_report": "audio-policy-tuning-v6-ensemble-50-50.json"
+  },
+  "final_group_disjoint_evaluation": {
+    "samples": 375,
+    "exact_context_accuracy": 0.88,
+    "quiet_recall": 0.9133,
+    "quiet_false_positive_rate": 0.0489,
+    "activation_p95_seconds": 7.0,
+    "release_p95_seconds": 5.0,
+    "gate_passed": true
+  },
+  "privacy": {
+    "raw_audio_included": false,
+    "file_paths_included": false,
+    "transcripts_included": false
+  }
+}

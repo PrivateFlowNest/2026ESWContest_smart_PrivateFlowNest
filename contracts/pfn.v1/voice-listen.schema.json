@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-voice-listen.schema.json",
+  "title": "HomeMind push-to-talk request from the 7-inch UI to the perception node",
+  "description": "NODE-RPI5-01 (UI button) to NODE-RPI5-02. start = begin listening for one utterance exactly like the local push-to-talk trigger; cancel = stop listening. Carries no audio and no text. The perception node ignores a request whose expires_at_ms has passed, so a press is never replayed after a reconnect. Core does not subscribe.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "trace_id", "source_node_id", "target_node_id", "client_id", "action",
+               "sent_at_ms", "expires_at_ms"],
+  "properties": {
+    "schema_version": {"const": "pfn.v1"},
+    "event_id": {"type": "string", "format": "uuid"},
+    "trace_id": {"type": "string", "format": "uuid"},
+    "source_node_id": {"const": "NODE-RPI5-01"},
+    "target_node_id": {"const": "NODE-RPI5-02"},
+    "client_id": {"type": "string", "minLength": 1, "maxLength": 64},
+    "action": {"enum": ["start", "cancel"]},
+    "sent_at_ms": {"type": "integer", "minimum": 0},
+    "expires_at_ms": {"type": "integer", "minimum": 0},
+    "simulated": {"type": "boolean"}
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "presence_zone": "DESK",
+  "activity": "MEETING",
+  "audio_context": "ZOOM_SPEAKER",
+  "quiet_required": true,
+  "confidence": 0.84
+}

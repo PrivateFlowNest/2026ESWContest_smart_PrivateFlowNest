@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.0",
+  "model_version": "yamnet-temporal-logreg-v0.6.0+context-fusion-rules-v1",
+  "samples": 500,
+  "exact_context_accuracy": 0.658,
+  "quiet_required": {
+    "positive_samples": 200,
+    "negative_samples": 300,
+    "recall": 0.6,
+    "false_positive_rate": 0.0367
+  },
+  "activation_delay_seconds": {
+    "count": 120,
+    "mean": 6.408,
+    "p95": 8.0
+  },
+  "confusion_matrix": {
+    "labels": [
+      "IN_PERSON_MEETING",
+      "QUIET",
+      "SELF_TALK",
+      "TV_MEDIA",
+      "UNKNOWN",
+      "ZOOM_SPEAKER"
+    ],
+    "values": [
+      [
+        66,
+        2,
+        16,
+        3,
+        12,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        99,
+        0,
+        1,
+        0
+      ],
+      [
+        11,
+        0,
+        19,
+        62,
+        8,
+        0
+      ],
+      [
+        0,
+        1,
+        49,
+        1,
+        49,
+        0
+      ],
+      [
+        0,
+        0,
+        36,
+        0,
+        11,
+        53
+      ]
+    ]
+  },
+  "inference_latency_ms": {
+    "windows": 2347,
+    "mean": 19.288,
+    "p95": 21.029
+  },
+  "coverage": {
+    "learned_activity_labels": [
+      "IN_PERSON_MEETING",
+      "SELF_TALK",
+      "TV_MEDIA",
+      "UNKNOWN",
+      "ZOOM_SPEAKER"
+    ],
+    "rule_or_auxiliary_labels": [
+      "QUIET",
+      "ZOOM_HEADPHONES"
+    ]
+  },
+  "privacy": {
+    "raw_audio_in_report": false,
+    "file_paths_in_report": false,
+    "transcripts_in_report": false
+  },
+  "selection": {
+    "split": "validation",
+    "per_label": 100,
+    "seed": 20260903,
+    "available_after_duration_filter": {
+      "skipped_missing": 0,
+      "IN_PERSON_MEETING": 1000,
+      "SELF_TALK": 413,
+      "TV_MEDIA": 1000,
+      "UNKNOWN": 1000,
+      "ZOOM_SPEAKER": 808
+    }
+  },
+  "audio_classifier_only": {
+    "window": {
+      "samples": 2348,
+      "accuracy": 0.6942,
+      "confusion_matrix": {
+        "labels": [
+          "IN_PERSON_MEETING",
+          "SELF_TALK",
+          "TV_MEDIA",
+          "UNKNOWN",
+          "ZOOM_SPEAKER"
+        ],
+        "values": [
+          [
+            377,
+            89,
+            19,
+            2,
+            5
+          ],
+          [
+            5,
+            388,
+            0,
+            0,
+            0
+          ],
+          [
+            80,
+            86,
+            303,
+            5,
+            10
+          ],
+          [
+            7,
+            215,
+            7,
+            250,
+            9
+          ],
+          [
+            2,
+            166,
+            5,
+            6,
+            312
+          ]
+        ]
+      }
+    },
+    "segment_majority": {
+      "samples": 500,
+      "accuracy": 0.74,
+      "confusion_matrix": {
+        "labels": [
+          "IN_PERSON_MEETING",
+          "SELF_TALK",
+          "TV_MEDIA",
+          "UNKNOWN",
+          "ZOOM_SPEAKER"
+        ],
+        "values": [
+          [
+            82,
+            14,
+            3,
+            0,
+            1
+          ],
+          [
+            0,
+            100,
+            0,
+            0,
+            0
+          ],
+          [
+            18,
+            17,
+            65,
+            0,
+            0
+          ],
+          [
+            1,
+            45,
+            1,
+            53,
+            0
+          ],
+          [
+            1,
+            29,
+            0,
+            0,
+            70
+          ]
+        ]
+      }
+    },
+    "note": "No fusion rules, hysteresis, direction, vision, or device state applied."
+  }
+}

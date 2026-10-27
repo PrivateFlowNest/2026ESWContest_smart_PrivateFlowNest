@@ -1,0 +1,345 @@
+{
+  "created_at": "2026-09-02T13:20:36.662435+00:00",
+  "base_model": "LGAI-EXAONE/EXAONE-4.0-1.2B",
+  "adapter": "/mnt/c/Users/alexi/Desktop/Workspace/ESW/services/exaone-edge/artifacts/exaone-1.2b-lora-v1/final-adapter",
+  "test_file": "/mnt/c/Users/alexi/Desktop/Workspace/ESW/services/exaone-edge/data/finetune-v1/test.jsonl",
+  "total": 16,
+  "json_valid_count": 16,
+  "json_valid_rate": 1.0,
+  "contract_valid_count": 16,
+  "contract_valid_rate": 1.0,
+  "meaning_match_count": 16,
+  "meaning_match_rate": 1.0,
+  "elapsed_seconds": 16.74634375800008,
+  "samples_per_second": 0.9554324353551182,
+  "results": [
+    {
+      "id": "test-command-22-1-2-0",
+      "category": "command/VENTILATION_FAN/TURN_OFF",
+      "raw": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"VENTILATION_FAN\",\"action\":\"TURN_OFF\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}",
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "VENTILATION_FAN",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-command-28-1-2-0",
+      "category": "command/AIR_CONDITIONER/TURN_OFF",
+      "raw": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"AIR_CONDITIONER\",\"action\":\"TURN_OFF\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}",
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "AIR_CONDITIONER",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-unsupported-2-5-2",
+      "category": "safety/unsupported_device",
+      "raw": "{\"intent\":\"CLARIFY\",\"device\":null,\"action\":null,\"parameters\":{},\"ambiguous\":true,\"safety_flags\":[\"UNSUPPORTED_DEVICE\"],\"clarification_question\":\"노트북은(는) 현재 지원되지 않습니다. 다른 기기를 말씀하셨나요?\"}",
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "UNSUPPORTED_DEVICE"
+        ],
+        "clarification_question": "노트북은(는) 현재 지원되지 않습니다. 다른 기기를 말씀하셨나요?"
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-command-14-0-0-0",
+      "category": "command/ENTRY_DOOR/QUERY_STATUS",
+      "raw": "{\"intent\":\"DEVICE_QUERY\",\"device\":\"ENTRY_DOOR\",\"action\":\"QUERY_STATUS\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}",
+      "proposal": {
+        "intent": "DEVICE_QUERY",
+        "device": "ENTRY_DOOR",
+        "action": "QUERY_STATUS",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-quiet-2-1-1",
+      "category": "context/quiet_required",
+      "raw": "{\"intent\":\"CONTEXT_SUGGESTION\",\"device\":\"ALL_QUIET_DEVICES\",\"action\":\"SET_QUIET_MODE\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}",
+      "proposal": {
+        "intent": "CONTEXT_SUGGESTION",
+        "device": "ALL_QUIET_DEVICES",
+        "action": "SET_QUIET_MODE",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-command-14-1-1-2",
+      "category": "command/ENTRY_DOOR/QUERY_STATUS",
+      "raw": "{\"intent\":\"DEVICE_QUERY\",\"device\":\"ENTRY_DOOR\",\"action\":\"QUERY_STATUS\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}",
+      "proposal": {
+        "intent": "DEVICE_QUERY",
+        "device": "ENTRY_DOOR",
+        "action": "QUERY_STATUS",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-command-26-1-1-2",
+      "category": "command/WASHER/RESUME_NOTIFICATION",
+      "raw": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"WASHER\",\"action\":\"RESUME_NOTIFICATION\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}",
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "WASHER",
+        "action": "RESUME_NOTIFICATION",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-command-32-0-1-0",
+      "category": "command/AIR_CONDITIONER/QUERY_STATUS",
+      "raw": "{\"intent\":\"DEVICE_QUERY\",\"device\":\"AIR_CONDITIONER\",\"action\":\"QUERY_STATUS\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}",
+      "proposal": {
+        "intent": "DEVICE_QUERY",
+        "device": "AIR_CONDITIONER",
+        "action": "QUERY_STATUS",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-command-32-0-1-2",
+      "category": "command/AIR_CONDITIONER/QUERY_STATUS",
+      "raw": "{\"intent\":\"DEVICE_QUERY\",\"device\":\"AIR_CONDITIONER\",\"action\":\"QUERY_STATUS\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}",
+      "proposal": {
+        "intent": "DEVICE_QUERY",
+        "device": "AIR_CONDITIONER",
+        "action": "QUERY_STATUS",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-command-05-2-0-2",
+      "category": "command/TV/TURN_OFF",
+      "raw": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"TURN_OFF\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}",
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "TV",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-ambiguous-action-1-0",
+      "category": "safety/ambiguous_action",
+      "raw": "{\"intent\":\"CLARIFY\",\"device\":null,\"action\":null,\"parameters\":{},\"ambiguous\":true,\"safety_flags\":[\"AMBIGUOUS_ACTION\"],\"clarification_question\":\"해당 기기를 어떻게 할까요?\"}",
+      "proposal": {
+        "intent": "CLARIFY",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": true,
+        "safety_flags": [
+          "AMBIGUOUS_ACTION"
+        ],
+        "clarification_question": "해당 기기를 어떻게 할까요?"
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-command-22-0-1-2",
+      "category": "command/VENTILATION_FAN/TURN_OFF",
+      "raw": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"VENTILATION_FAN\",\"action\":\"TURN_OFF\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}",
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "VENTILATION_FAN",
+        "action": "TURN_OFF",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-negated-2-0",
+      "category": "safety/negated",
+      "raw": "{\"intent\":\"NO_ACTION\",\"device\":null,\"action\":null,\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[\"NEGATED_REQUEST\"],\"clarification_question\":null}",
+      "proposal": {
+        "intent": "NO_ACTION",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [
+          "NEGATED_REQUEST"
+        ],
+        "clarification_question": null
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-command-08-0-2-0",
+      "category": "command/TV/DECREASE_VOLUME",
+      "raw": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"DECREASE_VOLUME\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}",
+      "proposal": {
+        "intent": "DEVICE_CONTROL",
+        "device": "TV",
+        "action": "DECREASE_VOLUME",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-command-14-1-0-1",
+      "category": "command/ENTRY_DOOR/QUERY_STATUS",
+      "raw": "{\"intent\":\"DEVICE_QUERY\",\"device\":\"ENTRY_DOOR\",\"action\":\"QUERY_STATUS\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}",
+      "proposal": {
+        "intent": "DEVICE_QUERY",
+        "device": "ENTRY_DOOR",
+        "action": "QUERY_STATUS",
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [],
+        "clarification_question": null
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    },
+    {
+      "id": "test-negated-1-5",
+      "category": "safety/negated",
+      "raw": "{\"intent\":\"NO_ACTION\",\"device\":null,\"action\":null,\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[\"NEGATED_REQUEST\"],\"clarification_question\":null}",
+      "proposal": {
+        "intent": "NO_ACTION",
+        "device": null,
+        "action": null,
+        "parameters": {},
+        "ambiguous": false,
+        "safety_flags": [
+          "NEGATED_REQUEST"
+        ],
+        "clarification_question": null
+      },
+      "json_valid": true,
+      "contract_valid": true,
+      "meaning_match": true,
+      "meaning_errors": [],
+      "parse_error": null,
+      "contract_error": null
+    }
+  ]
+}

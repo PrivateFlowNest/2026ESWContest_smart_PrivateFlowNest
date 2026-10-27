@@ -1,0 +1,10 @@
+[Unit]
+Description=HomeMind clock from core, every 10 minutes
+
+[Timer]
+OnBootSec=20s
+OnUnitActiveSec=10min
+AccuracySec=10s
+
+[Install]
+WantedBy=timers.target

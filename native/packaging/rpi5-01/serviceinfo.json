@@ -1,0 +1,8 @@
+{
+  "id": "com.privateflownest.homemindrpi5llm",
+  "description": "HomeMind NODE-RPI5-01 LLM node",
+  "name": "homemind-rpi5-llm",
+  "type": "native",
+  "entry": "homemind-llm",
+  "version": "@VERSION@"
+}

@@ -1,0 +1,12 @@
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+.tmp-pytest/
+tests/temp-run-*/
+data/figure-dataset/
+data/smoke-dataset/
+data/figure-coco/
+artifacts/smoke-coco/
+artifacts/*.pth
+artifacts/*.onnx

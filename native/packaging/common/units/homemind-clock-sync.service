@@ -1,0 +1,27 @@
+# Takes core's clock (NODE-RPI4-01) so the RPI5 nodes agree with core: a 7-inch voice press expires after 3 s and
+# core checks command expiry, while a Pi 5 keeps no time over a power cycle (real Pi5-01: 154 s behind, 2026-10-24).
+# Run by homemind-clock-sync.timer (20 s after boot, then every 10 minutes); also at boot by itself.
+[Unit]
+Description=HomeMind clock from core (pfn/v1/core/state/response)
+After=network-online.target
+Wants=network-online.target
+# Powered on together, core may come up after this runs: try again every 30 s until it answers (not 10 minutes later).
+StartLimitIntervalSec=0
+
+[Service]
+Type=oneshot
+Restart=on-failure
+RestartSec=30s
+# root: clock_settime needs CAP_SYS_TIME, and the 0640 root:network MQTT password file is read.
+ExecStart=/data/share/homemind/bin/homemind-clock-sync --config-dir /data/share/homemind/config
+Environment=LD_LIBRARY_PATH=/data/share/homemind/lib
+CapabilityBoundingSet=CAP_SYS_TIME CAP_DAC_READ_SEARCH
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+TimeoutStartSec=60
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,64 @@
+#!/bin/sh
+# @PACKAGE@ postinst. Same pattern as homemind-core (Pi4 Atlas): files under /data/share, unit copies in
+# /etc/systemd/system because the enable links point there and the root filesystem is read-only.
+set -e
+
+HM=/data/share/homemind
+UNITS="@UNITS@"
+
+mkdir -p "$HM/config" "$HM/models" "$HM/secrets"
+chown network:network "$HM/config" "$HM/models"
+chmod 0750 "$HM/config" "$HM/models"
+# The MQTT password file is created by a person on the device (never shipped):
+#   install -m 0640 -o root -g network /dev/stdin /data/share/homemind/secrets/mqtt-password
+chown root:network "$HM/secrets"
+chmod 0750 "$HM/secrets"
+chown -R network:network "$HM/bin" "$HM/lib" 2>/dev/null || true
+
+@POSTINST_EXTRA@
+
+for default in "$HM"/package-defaults/*.json "$HM"/package-defaults/*.env; do
+  [ -f "$default" ] || continue
+  target="$HM/config/$(basename "$default")"
+  if [ ! -f "$target" ]; then
+    cp "$default" "$target"
+    chown network:network "$target"
+    chmod 0640 "$target"
+  fi
+done
+
+root_was_read_only=0
+restore_root_read_only() {
+  if [ "$root_was_read_only" -eq 1 ]; then
+    sync
+    mount -o remount,ro / || true
+    root_was_read_only=0
+  fi
+}
+trap restore_root_read_only EXIT HUP INT TERM
+case ",$(awk '$2 == "/" { print $4; exit }' /proc/mounts)," in
+  *,ro,*)
+    mount -o remount,rw /
+    root_was_read_only=1
+    ;;
+esac
+for unit in $UNITS; do
+  cp "/data/share/usr/lib/systemd/system/$unit" "/etc/systemd/system/$unit.new"
+  chmod 0644 "/etc/systemd/system/$unit.new"
+  mv "/etc/systemd/system/$unit.new" "/etc/systemd/system/$unit"
+done
+# Enable while / is still writable: the enable links live in /etc. (Until 2026-10-23 this ran after the remount to
+# read-only and failed silently: on the real Pi4 the Mobile API did not start after a reboot.)
+systemctl daemon-reload
+for unit in $UNITS; do
+  systemctl enable "$unit" || echo "$unit: enable failed" >&2
+done
+sync
+restore_root_read_only
+trap - EXIT HUP INT TERM
+
+for unit in $UNITS; do
+  # Units carry ConditionPathExists on their model/password files: they stay inactive until those exist.
+  systemctl restart "$unit" || true
+done
+exit 0

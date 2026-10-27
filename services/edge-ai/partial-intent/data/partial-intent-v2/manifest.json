@@ -1,0 +1,21 @@
+{
+  "source": "authored synthetic Korean seed set v2; not a natural-speech acceptance set",
+  "rows": 2524,
+  "by_split": {
+    "train": 1678,
+    "validation": 429,
+    "test": 417
+  },
+  "by_intent": {
+    "CLIMATE_COMFORT": 253,
+    "LIGHTING": 254,
+    "VENTILATION": 287,
+    "MEDIA": 286,
+    "ACCESS": 271,
+    "LAUNDRY": 300,
+    "CLEANING": 275,
+    "QUIET_ENVIRONMENT": 290,
+    "NO_ACTION": 308
+  },
+  "group_leakage": []
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "99999999-9999-4999-8999-999999999999",
+  "trace_id": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+  "source_node_id": "NODE-RPI4-01",
+  "mode": "normal",
+  "camera_allowed": true,
+  "microphone_allowed": true,
+  "recording": false,
+  "local_processing": true,
+  "changed_at_ms": 1788278400000
+}

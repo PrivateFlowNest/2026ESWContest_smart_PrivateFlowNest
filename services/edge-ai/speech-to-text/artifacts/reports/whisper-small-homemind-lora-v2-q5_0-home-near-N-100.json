@@ -1,0 +1,1073 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-03T16:15:18.503459+00:00",
+  "model_version": "whisper-small-homemind-lora-v2-q5_0",
+  "total": 100,
+  "character_error_rate": 0.11702127659574468,
+  "character_accuracy": 0.8829787234042553,
+  "real_time_factor": 0.47876508771328086,
+  "audio_seconds": 305.54000000000013,
+  "runtime_seconds": 146.2818848999159,
+  "homemind_keyword_recall": 0.8118811881188119,
+  "keyword_occurrences": 101,
+  "keyword_group_metrics": {
+    "light": {
+      "hits": 16,
+      "occurrences": 24,
+      "recall": 0.6666666666666666
+    },
+    "tv": {
+      "hits": 5,
+      "occurrences": 6,
+      "recall": 0.8333333333333334
+    },
+    "aircon": {
+      "hits": 22,
+      "occurrences": 25,
+      "recall": 0.88
+    },
+    "washer": {
+      "hits": 3,
+      "occurrences": 3,
+      "recall": 1.0
+    },
+    "window": {
+      "hits": 1,
+      "occurrences": 1,
+      "recall": 1.0
+    },
+    "front_door": {
+      "hits": 3,
+      "occurrences": 4,
+      "recall": 0.75
+    },
+    "bathroom": {
+      "hits": 8,
+      "occurrences": 11,
+      "recall": 0.7272727272727273
+    },
+    "notification": {
+      "hits": 17,
+      "occurrences": 18,
+      "recall": 0.9444444444444444
+    },
+    "meeting": {
+      "hits": 0,
+      "occurrences": 1,
+      "recall": 0.0
+    },
+    "sound": {
+      "hits": 7,
+      "occurrences": 8,
+      "recall": 0.875
+    }
+  },
+  "privacy": {
+    "raw_audio_in_report": false,
+    "references_in_report": false,
+    "hypotheses_in_report": false,
+    "audio_paths_in_report": false
+  },
+  "results": [
+    {
+      "id": "B-M2812M-M-t03dC-NUNU-M220370",
+      "edits": 1,
+      "reference_chars": 7,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 1.94,
+      "runtime_seconds": 1.5223,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2659F-M-t03dC-NUNU-M910472",
+      "edits": 1,
+      "reference_chars": 12,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.61,
+      "runtime_seconds": 1.4596,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2637M-M-t03dC-NUNU-M030393",
+      "edits": 0,
+      "reference_chars": 14,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.32,
+      "runtime_seconds": 1.4465,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M820279",
+      "edits": 4,
+      "reference_chars": 13,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 4.49,
+      "runtime_seconds": 1.4872,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1509M-M-t03dC-NUNU-M620353",
+      "edits": 0,
+      "reference_chars": 10,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.03,
+      "runtime_seconds": 1.4018,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2812M-M-t03dC-NUNU-M220074",
+      "edits": 1,
+      "reference_chars": 9,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.69,
+      "runtime_seconds": 1.4334,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2812M-M-t03dC-NUNU-M220675",
+      "edits": 0,
+      "reference_chars": 15,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.53,
+      "runtime_seconds": 1.4379,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6003F-M-t03dC-NUNU-M810484",
+      "edits": 4,
+      "reference_chars": 10,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 3.14,
+      "runtime_seconds": 1.447,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1530F-M-t03dC-NUNU-M810785",
+      "edits": 0,
+      "reference_chars": 11,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.66,
+      "runtime_seconds": 1.4642,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2619F-M-t03dC-NUNU-M060610",
+      "edits": 3,
+      "reference_chars": 10,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 2.59,
+      "runtime_seconds": 1.4284,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6003F-M-t03dC-NUNU-M810797",
+      "edits": 1,
+      "reference_chars": 9,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.22,
+      "runtime_seconds": 1.4528,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2637M-M-t03dC-NUNU-M030003",
+      "edits": 1,
+      "reference_chars": 13,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.67,
+      "runtime_seconds": 1.4249,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M821257",
+      "edits": 6,
+      "reference_chars": 12,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 2.72,
+      "runtime_seconds": 1.3993,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6003F-M-t03dC-NUNU-M810299",
+      "edits": 2,
+      "reference_chars": 11,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.69,
+      "runtime_seconds": 1.4485,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M820272",
+      "edits": 4,
+      "reference_chars": 17,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 4.29,
+      "runtime_seconds": 1.5071,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M820766",
+      "edits": 2,
+      "reference_chars": 12,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.04,
+      "runtime_seconds": 1.4714,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2637M-M-t03dC-NUNU-M030971",
+      "edits": 1,
+      "reference_chars": 16,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.87,
+      "runtime_seconds": 1.4477,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2622F-M-t03dC-NUNU-M231342",
+      "edits": 0,
+      "reference_chars": 15,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.15,
+      "runtime_seconds": 1.4524,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6003F-M-t03dC-NUNU-M810539",
+      "edits": 0,
+      "reference_chars": 8,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.22,
+      "runtime_seconds": 1.4268,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2968F-M-t03dC-NUNU-M820272",
+      "edits": 0,
+      "reference_chars": 17,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.97,
+      "runtime_seconds": 1.5327,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M821262",
+      "edits": 9,
+      "reference_chars": 14,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 2.78,
+      "runtime_seconds": 1.6507,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M820808",
+      "edits": 3,
+      "reference_chars": 22,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 6.69,
+      "runtime_seconds": 1.5087,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6003F-M-t03dC-NUNU-M810348",
+      "edits": 3,
+      "reference_chars": 8,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 2.35,
+      "runtime_seconds": 1.427,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2682F-M-t03dC-NUNU-M130891",
+      "edits": 2,
+      "reference_chars": 15,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.24,
+      "runtime_seconds": 1.4541,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2637M-M-t03dC-NUNU-M030868",
+      "edits": 1,
+      "reference_chars": 12,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 1.86,
+      "runtime_seconds": 1.4253,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1530F-M-t03dC-NUNU-M811246",
+      "edits": 0,
+      "reference_chars": 13,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.81,
+      "runtime_seconds": 1.4796,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2649F-M-t03dC-NUNU-M070754",
+      "edits": 1,
+      "reference_chars": 13,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.73,
+      "runtime_seconds": 1.4417,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2622F-M-t03dC-NUNU-M230623",
+      "edits": 2,
+      "reference_chars": 15,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.22,
+      "runtime_seconds": 1.4345,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2622F-M-t03dC-NUNU-M230223",
+      "edits": 0,
+      "reference_chars": 14,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.81,
+      "runtime_seconds": 1.4612,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1530F-M-t03dC-NUNU-M810103",
+      "edits": 1,
+      "reference_chars": 14,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.59,
+      "runtime_seconds": 1.4442,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1509M-M-t03dC-NUNU-M621902",
+      "edits": 4,
+      "reference_chars": 12,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.86,
+      "runtime_seconds": 1.4227,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1833M-M-t03dC-NUNU-M21921",
+      "edits": 1,
+      "reference_chars": 10,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 4.1,
+      "runtime_seconds": 1.4613,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2622F-M-t03dC-NUNU-M230548",
+      "edits": 0,
+      "reference_chars": 10,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.15,
+      "runtime_seconds": 1.418,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6080M-M-t03dC-NUNU-M621016",
+      "edits": 0,
+      "reference_chars": 10,
+      "keyword_hits": 2,
+      "keyword_total": 2,
+      "audio_seconds": 2.25,
+      "runtime_seconds": 1.4653,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6003F-M-t03dC-NUNU-M810690",
+      "edits": 0,
+      "reference_chars": 13,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.95,
+      "runtime_seconds": 1.438,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2622F-M-t03dC-NUNU-M230817",
+      "edits": 2,
+      "reference_chars": 17,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.5,
+      "runtime_seconds": 1.4637,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2622F-M-t03dC-NUNU-M231037",
+      "edits": 0,
+      "reference_chars": 17,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.38,
+      "runtime_seconds": 1.4779,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1530F-M-t03dC-NUNU-M810853",
+      "edits": 2,
+      "reference_chars": 10,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.54,
+      "runtime_seconds": 1.4471,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2807F-M-t03dC-NUNU-M030056",
+      "edits": 2,
+      "reference_chars": 17,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.84,
+      "runtime_seconds": 1.4699,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2682F-M-t03dC-NUNU-M130080",
+      "edits": 0,
+      "reference_chars": 10,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.93,
+      "runtime_seconds": 1.4166,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6082M-M-t03dC-NUNU-M910631",
+      "edits": 0,
+      "reference_chars": 12,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.3,
+      "runtime_seconds": 1.4683,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2678F-M-t03dC-NUNU-M030003",
+      "edits": 1,
+      "reference_chars": 13,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.43,
+      "runtime_seconds": 1.4436,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M820928",
+      "edits": 0,
+      "reference_chars": 18,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 4.01,
+      "runtime_seconds": 1.4782,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2968F-M-t03dC-NUNU-M820414",
+      "edits": 1,
+      "reference_chars": 18,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 2.92,
+      "runtime_seconds": 1.4864,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2622F-M-t03dC-NUNU-M230216",
+      "edits": 0,
+      "reference_chars": 11,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.68,
+      "runtime_seconds": 1.4234,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6080M-M-t03dC-NUNU-M620604",
+      "edits": 0,
+      "reference_chars": 17,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.48,
+      "runtime_seconds": 1.4375,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M820035",
+      "edits": 0,
+      "reference_chars": 17,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 5.36,
+      "runtime_seconds": 1.481,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2649F-M-t03dC-NUNU-M070548",
+      "edits": 1,
+      "reference_chars": 10,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.32,
+      "runtime_seconds": 1.4785,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6080M-M-t03dC-NUNU-M621768",
+      "edits": 0,
+      "reference_chars": 19,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.62,
+      "runtime_seconds": 1.5168,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M820202",
+      "edits": 1,
+      "reference_chars": 17,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 4.04,
+      "runtime_seconds": 1.4718,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1528F-M-t03dC-NUNU-M820418",
+      "edits": 3,
+      "reference_chars": 10,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 2.4,
+      "runtime_seconds": 1.4603,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M820450",
+      "edits": 4,
+      "reference_chars": 15,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.56,
+      "runtime_seconds": 1.4819,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M820671",
+      "edits": 6,
+      "reference_chars": 15,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.05,
+      "runtime_seconds": 1.4781,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1528F-M-t03dC-NUNU-M820115",
+      "edits": 0,
+      "reference_chars": 16,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.39,
+      "runtime_seconds": 1.4765,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2619F-M-t03dC-NUNU-M060143",
+      "edits": 1,
+      "reference_chars": 15,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.81,
+      "runtime_seconds": 1.5051,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6082M-M-t03dC-NUNU-M910038",
+      "edits": 0,
+      "reference_chars": 11,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.23,
+      "runtime_seconds": 1.4764,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M821084",
+      "edits": 1,
+      "reference_chars": 10,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.53,
+      "runtime_seconds": 1.4038,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2678F-M-t03dC-NUNU-M030449",
+      "edits": 0,
+      "reference_chars": 10,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.51,
+      "runtime_seconds": 1.4697,
+      "partial_update_count": 0
+    },
+    {
+      "id": "C-M0321M-M-t03dC-NUNU-M020629",
+      "edits": 2,
+      "reference_chars": 14,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.24,
+      "runtime_seconds": 1.4681,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1530F-M-t03dC-NUNU-M810484",
+      "edits": 2,
+      "reference_chars": 10,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.2,
+      "runtime_seconds": 1.4479,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6082M-M-t03dC-NUNU-M910646",
+      "edits": 1,
+      "reference_chars": 16,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.29,
+      "runtime_seconds": 1.4521,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2682F-M-t03dC-NUNU-M130019",
+      "edits": 2,
+      "reference_chars": 13,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.21,
+      "runtime_seconds": 1.5028,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6080M-M-t03dC-NUNU-M620201",
+      "edits": 0,
+      "reference_chars": 13,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.58,
+      "runtime_seconds": 1.4483,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1528F-M-t03dC-NUNU-M821084",
+      "edits": 3,
+      "reference_chars": 10,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 2.36,
+      "runtime_seconds": 1.4546,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1528F-M-t03dC-NUNU-M820202",
+      "edits": 3,
+      "reference_chars": 17,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 3.98,
+      "runtime_seconds": 1.5245,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M820473",
+      "edits": 5,
+      "reference_chars": 15,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.15,
+      "runtime_seconds": 1.4918,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M820065",
+      "edits": 0,
+      "reference_chars": 14,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.6,
+      "runtime_seconds": 1.4654,
+      "partial_update_count": 0
+    },
+    {
+      "id": "C-M0623F-M-t03dC-NUNU-M010136",
+      "edits": 1,
+      "reference_chars": 12,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.84,
+      "runtime_seconds": 1.4747,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1528F-M-t03dC-NUNU-M820142",
+      "edits": 3,
+      "reference_chars": 16,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 3.41,
+      "runtime_seconds": 1.4904,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M820646",
+      "edits": 2,
+      "reference_chars": 10,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.72,
+      "runtime_seconds": 1.4424,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2682F-M-t03dC-NUNU-M130554",
+      "edits": 2,
+      "reference_chars": 12,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.75,
+      "runtime_seconds": 1.4449,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M821289",
+      "edits": 5,
+      "reference_chars": 18,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 4.0,
+      "runtime_seconds": 1.5226,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6082M-M-t03dC-NUNU-M910012",
+      "edits": 0,
+      "reference_chars": 15,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.58,
+      "runtime_seconds": 1.4406,
+      "partial_update_count": 0
+    },
+    {
+      "id": "C-M0310F-M-t03dC-NUNU-M420456",
+      "edits": 0,
+      "reference_chars": 13,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.0,
+      "runtime_seconds": 1.4441,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2678F-M-t03dC-NUNU-M032032",
+      "edits": 0,
+      "reference_chars": 13,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.05,
+      "runtime_seconds": 1.4335,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2968F-M-t03dC-NUNU-M821038",
+      "edits": 0,
+      "reference_chars": 10,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.24,
+      "runtime_seconds": 1.4498,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6003F-M-t03dC-NUNU-M810380",
+      "edits": 9,
+      "reference_chars": 15,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 3.59,
+      "runtime_seconds": 1.521,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6003F-M-t03dC-NUNU-M810943",
+      "edits": 4,
+      "reference_chars": 10,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 2.7,
+      "runtime_seconds": 1.4349,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2640M-M-t03dC-NUNU-M220589",
+      "edits": 0,
+      "reference_chars": 15,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.1,
+      "runtime_seconds": 1.4663,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1528F-M-t03dC-NUNU-M821063",
+      "edits": 0,
+      "reference_chars": 15,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.31,
+      "runtime_seconds": 1.4559,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6080M-M-t03dC-NUNU-M621107",
+      "edits": 0,
+      "reference_chars": 10,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.24,
+      "runtime_seconds": 1.4391,
+      "partial_update_count": 0
+    },
+    {
+      "id": "C-M0310F-M-t03dC-NUNU-M420030",
+      "edits": 0,
+      "reference_chars": 12,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.53,
+      "runtime_seconds": 1.4435,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1530F-M-t03dC-NUNU-M810466",
+      "edits": 0,
+      "reference_chars": 18,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.63,
+      "runtime_seconds": 1.485,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2640M-M-t03dC-NUNU-M220835",
+      "edits": 3,
+      "reference_chars": 15,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 2.82,
+      "runtime_seconds": 1.4498,
+      "partial_update_count": 0
+    },
+    {
+      "id": "C-M0321M-M-t03dC-NUNU-M020055",
+      "edits": 6,
+      "reference_chars": 15,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 3.47,
+      "runtime_seconds": 1.4481,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2619F-M-t03dC-NUNU-M060376",
+      "edits": 0,
+      "reference_chars": 11,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.34,
+      "runtime_seconds": 1.4594,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6080M-M-t03dC-NUNU-M620135",
+      "edits": 0,
+      "reference_chars": 9,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 4.16,
+      "runtime_seconds": 1.4527,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1530F-M-t03dC-NUNU-M810774",
+      "edits": 0,
+      "reference_chars": 14,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.02,
+      "runtime_seconds": 1.481,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2649F-M-t03dC-NUNU-M071237",
+      "edits": 0,
+      "reference_chars": 9,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.1,
+      "runtime_seconds": 1.4382,
+      "partial_update_count": 0
+    },
+    {
+      "id": "C-M0310F-M-t03dC-NUNU-M421287",
+      "edits": 0,
+      "reference_chars": 15,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.6,
+      "runtime_seconds": 1.4631,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6009F-M-t03dC-NUNU-M820297",
+      "edits": 6,
+      "reference_chars": 20,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 7.56,
+      "runtime_seconds": 1.5443,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M1530F-M-t03dC-NUNU-M810348",
+      "edits": 1,
+      "reference_chars": 8,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.6,
+      "runtime_seconds": 1.4347,
+      "partial_update_count": 0
+    },
+    {
+      "id": "C-M0310F-M-t03dC-NUNU-M420629",
+      "edits": 0,
+      "reference_chars": 11,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.31,
+      "runtime_seconds": 1.4926,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6080M-M-t03dC-NUNU-M621897",
+      "edits": 0,
+      "reference_chars": 12,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.62,
+      "runtime_seconds": 1.4746,
+      "partial_update_count": 0
+    },
+    {
+      "id": "C-M0623F-M-t03dC-NUNU-M010327",
+      "edits": 0,
+      "reference_chars": 17,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 3.37,
+      "runtime_seconds": 1.4858,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2968F-M-t03dC-NUNU-M820070",
+      "edits": 3,
+      "reference_chars": 14,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.55,
+      "runtime_seconds": 1.4792,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2968F-M-t03dC-NUNU-M821090",
+      "edits": 4,
+      "reference_chars": 15,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 2.45,
+      "runtime_seconds": 1.4294,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6003F-M-t03dC-NUNU-M810737",
+      "edits": 2,
+      "reference_chars": 10,
+      "keyword_hits": 0,
+      "keyword_total": 1,
+      "audio_seconds": 2.85,
+      "runtime_seconds": 1.4273,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M6080M-M-t03dC-NUNU-M620268",
+      "edits": 0,
+      "reference_chars": 12,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.49,
+      "runtime_seconds": 1.4635,
+      "partial_update_count": 0
+    },
+    {
+      "id": "B-M2659F-M-t03dC-NUNU-M911932",
+      "edits": 2,
+      "reference_chars": 12,
+      "keyword_hits": 1,
+      "keyword_total": 1,
+      "audio_seconds": 2.87,
+      "runtime_seconds": 1.4776,
+      "partial_update_count": 0
+    }
+  ]
+}

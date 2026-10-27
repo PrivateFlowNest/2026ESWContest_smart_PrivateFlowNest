@@ -1,0 +1,36 @@
+[Unit]
+Description=HomeMind Mobile API (NODE-RPI4-01): phone app HTTP API -> pfn.v1 core task requests, QR pairing tokens
+After=homemind-mqtt.service homemind-core.service network-online.target
+Wants=homemind-mqtt.service network-online.target
+ConditionPathExists=/data/share/homemind/config/mobile-api.json
+ConditionPathExists=/data/share/homemind/secrets/mobile-api-mqtt-password
+# created by postinst (network:network 0700); ReadWritePaths below needs it to exist
+ConditionPathIsDirectory=/data/share/homemind/mobile-api
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=network
+Group=network
+Environment=LD_LIBRARY_PATH=/data/share/homemind/lib
+ExecStart=/data/share/homemind/bin/homemind-mobile-api --config /data/share/homemind/config/mobile-api.json
+Restart=always
+RestartSec=3s
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadOnlyPaths=/data/share/homemind
+# tokens.json (SHA-256 only), pairing-used.json, pairing-secret
+ReadWritePaths=/data/share/homemind/mobile-api
+LockPersonality=true
+RestrictSUIDSGID=true
+MemoryDenyWriteExecute=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+{
+  "name": "homemind-demo-video",
+  "private": true,
+  "description": "Diagram animations for the contest demo video (Three.js scenes rendered frame by frame with Puppeteer, encoded with ffmpeg)",
+  "scripts": {
+    "render": "node render.js"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.2.0",
+    "puppeteer": "^23.11.1",
+    "three": "^0.170.0"
+  }
+}

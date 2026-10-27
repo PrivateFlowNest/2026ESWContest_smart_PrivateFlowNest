@@ -1,0 +1,33 @@
+# hm_text: UTF-8 + Python str/json/re semantics (utf8proc for case folding, PCRE2 for regexes).
+# HM_TEXT_STATIC_DEPS links libutf8proc.a / libpcre2-8.a so the device needs no extra runtime packages.
+option(HM_TEXT_STATIC_DEPS "link utf8proc and PCRE2 statically when the archives exist" ON)
+pkg_check_modules(UTF8PROC REQUIRED IMPORTED_TARGET libutf8proc)
+pkg_check_modules(PCRE2 REQUIRED IMPORTED_TARGET libpcre2-8)
+
+add_library(hm_text STATIC src/text.cpp src/pyjson.cpp src/pyregex.cpp)
+target_include_directories(hm_text PUBLIC include)
+target_compile_options(hm_text PRIVATE ${HM_WARNINGS})
+target_link_libraries(hm_text PUBLIC nlohmann_json::nlohmann_json)
+
+set(hm_text_static FALSE)
+if(HM_TEXT_STATIC_DEPS)
+  find_library(HM_UTF8PROC_ARCHIVE NAMES libutf8proc.a HINTS ${UTF8PROC_LIBRARY_DIRS})
+  find_library(HM_PCRE2_ARCHIVE NAMES libpcre2-8.a HINTS ${PCRE2_LIBRARY_DIRS})
+  if(HM_UTF8PROC_ARCHIVE AND HM_PCRE2_ARCHIVE)
+    set(hm_text_static TRUE)
+  endif()
+endif()
+if(hm_text_static)
+  target_include_directories(hm_text PRIVATE ${UTF8PROC_INCLUDE_DIRS} ${PCRE2_INCLUDE_DIRS})
+  target_compile_definitions(hm_text PRIVATE UTF8PROC_STATIC PCRE2_STATIC)
+  target_link_libraries(hm_text PRIVATE ${HM_UTF8PROC_ARCHIVE} ${HM_PCRE2_ARCHIVE})
+else()
+  target_link_libraries(hm_text PRIVATE PkgConfig::UTF8PROC PkgConfig::PCRE2)
+endif()
+
+if(HM_BUILD_TESTS)
+  add_executable(hm_text_tests tests/test_text.cpp)
+  target_link_libraries(hm_text_tests PRIVATE hm_text GTest::gtest_main)
+  target_compile_options(hm_text_tests PRIVATE ${HM_WARNINGS})
+  add_test(NAME hm_text_tests COMMAND hm_text_tests)
+endif()

@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/context-feature-observation.schema.json",
+  "title": "HomeMind Context Feature Observation",
+  "description": "Privacy-minimized asynchronous feature event consumed by NODE-RPI5-02 context-fusion. Raw media, transcripts, coordinates, and identities are not allowed. The single USB microphone has no direction, so there is no sound-direction feature. PC-SIMULATION marks scenario replays (simulated=true).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "trace_id",
+    "timestamp",
+    "valid_until",
+    "source",
+    "source_node_id",
+    "event_type",
+    "simulated",
+    "payload"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "event_id": { "type": "string", "minLength": 1 },
+    "trace_id": { "type": "string", "minLength": 1 },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "valid_until": { "type": "string", "format": "date-time" },
+    "source": {
+      "enum": [
+        "pi5.audio-context",
+        "pi5.turn-taking",
+        "pi5.vision-presence",
+        "pi4.device-state",
+        "pc.scenario"
+      ]
+    },
+    "source_node_id": { "enum": ["NODE-RPI5-02", "NODE-RPI4-01", "PC-SIMULATION"] },
+    "event_type": {
+      "enum": [
+        "AUDIO_CONTEXT",
+        "TURN_TAKING",
+        "PRESENCE",
+        "DEVICE_STATE"
+      ]
+    },
+    "simulated": { "type": "boolean" },
+    "payload": { "type": "object" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "source": { "const": "pc.scenario" } } },
+      "then": { "properties": { "source_node_id": { "const": "PC-SIMULATION" }, "simulated": { "const": true } } },
+      "else": { "properties": { "source_node_id": { "enum": ["NODE-RPI5-02", "NODE-RPI4-01"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "AUDIO_CONTEXT" } } },
+      "then": {
+        "properties": {
+          "source": { "enum": ["pi5.audio-context", "pc.scenario"] },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "context_type",
+              "confidence",
+              "speech_ratio",
+              "duration_seconds",
+              "model_version"
+            ],
+            "properties": {
+              "context_type": {
+                "enum": [
+                  "QUIET",
+                  "SELF_TALK",
+                  "TV_MEDIA",
+                  "ZOOM_SPEAKER",
+                  "ZOOM_HEADPHONES",
+                  "IN_PERSON_MEETING",
+                  "UNKNOWN"
+                ]
+              },
+              "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+              "speech_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+              "duration_seconds": { "type": "number", "minimum": 0 },
+              "model_version": { "type": "string", "minLength": 1 },
+              "class_probabilities": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "SELF_TALK": { "type": "number", "minimum": 0, "maximum": 1 },
+                  "TV_MEDIA": { "type": "number", "minimum": 0, "maximum": 1 },
+                  "ZOOM_SPEAKER": { "type": "number", "minimum": 0, "maximum": 1 },
+                  "IN_PERSON_MEETING": { "type": "number", "minimum": 0, "maximum": 1 },
+                  "UNKNOWN": { "type": "number", "minimum": 0, "maximum": 1 }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "TURN_TAKING" } } },
+      "then": {
+        "properties": {
+          "source": { "enum": ["pi5.turn-taking", "pc.scenario"] },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["turns_per_minute", "confidence", "method"],
+            "properties": {
+              "turns_per_minute": { "type": "number", "minimum": 0 },
+              "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+              "method": { "enum": ["SPEAKER_CHANGE", "SPEECH_BURST_PROXY"] }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "PRESENCE" } } },
+      "then": {
+        "properties": {
+          "source": { "enum": ["pi5.vision-presence", "pc.scenario"] },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["presence_zone", "confidence"],
+            "properties": {
+              "presence_zone": {
+                "enum": [
+                  "BED",
+                  "DESK",
+                  "BATHROOM",
+                  "ENTRANCE",
+                  "COMMON",
+                  "OUTDOOR",
+                  "UNKNOWN"
+                ]
+              },
+              "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "DEVICE_STATE" } } },
+      "then": {
+        "properties": {
+          "source": { "enum": ["pi4.device-state", "pc.scenario"] },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["tv_on", "laptop_active", "headphones_connected"],
+            "properties": {
+              "tv_on": { "type": "boolean" },
+              "laptop_active": { "type": "boolean" },
+              "headphones_connected": { "type": "boolean" }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

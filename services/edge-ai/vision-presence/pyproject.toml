@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "homemind-vision-presence"
+version = "0.1.0"
+description = "YOLOX candidate benchmarking and privacy-minimized zone presence for HomeMind"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "numpy>=1.26,<3",
+  "onnxruntime>=1.20,<2",
+  "opencv-python>=4.10,<5",
+  "psutil>=6,<8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+train = [
+  "loguru>=0.7,<1",
+  "ninja>=1.11,<2",
+  "onnx>=1.17,<2",
+  "pycocotools>=2.0.8,<3",
+  "tabulate>=0.9,<1",
+  "tensorboard>=2.18,<3",
+  "thop>=0.1.1",
+  "torch>=2.0",
+  "torchvision>=0.15",
+  "tqdm>=4.66,<5",
+]
+
+[project.scripts]
+homemind-vision = "homemind_vision.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

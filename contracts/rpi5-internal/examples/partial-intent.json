@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "event_id": "pi-0001",
+  "trace_id": "trace-0001",
+  "timestamp": "2026-10-21T13:20:00.000Z",
+  "source": "pi5.partial-intent",
+  "source_node_id": "NODE-RPI5-02",
+  "text_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "text_length": 6,
+  "is_final": false,
+  "intent": "VENTILATION",
+  "confidence": 0.77,
+  "result": "DETECTED",
+  "candidate_devices": [
+    "VENTILATION_FAN",
+    "WINDOW"
+  ],
+  "safe_preparations": [
+    "CHECK_DEVICE_STATE"
+  ],
+  "requires_confirmation": true,
+  "execution_allowed": false,
+  "model": {
+    "name": "homemind-partial-intent",
+    "version": "partial-intent-v2",
+    "runtime": "ONNX_RUNTIME"
+  }
+}

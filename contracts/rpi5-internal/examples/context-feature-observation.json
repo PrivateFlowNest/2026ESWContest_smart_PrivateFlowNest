@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "event_id": "obs-0001",
+  "trace_id": "trace-0002",
+  "timestamp": "2026-10-21T13:20:00.000Z",
+  "valid_until": "2026-10-21T13:20:30.000Z",
+  "source": "pi5.vision-presence",
+  "source_node_id": "NODE-RPI5-02",
+  "event_type": "PRESENCE",
+  "simulated": false,
+  "payload": {
+    "presence_zone": "DESK",
+    "confidence": 0.9
+  }
+}

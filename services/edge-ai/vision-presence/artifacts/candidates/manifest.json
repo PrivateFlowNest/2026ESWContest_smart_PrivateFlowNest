@@ -1,0 +1,25 @@
+{
+  "source": "Megvii-BaseDetection/YOLOX",
+  "input_size": [
+    1,
+    3,
+    416,
+    416
+  ],
+  "models": {
+    "nano": {
+      "path": "C:\\Users\\alexi\\Desktop\\Workspace\\ESW\\services\\edge-ai\\vision-presence\\artifacts\\candidates\\yolox_nano_416.onnx",
+      "bytes": 3713690,
+      "sha256": "858b80409ab19d45a221c8f38355938ebf410cb0953b53c1a285e5ab31caf979",
+      "parameters": 912159,
+      "output": "raw YOLOX predictions; final deployment postprocessing is added after one-class training"
+    },
+    "tiny": {
+      "path": "C:\\Users\\alexi\\Desktop\\Workspace\\ESW\\services\\edge-ai\\vision-presence\\artifacts\\candidates\\yolox_tiny_416.onnx",
+      "bytes": 20258878,
+      "sha256": "4ba55433a7da4389bf69faa572d22e50cae8cdbadef966c55829dc274adb58a4",
+      "parameters": 5055855,
+      "output": "raw YOLOX predictions; final deployment postprocessing is added after one-class training"
+    }
+  }
+}

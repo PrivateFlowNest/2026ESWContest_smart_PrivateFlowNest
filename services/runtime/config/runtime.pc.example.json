@@ -1,0 +1,50 @@
+{
+  "broker": {
+    "host": "127.0.0.1",
+    "port": 1883,
+    "username": null,
+    "password_file": null,
+    "keepalive": 30
+  },
+  "perception_node_id": "NODE-RPI5-02",
+  "llm_node_id": "NODE-RPI5-01",
+  "llm_base_url": "http://127.0.0.1:8080",
+  "llm_model": "exaone-1.2b-homemind-v3",
+  "llm_request_ttl_ms": 10000,
+  "simulated": true,
+
+  "audio_device": null,
+  "listen_mode": "push_to_talk",
+  "presence_zone": "UNKNOWN",
+  "presence_confidence": 0.9,
+  "activity_model": "services/edge-ai/audio-context/artifacts/public-balanced-v6-ensemble-50-50/activity.joblib",
+  "yamnet_model": "services/edge-ai/audio-context/artifacts/yamnet-tfhub-1-savedmodel",
+  "fusion_policy": "services/edge-ai/context-fusion/config/audio-policy-v6.3-hold15.json",
+  "window_seconds": 4.0,
+  "hop_seconds": 1.0,
+  "republish_seconds": 10.0,
+  "perception_ttl_seconds": 15.0,
+  "vad": {
+    "start_ms": 200,
+    "end_silence_ms": 700,
+    "max_ms": 8000,
+    "min_ms": 400,
+    "pre_roll_ms": 300,
+    "threshold_db": -45.0,
+    "noise_margin_db": 10.0
+  },
+  "ptt_timeout_seconds": 6.0,
+  "whisper_cli_path": "services/edge-ai/speech-to-text/models/whisper-bin-x64-b4938/Release/whisper-cli.exe",
+  "whisper_model": "services/edge-ai/speech-to-text/artifacts/training/whisper-small-homemind-lora-v4/ggml-whisper-small-homemind-lora-v4-q5_0.bin",
+  "whisper_threads": 8,
+  "whisper_server_url": null,
+  "stt_model_version": "whisper-small-homemind-lora-v4-q5_0",
+  "debug_transcripts": false,
+  "publish": "mqtt",
+
+  "wav_input": null,
+  "wav_fast": false,
+  "wav_voice": "auto",
+  "wav_offset_seconds": 0.0,
+  "wav_max_seconds": null
+}

@@ -1,0 +1,11 @@
+{
+  "camera_id": "CAM-INDOOR-01",
+  "note": "Template only (same polygons as services/edge-ai/vision-presence/config/zones.template.json). Replace after the room model and camera angle are fixed. Order matters: the first polygon containing the foot point wins.",
+  "zones": {
+    "BED": [[0.00, 0.00], [0.50, 0.00], [0.50, 0.50], [0.00, 0.50]],
+    "DESK": [[0.50, 0.00], [1.00, 0.00], [1.00, 0.50], [0.50, 0.50]],
+    "BATHROOM": [[0.00, 0.50], [0.35, 0.50], [0.35, 1.00], [0.00, 1.00]],
+    "ENTRANCE": [[0.35, 0.50], [0.65, 0.50], [0.65, 1.00], [0.35, 1.00]],
+    "COMMON": [[0.65, 0.50], [1.00, 0.50], [1.00, 1.00], [0.65, 1.00]]
+  }
+}

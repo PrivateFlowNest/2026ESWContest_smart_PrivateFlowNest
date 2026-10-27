@@ -1,0 +1,107 @@
+{
+ "real_hardware_executed": false,
+ "environment": "PC x86_64 Docker + Windows llama-server, fake ESP",
+ "rounds": [
+  {
+   "round": 1,
+   "LED-TV-01": "ready > running > completed",
+   "LED-AIRCON-01": "ready > running > completed",
+   "quiet_mode_on": "completed",
+   "quiet_release": "completed (1 activation, 1 release)",
+   "llm": "AIR_CONDITIONER/TURN_ON 608 ms: proposed > ready > running > completed",
+   "negation": "no message",
+   "quiet_mode_off": "ready > running > completed"
+  },
+  {
+   "round": 2,
+   "LED-TV-01": "ready > running > completed",
+   "LED-AIRCON-01": "ready > running > completed",
+   "quiet_mode_on": "completed",
+   "quiet_release": "completed (1 activation, 1 release)",
+   "llm": "AIR_CONDITIONER/TURN_ON 400 ms: proposed > ready > running > completed",
+   "negation": "no message",
+   "quiet_mode_off": "ready > running > completed"
+  },
+  {
+   "round": 3,
+   "LED-TV-01": "ready > running > completed",
+   "LED-AIRCON-01": "ready > running > completed",
+   "quiet_mode_on": "completed",
+   "quiet_release": "completed (1 activation, 1 release)",
+   "llm": "AIR_CONDITIONER/TURN_ON 450 ms: proposed > ready > running > completed",
+   "negation": "no message",
+   "quiet_mode_off": "ready > running > completed"
+  },
+  {
+   "round": 4,
+   "LED-TV-01": "ready > running > completed",
+   "LED-AIRCON-01": "ready > running > completed",
+   "quiet_mode_on": "completed",
+   "quiet_release": "completed (1 activation, 1 release)",
+   "llm": "AIR_CONDITIONER/TURN_ON 353 ms: proposed > ready > running > completed",
+   "negation": "no message",
+   "quiet_mode_off": "ready > running > completed"
+  },
+  {
+   "round": 5,
+   "LED-TV-01": "ready > running > completed",
+   "LED-AIRCON-01": "ready > running > completed",
+   "quiet_mode_on": "completed",
+   "quiet_release": "completed (1 activation, 1 release)",
+   "llm": "AIR_CONDITIONER/TURN_ON 446 ms: proposed > ready > running > completed",
+   "negation": "no message",
+   "quiet_mode_off": "ready > running > completed"
+  },
+  {
+   "round": 6,
+   "LED-TV-01": "ready > running > completed",
+   "LED-AIRCON-01": "ready > running > completed",
+   "quiet_mode_on": "completed",
+   "quiet_release": "completed (1 activation, 1 release)",
+   "llm": "AIR_CONDITIONER/TURN_ON 440 ms: proposed > ready > running > completed",
+   "negation": "no message",
+   "quiet_mode_off": "ready > running > completed"
+  },
+  {
+   "round": 7,
+   "LED-TV-01": "ready > running > completed",
+   "LED-AIRCON-01": "ready > running > completed",
+   "quiet_mode_on": "completed",
+   "quiet_release": "completed (1 activation, 1 release)",
+   "llm": "AIR_CONDITIONER/TURN_ON 461 ms: proposed > ready > running > completed",
+   "negation": "no message",
+   "quiet_mode_off": "ready > running > completed"
+  },
+  {
+   "round": 8,
+   "LED-TV-01": "ready > running > completed",
+   "LED-AIRCON-01": "ready > running > completed",
+   "quiet_mode_on": "completed",
+   "quiet_release": "completed (1 activation, 1 release)",
+   "llm": "AIR_CONDITIONER/TURN_ON 441 ms: proposed > ready > running > completed",
+   "negation": "no message",
+   "quiet_mode_off": "ready > running > completed"
+  },
+  {
+   "round": 9,
+   "LED-TV-01": "ready > running > completed",
+   "LED-AIRCON-01": "ready > running > completed",
+   "quiet_mode_on": "completed",
+   "quiet_release": "completed (1 activation, 1 release)",
+   "llm": "AIR_CONDITIONER/TURN_ON 356 ms: proposed > ready > running > completed",
+   "negation": "no message",
+   "quiet_mode_off": "ready > running > completed"
+  },
+  {
+   "round": 10,
+   "LED-TV-01": "ready > running > completed",
+   "LED-AIRCON-01": "ready > running > completed",
+   "quiet_mode_on": "completed",
+   "quiet_release": "completed (1 activation, 1 release)",
+   "llm": "AIR_CONDITIONER/TURN_ON 451 ms: proposed > ready > running > completed",
+   "negation": "no message",
+   "quiet_mode_off": "ready > running > completed"
+  }
+ ],
+ "schema_invalid": []
+}

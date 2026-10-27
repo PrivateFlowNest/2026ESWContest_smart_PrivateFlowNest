@@ -1,0 +1,36 @@
+{
+  "schema_version": "pfn.v1",
+  "policy_version": 3,
+  "notes": [
+    "NODE-RPI4-01 core applies this to every core/task/request after registry checks. First matching rule wins; no match uses default_approval.",
+    "origin comes from parameters.origin. A request without it is 'unspecified' and always needs UI approval.",
+    "context_rule tasks are created by core itself from context-rules.json and skip the source node check.",
+    "User decision 2026-10-21: direct commands (voice parser, phone app) and quiet mode run at once; LLM proposals, opening the entrance door and the three home scenarios need UI approval.",
+    "Decision 2026-10-22 (policy_version 2): a waiting task may also be approved from the phone (pfn/v1/mobile/task/action, written only by homemind-mobile-api), except when its rule has phone_may_approve false (opening the entrance door: approved on the 7-inch screen in the house). Core refuses approve and resume of such a task from the phone; reject and cancel stay allowed.",
+    "User decision 2026-10-24 (policy_version 3): a task waiting for approval (state proposed) expires after proposal_ttl_seconds (the rule's value, else the top-level default): core closes it as rejected with PROPOSAL_EXPIRED and refuses a later approve. 600 s for proposals in general, 120 s for opening the entrance door (approved by someone at the door, not hours later)."
+  ],
+  "origins": {
+    "voice_parser": { "allowed_source_nodes": ["NODE-RPI5-02"] },
+    "llm": { "allowed_source_nodes": ["NODE-RPI5-01"] },
+    "ui": { "allowed_source_nodes": ["NODE-RPI5-01", "NODE-RPI4-01"] },
+    "context_rule": { "allowed_source_nodes": [] }
+  },
+  "default_approval": "ui_approval",
+  "proposal_ttl_seconds": 600,
+  "rules": [
+    { "name": "entrance_door_open_needs_approval", "intents": ["device_control"], "target_device_ids": ["SERVO-DOOR-01"], "position_refs": ["open"], "approval": "ui_approval", "phone_may_approve": false, "proposal_ttl_seconds": 120 },
+    { "name": "llm_needs_approval", "origins": ["llm"], "approval": "ui_approval" },
+    { "name": "direct_device_control", "intents": ["device_control"], "origins": ["voice_parser", "ui"], "approval": "auto" },
+    { "name": "quiet_mode", "intents": ["quiet_mode_on", "quiet_mode_off"], "origins": ["voice_parser", "ui", "context_rule"], "approval": "auto" }
+  ],
+  "rejection_codes": {
+    "SOURCE_NOT_ALLOWED": "parameters.origin does not match source_node_id",
+    "DEVICE_UNKNOWN": "target device is not in device-registry.json",
+    "DEVICE_NOT_WIRED": "target device wiring_status is not wired",
+    "CAPABILITY_NOT_ALLOWED": "action is not a capability of the target device",
+    "PARAMETERS_INVALID": "command parameters do not satisfy command.schema.json",
+    "COLOR_NOT_SUPPORTED": "LED colour is outside supported_colors",
+    "POSITION_NOT_REGISTERED": "servo angle is not a registered open/closed position",
+    "PROPOSAL_EXPIRED": "the task waited for approval longer than its proposal_ttl_seconds"
+  }
+}

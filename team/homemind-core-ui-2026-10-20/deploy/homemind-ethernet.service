@@ -1,0 +1,13 @@
+[Unit]
+Description=HomeMind fixed direct-cable address
+Before=homemind-mqtt.service
+After=local-fs.target connman.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/ip link set eth0 up
+ExecStart=/usr/sbin/ip address replace 10.10.10.2/24 dev eth0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

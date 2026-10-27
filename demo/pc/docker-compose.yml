@@ -1,0 +1,41 @@
+# PC rehearsal: broker (1883 TCP, 9001 WebSocket) + homemind-core 0.6.0 + fake ESP32/ESP8266.
+# Simulation only — real_hardware_executed=false. Run: docker compose -f demo/pc/docker-compose.yml up --build
+name: homemind-pc-demo
+services:
+  broker:
+    image: homemind-pc-core:0.6.0
+    build:
+      context: ../../team/homemind-core-ui-2026-10-20
+      dockerfile: ../../demo/pc/Dockerfile.core
+      additional_contexts:
+        contracts: ../../contracts/pfn.v1
+    command: ["mosquitto", "-c", "/etc/homemind/mosquitto.conf"]
+    volumes: ["./mosquitto.conf:/etc/homemind/mosquitto.conf:ro"]
+    ports: ["1883:1883", "9001:9001"]
+  core:
+    image: homemind-pc-core:0.6.0
+    depends_on: [broker]
+    command: >
+      /opt/homemind/bin/homemind-core --broker-host broker --broker-port 1883
+      --database /data/homemind.db --node-id NODE-RPI4-01
+      --sensor-rules /opt/homemind/contracts/sensor-rules.json
+      --scenario-rules /opt/homemind/contracts/scenario-rules.json
+      --device-registry /opt/homemind/contracts/device-registry.json
+      --task-policy /opt/homemind/contracts/task-policy.json
+      --context-rules /opt/homemind/contracts/context-rules.json
+    volumes: ["core-db:/data"]
+    restart: unless-stopped
+  fake-esp32:
+    image: homemind-pc-core:0.6.0
+    profiles: ["fake-esp"]
+    depends_on: [broker]
+    command: ["/opt/homemind/bin/homemind-simulator", "--broker-host", "broker", "--broker-port", "1883", "--node-id", "CTRL-ESP32-ACT-01", "--duration-seconds", "86400", "--interval-ms", "5000"]
+    restart: unless-stopped
+  fake-esp8266:
+    image: homemind-pc-core:0.6.0
+    profiles: ["fake-esp"]
+    depends_on: [broker]
+    command: ["/opt/homemind/bin/homemind-simulator", "--broker-host", "broker", "--broker-port", "1883", "--node-id", "CTRL-ESP8266-LED-01", "--duration-seconds", "86400", "--interval-ms", "5000"]
+    restart: unless-stopped
+volumes:
+  core-db: {}

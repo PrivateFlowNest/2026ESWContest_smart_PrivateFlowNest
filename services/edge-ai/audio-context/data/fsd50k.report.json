@@ -1,0 +1,22 @@
+{
+  "root": "E:\\HomeMind-Datasets\\raw\\fsd50k",
+  "manifest": "C:\\Users\\alexi\\Desktop\\Workspace\\ESW\\services\\edge-ai\\audio-context\\data\\fsd50k.csv",
+  "selected_count": 3861,
+  "counts": {
+    "ALARM/test": 453,
+    "ALARM/train": 949,
+    "ALARM/validation": 69,
+    "DOORBELL/test": 27,
+    "DOORBELL/train": 79,
+    "DOORBELL/validation": 17,
+    "OTHER/test": 691,
+    "OTHER/train": 1387,
+    "OTHER/validation": 189
+  },
+  "license_unknown_count": 0,
+  "restricted_license_excluded_count": 642,
+  "allow_restricted_licenses": false,
+  "license_notice": "Retain per-clip Creative Commons license metadata and review the FSD50K competition-use notice before final submission.",
+  "unsupported_target": "WASHER_COMPLETE",
+  "generated_via_staging_root": "C:\\HomeMind-Staging\\fsd50k\\extracted"
+}

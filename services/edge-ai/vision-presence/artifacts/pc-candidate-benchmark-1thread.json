@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "purpose": "PC deployment proxy only; final figure accuracy and Pi 5 performance are not measured",
+  "system": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 33 Stepping 0, AuthenticAMD",
+    "logical_cpu_count": 24,
+    "physical_cpu_count": 12,
+    "memory_bytes": 34278096896
+  },
+  "results": [
+    {
+      "model": "yolox_nano_416",
+      "path": "C:\\Users\\alexi\\Desktop\\Workspace\\ESW\\services\\edge-ai\\vision-presence\\artifacts\\candidates\\yolox_nano_416.onnx",
+      "sha256": "858b80409ab19d45a221c8f38355938ebf410cb0953b53c1a285e5ab31caf979",
+      "model_bytes": 3713690,
+      "input_name": "image",
+      "input_shape": [
+        1,
+        3,
+        416,
+        416
+      ],
+      "providers": [
+        "CPUExecutionProvider"
+      ],
+      "threads": 1,
+      "streams_simulated": 2,
+      "warmup_runs": 20,
+      "runs": 200,
+      "load_ms": 38.156,
+      "latency_ms": {
+        "mean": 16.418,
+        "p50": 14.754,
+        "p95": 24.558,
+        "min": 14.263,
+        "max": 26.06
+      },
+      "throughput_fps": 60.908,
+      "rss_before_bytes": 57815040,
+      "rss_after_bytes": 89640960,
+      "rss_growth_bytes": 31825920
+    },
+    {
+      "model": "yolox_tiny_416",
+      "path": "C:\\Users\\alexi\\Desktop\\Workspace\\ESW\\services\\edge-ai\\vision-presence\\artifacts\\candidates\\yolox_tiny_416.onnx",
+      "sha256": "4ba55433a7da4389bf69faa572d22e50cae8cdbadef966c55829dc274adb58a4",
+      "model_bytes": 20258878,
+      "input_name": "image",
+      "input_shape": [
+        1,
+        3,
+        416,
+        416
+      ],
+      "providers": [
+        "CPUExecutionProvider"
+      ],
+      "threads": 1,
+      "streams_simulated": 2,
+      "warmup_runs": 20,
+      "runs": 200,
+      "load_ms": 77.95,
+      "latency_ms": {
+        "mean": 69.166,
+        "p50": 61.048,
+        "p95": 95.522,
+        "min": 54.342,
+        "max": 98.445
+      },
+      "throughput_fps": 14.458,
+      "rss_before_bytes": 66842624,
+      "rss_after_bytes": 115707904,
+      "rss_growth_bytes": 48865280
+    }
+  ],
+  "fastest_by_p95": "yolox_nano_416",
+  "unmeasured": [
+    "final_figure_precision_recall",
+    "small_figure_recall",
+    "raspberry_pi_5_latency",
+    "raspberry_pi_5_temperature",
+    "full_stack_resource_contention"
+  ]
+}

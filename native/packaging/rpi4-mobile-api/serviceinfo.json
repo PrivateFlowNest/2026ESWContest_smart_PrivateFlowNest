@@ -1,0 +1,8 @@
+{
+  "id": "com.privateflownest.homemindmobileapi",
+  "description": "HomeMind NODE-RPI4-01 Mobile API",
+  "name": "homemind-rpi4-mobile-api",
+  "type": "native",
+  "entry": "homemind-mobile-api",
+  "version": "@VERSION@"
+}

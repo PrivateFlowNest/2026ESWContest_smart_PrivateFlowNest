@@ -1,0 +1,25 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "5f0e0000-0000-4000-8000-000000000020",
+  "trace_id": "5f0e0000-0000-4000-8000-000000000003",
+  "task_id": "5f0e0000-0000-4000-8000-000000000021",
+  "source_node_id": "NODE-RPI5-02",
+  "intent": "device_control",
+  "target_device": "SERVO-DOOR-01",
+  "priority": 50,
+  "safety_level": "caution",
+  "interruptible": true,
+  "resume_policy": "never",
+  "confidence": 0.97,
+  "parameters": {
+    "target_device_id": "SERVO-DOOR-01",
+    "action": "set_position",
+    "parameters": {
+      "position_degrees": 90
+    },
+    "origin": "voice_parser",
+    "ai_device": "ENTRY_DOOR",
+    "ai_action": "OPEN"
+  },
+  "requested_at_ms": 1792560000000
+}

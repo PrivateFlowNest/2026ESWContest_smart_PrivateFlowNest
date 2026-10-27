@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-llm-request.schema.json",
+  "title": "HomeMind voice sentence the deterministic parser could not resolve",
+  "description": "NODE-RPI5-02 to NODE-RPI5-01 only. The only message that carries a raw transcript off NODE-RPI5-02. Broker ACL: RPI5 accounts only, retained=false; NODE-RPI4-01 core does not subscribe or store it. Drop after expires_at_ms.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "trace_id", "request_id", "source_node_id",
+    "utterance_id", "transcript", "parser", "requested_at_ms", "expires_at_ms"
+  ],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "event_id": { "type": "string", "format": "uuid" },
+    "trace_id": { "type": "string", "format": "uuid" },
+    "request_id": { "type": "string", "format": "uuid" },
+    "source_node_id": { "const": "NODE-RPI5-02" },
+    "utterance_id": { "type": "string", "format": "uuid" },
+    "transcript": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "language", "stt_model_version", "stt_confidence"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "language": { "const": "ko" },
+        "stt_model_version": { "type": "string", "minLength": 1, "maxLength": 64 },
+        "stt_confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 }
+      }
+    },
+    "parser": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["result", "rule_version"],
+      "properties": {
+        "result": { "enum": ["NO_MATCH", "AMBIGUOUS", "LOW_CONFIDENCE"] },
+        "rule_version": { "type": "string", "minLength": 1, "maxLength": 64 }
+      }
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["presence_zone", "activity", "audio_context", "quiet_required", "confidence"],
+      "properties": {
+        "presence_zone": { "enum": ["BED", "DESK", "BATHROOM", "ENTRANCE", "COMMON", "OUTDOOR", "UNKNOWN"] },
+        "activity": {
+          "enum": [
+            "RESTING", "SLEEPING", "STUDYING", "WORKING", "MEETING", "BATHROOM_USE",
+            "ENTERING", "LEAVING", "GENERAL_ACTIVITY", "UNKNOWN"
+          ]
+        },
+        "audio_context": {
+          "enum": [
+            "QUIET", "SELF_TALK", "TV_MEDIA", "ZOOM_SPEAKER", "ZOOM_HEADPHONES",
+            "IN_PERSON_MEETING", "UNKNOWN"
+          ]
+        },
+        "quiet_required": { "type": "boolean" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "requested_at_ms": { "type": "integer", "minimum": 0 },
+    "expires_at_ms": { "type": "integer", "minimum": 0 },
+    "simulated": { "type": "boolean" }
+  }
+}

@@ -1,0 +1,390 @@
+{
+ "summary": {
+  "base_url": "http://127.0.0.1:8091",
+  "n": 20,
+  "p50_ms": 3183.6,
+  "p95_ms": 3429.6,
+  "max_ms": 3431.9,
+  "warmup_ms": 5998.8
+ },
+ "rows": [
+  {
+   "id": "fresh-light-001",
+   "warmup": true,
+   "wall_ms": 5998.8,
+   "completion_tokens": 51,
+   "timings": {
+    "cache_n": 0,
+    "prompt_n": 1479,
+    "prompt_ms": 4049.464,
+    "prompt_per_token_ms": 2.737974306964165,
+    "prompt_per_second": 365.23352226368723,
+    "predicted_n": 51,
+    "predicted_ms": 1895.886,
+    "predicted_per_token_ms": 37.91772,
+    "predicted_per_second": 26.372893728842346
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"LIGHT\",\"action\":\"TURN_ON\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-002",
+   "warmup": false,
+   "wall_ms": 3350.4,
+   "completion_tokens": 51,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 445,
+    "prompt_ms": 1479.652,
+    "prompt_per_token_ms": 3.3250606741573034,
+    "prompt_per_second": 300.74639171913395,
+    "predicted_n": 51,
+    "predicted_ms": 1834.044,
+    "predicted_per_token_ms": 36.68088,
+    "predicted_per_second": 27.262159468366082
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"LIGHT\",\"action\":\"TURN_OFF\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-003",
+   "warmup": false,
+   "wall_ms": 3167.7,
+   "completion_tokens": 51,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 445,
+    "prompt_ms": 1318.469,
+    "prompt_per_token_ms": 2.9628516853932587,
+    "prompt_per_second": 337.51267568672455,
+    "predicted_n": 51,
+    "predicted_ms": 1829.467,
+    "predicted_per_token_ms": 36.58934,
+    "predicted_per_second": 27.330364526935984
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"LIGHT\",\"action\":\"TURN_ON\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-004",
+   "warmup": false,
+   "wall_ms": 3198.0,
+   "completion_tokens": 51,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 447,
+    "prompt_ms": 1356.566,
+    "prompt_per_token_ms": 3.0348232662192394,
+    "prompt_per_second": 329.5084794989702,
+    "predicted_n": 51,
+    "predicted_ms": 1794.819,
+    "predicted_per_token_ms": 35.89638,
+    "predicted_per_second": 27.857962279204756
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"LIGHT\",\"action\":\"TURN_OFF\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-005",
+   "warmup": false,
+   "wall_ms": 3376.8,
+   "completion_tokens": 57,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 456,
+    "prompt_ms": 1358.348,
+    "prompt_per_token_ms": 2.978833333333333,
+    "prompt_per_second": 335.70189671571643,
+    "predicted_n": 57,
+    "predicted_ms": 1994.919,
+    "predicted_per_token_ms": 35.62355357142857,
+    "predicted_per_second": 28.071315176205147
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"LIGHT\",\"action\":\"SET_BRIGHTNESS\",\"parameters\":{\"brightness\":45},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-006",
+   "warmup": false,
+   "wall_ms": 3385.9,
+   "completion_tokens": 56,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 457,
+    "prompt_ms": 1373.78,
+    "prompt_per_token_ms": 3.006083150984683,
+    "prompt_per_second": 332.65879544031793,
+    "predicted_n": 56,
+    "predicted_ms": 1992.497,
+    "predicted_per_token_ms": 36.22721818181818,
+    "predicted_per_second": 27.603554735590563
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"LIGHT\",\"action\":\"SET_BRIGHTNESS\",\"parameters\":{\"brightness\":0},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-007",
+   "warmup": false,
+   "wall_ms": 3431.9,
+   "completion_tokens": 58,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 456,
+    "prompt_ms": 1354.826,
+    "prompt_per_token_ms": 2.9711096491228073,
+    "prompt_per_second": 336.5745859615921,
+    "predicted_n": 58,
+    "predicted_ms": 2030.451,
+    "predicted_per_token_ms": 35.621947368421054,
+    "predicted_per_second": 28.0725809192145
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"LIGHT\",\"action\":\"SET_BRIGHTNESS\",\"parameters\":{\"brightness\":100},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-008",
+   "warmup": false,
+   "wall_ms": 3162.4,
+   "completion_tokens": 52,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 448,
+    "prompt_ms": 1354.105,
+    "prompt_per_token_ms": 3.0225558035714286,
+    "prompt_per_second": 330.8458354411216,
+    "predicted_n": 52,
+    "predicted_ms": 1789.307,
+    "predicted_per_token_ms": 35.084450980392155,
+    "predicted_per_second": 28.50265493847618
+   },
+   "content": "{\"intent\":\"DEVICE_QUERY\",\"device\":\"LIGHT\",\"action\":\"QUERY_STATUS\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-009",
+   "warmup": false,
+   "wall_ms": 3197.5,
+   "completion_tokens": 52,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 447,
+    "prompt_ms": 1341.797,
+    "prompt_per_token_ms": 3.0017829977628634,
+    "prompt_per_second": 333.1353401445971,
+    "predicted_n": 52,
+    "predicted_ms": 1834.163,
+    "predicted_per_token_ms": 35.96398039215686,
+    "predicted_per_second": 27.805598520960242
+   },
+   "content": "{\"intent\":\"DEVICE_QUERY\",\"device\":\"LIGHT\",\"action\":\"QUERY_STATUS\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-light-010",
+   "warmup": false,
+   "wall_ms": 3169.7,
+   "completion_tokens": 52,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 447,
+    "prompt_ms": 1344.385,
+    "prompt_per_token_ms": 3.007572706935123,
+    "prompt_per_second": 332.49404002573664,
+    "predicted_n": 52,
+    "predicted_ms": 1792.515,
+    "predicted_per_token_ms": 35.14735294117647,
+    "predicted_per_second": 28.451644756110827
+   },
+   "content": "{\"intent\":\"DEVICE_QUERY\",\"device\":\"LIGHT\",\"action\":\"QUERY_STATUS\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-011",
+   "warmup": false,
+   "wall_ms": 3098.7,
+   "completion_tokens": 50,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 445,
+    "prompt_ms": 1360.61,
+    "prompt_per_token_ms": 3.0575505617977528,
+    "prompt_per_second": 327.0591866883236,
+    "predicted_n": 50,
+    "predicted_ms": 1717.54,
+    "predicted_per_token_ms": 35.05183673469388,
+    "predicted_per_second": 28.529175448606725
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"TURN_ON\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-012",
+   "warmup": false,
+   "wall_ms": 3069.5,
+   "completion_tokens": 50,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 443,
+    "prompt_ms": 1342.01,
+    "prompt_per_token_ms": 3.0293679458239278,
+    "prompt_per_second": 330.10186213217486,
+    "predicted_n": 50,
+    "predicted_ms": 1699.228,
+    "predicted_per_token_ms": 34.67812244897959,
+    "predicted_per_second": 28.83662463189166
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"TURN_OFF\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-013",
+   "warmup": false,
+   "wall_ms": 3266.2,
+   "completion_tokens": 53,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 450,
+    "prompt_ms": 1401.238,
+    "prompt_per_token_ms": 3.1138622222222225,
+    "prompt_per_second": 321.14458785730903,
+    "predicted_n": 53,
+    "predicted_ms": 1842.442,
+    "predicted_per_token_ms": 35.431576923076925,
+    "predicted_per_second": 28.22341218882331
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"DECREASE_VOLUME\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-014",
+   "warmup": false,
+   "wall_ms": 3214.2,
+   "completion_tokens": 53,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 447,
+    "prompt_ms": 1395.186,
+    "prompt_per_token_ms": 3.1212214765100668,
+    "prompt_per_second": 320.38738920832066,
+    "predicted_n": 53,
+    "predicted_ms": 1801.846,
+    "predicted_per_token_ms": 34.65088461538461,
+    "predicted_per_second": 28.85929208156524
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"INCREASE_VOLUME\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-015",
+   "warmup": false,
+   "wall_ms": 3318.6,
+   "completion_tokens": 55,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 455,
+    "prompt_ms": 1377.392,
+    "prompt_per_token_ms": 3.0272351648351647,
+    "prompt_per_second": 330.3344291240257,
+    "predicted_n": 55,
+    "predicted_ms": 1898.352,
+    "predicted_per_token_ms": 35.15466666666667,
+    "predicted_per_second": 28.445725555639836
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"SET_VOLUME\",\"parameters\":{\"volume\":37},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-016",
+   "warmup": false,
+   "wall_ms": 3336.3,
+   "completion_tokens": 54,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 455,
+    "prompt_ms": 1431.342,
+    "prompt_per_token_ms": 3.1458065934065935,
+    "prompt_per_second": 317.88349674641,
+    "predicted_n": 54,
+    "predicted_ms": 1882.886,
+    "predicted_per_token_ms": 35.526150943396225,
+    "predicted_per_second": 28.14827875930885
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"SET_VOLUME\",\"parameters\":{\"volume\":0},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-017",
+   "warmup": false,
+   "wall_ms": 3015.9,
+   "completion_tokens": 48,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 444,
+    "prompt_ms": 1344.99,
+    "prompt_per_token_ms": 3.029256756756757,
+    "prompt_per_second": 330.1139785425914,
+    "predicted_n": 48,
+    "predicted_ms": 1651.813,
+    "predicted_per_token_ms": 35.14495744680851,
+    "predicted_per_second": 28.453584031606486
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"MUTE\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-018",
+   "warmup": false,
+   "wall_ms": 3052.2,
+   "completion_tokens": 49,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 444,
+    "prompt_ms": 1326.628,
+    "prompt_per_token_ms": 2.9879009009009008,
+    "prompt_per_second": 334.6831214176092,
+    "predicted_n": 49,
+    "predicted_ms": 1683.996,
+    "predicted_per_token_ms": 35.08325,
+    "predicted_per_second": 28.50363064995404
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"UNMUTE\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-019",
+   "warmup": false,
+   "wall_ms": 3070.3,
+   "completion_tokens": 48,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 445,
+    "prompt_ms": 1399.954,
+    "prompt_per_token_ms": 3.14596404494382,
+    "prompt_per_second": 317.8675870778611,
+    "predicted_n": 48,
+    "predicted_ms": 1652.955,
+    "predicted_per_token_ms": 35.16925531914894,
+    "predicted_per_second": 28.43392590844881
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"MUTE\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-020",
+   "warmup": false,
+   "wall_ms": 3097.2,
+   "completion_tokens": 49,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 448,
+    "prompt_ms": 1373.704,
+    "prompt_per_token_ms": 3.066303571428571,
+    "prompt_per_second": 326.12556999178867,
+    "predicted_n": 49,
+    "predicted_ms": 1696.768,
+    "predicted_per_token_ms": 35.349333333333334,
+    "predicted_per_second": 28.28907664453832
+   },
+   "content": "{\"intent\":\"DEVICE_CONTROL\",\"device\":\"TV\",\"action\":\"UNMUTE\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  },
+  {
+   "id": "fresh-tv-021",
+   "warmup": false,
+   "wall_ms": 3106.8,
+   "completion_tokens": 51,
+   "timings": {
+    "cache_n": 1033,
+    "prompt_n": 446,
+    "prompt_ms": 1329.484,
+    "prompt_per_token_ms": 2.9809058295964124,
+    "prompt_per_second": 335.4684975524339,
+    "predicted_n": 51,
+    "predicted_ms": 1750.846,
+    "predicted_per_token_ms": 35.01692,
+    "predicted_per_second": 28.557623000538022
+   },
+   "content": "{\"intent\":\"DEVICE_QUERY\",\"device\":\"TV\",\"action\":\"QUERY_STATUS\",\"parameters\":{},\"ambiguous\":false,\"safety_flags\":[],\"clarification_question\":null}"
+  }
+ ]
+}

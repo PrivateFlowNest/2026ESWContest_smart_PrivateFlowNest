@@ -1,0 +1,30 @@
+[Unit]
+Description=HomeMind Whisper small LoRA v4 (whisper.cpp server, localhost only)
+ConditionPathExists=/data/share/homemind/config/whisper.env
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=network
+Group=network
+EnvironmentFile=/data/share/homemind/config/whisper.env
+Environment=LD_LIBRARY_PATH=/data/share/homemind/lib
+ExecCondition=/bin/sh -c 'test -r "$HM_WHISPER_MODEL"'
+ExecStart=/bin/sh -c 'exec /data/share/homemind/bin/whisper-server -m "$HM_WHISPER_MODEL" --host 127.0.0.1 --port 8090 -t "$HM_WHISPER_THREADS" -l ko $HM_WHISPER_EXTRA_ARGS'
+Restart=always
+RestartSec=5s
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadOnlyPaths=/data/share/homemind
+LockPersonality=true
+RestrictSUIDSGID=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

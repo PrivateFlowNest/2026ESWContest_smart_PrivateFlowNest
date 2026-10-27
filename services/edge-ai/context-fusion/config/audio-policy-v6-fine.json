@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "config_version": "audio-policy-v6.0.1-fine",
+  "engine": {
+    "quiet_audio_confidence": 0.73,
+    "meeting_tv_margin": 0.275,
+    "activation_updates": 2,
+    "release_updates": 2,
+    "change_updates": 2,
+    "ttl_seconds": 10.0
+  },
+  "acceptance": {
+    "calibration_passed": true,
+    "holdout_passed": false,
+    "source_report": "audio-policy-tuning-v6-fine.json"
+  }
+}

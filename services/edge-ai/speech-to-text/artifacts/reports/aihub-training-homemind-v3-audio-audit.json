@@ -1,0 +1,15 @@
+{
+  "input_rows": 6606,
+  "output_rows": 6603,
+  "unique_audio_files": 4133,
+  "removed_rows": 3,
+  "invalid_reasons": {
+    "segment_out_of_range": 3
+  },
+  "removed_source_counts": {
+    "AIHUB-464-TRAINING": 3
+  },
+  "raw_transcripts_in_summary": false,
+  "audio_paths_in_summary": false,
+  "decoded_audio_checked": true
+}

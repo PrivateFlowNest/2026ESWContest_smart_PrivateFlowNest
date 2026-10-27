@@ -1,0 +1,16 @@
+{
+  "base_dir": "/data/share/homemind",
+  "broker": {
+    "host": "BROKER_HOST",
+    "port": 1884,
+    "username": "NODE-RPI5-01",
+    "password_file": "/data/share/homemind/secrets/mqtt-password",
+    "keepalive": 30
+  },
+  "contracts_dir": "share/contracts",
+  "capabilities_path": "share/device-capabilities.json",
+  "llm_node_id": "NODE-RPI5-01",
+  "llm_base_url": "http://127.0.0.1:8080",
+  "llm_model": "exaone-1.2b-homemind-v3",
+  "simulated": false
+}

@@ -1,0 +1,12 @@
+{
+    "id": "com.atlas.app.homemind_ui",
+    "type": "flutter",
+    "name": "homemind_flutter_test",
+    "description": "HomeMind 1024x600 test dashboard",
+    "entry": "homemind_flutter_test --bundle=./ --fullscreen -a com.atlas.app.homemind_ui",
+    "version": "0.1.0",
+    "required_permissions": {
+        "privileged": [],
+        "user_consent": []
+    }
+}

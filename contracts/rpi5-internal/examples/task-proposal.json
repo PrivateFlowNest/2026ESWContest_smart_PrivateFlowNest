@@ -1,0 +1,9 @@
+{
+  "intent": "DEVICE_CONTROL",
+  "device": "WINDOW",
+  "action": "OPEN",
+  "parameters": {},
+  "ambiguous": false,
+  "safety_flags": [],
+  "clarification_question": null
+}

@@ -1,0 +1,8 @@
+{
+  "id": "com.privateflownest.homemindrpi5ui",
+  "description": "HomeMind NODE-RPI5-01 7-inch UI",
+  "name": "homemind-rpi5-ui",
+  "type": "native",
+  "entry": "homemind-ui-launch.sh",
+  "version": "@VERSION@"
+}

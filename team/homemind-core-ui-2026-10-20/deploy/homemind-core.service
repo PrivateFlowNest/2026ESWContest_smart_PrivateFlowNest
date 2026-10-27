@@ -1,0 +1,31 @@
+[Unit]
+Description=HomeMind Pi4 MQTT to SQLite core
+After=homemind-mqtt.service
+Wants=homemind-mqtt.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=network
+Group=network
+Environment=LD_LIBRARY_PATH=/data/share/homemind/lib
+ExecStart=/data/share/homemind/bin/homemind-core --broker-host 10.10.10.2 --broker-port 1883 --database /data/share/homemind/db/homemind.db --node-id NODE-RPI4-01 --sensor-rules /data/share/homemind/config/sensor-rules.json --scenario-rules /data/share/homemind/config/scenario-rules.json --device-registry /data/share/homemind/config/device-registry.json --task-policy /data/share/homemind/config/task-policy.json --context-rules /data/share/homemind/config/context-rules.json
+Restart=always
+RestartSec=3s
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/data/share/homemind/db
+ReadOnlyPaths=/data/share/homemind/config
+LockPersonality=true
+RestrictSUIDSGID=true
+MemoryDenyWriteExecute=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

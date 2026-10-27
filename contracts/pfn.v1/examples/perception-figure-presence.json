@@ -1,0 +1,18 @@
+{
+  "schema_version": "pfn.v1",
+  "event_id": "5f0e0000-0000-4000-8000-000000000028",
+  "trace_id": "5f0e0000-0000-4000-8000-000000000005",
+  "source_node_id": "NODE-RPI5-02",
+  "source_device_id": "CAM-OUTDOOR-01",
+  "observation_type": "FIGURE_PRESENCE",
+  "zone": "outdoor",
+  "confidence": 0.88,
+  "attributes": {
+    "present": true,
+    "figure_count": 1,
+    "model_version": "yolox-nano-416-figure",
+    "frame_age_ms": 120
+  },
+  "observed_at_ms": 1792560000000,
+  "simulated": true
+}

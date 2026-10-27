@@ -1,0 +1,33 @@
+[Unit]
+Description=HomeMind LLM node (NODE-RPI5-01): llm/request -> EXAONE + C++ guard -> core task request
+After=homemind-exaone.service network-online.target
+Wants=homemind-exaone.service network-online.target
+# Restarted with EXAONE: a new llama-server has an empty prompt cache, and this node warms it up at start.
+PartOf=homemind-exaone.service
+ConditionPathExists=/data/share/homemind/config/rpi5-01.json
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=network
+Group=network
+Environment=LD_LIBRARY_PATH=/data/share/homemind/lib
+ExecStart=/data/share/homemind/bin/homemind-llm --config /data/share/homemind/config/rpi5-01.json
+Restart=always
+RestartSec=3s
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadOnlyPaths=/data/share/homemind
+LockPersonality=true
+RestrictSUIDSGID=true
+MemoryDenyWriteExecute=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

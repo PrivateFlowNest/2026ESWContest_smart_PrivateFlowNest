@@ -1,0 +1,583 @@
+{
+ "real_hardware_executed": false,
+ "environment": "PC x86_64 Docker + Windows llama-server, fake ESP",
+ "minutes": 30.0,
+ "events": [
+  "10.1 broker restarted",
+  "15.0 llama-server stopped",
+  "16.5 llama-server started",
+  "20.0 core restarted"
+ ],
+ "checks": {
+  "voice commands completed (outside fault windows)": true,
+  "hidden intent completed when the model is up": true,
+  "model outage reported as model_unavailable": true,
+  "context transitions both ways": true,
+  "core quiet mode on/off completed": true,
+  "services still running": true,
+  "memory growth after warm-up < 20 MiB": true,
+  "all messages schema-valid": true,
+  "no transcript in llm logs": true
+ },
+ "memory_growth_mib": {
+  "llm": 0.0,
+  "perception": 0.0
+ },
+ "memory": [
+  {
+   "min": 0.0,
+   "llm": 1.3,
+   "perception": 171.7,
+   "core": 8.0
+  },
+  {
+   "min": 0.5,
+   "llm": 1.5,
+   "perception": 175.3,
+   "core": 7.8
+  },
+  {
+   "min": 1.0,
+   "llm": 1.5,
+   "perception": 175.1,
+   "core": 8.0
+  },
+  {
+   "min": 1.6,
+   "llm": 1.5,
+   "perception": 175.7,
+   "core": 7.8
+  },
+  {
+   "min": 2.1,
+   "llm": 1.5,
+   "perception": 175.3,
+   "core": 8.0
+  },
+  {
+   "min": 2.6,
+   "llm": 1.5,
+   "perception": 175.4,
+   "core": 8.0
+  },
+  {
+   "min": 3.1,
+   "llm": 1.5,
+   "perception": 175.6,
+   "core": 8.1
+  },
+  {
+   "min": 3.7,
+   "llm": 1.5,
+   "perception": 175.9,
+   "core": 8.1
+  },
+  {
+   "min": 4.2,
+   "llm": 1.5,
+   "perception": 175.6,
+   "core": 7.8
+  },
+  {
+   "min": 4.7,
+   "llm": 1.5,
+   "perception": 175.6,
+   "core": 7.9
+  },
+  {
+   "min": 5.2,
+   "llm": 1.5,
+   "perception": 175.9,
+   "core": 7.9
+  },
+  {
+   "min": 5.8,
+   "llm": 1.5,
+   "perception": 175.4,
+   "core": 8.1
+  },
+  {
+   "min": 6.3,
+   "llm": 1.5,
+   "perception": 175.4,
+   "core": 7.9
+  },
+  {
+   "min": 6.8,
+   "llm": 1.5,
+   "perception": 175.7,
+   "core": 7.9
+  },
+  {
+   "min": 7.3,
+   "llm": 1.5,
+   "perception": 175.7,
+   "core": 8.2
+  },
+  {
+   "min": 7.9,
+   "llm": 1.5,
+   "perception": 175.7,
+   "core": 8.2
+  },
+  {
+   "min": 8.4,
+   "llm": 1.5,
+   "perception": 175.9,
+   "core": 7.9
+  },
+  {
+   "min": 8.9,
+   "llm": 1.5,
+   "perception": 175.5,
+   "core": 8.0
+  },
+  {
+   "min": 9.4,
+   "llm": 1.5,
+   "perception": 175.5,
+   "core": 4.5
+  },
+  {
+   "min": 10.0,
+   "llm": 1.5,
+   "perception": 175.5,
+   "core": 4.9
+  },
+  {
+   "min": 10.5,
+   "llm": 1.5,
+   "perception": 175.6,
+   "core": 4.7
+  },
+  {
+   "min": 11.0,
+   "llm": 1.5,
+   "perception": 175.6,
+   "core": 5.7
+  },
+  {
+   "min": 11.5,
+   "llm": 1.5,
+   "perception": 175.6,
+   "core": 5.9
+  },
+  {
+   "min": 12.0,
+   "llm": 1.5,
+   "perception": 176.1,
+   "core": 6.2
+  },
+  {
+   "min": 12.6,
+   "llm": 1.5,
+   "perception": 175.8,
+   "core": 6.5
+  },
+  {
+   "min": 13.1,
+   "llm": 1.5,
+   "perception": 175.6,
+   "core": 6.6
+  },
+  {
+   "min": 13.6,
+   "llm": 1.8,
+   "perception": 175.6,
+   "core": 7.2
+  },
+  {
+   "min": 14.1,
+   "llm": 1.5,
+   "perception": 175.9,
+   "core": 8.0
+  },
+  {
+   "min": 14.6,
+   "llm": 1.5,
+   "perception": 175.6,
+   "core": 7.9
+  },
+  {
+   "min": 15.1,
+   "llm": 1.5,
+   "perception": 175.6,
+   "core": 8.3
+  },
+  {
+   "min": 15.7,
+   "llm": 1.5,
+   "perception": 175.6,
+   "core": 8.5
+  },
+  {
+   "min": 16.2,
+   "llm": 1.5,
+   "perception": 176.1,
+   "core": 8.8
+  },
+  {
+   "min": 16.7,
+   "llm": 1.5,
+   "perception": 176.1,
+   "core": 9.4
+  },
+  {
+   "min": 17.2,
+   "llm": 1.5,
+   "perception": 175.9,
+   "core": 9.2
+  },
+  {
+   "min": 17.8,
+   "llm": 1.5,
+   "perception": 175.7,
+   "core": 9.5
+  },
+  {
+   "min": 18.3,
+   "llm": 1.5,
+   "perception": 175.7,
+   "core": 9.9
+  },
+  {
+   "min": 18.8,
+   "llm": 1.5,
+   "perception": 175.8,
+   "core": 9.8
+  },
+  {
+   "min": 19.3,
+   "llm": 1.5,
+   "perception": 176.3,
+   "core": 10.0
+  },
+  {
+   "min": 19.8,
+   "llm": 1.5,
+   "perception": 176.3,
+   "core": 10.5
+  },
+  {
+   "min": 20.4,
+   "llm": 1.5,
+   "perception": 176.3,
+   "core": 4.1
+  },
+  {
+   "min": 20.9,
+   "llm": 1.5,
+   "perception": 176.5,
+   "core": 4.3
+  },
+  {
+   "min": 21.4,
+   "llm": 1.5,
+   "perception": 176.0,
+   "core": 4.2
+  },
+  {
+   "min": 21.9,
+   "llm": 1.5,
+   "perception": 176.0,
+   "core": 5.2
+  },
+  {
+   "min": 22.5,
+   "llm": 1.5,
+   "perception": 175.8,
+   "core": 6.1
+  },
+  {
+   "min": 23.0,
+   "llm": 1.5,
+   "perception": 175.8,
+   "core": 5.9
+  },
+  {
+   "min": 23.5,
+   "llm": 2.0,
+   "perception": 175.8,
+   "core": 6.6
+  },
+  {
+   "min": 24.1,
+   "llm": 1.5,
+   "perception": 176.3,
+   "core": 6.8
+  },
+  {
+   "min": 24.6,
+   "llm": 1.5,
+   "perception": 176.3,
+   "core": 6.8
+  },
+  {
+   "min": 25.1,
+   "llm": 1.5,
+   "perception": 176.6,
+   "core": 7.1
+  },
+  {
+   "min": 25.6,
+   "llm": 1.8,
+   "perception": 175.9,
+   "core": 7.1
+  },
+  {
+   "min": 26.1,
+   "llm": 1.5,
+   "perception": 175.9,
+   "core": 7.4
+  },
+  {
+   "min": 26.7,
+   "llm": 1.5,
+   "perception": 175.9,
+   "core": 7.8
+  },
+  {
+   "min": 27.2,
+   "llm": 1.5,
+   "perception": 175.9,
+   "core": 7.6
+  },
+  {
+   "min": 27.7,
+   "llm": 1.5,
+   "perception": 175.9,
+   "core": 7.7
+  },
+  {
+   "min": 28.2,
+   "llm": 1.5,
+   "perception": 175.9,
+   "core": 7.8
+  },
+  {
+   "min": 28.7,
+   "llm": 1.5,
+   "perception": 176.2,
+   "core": 7.9
+  },
+  {
+   "min": 29.2,
+   "llm": 1.5,
+   "perception": 176.2,
+   "core": 7.9
+  },
+  {
+   "min": 29.8,
+   "llm": 1.5,
+   "perception": 175.9,
+   "core": 7.9
+  }
+ ],
+ "voice": [
+  {
+   "min": 0.0,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 1.03,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 2.05,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 3.07,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 4.1,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 5.12,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 6.14,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 7.16,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 8.18,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 9.2,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 10.22,
+   "final": "completed",
+   "near_fault": true
+  },
+  {
+   "min": 11.23,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 12.25,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 13.27,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 14.3,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 15.32,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 16.34,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 17.35,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 18.4,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 19.47,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 20.48,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 21.53,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 22.58,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 23.64,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 24.69,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 25.72,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 26.78,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 27.81,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 28.83,
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 29.88,
+   "final": "completed",
+   "near_fault": false
+  }
+ ],
+ "hidden_intent": [
+  {
+   "min": 0.0,
+   "outage": false,
+   "status": "task_requested",
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 5.01,
+   "outage": false,
+   "status": "task_requested",
+   "final": "completed",
+   "near_fault": false
+  },
+  {
+   "min": 10.1,
+   "outage": false,
+   "status": null,
+   "final": null,
+   "near_fault": true
+  },
+  {
+   "min": 15.0,
+   "outage": true,
+   "status": "model_unavailable",
+   "final": null,
+   "near_fault": false
+  },
+  {
+   "min": 20.0,
+   "outage": false,
+   "status": "task_requested",
+   "final": "completed",
+   "near_fault": true
+  },
+  {
+   "min": 25.0,
+   "outage": false,
+   "status": "task_requested",
+   "final": "completed",
+   "near_fault": false
+  }
+ ],
+ "transitions": {
+  "UPDATED": 4,
+  "ACTIVATED": 4,
+  "DEACTIVATED": 4,
+  "UNCHANGED": 178
+ },
+ "quiet_tasks_completed": {
+  "quiet_mode_on": 4,
+  "quiet_mode_off": 4
+ },
+ "schema_invalid": []
+}

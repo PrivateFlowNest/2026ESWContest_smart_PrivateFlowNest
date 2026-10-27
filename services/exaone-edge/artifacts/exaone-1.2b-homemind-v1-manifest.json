@@ -1,0 +1,39 @@
+{
+  "base_model": "LGAI-EXAONE/EXAONE-4.0-1.2B",
+  "training": {
+    "method": "BF16 LoRA SFT then merge",
+    "train_examples": 1311,
+    "validation_examples": 810,
+    "epochs": 3,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "runtime_seconds": 846.3112,
+    "final_eval_loss": 0.0008623293251730502
+  },
+  "artifacts": {
+    "adapter": {
+      "path": "exaone-1.2b-lora-v1/final-adapter/adapter_model.safetensors",
+      "bytes": 61004208,
+      "sha256": "a94d3afe1aea9a7feb517aecfa9309cef1c44b49750ea6e7080d21380a828a05"
+    },
+    "f16_gguf": {
+      "path": "exaone-1.2b-homemind-v1-f16.gguf",
+      "bytes": 2563248448,
+      "sha256": "43b06bba89b6344e967936854763ea860f2cab41cf5a12238ba4e2ba7ff65352"
+    },
+    "q4_k_m_gguf": {
+      "path": "exaone-1.2b-homemind-v1-q4_k_m.gguf",
+      "bytes": 812437824,
+      "sha256": "dee9aacb73f6c8ff98af7fea01d23b2eb60f3fefa3a323e967062fbb65e9e24d"
+    }
+  },
+  "evaluation": {
+    "synthetic_test_total": 810,
+    "json_valid_rate": 1.0,
+    "contract_valid_rate": 0.9987654320987654,
+    "meaning_match_rate": 0.9901234567901235,
+    "q4_hardware_smoke_total": 24,
+    "q4_hardware_smoke_success": 24,
+    "q4_model_first_pass_total": 15,
+    "q4_model_first_pass_success": 15
+  }
+}

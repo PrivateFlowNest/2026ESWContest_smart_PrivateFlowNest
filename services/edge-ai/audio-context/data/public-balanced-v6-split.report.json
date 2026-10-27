@@ -1,0 +1,23 @@
+{
+  "manifest": "C:\\Users\\alexi\\Desktop\\Workspace\\ESW\\services\\edge-ai\\audio-context\\data\\public-balanced-v6-split.csv",
+  "input": "C:\\Users\\alexi\\Desktop\\Workspace\\ESW\\services\\edge-ai\\audio-context\\data\\public-balanced-v3.csv",
+  "target_head": "activity",
+  "seed": 20260903,
+  "reserved_test_groups_per_label": {
+    "IN_PERSON_MEETING": 100,
+    "SELF_TALK": 100,
+    "TV_MEDIA": 100,
+    "UNKNOWN": 100,
+    "ZOOM_SPEAKER": 100
+  },
+  "remaining_validation_groups_per_label": {
+    "IN_PERSON_MEETING": 152,
+    "SELF_TALK": 208,
+    "TV_MEDIA": 900,
+    "UNKNOWN": 536,
+    "ZOOM_SPEAKER": 102
+  },
+  "moved_rows": 1388,
+  "group_overlap_count": 0,
+  "selection_rule": "stable hash; all rows from a source group move together"
+}

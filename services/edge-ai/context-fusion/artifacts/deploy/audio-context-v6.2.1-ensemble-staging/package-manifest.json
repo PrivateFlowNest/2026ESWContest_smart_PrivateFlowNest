@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "package_version": "audio-context-v6.2.1-ensemble-50-50",
+  "created_at": "2026-09-03T08:34:46.581894+00:00",
+  "target": {
+    "device": "Raspberry Pi 5",
+    "architecture": "aarch64"
+  },
+  "activation": {
+    "allowed": false,
+    "status": "STAGING_ONLY",
+    "blockers": [
+      "cryptographic_signature_missing"
+    ]
+  },
+  "acceptance": {
+    "calibration_passed": true,
+    "holdout_passed": true
+  },
+  "signature": {
+    "status": "UNSIGNED",
+    "required_before_activation": true
+  },
+  "privacy": {
+    "raw_audio_included": false,
+    "raw_video_included": false,
+    "transcripts_included": false
+  },
+  "rollback": {
+    "model_version": "public-balanced-v5-window4s",
+    "included": true,
+    "procedure": "stop service, replace models from rollback/, restore prior policy, restart, verify health"
+  },
+  "files": [
+    {
+      "role": "activity_model",
+      "path": "models/activity.joblib",
+      "bytes": 398795,
+      "sha256": "7c9943efc1668ad0ebd72199647ab3c81a921e95ddbee4e84077eaeb38a188a8"
+    },
+    {
+      "role": "sound_event_model",
+      "path": "models/sound_event.joblib",
+      "bytes": 149683,
+      "sha256": "471fc4065a23c12d19486a3ea5cc0dbffca60593c5e3d83cfccbf236cd7a9a26"
+    },
+    {
+      "role": "policy_config",
+      "path": "config/audio-policy.json",
+      "bytes": 442,
+      "sha256": "9e69a08170d13078a4020776e3a8a1188adf03db6d44870a754e896f90f50956"
+    },
+    {
+      "role": "training_metrics",
+      "path": "reports/training-metrics.json",
+      "bytes": 962,
+      "sha256": "67fb71f8bbfc590cda5739f0489876ad603718ab7bc4e1d68e770c669afd09c1"
+    },
+    {
+      "role": "policy_tuning",
+      "path": "reports/policy-tuning.json",
+      "bytes": 491681,
+      "sha256": "70102590245e186d6345575d441e5fec39ee3287be6ae5c5c5d40b086e17b00d"
+    },
+    {
+      "role": "runtime_wheel",
+      "path": "wheels/homemind_audio_context-0.1.0-py3-none-any.whl",
+      "bytes": 57215,
+      "sha256": "b83a8675bb2d09fd1c5bacc26c1082e8ceb7328ab456b76ae5672462e41b6024"
+    },
+    {
+      "role": "runtime_wheel",
+      "path": "wheels/homemind_context_fusion-0.1.0-py3-none-any.whl",
+      "bytes": 31864,
+      "sha256": "2c1e82396ffe904fa847b6beb380d29ddc9ee3647649280a90abb14266066e55"
+    },
+    {
+      "role": "rollback_activity_model",
+      "path": "rollback/activity.joblib",
+      "bytes": 199280,
+      "sha256": "5e5132ccc78b3e9ebdb5dd819ba838060d26e9dfd19ae1fb0d59ac05eda0aead"
+    },
+    {
+      "role": "rollback_sound_event_model",
+      "path": "rollback/sound_event.joblib",
+      "bytes": 149683,
+      "sha256": "471fc4065a23c12d19486a3ea5cc0dbffca60593c5e3d83cfccbf236cd7a9a26"
+    },
+    {
+      "role": "rollback_metrics",
+      "path": "rollback/metrics.json",
+      "bytes": 14364,
+      "sha256": "a3a7a0122fe19b85e03e8dfbb74d394106416688b6e654961c97a9b3f3942252"
+    }
+  ]
+}

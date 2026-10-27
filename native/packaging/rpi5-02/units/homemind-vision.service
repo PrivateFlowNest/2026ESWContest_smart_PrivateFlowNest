@@ -1,0 +1,48 @@
+[Unit]
+Description=HomeMind vision presence (NODE-RPI5-02): Camera1 D-Bus -> empty-scene difference or YOLOX -> zone -> FIGURE_PRESENCE
+# camera.service = Atlas com.atlas.Camera1, D-Bus activated: the service wakes it with StartServiceByName before the
+# first Open. Do not pull it in here: camera.service requires camera-registry.service (DefaultDependencies=no), which
+# then ran at 5.7 s of boot before /var/tmp existed, wrote no /tmp/camera_plugin_registry.json, and Camera1 listed no
+# cameras until both were restarted (real NODE-RPI5-02 reboot, 2026-10-25). This unit starts after basic.target.
+After=network-online.target
+Wants=network-online.target
+# Off until a person creates the config from share/vision/*.example, fits zones.rail.json to the mounted camera and
+# stores the empty scene with --capture-background (detector "background"; no model needed).
+ConditionPathExists=/data/share/homemind/config/rpi5-02-vision.json
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=network
+Group=network
+# Camera1 D-Bus policy (/usr/share/dbus-1/system.d/com.atlas.Camera1.conf) allows Open/Close, StartPreview/Capture
+# and SetFormat only to these groups (root aside); `camera` lets the service hand its capture folder to the user
+# Camera1 writes the JPEGs as. Checked on NODE-RPI5-02 2026-10-25.
+SupplementaryGroups=perm_cameradevice perm_camerastream perm_cameracontrol camera
+Environment=LD_LIBRARY_PATH=/data/share/homemind/lib
+# Writes camera PRESENCE events to /run/homemind/presence for homemind-perception (shared runtime directory).
+RuntimeDirectory=homemind
+RuntimeDirectoryMode=0770
+RuntimeDirectoryPreserve=yes
+# Let udev finish the USB webcams (uvcvideo comes up about 6.6 s into boot) before the first Camera1 wake-up.
+ExecStartPre=-/usr/sbin/udevadm settle --timeout=30
+ExecStart=/data/share/homemind/bin/homemind-vision --config /data/share/homemind/config/rpi5-02-vision.json
+Restart=always
+RestartSec=5s
+NoNewPrivileges=true
+# Camera1 (user camera, PrivateTmp=no) writes each captured JPEG to the configured capture_dir
+# (/tmp/homemind-vision-indoor|outdoor, group camera 0730), so this service shares the real /tmp.
+PrivateTmp=false
+ProtectHome=true
+ProtectSystem=strict
+ReadOnlyPaths=/data/share/homemind
+ReadWritePaths=/tmp
+LockPersonality=true
+RestrictSUIDSGID=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

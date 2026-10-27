@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.2",
+  "dataset": "AIHUB-71405-VALIDATION-HOME-NEAR-N",
+  "sample_count": 100,
+  "selection_status": "V4_BEST_PC_CANDIDATE_KEYWORD_TARGET_NOT_MET",
+  "targets": {
+    "character_error_rate_max": 0.25,
+    "real_time_factor_max": 1.0,
+    "homemind_keyword_recall_min": 0.9
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "model": "whisper-small-homemind-lora-v4-q5_0",
+      "character_error_rate": 0.11018237082066869,
+      "real_time_factor": 0.6413369136614413,
+      "homemind_keyword_recall": 0.8217821782178217,
+      "passed": false,
+      "decision": "retain_as_best_pc_candidate_pending_pi5_and_real_microphone_validation"
+    },
+    {
+      "rank": 2,
+      "model": "whisper-small-homemind-lora-v2-q5_0",
+      "character_error_rate": 0.11702127659574468,
+      "real_time_factor": 0.47876508771328086,
+      "homemind_keyword_recall": 0.8118811881188119,
+      "passed": false,
+      "decision": "retain_as_pre_augmentation_baseline"
+    },
+    {
+      "rank": 3,
+      "model": "whisper-small-homemind-lora-v1-q5_0",
+      "character_error_rate": 0.12613981762917933,
+      "real_time_factor": 0.4798479321858916,
+      "homemind_keyword_recall": 0.8118811881188119,
+      "passed": false,
+      "decision": "retain_as_general_iot_baseline"
+    },
+    {
+      "rank": 4,
+      "model": "whisper-small-homemind-lora-v3-q5_0",
+      "character_error_rate": 0.128419452887538,
+      "real_time_factor": 0.6322935654909335,
+      "homemind_keyword_recall": 0.8118811881188119,
+      "passed": false,
+      "decision": "superseded_by_conservative_v4"
+    },
+    {
+      "rank": 5,
+      "model": "whisper.cpp-b4938-ggml-small",
+      "character_error_rate": 0.23328267477203649,
+      "real_time_factor": 0.4428266780132791,
+      "homemind_keyword_recall": 0.6633663366336634,
+      "passed": false,
+      "decision": "superseded_by_fine_tuned_models"
+    },
+    {
+      "rank": 6,
+      "model": "whisper.cpp-b4938-ggml-small-homemind-prompt",
+      "character_error_rate": 0.22720364741641338,
+      "real_time_factor": 0.8397673892123501,
+      "homemind_keyword_recall": 0.6336633663366337,
+      "passed": false,
+      "decision": "prompt_only_not_sufficient"
+    },
+    {
+      "rank": 7,
+      "model": "whisper.cpp-whisper-bin-x64-b4938-ggml-base",
+      "character_error_rate": 0.31534954407294835,
+      "real_time_factor": 0.22432788570988946,
+      "homemind_keyword_recall": 0.5643564356435643,
+      "passed": false,
+      "decision": "retain_as_memory_fallback"
+    }
+  ],
+  "v4_keyword_group_metrics": {
+    "light": {"hits": 17, "occurrences": 24, "recall": 0.7083333333333334},
+    "tv": {"hits": 5, "occurrences": 6, "recall": 0.8333333333333334},
+    "aircon": {"hits": 22, "occurrences": 25, "recall": 0.88},
+    "washer": {"hits": 3, "occurrences": 3, "recall": 1.0},
+    "window": {"hits": 1, "occurrences": 1, "recall": 1.0},
+    "front_door": {"hits": 2, "occurrences": 4, "recall": 0.5},
+    "bathroom": {"hits": 9, "occurrences": 11, "recall": 0.8181818181818182},
+    "notification": {"hits": 17, "occurrences": 18, "recall": 0.9444444444444444},
+    "meeting": {"hits": 0, "occurrences": 1, "recall": 0.0},
+    "sound": {"hits": 7, "occurrences": 8, "recall": 0.875}
+  },
+  "privacy": {
+    "raw_audio_in_report": false,
+    "references_in_report": false,
+    "hypotheses_in_report": false,
+    "audio_paths_in_report": false
+  },
+  "release_blockers": [
+    "HomeMind keyword recall is 0.8218, below the 0.90 target",
+    "generic original-data augmentation has been exhausted; weak groups need independent HomeMind microphone recordings",
+    "Pi 5 8GB latency, memory, and thermal benchmark not completed",
+    "independent contest microphone acceptance audio not yet available"
+  ]
+}

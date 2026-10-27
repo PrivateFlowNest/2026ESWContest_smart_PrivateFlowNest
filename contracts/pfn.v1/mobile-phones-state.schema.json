@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-mobile-phones-state.schema.json",
+  "title": "HomeMind paired phones, from the Mobile API to the 7-inch UI",
+  "description": "homemind-mobile-api on NODE-RPI4-01 to NODE-RPI5-01 (added 2026-10-25). The answer to pfn/v1/mobile/phones/request (same request_id, action list or revoke), or an update without a request (request_id null) right after a phone pairs (action paired). phones lists every phone that holds a valid token: phone_id is the token id (never the token), device_name is what the phone sent when it paired, paired_at is the pairing time (UTC ISO 8601), last_seen_at_ms is the phone's last accepted request since the Mobile API started (null when none). revoked tells whether an unpair request removed a phone. No token, pairing code or secret. The broker ACL lets only NODE-RPI5-01 read it.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "request_id", "source_node_id", "target_node_id", "created_at_ms", "action",
+               "status", "phones"],
+  "properties": {
+    "schema_version": {"const": "pfn.v1"},
+    "event_id": {"type": "string", "format": "uuid"},
+    "request_id": {"anyOf": [{"type": "string", "format": "uuid"}, {"type": "null"}]},
+    "source_node_id": {"const": "NODE-RPI4-01"},
+    "target_node_id": {"const": "NODE-RPI5-01"},
+    "created_at_ms": {"type": "integer", "minimum": 0},
+    "action": {"enum": ["list", "revoke", "paired"]},
+    "status": {"enum": ["ok", "unavailable"]},
+    "reason": {"type": "string", "minLength": 1, "maxLength": 200},
+    "revoked": {"type": "boolean"},
+    "phones": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["phone_id", "device_name", "paired_at", "last_seen_at_ms"],
+        "properties": {
+          "phone_id": {"type": "string", "pattern": "^[0-9a-f]{8}$"},
+          "device_name": {"type": "string", "minLength": 1, "maxLength": 64},
+          "paired_at": {"type": "string", "minLength": 1, "maxLength": 40},
+          "last_seen_at_ms": {"anyOf": [{"type": "integer", "minimum": 0}, {"type": "null"}]}
+        }
+      }
+    },
+    "simulated": {"type": "boolean"}
+  },
+  "allOf": [
+    {"if": {"properties": {"action": {"const": "revoke"}, "status": {"const": "ok"}}},
+     "then": {"required": ["revoked"]}},
+    {"if": {"properties": {"status": {"const": "unavailable"}}}, "then": {"required": ["reason"]}},
+    {"if": {"properties": {"action": {"const": "paired"}}}, "then": {"properties": {"request_id": {"type": "null"}}}}
+  ]
+}

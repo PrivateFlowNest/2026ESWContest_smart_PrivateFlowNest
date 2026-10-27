@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/audio-context.schema.json",
+  "title": "HomeMind Audio Context Event",
+  "oneOf": [
+    { "$ref": "#/$defs/activityContext" },
+    { "$ref": "#/$defs/soundEvent" }
+  ],
+  "$defs": {
+    "base": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "event_id",
+        "trace_id",
+        "timestamp",
+        "source",
+        "source_node_id",
+        "event_type",
+        "confidence",
+        "model_version"
+      ],
+      "properties": {
+        "schema_version": { "const": "1.0" },
+        "event_id": { "type": "string", "minLength": 1 },
+        "trace_id": { "type": "string", "minLength": 1 },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "source": { "const": "pi5.audio-context" },
+        "source_node_id": { "const": "NODE-RPI5-02" },
+        "event_type": { "type": "string" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "model_version": { "type": "string", "minLength": 1 },
+        "evidence": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        }
+      }
+    },
+    "activityContext": {
+      "allOf": [
+        { "$ref": "#/$defs/base" },
+        {
+          "type": "object",
+          "required": ["context_type", "policy_tags", "valid_until"],
+          "properties": {
+            "event_type": { "const": "ACTIVITY_CONTEXT" },
+            "context_type": {
+              "enum": [
+                "QUIET",
+                "SELF_TALK",
+                "TV_MEDIA",
+                "ZOOM_SPEAKER",
+                "ZOOM_HEADPHONES",
+                "IN_PERSON_MEETING",
+                "UNKNOWN"
+              ]
+            },
+            "policy_tags": {
+              "type": "array",
+              "items": { "enum": ["QUIET_REQUIRED"] },
+              "uniqueItems": true
+            },
+            "valid_until": { "type": "string", "format": "date-time" }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "soundEvent": {
+      "allOf": [
+        { "$ref": "#/$defs/base" },
+        {
+          "type": "object",
+          "required": ["sound_type"],
+          "properties": {
+            "event_type": { "const": "SOUND_EVENT" },
+            "sound_type": {
+              "enum": ["DOORBELL", "WASHER_COMPLETE", "ALARM", "OTHER"]
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pfn-v1-task-policy.schema.json",
+  "title": "HomeMind core task approval policy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "policy_version", "notes", "origins", "default_approval", "proposal_ttl_seconds", "rules", "rejection_codes"],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "policy_version": { "type": "integer", "minimum": 1 },
+    "notes": { "type": "array", "items": { "type": "string" } },
+    "origins": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["allowed_source_nodes"],
+        "properties": {
+          "allowed_source_nodes": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^[A-Z0-9]+(?:-[A-Z0-9]+)*$" } }
+        }
+      }
+    },
+    "default_approval": { "const": "ui_approval" },
+    "proposal_ttl_seconds": { "type": "integer", "minimum": 30, "maximum": 86400 },
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "approval"],
+        "properties": {
+          "name": { "type": "string", "pattern": "^[a-z0-9_]+$", "maxLength": 64 },
+          "intents": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1, "maxLength": 64 } },
+          "origins": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1, "maxLength": 64 } },
+          "target_device_ids": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^[A-Z0-9]+(?:-[A-Z0-9]+)*$" } },
+          "position_refs": { "type": "array", "minItems": 1, "items": { "enum": ["open", "closed"] } },
+          "approval": { "enum": ["auto", "ui_approval"] },
+          "phone_may_approve": { "type": "boolean" },
+          "proposal_ttl_seconds": { "type": "integer", "minimum": 30, "maximum": 86400 }
+        }
+      }
+    },
+    "rejection_codes": { "type": "object", "additionalProperties": { "type": "string" } }
+  }
+}

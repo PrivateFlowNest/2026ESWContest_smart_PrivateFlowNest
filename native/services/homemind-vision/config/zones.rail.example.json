@@ -1,0 +1,9 @@
+{
+  "camera_id": "CAM-INDOOR-01",
+  "note": "One-axis doll model: the rail crosses the frame left to right and each stop of the doll axis (firmware doll_axis named positions entrance / bed / bathroom) owns one band. Template only: after mounting the camera, set the bands so the doll's feet at each stop fall inside its band and nothing else moving (LEDs, screens) lies inside them (or list it under the camera's ignore). Order matters: the first polygon containing the foot point wins.",
+  "zones": {
+    "ENTRANCE": [[0.00, 0.55], [0.33, 0.55], [0.33, 1.00], [0.00, 1.00]],
+    "BED": [[0.33, 0.55], [0.66, 0.55], [0.66, 1.00], [0.33, 1.00]],
+    "BATHROOM": [[0.66, 0.55], [1.00, 0.55], [1.00, 1.00], [0.66, 1.00]]
+  }
+}

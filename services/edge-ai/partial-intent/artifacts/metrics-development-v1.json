@@ -1,0 +1,207 @@
+{
+  "dataset_source": "acceptance-korean-v1.jsonl",
+  "acceptance_scope": "PC independent Korean text challenge set; not Pi 5 or live-ASR acceptance",
+  "test_rows": 50,
+  "class_counts": {
+    "CLIMATE_COMFORT": 5,
+    "LIGHTING": 5,
+    "VENTILATION": 5,
+    "MEDIA": 5,
+    "ACCESS": 5,
+    "LAUNDRY": 5,
+    "CLEANING": 5,
+    "QUIET_ENVIRONMENT": 5,
+    "NO_ACTION": 10
+  },
+  "raw_model_accuracy": 1.0,
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "gate": {
+    "detected_coverage": 0.8,
+    "detected_precision": 1.0,
+    "positive_recall": 1.0,
+    "proactive_false_positive_rate": 0.0
+  },
+  "threshold": 0.35,
+  "classification_report": {
+    "CLIMATE_COMFORT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "LIGHTING": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "VENTILATION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "MEDIA": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "ACCESS": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "LAUNDRY": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "CLEANING": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "QUIET_ENVIRONMENT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "NO_ACTION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 10.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 50.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 50.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      10
+    ]
+  ],
+  "labels": [
+    "CLIMATE_COMFORT",
+    "LIGHTING",
+    "VENTILATION",
+    "MEDIA",
+    "ACCESS",
+    "LAUNDRY",
+    "CLEANING",
+    "QUIET_ENVIRONMENT",
+    "NO_ACTION"
+  ]
+}

@@ -1,0 +1,8 @@
+Package: homemind-rpi4-mobile-api
+Version: @VERSION@
+Architecture: aarch64
+Depends: homemind-core (>= 0.6.3)
+Maintainer: HomeMind TaskFlow Team
+Section: services
+Priority: optional
+Description: HomeMind NODE-RPI4-01 Mobile API (phone app HTTP API -> pfn.v1 core task requests, QR pairing tokens)

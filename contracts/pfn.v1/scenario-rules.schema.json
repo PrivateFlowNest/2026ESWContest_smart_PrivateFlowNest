@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/scenario-rules.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "rules_version", "scenarios"],
+  "properties": {
+    "schema_version": { "const": "pfn.v1" },
+    "rules_version": { "type": "integer", "minimum": 1 },
+    "scenarios": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["intent", "name_ko", "commands"],
+        "properties": {
+          "intent": { "type": "string", "minLength": 1, "maxLength": 64 },
+          "name_ko": { "type": "string", "minLength": 1, "maxLength": 128 },
+          "commands": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["target_node_id", "target_device_id", "action", "parameters"],
+              "properties": {
+                "target_node_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+                "target_device_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+                "action": { "enum": ["set_switch", "set_color", "set_level", "set_position", "move_axis", "home_axis", "set_led", "set_number"] },
+                "parameters": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

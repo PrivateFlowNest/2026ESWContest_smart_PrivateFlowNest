@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://homemind.local/contracts/pi4-task-proposal-envelope.schema.json",
+  "title": "HomeMind Pi 4 Task Proposal Envelope",
+  "description": "A validated but still untrusted EXAONE proposal delivered to the Pi 4 policy engine.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "message_type",
+    "proposal_id",
+    "trace_id",
+    "source_event_id",
+    "timestamp",
+    "source",
+    "transition",
+    "proposal",
+    "model",
+    "context"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "message_type": { "const": "TASK_PROPOSAL" },
+    "proposal_id": { "type": "string", "minLength": 1 },
+    "trace_id": { "type": "string", "minLength": 1 },
+    "source_event_id": { "type": "string", "minLength": 1 },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "source": { "const": "pi5.exaone-audio-bridge" },
+    "transition": { "enum": ["QUIET_MODE_ENTER", "QUIET_MODE_EXIT"] },
+    "proposal": { "$ref": "task-proposal.schema.json" },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "origin", "latency_ms"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "origin": {
+          "enum": ["model", "guard", "model_guard", "guard_fallback"]
+        },
+        "latency_ms": { "type": "number", "minimum": 0 }
+      }
+    },
+    "context": { "$ref": "activity-context.schema.json" }
+  }
+}

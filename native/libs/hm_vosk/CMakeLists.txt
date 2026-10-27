@@ -1,0 +1,50 @@
+# hm_vosk: Vosk partial transcripts (NODE-RPI5-02 partial-intent hints). libvosk.so is loaded at run time
+# (dlopen), so nothing here needs Vosk to build. For the PC/QEMU tests the prebuilt Vosk 0.3.45 zip for this
+# architecture (native/.deps/downloads/vosk-0.3.45/vosk-linux-<arch>-0.3.45.zip, SHA-256 in MODEL_MANIFEST) is
+# unpacked into the build tree (never on the Windows file system).
+add_library(hm_vosk STATIC src/vosk.cpp)
+target_include_directories(hm_vosk PUBLIC include)
+target_link_libraries(hm_vosk PUBLIC hm_common PRIVATE ${CMAKE_DL_LIBS})
+target_compile_options(hm_vosk PRIVATE ${HM_WARNINGS})
+
+set(HM_VOSK_VERSION 0.3.45)
+set(_hm_vosk_arch "${CMAKE_SYSTEM_PROCESSOR}")
+if(_hm_vosk_arch STREQUAL "arm64")
+  set(_hm_vosk_arch aarch64)
+endif()
+set(_hm_vosk_zip "${CMAKE_CURRENT_SOURCE_DIR}/../../.deps/downloads/vosk-${HM_VOSK_VERSION}/vosk-linux-${_hm_vosk_arch}-${HM_VOSK_VERSION}.zip")
+set(HM_VOSK_LIBRARY "" CACHE FILEPATH "libvosk.so for the tests (empty: unpack the prebuilt zip from native/.deps)")
+if(NOT HM_VOSK_LIBRARY AND EXISTS "${_hm_vosk_zip}")
+  set(_hm_vosk_dir "${CMAKE_BINARY_DIR}/_deps/vosk-linux-${_hm_vosk_arch}-${HM_VOSK_VERSION}")
+  if(NOT EXISTS "${_hm_vosk_dir}/libvosk.so")
+    file(ARCHIVE_EXTRACT INPUT "${_hm_vosk_zip}" DESTINATION "${CMAKE_BINARY_DIR}/_deps")
+  endif()
+  if(EXISTS "${_hm_vosk_dir}/libvosk.so")
+    set(_hm_vosk_test_library "${_hm_vosk_dir}/libvosk.so")
+  endif()
+elseif(HM_VOSK_LIBRARY)
+  set(_hm_vosk_test_library "${HM_VOSK_LIBRARY}")
+endif()
+if(_hm_vosk_test_library)
+  message(STATUS "hm_vosk: test library ${_hm_vosk_test_library}")
+else()
+  message(STATUS "hm_vosk: no prebuilt libvosk for ${_hm_vosk_arch} (tests that need it are skipped)")
+endif()
+set(HM_VOSK_TEST_LIBRARY "${_hm_vosk_test_library}" CACHE INTERNAL "")
+set(HM_VOSK_TEST_MODEL "${HM_REPO_ROOT}/services/edge-ai/speech-to-text/models/vosk-model-small-ko-0.22" CACHE INTERNAL "")
+
+# JSONL probe for native/tests/test_perception_partial.py (partials vs the Python VoskBackend, PC chunk latency).
+if(TARGET hm_audio)
+  add_executable(hm_vosk_probe tools/hm_vosk_probe.cpp)
+  target_link_libraries(hm_vosk_probe PRIVATE hm_vosk hm_audio)
+  target_compile_options(hm_vosk_probe PRIVATE ${HM_WARNINGS})
+endif()
+
+if(HM_BUILD_TESTS)
+  add_executable(hm_vosk_tests tests/test_vosk.cpp)
+  target_link_libraries(hm_vosk_tests PRIVATE hm_vosk GTest::gtest_main)
+  target_compile_options(hm_vosk_tests PRIVATE ${HM_WARNINGS})
+  target_compile_definitions(hm_vosk_tests PRIVATE HM_VOSK_TEST_LIBRARY="${HM_VOSK_TEST_LIBRARY}"
+                                                     HM_VOSK_TEST_MODEL="${HM_VOSK_TEST_MODEL}")
+  add_test(NAME hm_vosk_tests COMMAND hm_vosk_tests)
+endif()
